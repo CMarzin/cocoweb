@@ -15,11 +15,14 @@
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
   background-color: var(--white);
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1rem;
 }
 p:last-child {
   margin-bottom: 0;

@@ -1,0 +1,16 @@
+---
+title: Tips 100 Bytes of css.
+description: Tips et découverte du jour.
+date: 2021-10-18
+tags:
+  - tips
+  - article
+  - Library
+layout: layouts/post.njk
+---
+### Article
+[100 Bytes of CSS to look great everywhere](https://www.swyx.io/css-100-bytes/)
+
+### Librairie js
+[WinBox.js – Modern HTML5 Window Manager](https://nextapps-de.github.io/winbox/)
+

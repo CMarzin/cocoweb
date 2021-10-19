@@ -1,9 +1,12 @@
 ---
-title: Tips du 12/10/2021.
+title: Tips la Guerre de l’Art.
 description: Tips et découverte du jour.
-date: 2018-10-12
+date: 2021-10-12
 tags:
-  - another tag
+  - tips
+  - article
+  - podcast
+  - repo git
 layout: layouts/post.njk
 ---
 ## Article
