@@ -13,7 +13,7 @@ layout: layouts/post.njk
 
 [La Guerre de l’Art : Comment libérer sa créativité et exprimer son talent](https://medium.com/essentiels/la-guerre-de-lart-comment-lib%C3%A9rer-sa-cr%C3%A9ativit%C3%A9-et-exprimer-son-talent-3c7273d423cb)
 ## Podcast
-Podcast Tech out sur l’art de la concentration
+Podcast Tech out sur [l’art de la concentration](https://open.spotify.com/episode/7znsK3Eqxdjl0lOe4JOPAs?si=99a2f354d9474036)
 
 ## Repo git
 

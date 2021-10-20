@@ -5,7 +5,7 @@ date: 2021-10-18
 tags:
   - tips
   - article
-  - Library
+  - Librairie js
 layout: layouts/post.njk
 ---
 ### Article
