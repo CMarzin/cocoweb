@@ -7,4 +7,4 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+Salut je m'appelle Corentin Marzin, voici mon site où je poste toutes ma veille digital.
