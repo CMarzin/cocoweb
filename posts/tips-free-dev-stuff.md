@@ -10,7 +10,6 @@ tags:
   - Veille
 layout: layouts/post.njk
 ---
-
 ### Librairie js
 The cursor is the heart of any interaction with the web.
 Why not take it to the next level? 🚀 - [Blobity](https://blobity.dev/)
