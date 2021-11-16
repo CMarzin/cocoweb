@@ -7,4 +7,6 @@ eleventyNavigation:
   order: 3
 ---
 
-Salut je m'appelle Corentin Marzin, voici mon site où je poste toutes ma veille digital.
+Salut, je m'appelle Corentin Marzin, voici mon site où je poste toute ma veille digitale.
+
+J'ai aussi un [Portefolio](https://corentinmarzin.fr) et un compte [Unsplash](https://unsplash.com/@marzin_corentin).
