@@ -2,9 +2,9 @@
   "title": "Cocoweb",
   "url": "https://cocoweb.fr/",
   "language": "fr",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Voici mon blog où je poste ma veille technologique.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Voici mon blog où je poste ma veille technologique.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://cocoweb.fr/"
