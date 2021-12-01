@@ -32,6 +32,6 @@ A bit like Solr, but much smaller and not as bright, search engine in js. - [Git
 
 CSS Animation Weekly #277 - [cssanimation.rocks](http://weekly.cssanimation.rocks/issues/css-animation-weekly-277-893310?via=twitter-card-webview)
 
-Resource around the web on becoming a better programmer, issues 221 - [Better Dev Link ](https://betterdev.link/issues/221)
+ <!-- Resource around the web on becoming a better programmer, issues 221 - [Better Dev Link ](https://betterdev.link/issues/221) -->
 
 
