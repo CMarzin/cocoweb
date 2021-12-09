@@ -1,0 +1,33 @@
+---
+title: Search
+layout: layouts/base.njk
+templateClass: tmpl-search
+eleventyNavigation:
+  key: Search
+  order: 4
+---
+
+<h2>Search tips in the site</h2>
+
+<form method="get" class="search">
+  <input class="search__input" type="text" name="q" id="search-str">
+  <button type="submit" class="submit search__button">search</button>
+</form>
+
+<ul class="search__result js-result"></ul>
+
+{% set fuse %}
+  {% include 'js/plugins/fuse.js' %}
+{% endset %}
+
+<script>
+  {{ fuse | safe }}
+</script>
+
+{% set search %}
+  {% include 'js/search.js' %}
+{% endset %}
+
+<script async>
+  {{ search | safe }}
+</script>

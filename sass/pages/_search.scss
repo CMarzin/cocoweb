@@ -1,0 +1,27 @@
+.search__result {
+  padding-left: 0;
+}
+
+.search__result li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.search__input {
+  padding: 10px;
+  height: 40px;
+}
+
+.search__button {
+  padding: 10px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: var(--lightgray);
+  border: 1px solid var(--lightgray);
+  cursor: pointer;
+
+  &:hover {
+    color: var(--blue);
+    border: 1px solid var(--blue)
+  }
+}
