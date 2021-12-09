@@ -7,29 +7,27 @@ eleventyNavigation:
   order: 4
 ---
 
-<h2>Search this site</h2>
-  <p>
-    This site is indexed by Google. So it can be searched.
-  </p>
+<h2>Search tips in the site</h2>
 
-  <form action="https://www.google.com/search" method="get" class="search">
-    <input type="hidden" name="q" id="q" value="site:https://cocoweb.fr">
-    <p><label for="search-str">Search <small>(results displayed on Google's site)</small></label>
-    <input type="text" name="q" id="search-str"></p>
-    <p><button type="submit" class="submit">Search with Google</button></p>
-  </form>
+<form method="get" class="search">
+  <input class="search__input" type="text" name="q" id="search-str">
+  <button type="submit" class="submit search__button">search</button>
+</form>
 
-  <h2>Tagged posts</h2>
-  <p>
-    If you are struggling to find what you are looking for, you might also find it by exploring the tags.
-  </p>
-  <ul>
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <li>
-      <a href="{{ tagUrl | url }}" class="post-tag">
-      {{ tag }}
-      </a> ({{ collections[tag].length }})
-    </li>
-  {% endfor %}
-  </ul>
+<ul class="search__result js-result"></ul>
+
+{% set fuse %}
+  {% include 'js/plugins/fuse.js' %}
+{% endset %}
+
+<script>
+  {{ fuse | safe }}
+</script>
+
+{% set search %}
+  {% include 'js/search.js' %}
+{% endset %}
+
+<script async>
+  {{ search | safe }}
+</script>
