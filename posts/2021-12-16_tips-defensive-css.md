@@ -6,6 +6,7 @@ tags:
   - tips
   - article
   - Veille
+  - WebGL
 layout: layouts/post.njk
 ---
 
@@ -14,7 +15,7 @@ layout: layouts/post.njk
 
 [From Node to Ruby on Rails | D U N K](https://nikodunk.com/a-node-js-developer-discovers-rails/)
 
-## Veille
+## Veilles
 
 [The Vite Ecosystem | patak](https://patak.dev/vite/ecosystem.html)
 
