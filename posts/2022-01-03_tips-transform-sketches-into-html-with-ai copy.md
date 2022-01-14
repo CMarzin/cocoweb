@@ -5,6 +5,7 @@ date: 2022-01-03
 tags:
   - tips
   - Veille
+  - CSS
 layout: layouts/post.njk
 ---
 
