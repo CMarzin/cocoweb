@@ -1,6 +1,6 @@
 ---
 title: Tips la Guerre de l’Art.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-10-12
 tags:
   - tips

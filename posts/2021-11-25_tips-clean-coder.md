@@ -1,6 +1,6 @@
 ---
 title: Tips The Clean Coder.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-11-25
 tags:
   - tips

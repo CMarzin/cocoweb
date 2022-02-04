@@ -1,6 +1,6 @@
 ---
 title: Tips Defensive CSS techniques.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-16
 tags:
   - tips

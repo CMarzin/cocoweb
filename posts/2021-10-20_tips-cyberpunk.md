@@ -1,6 +1,6 @@
 ---
 title: Tips cyberpunk.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-10-20
 tags:
   - tips

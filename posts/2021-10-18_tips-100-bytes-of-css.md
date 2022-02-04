@@ -1,6 +1,6 @@
 ---
 title: Tips 100 Bytes of css.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-10-18
 tags:
   - tips

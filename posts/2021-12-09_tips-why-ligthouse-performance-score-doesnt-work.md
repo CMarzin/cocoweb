@@ -1,6 +1,6 @@
 ---
 title: Tips Why Lighthouse Performance Score Doesn’t Work.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-09
 tags:
   - tips

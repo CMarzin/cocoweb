@@ -7,6 +7,8 @@ eleventyNavigation:
   order: 3
 ---
 
-Salut, je m'appelle Corentin Marzin, voici mon site où je poste toute ma veille digitale.
+Hello, I am Corentin Marzin, here is the website where I post all my digital watch.
 
-J'ai aussi un [Portefolio](https://corentinmarzin.fr) et un compte [Unsplash](https://unsplash.com/@marzin_corentin).
+I have a [Portefolio](https://corentinmarzin.fr) and an [Unsplash](https://unsplash.com/@marzin_corentin) account.
+
+You can found my Github accound [here](https://github.com/CMarzin).

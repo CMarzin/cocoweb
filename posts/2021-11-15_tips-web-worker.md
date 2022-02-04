@@ -1,6 +1,6 @@
 ---
 title: Tips Web Workers and third-party script.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-11-15
 tags:
   - tips

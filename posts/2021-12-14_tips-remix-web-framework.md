@@ -1,6 +1,6 @@
 ---
 title: Tips Remix web framework.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-14
 tags:
   - tips

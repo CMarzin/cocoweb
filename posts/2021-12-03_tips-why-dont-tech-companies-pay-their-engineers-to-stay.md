@@ -1,6 +1,6 @@
 ---
 title: Tips Why don't tech-companies pay their engineers to stay.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-03
 tags:
   - tips

@@ -1,6 +1,6 @@
 ---
 title: Tips Release Eleventy v1.0.0.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2022-01-13
 tags:
   - tips

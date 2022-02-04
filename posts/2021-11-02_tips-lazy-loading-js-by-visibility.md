@@ -1,6 +1,6 @@
 ---
 title: Tips lazy loading js by visiblity.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-11-02
 tags:
   - tips

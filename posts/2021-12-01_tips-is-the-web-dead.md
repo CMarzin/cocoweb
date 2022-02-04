@@ -1,6 +1,6 @@
 ---
 title: Tips Is the web dead ?.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-01
 tags:
   - tips

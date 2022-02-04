@@ -1,6 +1,6 @@
 ---
 title: Tips modern css colors.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-11-18
 tags:
   - tips

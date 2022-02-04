@@ -1,6 +1,6 @@
 ---
 title: Tips The Feynman technique - how to learn anything.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-12-21
 tags:
   - tips

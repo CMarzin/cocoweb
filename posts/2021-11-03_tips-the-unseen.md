@@ -1,6 +1,6 @@
 ---
 title: Tips the unseen 99%.
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2021-11-03
 tags:
   - tips

@@ -1,6 +1,6 @@
 ---
 title: Tips Vuejs slots
-description: Tips et découverte du jour.
+description: Tips et discovery of the day.
 date: 2022-01-17
 tags:
   - tips
