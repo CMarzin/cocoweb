@@ -7,7 +7,7 @@ tags:
   - Veille
   - repo git
   - twitter
-  - CSScC
+  - CSS
   - sass
   - Web Performance
 layout: layouts/post.njk
