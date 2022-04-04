@@ -5,7 +5,7 @@ date: 2022-01-11
 tags:
   - tips
   - repo git
-  - Web Performance
+  - web performance
   - Veille
   - CSS
 layout: layouts/post.njk

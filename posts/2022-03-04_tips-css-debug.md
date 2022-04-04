@@ -9,7 +9,7 @@ tags:
   - twitter
   - CSS
   - sass
-  - Web Performance
+  - web performance
 layout: layouts/post.njk
 ---
 
