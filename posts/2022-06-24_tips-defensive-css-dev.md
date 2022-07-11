@@ -7,7 +7,6 @@ tags:
   - Veille
   - repo git
   - CSS
-  - repo git
   - web performance
   - CLI
   - design
