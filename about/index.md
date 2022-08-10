@@ -11,4 +11,4 @@ Hello, I am Corentin Marzin, here is the website where I post all my digital wat
 
 I have a [Portefolio](https://corentinmarzin.fr) and an [Unsplash account](https://unsplash.com/@marzin_corentin).
 
-You can found my [Github account](https://github.com/CMarzin).
+You can check my [Github account](https://github.com/CMarzin).
