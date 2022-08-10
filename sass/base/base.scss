@@ -129,6 +129,11 @@ code {
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
 }
+
+.home a {
+  padding: 1rem;
+  padding-left: 0;
+}
 .home :link:not(:hover) {
   text-decoration: none;
 }
@@ -144,6 +149,11 @@ code {
   display: inline-block;
   margin-right: 1em;
 }
+
+.nav-item a {
+  padding: 1em;
+}
+
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
 }

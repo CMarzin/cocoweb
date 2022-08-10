@@ -8,8 +8,15 @@
 }
 
 .search__input {
+  margin-top: 10px;
   padding: 10px;
   height: 40px;
+}
+
+.search__label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .search__button {
