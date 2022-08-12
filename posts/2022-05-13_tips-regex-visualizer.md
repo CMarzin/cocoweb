@@ -1,5 +1,5 @@
 ---
-title: Tips Regex Visualizer
+title: Regex Visualizer
 description: Tips and discovery of the week.
 date: 2022-05-13
 tags:

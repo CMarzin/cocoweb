@@ -1,5 +1,5 @@
 ---
-title: Tips optimising largest contenful paint
+title: Optimising largest contenful paint
 description: Tips and discovery of the week.
 date: 2022-05-06
 tags:

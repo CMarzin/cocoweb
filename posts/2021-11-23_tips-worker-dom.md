@@ -1,5 +1,5 @@
 ---
-title: Tips Worker Dom.
+title: Worker Dom.
 description: Tips et discovery of the day.
 date: 2021-11-23
 tags:

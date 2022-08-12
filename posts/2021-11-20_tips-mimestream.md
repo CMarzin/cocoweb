@@ -1,5 +1,5 @@
 ---
-title: Tips Mimestream macOS email.
+title: Mimestream macOS email.
 description: Tips et discovery of the day.
 date: 2021-11-20
 tags:

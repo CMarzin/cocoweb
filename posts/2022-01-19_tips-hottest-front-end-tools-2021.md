@@ -1,5 +1,5 @@
 ---
-title: Tips Hottests Front-end Tools of 2021
+title: Hottests Front-end Tools of 2021
 description: Tips et discovery of the day.
 date: 2022-01-19
 tags:

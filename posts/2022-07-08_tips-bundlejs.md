@@ -1,5 +1,5 @@
 ---
-title: Tips Bundle JS
+title: Bundle JS
 description: Tips and discovery of the week.
 date: 2022-07-08
 tags:

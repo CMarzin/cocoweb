@@ -1,5 +1,5 @@
 ---
-title: Tips Using Docker for All The Things !.
+title: Using Docker for All The Things !.
 description: Tips et discovery of the day.
 date: 2021-12-02
 tags:

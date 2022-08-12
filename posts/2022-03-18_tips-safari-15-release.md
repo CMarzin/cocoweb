@@ -1,5 +1,5 @@
 ---
-title: Tips Safari 15.4 release
+title: Safari 15.4 release
 description: Tips and discovery of the week.
 date: 2022-03-18
 tags:

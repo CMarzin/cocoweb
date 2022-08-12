@@ -1,5 +1,5 @@
 ---
-title: Tips Sass with Eleventy.
+title: Sass with Eleventy.
 description: Tips et discovery of the day.
 date: 2021-11-26
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips A Unified Theory of Web Performance.
+title: A Unified Theory of Web Performance.
 description: Tips et discovery of the day.
 date: 2022-01-11
 tags:

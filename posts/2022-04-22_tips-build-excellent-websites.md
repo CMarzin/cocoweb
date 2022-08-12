@@ -1,5 +1,5 @@
 ---
-title: Tips Build excellent websites
+title: Build excellent websites
 description: Tips and discovery of the week.
 date: 2022-04-22
 tags:

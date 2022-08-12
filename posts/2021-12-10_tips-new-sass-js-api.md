@@ -1,5 +1,5 @@
 ---
-title: Tips Sass New JS API Release Candidate is Live.
+title: Sass New JS API Release Candidate is Live.
 description: Tips et discovery of the day.
 date: 2021-12-10
 tags:

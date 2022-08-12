@@ -1,5 +1,5 @@
 ---
-title: Tips guide to asking for help
+title: Guide to asking for help
 description: Tips and discovery of the week.
 date: 2022-07-15
 tags:

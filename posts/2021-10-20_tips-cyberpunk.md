@@ -1,5 +1,5 @@
 ---
-title: Tips cyberpunk.
+title: Cyberpunk VSCode theme
 description: Tips et discovery of the day.
 date: 2021-10-20
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips Nuxt 3 Amsterdam update
+title: Nuxt 3 Amsterdam update
 description: Tips and discovery of the week.
 date: 2022-02-11
 tags:

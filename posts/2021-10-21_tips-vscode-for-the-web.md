@@ -1,5 +1,5 @@
 ---
-title: Tips VSCode pour le web.
+title: VSCode pour le web.
 description: Tips et discovery of the day.
 date: 2021-10-21
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips World fastest website
+title: World fastest website
 description: Tips and discovery of the week.
 date: 2022-04-15
 tags:

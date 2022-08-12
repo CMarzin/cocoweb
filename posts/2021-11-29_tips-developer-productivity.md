@@ -1,5 +1,5 @@
 ---
-title: Tips Developer productivity.
+title: Developer productivity.
 description: Tips et discovery of the day.
 date: 2021-11-29
 tags:

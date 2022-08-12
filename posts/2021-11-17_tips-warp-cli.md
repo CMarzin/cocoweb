@@ -1,5 +1,5 @@
 ---
-title: Tips Warp cli.
+title: Warp cli.
 description: Tips et discovery of the day.
 date: 2021-11-17
 tags:

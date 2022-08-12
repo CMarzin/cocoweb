@@ -1,5 +1,5 @@
 ---
-title: Tips Vuejs slots
+title: Vuejs slots
 description: Tips et discovery of the day.
 date: 2022-01-17
 tags:

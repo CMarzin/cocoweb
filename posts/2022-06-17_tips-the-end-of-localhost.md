@@ -1,5 +1,5 @@
 ---
-title: Tips The end of localhost
+title: The end of localhost
 description: Tips and discovery of the week.
 date: 2022-06-17
 tags:

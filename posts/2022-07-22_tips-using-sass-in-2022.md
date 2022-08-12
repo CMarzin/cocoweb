@@ -1,5 +1,5 @@
 ---
-title: Tips Using sass in 2022
+title: Using sass in 2022
 description: Tips and discovery of the week.
 date: 2022-07-22
 tags:

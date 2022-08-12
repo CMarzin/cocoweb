@@ -1,5 +1,5 @@
 ---
-title: Tips useful css tricks
+title: Useful css tricks
 description: Tips and discovery of the week.
 date: 2022-03-11
 tags:

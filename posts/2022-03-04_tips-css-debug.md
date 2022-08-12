@@ -1,5 +1,5 @@
 ---
-title: Tips CSS Debug
+title: CSS Debug
 description: Tips and discovery of the week.
 date: 2022-03-04
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips Transform sketches into HTML using AI.
+title: Transform sketches into HTML using AI.
 description: Tips et discovery of the day.
 date: 2022-01-03
 tags:

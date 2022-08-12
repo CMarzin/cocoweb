@@ -1,5 +1,5 @@
 ---
-title: Tips Developper tools reviews
+title: Developper tools reviews
 description: Tips and discovery of the week.
 date: 2022-06-03
 tags:

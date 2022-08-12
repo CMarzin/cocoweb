@@ -1,5 +1,5 @@
 ---
-title: Tips Future frontend build tools
+title: Future frontend build tools
 description: Tips and discovery of the week.
 date: 2022-06-10
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips Defensive css
+title: Defensive css
 description: Tips and discovery of the week.
 date: 2022-06-24
 tags:

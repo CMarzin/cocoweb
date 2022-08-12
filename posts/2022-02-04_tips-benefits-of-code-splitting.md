@@ -1,5 +1,5 @@
 ---
-title: Tips benefits of code splitting
+title: Benefits of code splitting
 description: Tips and discovery of the week.
 date: 2022-02-04
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips Having fun hover link
+title: Having fun hover link
 description: Tips and discovery of the week.
 date: 2022-02-18
 tags:

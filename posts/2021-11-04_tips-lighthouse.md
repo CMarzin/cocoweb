@@ -1,5 +1,5 @@
 ---
-title: Tips lighthouse user flow.
+title: lighthouse user flow.
 description: Tips et discovery of the day.
 date: 2021-11-04
 tags:

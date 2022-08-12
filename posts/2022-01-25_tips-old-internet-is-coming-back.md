@@ -1,5 +1,5 @@
 ---
-title: Tips Old internet is coming back
+title: Old internet is coming back
 description: Tips et discovery of the day.
 date: 2022-01-25
 tags:

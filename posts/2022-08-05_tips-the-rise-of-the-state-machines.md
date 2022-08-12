@@ -1,7 +1,7 @@
 ---
-title: Tips The rise of the state machine
+title: The rise of the state machine
 description: Tips and discovery of the week.
-date: 2022-08-29
+date: 2022-08-05
 tags:
   - tips
   - Veille

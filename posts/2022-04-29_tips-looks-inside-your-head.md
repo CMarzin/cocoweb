@@ -1,5 +1,5 @@
 ---
-title: Tips Let’s take a look inside your < head >
+title: Let’s take a look inside your < head >
 description: Tips and discovery of the week.
 date: 2022-04-29
 tags:

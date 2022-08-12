@@ -1,5 +1,5 @@
 ---
-title: Tips adding search to jamstack.
+title: Adding search to jamstack.
 description: Tips et discovery of the day.
 date: 2021-11-19
 tags:

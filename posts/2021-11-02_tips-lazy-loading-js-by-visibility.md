@@ -1,5 +1,5 @@
 ---
-title: Tips lazy loading js by visiblity.
+title: Lazy loading js by visiblity.
 description: Tips et discovery of the day.
 date: 2021-11-02
 tags:

@@ -1,5 +1,5 @@
 ---
-title: Tips Web performance tools
+title: Web performance tools
 description: Tips and discovery of the week.
 date: 2022-07-29
 tags:

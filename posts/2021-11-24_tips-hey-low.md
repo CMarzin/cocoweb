@@ -1,5 +1,5 @@
 ---
-title: Tips Hey low.
+title: Hey low.
 description: Tips et discovery of the day.
 date: 2021-11-24
 tags:

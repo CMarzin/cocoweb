@@ -1,5 +1,5 @@
 ---
-title: Tips performance cost of EV Certificates.
+title: Performance cost of EV Certificates.
 description: Tips et discovery of the day.
 date: 2021-11-20
 tags:

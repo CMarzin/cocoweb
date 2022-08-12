@@ -1,5 +1,5 @@
 ---
-title: Tips CLI and GIT.
+title: CLI and GIT.
 description: Tips et discovery of the day.
 date: 2021-10-25
 tags:

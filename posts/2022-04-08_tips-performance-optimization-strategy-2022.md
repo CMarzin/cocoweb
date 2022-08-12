@@ -1,5 +1,5 @@
 ---
-title: Tips Performance Optimization Strategy in 2022
+title: Performance Optimization Strategy in 2022
 description: Tips and discovery of the week.
 date: 2022-04-08
 tags:

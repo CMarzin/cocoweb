@@ -1,5 +1,5 @@
 ---
-title: Tips Magepack
+title: Magepack
 description: Tips and discovery of the week.
 date: 2022-03-25
 tags:

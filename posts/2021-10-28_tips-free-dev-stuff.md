@@ -1,5 +1,5 @@
 ---
-title: Tips Free Developer Stuff.
+title: Free Developer Stuff.
 description: Tips et discovery of the day.
 date: 2021-10-28
 tags:

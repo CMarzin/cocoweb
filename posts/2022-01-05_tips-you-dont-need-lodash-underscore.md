@@ -1,5 +1,5 @@
 ---
-title: Tips You don't (may not) need Lodash/Underscore.
+title: You don't (may not) need Lodash/Underscore.
 description: Tips et discovery of the day.
 date: 2022-01-05
 tags:

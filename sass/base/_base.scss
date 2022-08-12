@@ -19,14 +19,19 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
   max-width: 70ch;
-  padding: 3em 1em;
   margin: auto;
   line-height: 1.75;
   font-size: 1rem;
 }
+
+body {
+  padding: 1em 1em;
+}
+
 p:last-child {
   margin-bottom: 0;
 }
+
 p,
 .tmpl-post li,
 img {
@@ -42,9 +47,13 @@ a[href] {
 a[href]:visited {
   color: var(--navy);
 }
+
 main {
-  padding: 1rem;
+  @include mq($from: 'tablet') {
+    margin-top: 1em;
+  }
 }
+
 main :first-child {
   margin-top: 0;
 }
@@ -124,16 +133,24 @@ code {
 
 /* Header */
 .home {
-  padding: 0 1rem;
   float: left;
   margin: 1rem 0; /* 16px /16 */
   font-size: 1em; /* 16px /16 */
+  @include mq($from: 'tablet') {
+    padding: 0;
+    margin: .5rem 0;
+  }
 }
 
 .home a {
   padding: 1rem;
   padding-left: 0;
+
+  @include mq($from: 'tablet') {
+    padding: .5rem;
+  }
 }
+
 .home :link:not(:hover) {
   text-decoration: none;
 }
@@ -143,15 +160,14 @@ code {
   padding: 0;
   list-style: none;
   float: left;
-  margin-left: 1em;
+  @include mq($from: 'tablet') {
+    margin: 0;
+  }
 }
 .nav-item {
   display: inline-block;
   margin-right: 1em;
-}
-
-.nav-item a {
-  padding: 1em;
+  padding: .5em;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -173,7 +189,11 @@ code {
   align-items: baseline;
   counter-increment: start-from -1;
   line-height: 1.8;
+  padding: 10px;
+  margin-top: 1.5em;
+  border: 2px solid black;
 }
+
 .postlist-item:before {
   display: inline-block;
   pointer-events: none;
@@ -188,7 +208,9 @@ code {
 }
 .postlist-date {
   word-spacing: -0.5px;
+  font-style: italic;
 }
+
 .postlist-link {
   padding-left: .25em;
   padding-right: .25em;
@@ -200,12 +222,25 @@ code {
   font-weight: bold;
 }
 .tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
+  font-size: 1em; /* 19px /16 */
   font-weight: 700;
+
+  @include mq($from: 'tablet') {
+    font-size: 1.1875em;
+  }
 }
 
 
 /* Tags */
+
+.post-tag__container {
+  padding-top: 1em;
+  @include mq($from: 'tablet') {
+    padding-top: 0;
+    width: 100%;
+  }
+}
+
 .post-tag {
   display: inline-flex;
   align-items: center;
