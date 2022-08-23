@@ -1,7 +1,7 @@
 ---
 title: Vue for interactive command-line apps
 description: Tips and discovery of the week.
-date: 2022-08-29
+date: 2022-08-12
 tags:
   - tips
   - repo git
