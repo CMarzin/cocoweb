@@ -1,7 +1,7 @@
 ---
 title: The way developers get things done
 description: Tips and discovery of the week.
-date: 2022-10-17
+date: 2022-10-31
 tags:
   - tips
   - Veille
