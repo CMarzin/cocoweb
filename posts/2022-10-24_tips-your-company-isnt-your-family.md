@@ -1,7 +1,7 @@
 ---
 title: Your company isn’t your family
 description: Tips and discovery of the week.
-date: 2022-10-17
+date: 2022-10-24
 tags:
   - tips
   - Veille
