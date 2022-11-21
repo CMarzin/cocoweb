@@ -1,7 +1,7 @@
 ---
 title: Solar Powered Website
 description: Tips and discovery of the week.
-date: 2022-10-31
+date: 2022-11-04
 tags:
   - tips
   - Veille
