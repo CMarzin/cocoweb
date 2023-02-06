@@ -6,6 +6,9 @@
   --navy: #17050F;
   --blue: #082840;
   --white: #fff;
+  --violet: #8b5cf6;
+  --violet-ligth: hsl(258deg 90% 66% / 50%);
+  --violet-2: hsl(258deg 90% 66% / 70%);
 }
 
 /* Global stylesheet */
@@ -32,6 +35,10 @@ p:last-child {
   margin-bottom: 0;
 }
 
+h2 {
+  color: var(--violet-2);
+}
+
 p,
 .tmpl-post li,
 img {
@@ -43,18 +50,6 @@ p,
   line-height: 1.45;
 }
 
-.content-section a,
-a.postlist-link,
-.nav-item a {
-  text-decoration-skip-ink: none;
-  text-underline-offset: .25em;
-  text-decoration-line: underline;
-
-  &:hover {
-    text-decoration-thickness: 3px;
-  }
-}
-
 a[href] {
   color: var(--blue);
 }
@@ -62,6 +57,22 @@ a[href] {
 a[href]:visited {
   color: var(--navy);
 }
+
+.content-section a,
+a.postlist-link,
+.nav-item a {
+  text-decoration-skip-ink: none;
+  text-underline-offset: .25em;
+  text-decoration-line: underline;
+  color: var(--violet-2);
+
+  &:hover {
+    text-decoration-thickness: 3px;
+    text-decoration-color: var(--violet-2);
+  }
+}
+
+
 
 main {
   @include mq($from: 'tablet') {
@@ -216,7 +227,7 @@ code {
   line-height: 1.8;
   padding: 10px;
   margin-top: 1.5em;
-  border: 2px solid black;
+  border: 2px solid var(--violet-ligth);
 }
 
 .postlist-item:before {
