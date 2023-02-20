@@ -16,12 +16,10 @@
   </head>
   <body>
     <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
+        <li title="{% if entry.key === 'Home' %} {{ metadata.title }}{% else %} {{ entry.title }}{% endif %}" class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{% if entry.key === 'Home' %} {{ metadata.title }}{% else %} {{ entry.title }}{% endif %}</a></li>
       {%- endfor %}
       </ul>
     </header>

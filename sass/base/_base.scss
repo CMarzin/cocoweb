@@ -9,6 +9,13 @@
   --violet: #8b5cf6;
   --violet-ligth: hsl(258deg 90% 66% / 50%);
   --violet-2: hsl(258deg 90% 66% / 70%);
+  --color-light: #eee;
+  --color-dark: #111;
+  --color-grey-dark: #686868;
+  --color-grey-medium: #a9a9a9;
+  --color-grey-light: #e9e9e9;
+  --color-black: #282828;
+  --color-beige: #eeece9;
 }
 
 /* Global stylesheet */
@@ -20,7 +27,7 @@ html,
 body {
   font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
-  background-color: var(--white);
+  background-color: var(--color-grey-light);
   max-width: 70ch;
   margin: auto;
   line-height: 1.75;
@@ -36,7 +43,7 @@ p:last-child {
 }
 
 h2 {
-  color: var(--violet-2);
+  // color: var(--violet-2);
 }
 
 p,
@@ -50,17 +57,16 @@ p,
   line-height: 1.45;
 }
 
-a[href] {
-  color: var(--blue);
-}
+// a[href] {
+//   color: var(--blue);
+// }
 
-a[href]:visited {
-  color: var(--navy);
-}
+// a[href]:visited {
+//   color: var(--navy);
+// }
 
 .content-section a,
-a.postlist-link,
-.nav-item a {
+a.postlist-link {
   text-decoration-skip-ink: none;
   text-underline-offset: .25em;
   text-decoration-line: underline;
@@ -72,7 +78,12 @@ a.postlist-link,
   }
 }
 
-
+.home a,
+.home a:visited,
+.nav .nav-item a,
+.nav .nav-item a:visited {
+  color: var(--navy);
+}
 
 main {
   @include mq($from: 'tablet') {
@@ -85,7 +96,7 @@ main :first-child {
 }
 
 header {
-  border-bottom: 1px dashed var(--lightgray);
+  border-bottom: 1px dashed var(--violet-2);
 }
 
 header:after {
@@ -207,8 +218,25 @@ code {
   text-decoration: none;
 }
 
+.nav-item:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  text-decoration-thickness: 3px;
+}
+
+// Trick to avoid changing width when we change font-weight https://stackoverflow.com/a/20249560/10166188
+.nav-item::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 .nav-item-active {
-  font-weight: 700;
+  font-weight: bold;
   text-decoration: underline;
   text-underline-offset: .25em;
   text-decoration-thickness: 3px;
@@ -225,9 +253,11 @@ code {
   align-items: baseline;
   counter-increment: start-from -1;
   line-height: 1.8;
-  padding: 10px;
+  padding: 20px;
   margin-top: 1.5em;
-  border: 2px solid var(--violet-ligth);
+  background-color: var(--white);
+  border-radius: 5px;
+  // border: 2px solid var(--violet-ligth);
 }
 
 .postlist-item:before {
@@ -245,9 +275,11 @@ code {
 .postlist-date {
   word-spacing: -0.5px;
   font-style: italic;
+  margin-left: auto;
 }
 
 .postlist-link {
+  margin-left: 5px;
   padding-left: .25em;
   padding-right: .25em;
   text-underline-position: from-font;
@@ -270,11 +302,14 @@ code {
 /* Tags */
 
 .post-tag__container {
-  padding-top: 1em;
+  margin-top: 15px;
   @include mq($from: 'tablet') {
-    padding-top: 0;
     width: 100%;
   }
+}
+
+.post-tag__container .post-tag:first-child {
+  margin-left: 0;
 }
 
 .post-tag {
