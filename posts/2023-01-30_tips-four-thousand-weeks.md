@@ -6,7 +6,7 @@ tags:
   - tips
   - Veille
   - web tools
-  - App
+  - app
 layout: layouts/post.njk
 ---
 
