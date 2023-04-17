@@ -26,8 +26,6 @@ An opinionated toast component for Vue. It's a Vue port of Sonner
 Tutorial about how you can use suspense in vuejs.
 [Suspense in vuejs](https://vueschool.io/articles/vuejs-tutorials/suspense-everything-you-need-to-know/)
 
-https://www.nikolasbentelstudio.com/untitled-folder-wallet/
-
 ## Veille
 
 Thought of grady of the "after" GTP, how our developer job will evolve with the new AI paradigm.
