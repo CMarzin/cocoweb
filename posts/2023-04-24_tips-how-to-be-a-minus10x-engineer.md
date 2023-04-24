@@ -29,6 +29,9 @@ The new Outlook switches rendering engines from Microsoft Word to Edge.
 I bet you need a quick favicon.
 [fav.farm](https://fav.farm/)
 
+Need to pimp your readme with colorful badges ?
+[Shields.io - badges for readme](https://shields.io/)
+
 ## AI
 
 GPT-4 Week 5. Open Source is coming + Music industry in shambles - Nofil's Weekly Breakdown
