@@ -6,7 +6,7 @@ tags:
   - tips
   - Veille
   - CSS
-  - AI
+  - repo git
   - design
 layout: layouts/post.njk
 ---
