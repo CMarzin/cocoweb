@@ -8,7 +8,7 @@
     "serve": "eleventy --serve",
     "watch:sass": "sass sass:_site/css --watch",
     "build:sass": "sass sass/theme.scss _site/css/theme.css",
-    "start": "npm run debug && eleventy --serve & npm run watch:sass",
+    "start": "eleventy --serve & npm run watch:sass",
     "debug": "DEBUG=* eleventy"
   },
   "repository": {

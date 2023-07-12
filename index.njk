@@ -9,6 +9,7 @@ eleventyNavigation:
 
 {% set postslist = collections.posts | head(-10) %}
 {% set postslistCounter = collections.posts | length %}
+
 {% include "postslist.njk" %}
 
 <p>More tips can be found in <a href="{{ '/tips/' | url }}">all tips</a>.</p>
