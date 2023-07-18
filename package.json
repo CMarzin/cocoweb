@@ -35,6 +35,7 @@
     "markdown-it-anchor": "^8.6.7"
   },
   "dependencies": {
+    "@quasibit/eleventy-plugin-schema": "^1.11.0",
     "markdown-it-attrs": "^4.1.6",
     "sass": "^1.62.0"
   },
