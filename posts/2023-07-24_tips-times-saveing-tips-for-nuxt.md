@@ -28,7 +28,7 @@ Pines is a library of animations, sliders, tooltips, accordions, modals, and mor
 🎨 [SVG Hub](https://svghub.vercel.app)
 A library of over 70 custom-color elements ready to paste into your project.
 
-## Repository Github\
+## Repository Github
 
 🐙 [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma)
 A fancy self-hosted monitoring tool.
