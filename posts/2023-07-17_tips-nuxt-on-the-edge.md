@@ -2,6 +2,29 @@
 title: Nuxt on the edge
 description: Tips and discovery of the week.
 date: 2023-07-17
+meta:
+  site:
+    name: Site title
+    description: Site description
+    url: https://cocoweb.fr
+    logo:
+      src: https://example.com/images/logo.png
+      width: 1200
+      height: 630
+  language: en-US
+  url: https://example.com/page
+  title: Post title
+  description: Post description
+  image:
+    src: https://example.com/images/page.png
+  author:
+    name: Corentin Marzin
+  published: 2023-07-17
+  tags:
+    - tips
+    - Veille
+    - repo git
+    - web tools
 tags:
   - tips
   - Veille
