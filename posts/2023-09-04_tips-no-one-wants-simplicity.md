@@ -4,7 +4,7 @@ description: Tips and discovery of the week.
 date: 2023-09-04
 tags:
   - tips
-  - veille
+  - Veille
   - repo git
   - design
   - CSS
