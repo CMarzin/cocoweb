@@ -1,7 +1,7 @@
 ---
 title: How Tailwind CSS Works ?
 description: Tips and discovery of the week.
-date: 2023-10-30
+date: 2023-11-06
 tags:
   - tips
   - Veille
