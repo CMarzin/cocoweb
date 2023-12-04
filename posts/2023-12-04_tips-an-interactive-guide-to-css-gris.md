@@ -7,8 +7,6 @@ tags:
   - Veille
   - CSS
   - design
-  - vuejs
-  - TS
 layout: layouts/post.njk
 ---
 ## Veille
