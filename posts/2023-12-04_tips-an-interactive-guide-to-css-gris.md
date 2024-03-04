@@ -18,7 +18,7 @@ Josh Comeau the author of the course [CSS for JavaScript Developers](https://css
 Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.
 
 📗 [How large pull requests slow down development](https://graphite.dev/blog/how-large-prs-slow-down-development)
-![Christmas Parrot](/2023-12-04/joke-pr.png)
+![Christmas Parrot](/img/2023-12-04/joke-pr.png)
 
 ## Repository Github
 
