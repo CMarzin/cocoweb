@@ -1,7 +1,7 @@
 ---
 title: Lawsuit against OpenAI
 description: Tips and discovery of the week.
-date: 2024-04-03
+date: 2024-03-03
 tags:
   - tips
   - Veille

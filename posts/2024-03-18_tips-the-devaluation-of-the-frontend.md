@@ -1,7 +1,7 @@
 ---
 title: The quiet, pervasive devaluation of frontend
 description: Tips and discovery of the week.
-date: 2024-04-18
+date: 2024-03-18
 tags:
   - tips
   - Veille
