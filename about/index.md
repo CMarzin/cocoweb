@@ -2,6 +2,7 @@
 layout: layouts/post.njk
 title: About Me
 templateClass: tmpl-post
+ogImage: /img/og-cocoweb.webp
 eleventyNavigation:
   key: About Me
   order: 3
