@@ -21,10 +21,21 @@ ogImage: /img/og-tips.webp
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
 {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
 {%- if nextPost or previousPost %}
-<hr>
+
+<hr class="content-rule-footer">
+
+<div class="content-sources">
+  <h3>📖 Sources</h3>
+  <p>
+    Every news are mainly from my <a href="https://twitter.com/marz_coco">Twitter feed</a>, my <a href="https://github.com/CMarzin">Github feed</a>, <a href="https://tympanus.net/codrops/collective/">The collective</>, <a href="https://michaelnthiessen.com/">Michael Thiessen</a>, <a href="https://mokkapps.de/">Michael Hoffmann</a> and more recently by my friends <a href="https://adrienzaganelli.com/">Adrien Zaganelli</a>.
+  </p>
+</div>
+
 <ul>
   {%- if nextPost %}<li class="previous-next-page-link">Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
   {%- if previousPost %}<li class="previous-next-page-link">Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
+
+
 {%- endif %}
 {%- endif %}

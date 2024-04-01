@@ -105,8 +105,12 @@ img {
   }
 }
 
-.content-section a,
+.content-sources {
+  padding: 0.5em;
+}
 
+.content-section a,
+.content-sources a,
 a.postlist-link {
   text-decoration-skip-ink: none;
   text-underline-offset: .25em;
@@ -131,10 +135,6 @@ main {
   @include mq($from: 'tablet') {
     margin-top: 1em;
   }
-}
-
-main :first-child {
-  margin-top: 0;
 }
 
 header {
