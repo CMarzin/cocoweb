@@ -18,6 +18,7 @@ I have selected some news  from the web dev world to share.
 - XZ backdoor in Linux
 - NanoGL from the makemepulse team
 - A rant about vue-router
+- Migration from Laravel to Next.js
 
 **Have a great week.**
 
@@ -31,6 +32,9 @@ A custom WebGL framework made by the makemepulse team, with detailed instruction
 
 📗 [Kind of Annoyed at Vue-Router Lately](https://fadamakis.com/kind-of-annoyed-at-vue-router-lately-c74de773c72a)
 A rant about how Vue-router documentation is not up to date with the Composition API.
+
+🚀 [Laravel to Nextjs](https://x.com/JackEllis/status/1774807750528442462?s=20)
+Jack Ellis wrote about easy it is to migrate from Laravel to Next.js
 
 
 ___
