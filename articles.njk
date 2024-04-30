@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+permalink: /articles/
+eleventyNavigation:
+  key: Articles
+  order: 2
+---
+
+<h1>Articles</h1>
+
+{% set articlesList = collections.articles | head(-10) %}
+{% set articlesListCounter = collections.articles | length %}
+
+{% include "articlesList.njk" %}

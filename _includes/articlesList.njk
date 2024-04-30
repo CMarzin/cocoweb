@@ -1,0 +1,14 @@
+<ol reversed class="postlist" style="counter-reset: start-from {{ (articlesListCounter or articlesList.length) + 1 }}">
+{% for article in articlesList | reverse %}
+  <li class="postlist-item{% if article.url == url %} postlist-item-active{% endif %}">
+    <a href="{{ article.url | url }}" class="postlist-link">{% if article.data.title %}{{ article.data.title }}{% else %}<code>{{ article.url }}</code>{% endif %}</a>
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+    <div class="post-tag__container">
+      {% for tag in article.data.tags | filterTagList %}
+        {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+        <a href="{{ tagUrl | url }}" class="post-tag">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+  </li>
+{% endfor %}
+</ol>
