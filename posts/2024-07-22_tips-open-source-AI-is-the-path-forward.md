@@ -17,10 +17,10 @@ layout: layouts/post.njk
 
 I have selected some news  from the web dev world to share.
 
-- Open source AI is the path forward
-- How I hire a programmer
-- Daily Delights
-- Get The Screen Width & Height Without JavaScript
+🤖 Open source AI is the path forward
+🔮 How I hire a programmer
+🤩 Daily Delights
+😎 Get The Screen Width & Height Without JavaScript
 
 **Have a great week.**
 
