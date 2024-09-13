@@ -26,7 +26,7 @@ I have selected some news  from the web dev world to share.
 ___
 
 🚀 [The Future of Shipping](https://cloud.laravel.com/)
-Tailor Otwell announce Laravel Cloud. A platform fully optimised for deploying Laravel full-stack application. 
+Tailor Otwell announce Laravel Cloud. A platform fully optimised for deploying Laravel full-stack application.
 
 ⚡️ [The Future of Front-End Tooling](https://rspack.dev/blog/announcing-1-0)
 Announcing **Rspack 1.0**, a drop in replacement for Webpack written in rust for much faster speed, better compatibility with new version of Javascript and smaller bundle size.
