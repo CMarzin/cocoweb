@@ -9,6 +9,7 @@ tags:
   - CLI
   - CSS
   - laravel
+  - Typography
 layout: layouts/post.njk
 ---
 
