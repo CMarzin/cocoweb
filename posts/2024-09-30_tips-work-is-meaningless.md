@@ -19,6 +19,8 @@ I have selected some news  from the web dev world to share.
 🎩 A guide to destructuring in Javascript
 📈 Why I still blog after 15 years
 
+This week I wanted to mentioned for my friend [Margaux Tellier](https://margauxtellier.com/) because her Portfolio is simply 🔥 !
+
 **Have a great week.**
 
 ___
