@@ -1,12 +1,12 @@
 ---
-title: Bots, so many Bots on ProducHunt
+title: Bots, so many Bots
 description: Tips and discovery of the week.
 date: 2024-20-06
 tags:
   - tips
   - Veille
   - vuejs
-  - design
+  - CLI
 layout: layouts/post.njk
 ---
 ## Salut, web dev friends! 🧑‍💻
@@ -21,7 +21,7 @@ I have selected some news  from the web dev world to share.
 
 ___
 
-🤖 [Bots, so many Bots on ProductHunt](https://wakatime.com/blog/67-bots-so-many-bots)
+🤖 [Bots, so many Bots](https://wakatime.com/blog/67-bots-so-many-bots)
 Alan Hamlett examine the rise of creating bot account to support your product when launching on a platform like ProductHunt. Since 2018, there are more Bot than human on ProductHunt,
 Same for the upvotes, the comments etc…
 Time to go outside to see some real people if the internent if filled with bot lol
@@ -36,7 +36,6 @@ A list of tool which  require little to zero configuration :
 🚀 [Better Vue Components with TypeScript \[12 examples\]](qdqdq)
 Fotis demonstrate the value of using Typescript even if you are really familiar with Javascript.
 Really nice example with Pinia for the state management, typed slots and generics are also a must.
-
 
 ___
 
