@@ -20,7 +20,7 @@ I have selected some news  from the web dev world to share.
 📉 ACF plugin no longer available on Wordpress.org
 🚀 Announcing VoidZero
 
-**Have a great week.*
+**Have a great week.**
 
 ___
 
