@@ -1,7 +1,7 @@
 ---
 title: Bots, so many Bots
 description: Tips and discovery of the week.
-date: 2024-20-06
+date: 2024-10-06
 tags:
   - tips
   - Veille
