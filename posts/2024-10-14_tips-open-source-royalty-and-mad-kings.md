@@ -1,7 +1,7 @@
 ---
 title: Open source royalty and mad kings
 description: Tips and discovery of the week.
-date: 2024-10-13
+date: 2024-10-14
 tags:
   - tips
   - Veille
