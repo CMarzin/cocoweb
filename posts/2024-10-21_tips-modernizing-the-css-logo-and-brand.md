@@ -17,7 +17,7 @@ This week, I am really proud to have open a [pull request](https://github.com/xi
 Anyway here the news.
 
 💅 Modernizing the CSS logo and branding
-🦕 Announcing Demo 2
+🦕 Announcing Deno 2
 ✨ GSAP is joining Webflow
 🍦 The web in vanilla mode
 
