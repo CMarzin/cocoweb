@@ -26,7 +26,7 @@ ___
 Another way to think about the development of a web app. Its more difficult to build an app that way but the user satisfaction is way higher and nearly zero data lost.
 
 💅 [6 CSS Snippets Every Front-End Developer Should Know In 2025 · 19 janvier 2025](https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025)
-Page transitions, transition a <dialog>, popover and <details>, animate gradient test, type sage CSS and some easing.
+Page transitions, transition a `<dialog>`, popover and `<details>`, animate gradient test, type sage CSS and some easing.
 
 🏎️ [The Vite Ecosystem](https://patak.dev/vite/ecosystem)
 An exhaustive list of project using Vite, the list is very impressive and keep growing. I thanks Evan You the creator and the others maintainer for their incredible work.
