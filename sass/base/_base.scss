@@ -82,6 +82,11 @@ body {
   padding: 1em 1em;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
+
 p:last-child {
   margin-bottom: 0;
 }
