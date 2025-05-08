@@ -7,7 +7,6 @@ tags:
   - Veille
   - repo git
   - vuejs
-  - articles
 layout: layouts/post.njk
 ---
 
