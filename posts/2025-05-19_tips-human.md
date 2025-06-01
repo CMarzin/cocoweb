@@ -23,7 +23,7 @@ I have selected some news  from the web dev world to share.
 ___
 
 🤖 [Human](https://quarter--mile.com/Human)
-What if we a just an experiment from another civilisation ?
+What if we are just an experiment from another civilisation ?
 
 🦺 [Better error handling](https://meowbark.dev/Better-error-handling)
 Use neverThrow or oxide-ts for new projects.
