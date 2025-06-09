@@ -19,9 +19,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.addPassthroughCopy("./fonts/Inter-Bold.ttf");
-  eleventyConfig.addPassthroughCopy("./fonts/Inter-Medium.ttf");
-  eleventyConfig.addPassthroughCopy("./fonts/Inter-Regular.ttf");
+  eleventyConfig.addPassthroughCopy("./fonts/Montserrat-Regular.ttf");
+  eleventyConfig.addPassthroughCopy("./fonts/CormorantGaramond-Bold.ttf");
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
@@ -98,6 +97,8 @@ module.exports = function(eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("_includes/js/bundle.js");
+  
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

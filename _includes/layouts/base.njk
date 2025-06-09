@@ -27,6 +27,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/img/favicon/favicon-144x144.png">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
+    
 
     <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -41,8 +42,13 @@
       {%- for entry in collections.all | eleventyNavigation %}
         <li title="{% if entry.key === 'Home' %} {{ metadata.title }}{% else %} {{ entry.title }}{% endif %}" class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{% if entry.key === 'Home' %} {{ metadata.title }}{% else %} {{ entry.title }}{% endif %}</a></li>
       {%- endfor %}
+        <div class="color-scheme">
+          <input class="radio dark-checkbox" name="color-scheme" type="radio" value="dark" checked/>
+        <input class="radio light-checkbox" name="color-scheme" type="radio" value="light"/>
+         </div> 
       </ul>
     </header>
+    <script src="/_includes/js/bundle.js"></script>
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}

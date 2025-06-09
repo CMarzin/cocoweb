@@ -1,65 +1,152 @@
-/* Colors */
 :root {
-  --lightgray: #e0e0e0;
-  --gray: #C0C0C0;
-  --darkgray: #333;
-  --navy: #17050F;
-  --blue: #082840;
-  --white: #fff;
-  --violet: #8b5cf6;
-  --violet-ligth: hsl(258deg 90% 66% / 50%);
-  --violet-2: hsl(258deg 90% 66% / 70%);
-  --color-light: #eee;
-  --color-dark: #111;
-  --color-grey-dark: #686868;
-  --color-grey-medium: #a9a9a9;
-  --color-grey-light: #e9e9e9;
-  --color-black: #282828;
-  --color-beige: #eeece9;
+  color-scheme: dark;
    // https://github.com/kepano/flexoki/blob/main/css/flexoki.css
   --flexoki-black: #100F0F;
+  --flexoki-black-rgb: 16, 15, 15;
+  
   --flexoki-paper: #FFFCF0;
+  --flexoki-paper-rgb: 254, 252, 240;
+  --flexoki-200-rgb: 206, 205, 195;
 
-  --flexoki-950: #1C1B1A;
-  --flexoki-900: #282726;
-  --flexoki-850: #343331;
-  --flexoki-800: #403E3C;
-  --flexoki-700: #575653;
-  --flexoki-600: #6F6E69;
-  --flexoki-500: #878580;
-  --flexoki-300: #B7B5AC;
-  --flexoki-200: #CECDC3;
-  --flexoki-150: #DAD8CE;
-  --flexoki-100: #E6E4D9;
   --flexoki-50: #F2F0E5;
+  --flexoki-100: #E6E4D9;
+  --flexoki-150: #DAD8CE;
+  --flexoki-200: #CECDC3;
+  --flexoki-300: #B7B5AC;
+  --flexoki-400: #9F9D96;
+  --flexoki-500: #878580;
+  --flexoki-600: #6F6E69;
+  --flexoki-700: #575653;
+  --flexoki-800: #403E3C;
+  --flexoki-850: #343331;
+  --flexoki-900: #282726;
+  --flexoki-950: #1C1B1A;
 
-  --flexoki-red-600: #AF3029;
+  --flexoki-red-50: #FFE1D5;
+  --flexoki-red-100: #FFCABB;
+  --flexoki-red-150: #FDB2A2;
+  --flexoki-red-200: #F89A8A;
+  --flexoki-red-300: #E8705F;
   --flexoki-red-400: #D14D41;
+  --flexoki-red-500: #C03E35;
+  --flexoki-red-600: #AF3029;
+  --flexoki-red-700: #942822;
+  --flexoki-red-800: #6C201C;
+  --flexoki-red-850: #551B18;
+  --flexoki-red-900: #3E1715;
+  --flexoki-red-950: #261312;
 
-  --flexoki-orange-600: #BC5215;
+  --flexoki-orange-50: #FFE7CE;
+  --flexoki-orange-100: #FED3AF;
+  --flexoki-orange-150: #FCC192;
+  --flexoki-orange-200: #F9AE77;
+  --flexoki-orange-300: #EC8B49;
   --flexoki-orange-400: #DA702C;
+  --flexoki-orange-500: #CB6120;
+  --flexoki-orange-600: #BC5215;
+  --flexoki-orange-700: #9D4310;
+  --flexoki-orange-800: #71320D;
+  --flexoki-orange-850: #59290D;
+  --flexoki-orange-900: #40200D;
+  --flexoki-orange-950: #27180E;
 
-  --flexoki-yellow-900: #4D3A0B;
-  --flexoki-yellow-600: #AD8301;
+  --flexoki-yellow-50: #FAEEC6;
+  --flexoki-yellow-100: #F6E2A0;
+  --flexoki-yellow-150: #F1D67E;
+  --flexoki-yellow-200: #ECCB60;
+  --flexoki-yellow-300: #DFB431;
   --flexoki-yellow-400: #D0A215;
-  --flexoki-yellow-100: #FCEEB8;
+  --flexoki-yellow-500: #BE9207;
+  --flexoki-yellow-600: #AD8301;
+  --flexoki-yellow-700: #8E6B01;
+  --flexoki-yellow-800: #664D01;
+  --flexoki-yellow-850: #503D02;
+  --flexoki-yellow-900: #3A2D04;
+  --flexoki-yellow-950: #241E08;
 
-  --flexoki-green-600: #66800B;
+  --flexoki-green-50: #EDEECF;
+  --flexoki-green-100: #DDE2B2;
+  --flexoki-green-150: #CDD597;
+  --flexoki-green-200: #BEC97E;
+  --flexoki-green-300: #A0AF54;
   --flexoki-green-400: #879A39;
+  --flexoki-green-500: #768D21;
+  --flexoki-green-600: #66800B;
+  --flexoki-green-700: #536907;
+  --flexoki-green-800: #3D4C07;
+  --flexoki-green-850: #313D07;
+  --flexoki-green-900: #252D09;
+  --flexoki-green-950: #1A1E0C;
 
-  --flexoki-cyan-950: #142625;
-  --flexoki-cyan-600: #24837B;
+  --flexoki-cyan-50: #DDF1E4;
+  --flexoki-cyan-100: #BFE8D9;
+  --flexoki-cyan-150: #A2DECE;
+  --flexoki-cyan-200: #87D3C3;
+  --flexoki-cyan-300: #5ABDAC;
   --flexoki-cyan-400: #3AA99F;
-  --flexoki-cyan-50: #EBF2E7;
+  --flexoki-cyan-500: #2F968D;
+  --flexoki-cyan-600: #24837B;
+  --flexoki-cyan-700: #1C6C66;
+  --flexoki-cyan-800: #164F4A;
+  --flexoki-cyan-850: #143F3C;
+  --flexoki-cyan-900: #122F2C;
+  --flexoki-cyan-950: #101F1D;
 
-  --flexoki-blue-600: #205EA6;
+  --flexoki-blue-50: #E1ECEB;
+  --flexoki-blue-100: #C6DDE8;
+  --flexoki-blue-150: #ABCFE2;
+  --flexoki-blue-200: #92BFDB;
+  --flexoki-blue-300: #66A0C8;
   --flexoki-blue-400: #4385BE;
+  --flexoki-blue-500: #3171B2;
+  --flexoki-blue-600: #205EA6;
+  --flexoki-blue-700: #1A4F8C;
+  --flexoki-blue-800: #163B66;
+  --flexoki-blue-850: #133051;
+  --flexoki-blue-900: #12253B;
+  --flexoki-blue-950: #101A24;
 
-  --flexoki-purple-600: #5E409D;
+  --flexoki-purple-50: #F0EAEC;
+  --flexoki-purple-100: #E2D9E9;
+  --flexoki-purple-150: #D3CAE6;
+  --flexoki-purple-200: #C4B9E0;
+  --flexoki-purple-300: #A699D0;
   --flexoki-purple-400: #8B7EC8;
+  --flexoki-purple-500: #735EB5;
+  --flexoki-purple-600: #5E409D;
+  --flexoki-purple-700: #4F3685;
+  --flexoki-purple-800: #3C2A62;
+  --flexoki-purple-850: #31234E;
+  --flexoki-purple-900: #261C39;
+  --flexoki-purple-950: #1A1623;
 
-  --flexoki-magenta-600: #A02F6F;
+  --flexoki-magenta-50: #FEE4E5;
+  --flexoki-magenta-100: #FCCFDA;
+  --flexoki-magenta-150: #F9B9CF;
+  --flexoki-magenta-200: #F4A4C2;
+  --flexoki-magenta-300: #E47DA8;
   --flexoki-magenta-400: #CE5D97;
+  --flexoki-magenta-500: #B74583;
+  --flexoki-magenta-600: #A02F6F;
+  --flexoki-magenta-700: #87285E;
+  --flexoki-magenta-800: #641F46;
+  --flexoki-magenta-850: #4F1B39;
+  --flexoki-magenta-900: #39172B;
+  --flexoki-magenta-950: #24131D;
+}
+
+:root {
+  --light-icon: url("data: image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' %3E%3Cpath fill-rule='evenodd' d='M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  --dark-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='currentColor' viewBox='0 0 24 24' %3E%3Cpath d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z' /%3E%3C/svg%3E");
+  &:has(input[name="color-scheme"][value="light"]:checked) {
+    color-scheme: light;
+    --fx-noise: var(--light-icon);
+  }
+  
+  &:has(input[name="color-scheme"][value="dark"]:checked) {
+    color-scheme: dark;
+    --fx-noise: var(--dark-icon);
+  }
 }
 
 /* Global stylesheet */
@@ -69,13 +156,13 @@
 
 html,
 body {
-  font-family: Inter, system-ui, sans-serif;
-  color: var(--flexoki-200);
-  background-color: var(--flexoki-black);
+  font-family: Montserrat, system-ui, sans-serif;
+  color: light-dark(var(--flexoki-900), var(--flexoki-200));
+  background-color: light-dark(var(--flexoki-paper), var(--flexoki-black));
   max-width: 70ch;
   margin: auto;
   line-height: 1.75;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 body {
@@ -86,9 +173,19 @@ body {
   navigation: auto;
 }
 
+h1, h2, h3 {
+  font-family: CormorantGaramond, system-ui, sans-serif;
+  font-weight: 700;
+}
+
 
 p:last-child {
   margin-bottom: 0;
+}
+
+p strong {
+  font-family: CormorantGaramond, system-ui, sans-serif;
+  font-weight: 700;
 }
 
 p,
@@ -101,12 +198,12 @@ img {
   text-decoration-skip-ink: none;
   text-underline-offset: .25em;
   text-decoration-line: underline;
-  color: var(--flexoki-200);
+  color: light-dark(var(--flexoki-black), var(--flexoki-200));
 
   &:hover {
-    color: var(--flexoki-purple-400);
+    color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
     text-decoration-thickness: 3px;
-    text-decoration-color: var(--flexoki-purple-400);
+    text-decoration-color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
   }
 }
 
@@ -118,14 +215,11 @@ img {
 .content-sources a,
 a.postlist-link {
   text-decoration-skip-ink: none;
-  text-underline-offset: .25em;
   text-decoration-line: underline;
-  color: var(--flexoki-200);
+  color: light-dark(var(--flexoki-black), var(--flexoki-200));
 
   &:hover {
-    color: var(--flexoki-purple-400);
-    text-decoration-thickness: 3px;
-    text-decoration-color: var(--flexoki-purple-400);
+    color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
   }
 }
 
@@ -133,7 +227,7 @@ a.postlist-link {
 .home a:visited,
 .nav .nav-item a,
 .nav .nav-item a:visited {
-  color: var(--flexoki-purple-400);
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 main {
@@ -143,7 +237,8 @@ main {
 }
 
 header {
-  border-bottom: 1px dashed var(--flexoki-purple-400);
+  border-bottom: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
+  display: flex;
 }
 
 header:after {
@@ -202,6 +297,7 @@ code {
 .highlight-line:empty:before {
   content: " ";
 }
+
 /* avoid double line breaks when using display: block; */
 .highlight-line + br {
   display: none;
@@ -211,13 +307,16 @@ code {
   color: #b0b0b0;
   background-color: #222;
 }
+
 .highlight-line-active {
   background-color: #444;
   background-color: hsla(0, 0%, 27%, .8);
 }
+
 .highlight-line-add {
   background-color: #45844b;
 }
+
 .highlight-line-remove {
   background-color: #902f2f;
 }
@@ -253,6 +352,7 @@ code {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
+  width: 100%;
 
   @include mq($from: 'tablet') {
     margin: 0;
@@ -260,15 +360,9 @@ code {
   }
 }
 
-.nav .nav-item:last-child {
-  @include mq($from: 'tablet') {
-    flex-grow: 1;
-    text-align: end;
-  }
-}
-
 .nav-item {
   padding: .5em;
+  font-family: CormorantGaramond;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -280,7 +374,7 @@ code {
   text-decoration: underline;
   text-underline-offset: .25em;
   text-decoration-thickness: 3px;
-  text-decoration-color: var(--flexoki-purple-400);
+  text-decoration-color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 // Trick to avoid changing width when we change font-weight https://stackoverflow.com/a/20249560/10166188
@@ -298,7 +392,7 @@ code {
   text-decoration: underline;
   text-underline-offset: .25em;
   text-decoration-thickness: 3px;
-  text-decoration-color: var(--flexoki-purple-400);
+  text-decoration-color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 /* Posts list */
@@ -316,7 +410,7 @@ code {
   padding: 20px;
   margin-top: 1.5em;
   border-radius: 5px;
-  border: 2px solid var(--flexoki-purple-600);
+  border: 2px solid light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 .postlist-item:before {
@@ -330,7 +424,7 @@ code {
 .postlist-date,
 .postlist-item:before {
   font-size: 0.8125em; /* 13px /16 */
-  color: var(--flexoki-500);
+  color: light-dark(var(--flexoki-600), var(--flexoki-200));
 }
 
 .postlist-date {
@@ -367,14 +461,17 @@ code {
 
 .postlist-item-active .postlist-link {
   font-weight: bold;
+  font-family: CormorantGaramond;
 }
 
 .tmpl-home .postlist-link {
-  font-size: 1em; /* 19px /16 */
+  font-size: 1.3em; /* 19px /16 */
   font-weight: 700;
+  font-family: CormorantGaramond;
+  text-decoration-line: none;
 
   @include mq($from: 'tablet') {
-    font-size: 1.1875em;
+    font-size: 1.5em;
   }
 }
 
@@ -402,22 +499,17 @@ code {
   text-transform: uppercase;
   font-size: 0.75em; /* 12px /16 */
   padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
-  color: var(--flexoki-200);
-  border: 1px solid var(--flexoki-200);
+  color: light-dark(var(--flexoki-black), var(--flexoki-200));
+  border: 1px solid light-dark(var(--flexoki-black), var(--flexoki-200));
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
   line-height: 1.8;
 }
 
-a[href].post-tag,
-a[href].post-tag:visited {
-  color: inherit;
-}
-
 a[href].post-tag:hover,
 a[href].post-tag:focus {
-  color: var(--flexoki-purple-400);
-  border: 1px solid var(--flexoki-purple-400);
+  color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+  border: 1px solid light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
 }
 
 .postlist-item > .post-tag {
@@ -429,6 +521,7 @@ a[href].post-tag:focus {
   background-color: #ffc;
   padding: 1em 0.625em; /* 16px 10px /16 */
 }
+
 .warning ol:only-child {
   margin: 0;
 }
@@ -449,4 +542,21 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+.color-scheme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq($from: 'tablet') {
+    margin-left: auto;
+  }
+}
+
+.color-scheme label {
+  display: flex;
+  gap: .25em;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }

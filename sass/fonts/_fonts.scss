@@ -1,23 +1,39 @@
-  @font-face {
-  	font-family: "Inter";
-  	src: url("/fonts/Inter-Regular.ttf") format("truetype");
-  	font-style: normal;
-  	font-weight: 400;
-  	font-display: swap;
-  }
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
 
-  @font-face {
-  	font-family: "Inter";
-  	src: url("/fonts/Inter-Medium.ttf") format("truetype");
-  	font-style: normal;
-  	font-weight: 450;
-  	font-display: swap;
-  }
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter-Medium.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 450;
+	font-display: swap;
+}
 
-  @font-face {
-  	font-family: "Inter";
-  	src: url("/fonts/Inter-Bold.ttf") format("truetype");
-  	font-style: normal;
-  	font-weight: 600;
-  	font-display: swap;
-  }
+@font-face {
+	font-family: "Inter";
+	src: url("/fonts/Inter-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CormorantGaramond";
+	src: url("/fonts/CormorantGaramond-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}

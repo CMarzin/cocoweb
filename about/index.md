@@ -1,10 +1,10 @@
 ---
 layout: layouts/post.njk
-title: About Me
+title: About
 templateClass: tmpl-post
 ogImage: /img/og-cocoweb.webp
 eleventyNavigation:
-  key: About Me
+  key: About
   order: 3
 ---
 
