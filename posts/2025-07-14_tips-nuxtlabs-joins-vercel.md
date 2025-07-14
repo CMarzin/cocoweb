@@ -6,7 +6,7 @@ tags:
   - tips
   - Veille
   - nuxt
-  - Design
+  - design
 layout: layouts/post.njk
 ---
 
