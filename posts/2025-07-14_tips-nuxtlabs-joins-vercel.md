@@ -1,7 +1,7 @@
 ---
 title: NuxtLabs joins Vercel
 description: Tips and discovery of the week.
-date: 2025-07-15
+date: 2025-07-14
 tags:
   - tips
   - Veille
