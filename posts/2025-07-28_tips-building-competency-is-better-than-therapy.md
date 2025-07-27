@@ -6,7 +6,7 @@ tags:
   - tips
   - Veille
   - vuejs
-  - go
+  - GO
 layout: layouts/post.njk
 ---
 
