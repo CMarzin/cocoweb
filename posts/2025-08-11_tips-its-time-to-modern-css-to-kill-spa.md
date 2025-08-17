@@ -1,7 +1,7 @@
 ---
 title: It’s time for modern CSS to kill the SPA
 description: Tips and discovery of the week.
-date: 2025-08-09
+date: 2025-08-11
 tags:
   - tips
   - Veille
