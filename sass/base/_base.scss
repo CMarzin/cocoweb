@@ -3,7 +3,7 @@
    // https://github.com/kepano/flexoki/blob/main/css/flexoki.css
   --flexoki-black: #100F0F;
   --flexoki-black-rgb: 16, 15, 15;
-  
+
   --flexoki-paper: #FFFCF0;
   --flexoki-paper-rgb: 254, 252, 240;
   --flexoki-200-rgb: 206, 205, 195;
@@ -142,7 +142,7 @@
     color-scheme: light;
     --fx-noise: var(--light-icon);
   }
-  
+
   &:has(input[name="color-scheme"][value="dark"]:checked) {
     color-scheme: dark;
     --fx-noise: var(--dark-icon);
@@ -445,6 +445,7 @@ code {
 
 .postlist-link {
   width: 100%;
+  max-width: 80%;
   margin-top: .25em;
   text-underline-position: from-font;
   text-underline-offset: 0;
