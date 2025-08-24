@@ -15,6 +15,7 @@ I am Corentin, I made digital interface for people.
 In this blog, I share my digital watch mainly and sometimes I write articles about things I do at work.
 
 I have several websites and projects you can check here :
+- [An npm package for creating merge request from your cli](https://github.com/CMarzin/cli-mr-creator)
 - [My personal and lastest folio](https://corentinmarzin.fr).
 - [My place where I publish the best photo I took](https://unsplash.com/@marzin_corentin).
 - [My Github account](https://github.com/CMarzin).
