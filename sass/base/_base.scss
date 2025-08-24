@@ -241,6 +241,16 @@ header {
   display: flex;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: .5em;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400))
+}
+
 header:after {
   content: "";
   display: table;

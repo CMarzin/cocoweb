@@ -27,7 +27,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/img/favicon/favicon-144x144.png">
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
-    
+
 
     <link rel="stylesheet" href="{{ '/css/theme.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
@@ -45,7 +45,7 @@
         <div class="color-scheme">
           <input class="radio dark-checkbox" name="color-scheme" type="radio" value="dark" checked/>
         <input class="radio light-checkbox" name="color-scheme" type="radio" value="light"/>
-         </div> 
+         </div>
       </ul>
     </header>
     <script src="/_includes/js/bundle.js"></script>
@@ -54,7 +54,9 @@
       {{ content | safe }}
     </main>
 
-    <footer></footer>
+    <footer>
+      {% footerCopyright %}
+    </footer>
 
     <!-- Current page: {{ page.url | url }} -->
 

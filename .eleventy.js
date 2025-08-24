@@ -7,11 +7,11 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
-const markdownItAttrs = require('markdown-it-attrs');
+const markdownItAttrs = require("markdown-it-attrs");
 
 const schema = require("@quasibit/eleventy-plugin-schema");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(schema);
@@ -28,21 +28,23 @@ module.exports = function(eleventyConfig) {
   // Alias `layout: post` to `layout: layouts/post.njk`
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
 
-  eleventyConfig.addFilter("readableDate", dateObj => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL yyyy");
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "dd LLL yyyy",
+    );
   });
 
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
   });
 
   // Get the first `n` elements of a collection.
   eleventyConfig.addFilter("head", (array, n) => {
-    if(!Array.isArray(array) || array.length === 0) {
+    if (!Array.isArray(array) || array.length === 0) {
       return [];
     }
-    if( n < 0 ) {
+    if (n < 0) {
       return array.slice(n);
     }
 
@@ -55,11 +57,13 @@ module.exports = function(eleventyConfig) {
   });
 
   function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts", "articles"].indexOf(tag) === -1);
+    return (tags || []).filter(
+      (tag) => ["all", "nav", "post", "posts", "articles"].indexOf(tag) === -1,
+    );
   }
 
-  eleventyConfig.addFilter("filterTagList", filterTagList)
-  eleventyConfig.addFilter("squash", function(text) {
+  eleventyConfig.addFilter("filterTagList", filterTagList);
+  eleventyConfig.addFilter("squash", function (text) {
     var content = new String(text);
 
     // all lower case, please
@@ -67,84 +71,90 @@ module.exports = function(eleventyConfig) {
 
     // remove all html elements and new lines
     var re = /(&lt;.*?&gt;)/gi;
-    var plain = unescape(content.replace(re, ''));
+    var plain = unescape(content.replace(re, ""));
 
     // remove duplicated words
-    var words = plain.split(' ');
-    var deduped = [...(new Set(words))];
-    var dedupedStr = deduped.join(' ')
+    var words = plain.split(" ");
+    var deduped = [...new Set(words)];
+    var dedupedStr = deduped.join(" ");
 
     // remove short and less meaningful words
-    var result = dedupedStr.replace(/\b(\.|\,|the|a|an|and|am|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for)\b/gi, '');
+    var result = dedupedStr.replace(
+      /\b(\.|\,|the|a|an|and|am|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for)\b/gi,
+      "",
+    );
     //remove newlines, and punctuation
-    result = result.replace(/\.|\,|\?|-|—|\n/g, '');
+    result = result.replace(/\.|\,|\?|-|—|\n/g, "");
     //remove repeated spaces
-    result = result.replace(/[ ]{2,}/g, ' ');
+    result = result.replace(/[ ]{2,}/g, " ");
 
     return result;
-  })
+  });
 
   // Create an array of all tags
-  eleventyConfig.addCollection("tagList", function(collection) {
+  eleventyConfig.addCollection("tagList", function (collection) {
     let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+    collection.getAll().forEach((item) => {
+      (item.data.tags || []).forEach((tag) => tagSet.add(tag));
     });
 
     return filterTagList([...tagSet]);
+  });
+
+  eleventyConfig.addShortcode("footerCopyright", function () {
+    return `
+    <span>© cocoweb.fr</span>
+    <span> ${new Date().getFullYear()}</span>
+    `;
   });
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("_includes/js/bundle.js");
-  
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
     html: true,
     breaks: true,
-    linkify: true
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
-      class: "direct-link",
-      symbol: "#",
-      level: [1,2,3,4],
-    }),
-    slugify: eleventyConfig.getFilter("slug")
-  }).use(markdownItAttrs);
+    linkify: true,
+  })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: "after",
+        class: "direct-link",
+        symbol: "#",
+        level: [1, 2, 3, 4],
+      }),
+      slugify: eleventyConfig.getFilter("slug"),
+    })
+    .use(markdownItAttrs);
 
   eleventyConfig.setLibrary("md", markdownLibrary);
 
   // Override Browsersync defaults (used only with --serve)
   eleventyConfig.setBrowserSyncConfig({
-    files: './_site/css/**/*.css',
+    files: "./_site/css/**/*.css",
     callbacks: {
-      ready: function(err, browserSync) {
-        const content_404 = fs.readFileSync('_site/404.html');
+      ready: function (err, browserSync) {
+        const content_404 = fs.readFileSync("_site/404.html");
 
         browserSync.addMiddleware("*", (req, res) => {
           // Provides the 404 content without redirect.
-          res.writeHead(404, {"Content-Type": "text/html; charset=UTF-8"});
+          res.writeHead(404, { "Content-Type": "text/html; charset=UTF-8" });
           res.write(content_404);
           res.end();
         });
       },
     },
     ui: false,
-    ghostMode: false
+    ghostMode: false,
   });
 
   return {
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "liquid"
-    ],
+    templateFormats: ["md", "njk", "html", "liquid"],
 
     // -----------------------------------------------------------------
     // If your site deploys to a subdirectory, change `pathPrefix`.
@@ -174,7 +184,7 @@ module.exports = function(eleventyConfig) {
       input: ".",
       includes: "_includes",
       data: "_data",
-      output: "_site"
-    }
+      output: "_site",
+    },
   };
 };
