@@ -1,7 +1,7 @@
 ---
 title: HTML is Dead, Long Live HTML
 description: Tips and discovery of the week.
-date: 2025-09-09
+date: 2025-09-08
 tags:
   - tips
   - Veille
