@@ -14,25 +14,25 @@ layout: layouts/post.njk
 
 I have selected some news  from the web dev world to share.
 
-🤖 Keep Thinking
-⚡️ Redis 101 : From a Beginners POV
-🐧 Ladybird
-🤓 How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown
+<a href="#Keep Thinking">🤖 Keep Thinking</a>
+<a href="#Redis 101 : From a Beginners POV">⚡️ Redis 101 : From a Beginners POV</a>
+<a href="#Ladybird">🐧 Ladybird</a>
+<a href="#How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown">🤓 How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown</a>
 
 **Have a great week.**
 
 ___
 
-🤖 [Keep Thinking](https://x.com/claudeai/status/1968705632095158393)
+<span id="Keep Thinking">🤖</span> [Keep Thinking](https://x.com/claudeai/status/1968705632095158393)
 The splendid marketing campaign of Claude The AI for problem solvers. This company deliver something in the vibe of apple when steve jobs was still with us.
 
-⚡️ [Redis 101 : From a Beginners POV](https://mrinalxdev.github.io/mrinalxblogs/blogs/redis.html)
+<span id="Redis 101 : From a Beginners POV">⚡️</span> [Redis 101 : From a Beginners POV](https://mrinalxdev.github.io/mrinalxblogs/blogs/redis.html)
 A nice detailed with some schema of how Redis works, there will be more articles on it soon. Stay tuned.
 
-🐧 [Ladybird](https://ladybird.org/)
+<span id="Ladybird">🐧</span> [Ladybird](https://ladybird.org/)
 A new independent browser with a brand new engine, it’s cool to see some new competition in the browser space.
 
-🤓 [How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown](https://voidzero.dev/posts/case-study-plaid-rolldown)
+<span id="How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown">🤓</span> [How PLAID Cut Build Times by 97% Migrating From Rollup To Rolldown](https://voidzero.dev/posts/case-study-plaid-rolldown)
 A build time decreased from 5-20 secondes to 200ms, the power of Rust in JS land.
 
 ___

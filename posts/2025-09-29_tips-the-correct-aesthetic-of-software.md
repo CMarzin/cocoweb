@@ -14,25 +14,25 @@ layout: layouts/post.njk
 
 I have selected some news  from the web dev world to share.
 
-😍 The correct Aesthetic of Software
-🔎 Formulas for optical adjustments
-👀 Internet without interruptions
-🚄 Local daily commute
+<a href="#The correct Aesthetic of Software">😍 The correct Aesthetic of Software</a>
+<a href="#Formulas for optical adjustments">🔎 Formulas for optical adjustments</a>
+<a href="#Internet without interruptions">👀 Internet without interruptions</a>
+<a href="#Local daily commute">🚄 Local daily commute</a>
 
 **Have a great week.**
 
 ___
 
-😍 [The correct Aesthetic of Software](https://x.com/parkerhendo/status/1973904521257759183)
+<span id="The correct Aesthetic of Software">😍</span> [The correct Aesthetic of Software](https://x.com/parkerhendo/status/1973904521257759183)
 Four screen of beautiful UI, maybe one day I can make one.
 
-🔎 [Formulas for optical adjustments](https://bjango.com/articles/opticaladjustments/)
+<span id="Formulas for optical adjustments">🔎</span> [Formulas for optical adjustments](https://bjango.com/articles/opticaladjustments/)
 Instead of guessing how to center icon on a circle for example, this articles give us an helpful formula to do it.
 
-👀 [Internet without interruptions](https://helium.computer/)
+<span id="Internet without interruptions">👀</span> [Internet without interruptions](https://helium.computer/)
 A new browser based on Chromium named Helium.
 
-🚄 [Local daily commute](https://www.commuting.to/)
+<span id="Internet without interruptions">🚄</span> [Local daily commute](https://www.commuting.to/)
 A window to the sky.
 
 ___
