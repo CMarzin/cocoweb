@@ -14,25 +14,25 @@ layout: layouts/post.njk
 
 I have selected some news  from the web dev world to share.
 
-<a href="#The correct Aesthetic of Software">😍 The correct Aesthetic of Software</a>
-<a href="#Formulas for optical adjustments">🔎 Formulas for optical adjustments</a>
-<a href="#Internet without interruptions">👀 Internet without interruptions</a>
-<a href="#Local daily commute">🚄 Local daily commute</a>
+{% anchorLink "😍", "The correct Aesthetic of Software" %}
+{% anchorLink "🔎", "Formulas for optical adjustments" %}
+{% anchorLink "👀", "Internet without interruptions" %}
+{% anchorLink "🚄", "Local daily commute" %}
 
 **Have a great week.**
 
 ___
 
-<span id="The correct Aesthetic of Software">😍</span> [The correct Aesthetic of Software](https://x.com/parkerhendo/status/1973904521257759183)
+{% anchorSection "😍", "The correct Aesthetic of Software" %}[The correct Aesthetic of Software](https://x.com/parkerhendo/status/1973904521257759183){% endanchorSection %}
 Four screen of beautiful UI, maybe one day I can make one.
 
-<span id="Formulas for optical adjustments">🔎</span> [Formulas for optical adjustments](https://bjango.com/articles/opticaladjustments/)
+{% anchorSection "🔎", "Formulas for optical adjustments" %}[Formulas for optical adjustments](https://bjango.com/articles/opticaladjustments/){% endanchorSection %}
 Instead of guessing how to center icon on a circle for example, this articles give us an helpful formula to do it.
 
-<span id="Internet without interruptions">👀</span> [Internet without interruptions](https://helium.computer/)
+{% anchorSection "👀", "Internet without interruptions" %}[Internet without interruptions](https://helium.computer/){% endanchorSection %}
 A new browser based on Chromium named Helium.
 
-<span id="Internet without interruptions">🚄</span> [Local daily commute](https://www.commuting.to/)
+{% anchorSection "🚄", "Local daily commute" %}[Local daily commute](https://www.commuting.to/){% endanchorSection %}
 A window to the sky.
 
 ___

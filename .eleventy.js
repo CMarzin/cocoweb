@@ -108,6 +108,19 @@ module.exports = function (eleventyConfig) {
     `;
   });
 
+  // Shortcode to create an anchor link with emoji
+  eleventyConfig.addShortcode("anchorLink", function (emoji, text) {
+    return `<a href="#${text}">${emoji} ${text}</a>`;
+  });
+
+  // Shortcode to create a span with id et emoji
+  eleventyConfig.addPairedShortcode(
+    "anchorSection",
+    function (content, emoji, id) {
+      return `<span id="${id}">${emoji}</span> ${content}`;
+    },
+  );
+
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");

@@ -15,26 +15,26 @@ layout: layouts/post.njk
 
 I have selected some news  from the web dev world to share.
 
-<a href="#Making Parsers Go Brr">⚡️ Making Parsers Go Brr</a>
-<a href="#The Multi-Repository TypeScript Problem">🤓 The Multi-Repository TypeScript Problem</a>
-<a href="#Web Interface Guidelines">📗 Web Interface Guidelines</a>
-<a href="#AI Induced Psychosis: A shallow investigation">🤖 AI Induced Psychosis: A shallow investigation</a>
+{% anchorLink "⚡️", "Making Parsers Go Brr" %}
+{% anchorLink "🤓", "The Multi-Repository TypeScript Problem" %}
+{% anchorLink "📗", "Web Interface Guidelines" %}
+{% anchorLink "🤖", "AI Induced Psychosis: A shallow investigation" %}
 
 **Have a great week.**
 
 ___
 
-<span id="Making Parsers Go Brr">⚡️</span> [Making Parsers Go Brr](https://sevenxyt.com/blog/making-parsers-go-brr/)
+{% anchorSection "⚡️", "Making Parsers Go Brr" %}[Making Parsers Go Brr](https://sevenxyt.com/blog/making-parsers-go-brr/){% endanchorSection %}
 A few techniques to explain why [Oxc](https://oxc.rs/), is very fast.
 
-<span id="The Multi-Repository TypeScript Problem">🤓</span> [The Multi-Repository TypeScript Problem](https://www.carrick.tools/blog/the-multi-repository-typescript-problem)
+{% anchorSection "🤓", "The Multi-Repository TypeScript Problem" %}[The Multi-Repository TypeScript Problem](https://www.carrick.tools/blog/the-multi-repository-typescript-problem){% endanchorSection %}
 A way to use typescript type safety system in a polyrepo architecture. Very clever.
 
-<span id="Web Interface Guidelines">📗</span> [Web Interface Guidelines](https://vercel.com/design/guidelines)
+{% anchorSection "📗", "Web Interface Guidelines" %}[Web Interface Guidelines](https://vercel.com/design/guidelines){% endanchorSection %}
 Guidelines from the Vercel teams.
 
-<span id="AI Induced Psychosis: A shallow investigation">🤖</span> [AI Induced Psychosis: A shallow investigation](https://www.lesswrong.com/posts/iGF7YcnQkEbwvYLPA/ai-induced-psychosis-a-shallow-investigation)
-Tips, don’t try to replace a psychiatrist by an LLMs. You’ll likely end up insane.
+{% anchorSection "🤖", "AI Induced Psychosis: A shallow investigation" %}[AI Induced Psychosis: A shallow investigation](https://www.lesswrong.com/posts/iGF7YcnQkEbwvYLPA/ai-induced-psychosis-a-shallow-investigation){% endanchorSection %}
+Tips, don't try to replace a psychiatrist by an LLMs. You'll likely end up insane.
 
 ___
 
