@@ -1,7 +1,7 @@
 ---
 title: STOP. Using AI Right now
 description: Tips and discovery of the week.
-date: 2025-11-03
+date: 2025-11-10
 tags:
   - tips
   - Veille
@@ -10,6 +10,7 @@ tags:
   - photography
 layout: layouts/post.njk
 ---
+
 ## Salut, web dev friends! 🧑‍💻
 
 I have selected some news  from the web dev world to share.
@@ -32,7 +33,7 @@ Snapchat uses Valdi for the last 8 years to build theirs app. It is build with T
 {% anchorSection "📸", "Moment Pro Camera Version 2" %}[Moment Pro Camera Version 2](https://x.com/AlecPloof/status/1986477738975502398?s=20){% endanchorSection %}
 A comparaison of the basic shot on iphone vs with Moment Pro Camera. I really love the photo it feels like an argentic photo. ( I love photography in my spare time sorry it’s not tech ).
 
-{% anchorSection "🪼", "Jelly slider" %}🪼 [Jelly slider with TypeGPU](https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider){% endanchorSection %}
+{% anchorSection "🪼", "Jelly slider" %}[Jelly slider with TypeGPU](https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider){% endanchorSection %}
 An experiment of a Jelly Slider made with [TypeGPU](https://docs.swmansion.com/TypeGPU/)
 
 ___

@@ -1,7 +1,7 @@
 ---
 title: Announcing the Swift SDK for Android
 description: Tips and discovery of the week.
-date: 2025-10-20
+date: 2025-10-27
 tags:
   - tips
   - Veille
