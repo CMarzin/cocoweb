@@ -19,8 +19,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
 
-  eleventyConfig.addPassthroughCopy("./fonts/Montserrat-Regular.ttf");
-  eleventyConfig.addPassthroughCopy("./fonts/CormorantGaramond-Bold.ttf");
+  eleventyConfig.addPassthroughCopy(
+    "./fonts/Montserrat-v31-latin-regular.woff2",
+  );
+  eleventyConfig.addPassthroughCopy(
+    "./fonts/Cormorant-garamond-v21-latin-700.woff2",
+  );
 
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
