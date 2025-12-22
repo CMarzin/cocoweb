@@ -32,7 +32,7 @@ Explore the independent web with Ghost new features. I don’t use Ghost as a CM
 {% anchorSection "💡", "Internet Handle" %}[Internet Handle](https://internethandle.org/){% endanchorSection %}
 Image if you can log into apps or website with you domain name, I didn’t know I can use my domain cocoweb to create an handle on [bluesky](https://bsky.app/). I could have corentin@cocoweb.fr :D
 
-{% anchorSection "📸", "New photos on Unsplash" %}[New photos on Unsplash](https://unsplash.com/fr/@marzin_corentin)){% endanchorSection %}
+{% anchorSection "📸", "New photos on Unsplash" %}[New photos on Unsplash](https://unsplash.com/fr/@marzin_corentin){% endanchorSection %}
 Shamelessly putting my own photo blog, I added recently some cool photo on my Unsplash, I am very proud of the ferrari one, the trains and the church.
 
 ___
