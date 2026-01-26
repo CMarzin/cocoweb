@@ -1,0 +1,36 @@
+---
+/**
+ * AnchorLink component
+ * Creates a link to a section with an emoji prefix.
+ * Replaces the Eleventy shortcode: {% anchorLink "emoji", "text" %}
+ * 
+ * @example
+ * <AnchorLink emoji="🔗" text="Introduction" />
+ * Renders: <a href="#introduction">🔗 Introduction</a>
+ */
+
+interface Props {
+  emoji: string;
+  text: string;
+}
+
+const { emoji, text } = Astro.props;
+
+// Generate href from text (lowercase, spaces to dashes)
+const href = `#${text.toLowerCase().replace(/\s+/g, '-')}`;
+---
+
+<a href={href} class="anchor-link">{emoji} {text}</a>
+
+<style>
+  .anchor-link {
+    display: block;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .anchor-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+</style>

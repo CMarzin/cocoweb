@@ -1,0 +1,50 @@
+.search__result {
+  padding-left: 0;
+}
+
+.search__result li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.search__result li > a {
+  color: light-dark(var(--flexoki-900), var(--flexoki-200));
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: .25em;
+    text-decoration-thickness: 3px;
+    text-decoration-color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+    color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+  }
+}
+
+.search__input {
+  margin-top: 10px;
+  padding: 10px;
+  height: 40px;
+  background: none;
+  border: 2px solid light-dark(var(--flexoki-200), var(--flexoki-900));
+  color: light-dark(var(--flexoki-900), var(--flexoki-200));
+}
+
+.search__label {
+  font-family: CormorantGaramond;
+  display: block;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.search__button {
+  padding: 10px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: light-dark(var(--flexoki-200), var(--flexoki-900));
+  border: 1px solid light-dark(var(--flexoki-200), var(--flexoki-900));
+  cursor: pointer;
+
+  &:hover {
+    color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+    border: 1px solid light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+  }
+}

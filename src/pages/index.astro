@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+
+// Try to get English content, fallback to French
+let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+const showTranslationNotice = posts.length === 0;
+
+if (showTranslationNotice) {
+  posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+}
+---
+
+<BaseLayout 
+  title="Cocoweb" 
+  description="Welcome to my blog where I share my tech watch and web discoveries."
+  lang="en"
+>
+  <section class="home">
+    {showTranslationNotice && (
+      <div class="translation-notice">
+        {t('post.translation-notice')}
+      </div>
+    )}
+    
+    <h2>Latest 10 tips</h2>
+    <PostList posts={posts} limit={10} basePath="/blog" lang="en" />
+    
+    <a href="/blog/" class="view-all">View all posts →</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .translation-notice {
+    background: var(--color-warning-bg, #fff3cd);
+    color: var(--color-warning-text, #856404);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+</style>

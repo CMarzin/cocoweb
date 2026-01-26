@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostList from '../../../components/PostList.astro';
+
+const posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+---
+
+<BaseLayout 
+  title="Tips - Cocoweb" 
+  description="Tous les tips et découvertes du web sur Cocoweb."
+  lang="fr"
+>
+  <div class="blog-page">
+    <h1>Tips</h1>
+    <p class="blog-description">
+      Ma veille technologique et mes découvertes du web.
+      {posts.length} articles publiés.
+    </p>
+
+    <PostList posts={posts} showTags={true} basePath="/fr/blog" lang="fr" />
+  </div>
+</BaseLayout>

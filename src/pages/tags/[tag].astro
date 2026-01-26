@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+
+export async function getStaticPaths() {
+  // Try English content first, fallback to French
+  let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+  if (posts.length === 0) {
+    posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+  }
+  
+  // Get all unique tags
+  const tags = new Set<string>();
+  posts.forEach((post) => {
+    post.data.tags.forEach((tag) => {
+      tags.add(tag.toLowerCase());
+    });
+  });
+
+  // Create a path for each tag
+  return Array.from(tags).map((tag) => ({
+    params: { tag: tag.replace(/\s+/g, '-') },
+    props: { 
+      tag,
+      posts: posts.filter((post) =>
+        post.data.tags.some((t) => t.toLowerCase() === tag)
+      ),
+    },
+  }));
+}
+
+interface Props {
+  tag: string;
+  posts: Awaited<ReturnType<typeof getCollection<'blog'>>>;
+}
+
+const { tag, posts } = Astro.props;
+const postCount = posts.length;
+---
+
+<BaseLayout 
+  title={`#${tag} - Cocoweb`} 
+  description={`Articles tagged with #${tag} on Cocoweb.`}
+  lang="en"
+>
+  <div class="tag-page">
+    <header class="tag-header">
+      <a href="/tags/" class="back-link">← All tags</a>
+      <h1>#{tag}</h1>
+      <p class="post-count">
+        {postCount} post{postCount > 1 ? 's' : ''}
+      </p>
+    </header>
+
+    <PostList posts={posts} showTags={true} basePath="/blog" lang="en" />
+  </div>
+</BaseLayout>
