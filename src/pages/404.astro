@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const t = useTranslations('en');
+---
+
+<BaseLayout title="Page not found - Cocoweb" description="The page you are looking for does not exist." lang="en">
+  <div class="not-found">
+    <h1>404</h1>
+    <p>{t('404.description')}</p>
+    <a href="/">{t('404.back')}</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .not-found h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+  }
+
+  .not-found p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .not-found a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-primary, #0066cc);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  .not-found a:hover {
+    opacity: 0.9;
+  }
+</style>

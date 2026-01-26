@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('fr');
+const posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+---
+
+<BaseLayout 
+  title="Cocoweb" 
+  description="Voici mon blog où je poste ma veille technologique."
+  lang="fr"
+>
+  <section class="home">
+    <p class="home-description">
+      Voici mon blog où je poste ma veille technologique.
+    </p>
+    
+    <h2>Derniers 10 tips</h2>
+    <PostList posts={posts} limit={10} basePath="/fr/blog" lang="fr" />
+    
+    <a href="/fr/blog/" class="view-all">Voir tous les articles →</a>
+  </section>
+</BaseLayout>

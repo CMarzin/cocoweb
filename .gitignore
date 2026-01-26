@@ -2,3 +2,5 @@ _site/
 node_modules/
 .unlighthouse
 .nuxt/
+.pnpm-store/
+dist/

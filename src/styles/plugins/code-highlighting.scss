@@ -1,0 +1,111 @@
+code[class*="language-"], pre[class*="language-"] {
+	font-size: 14px;
+	line-height: 1.375;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	-moz-tab-size: 2;
+	-o-tab-size: 2;
+	tab-size: 2;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	background: light-dark(var(--flexoki-50), var(--flexoki-950));
+	color: light-dark(var(--flexoki-900), var(--flexoki-200));
+}
+
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"] {
+	padding: .5em;
+	border-radius: .3em;
+}
+
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+	color: light-dark(var(--flexoki-500), var(--flexoki-300));
+}
+
+.token.punctuation {
+	color: light-dark(var(--flexoki-900), var(--flexoki-200));
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.operator, .token.boolean, .token.number {
+	color: light-dark(var(--flexoki-orange-400), var(--flexoki-orange-600));
+}
+
+.token.property {
+	color: light-dark(var(--flexoki-yellow-400), var(--flexoki-yellow-600));
+}
+
+.token.tag {
+	color: light-dark(var(--flexoki-blue-400), var(--flexoki-blue-600));
+}
+
+.token.string {
+	color: light-dark(var(--flexoki-cyan-400), var(--flexoki-cyan-600));
+}
+
+.token.selector {
+	color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+}
+
+.token.attr-name {
+	color: light-dark(var(--flexoki-orange-400), var(--flexoki-orange-600));
+}
+
+.token.entity, .token.url, .language-css .token.string, .style .token.string {
+	color: light-dark(var(--flexoki-cyan-400), var(--flexoki-cyan-600));
+}
+
+.token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {
+	color: light-dark(var(--flexoki-green-400), var(--flexoki-green-600));
+}
+
+.token.statement, .token.regex, .token.atrule {
+	color: light-dark(var(--flexoki-cyan-400), var(--flexoki-cyan-600));
+}
+
+.token.placeholder, .token.variable {
+	color: light-dark(var(--flexoki-blue-400), var(--flexoki-blue-600));
+}
+
+.token.deleted {
+	text-decoration: line-through;
+}
+
+.token.inserted {
+	border-bottom: 1px dotted #f9f8f5;
+	text-decoration: none;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.important, .token.bold {
+	font-weight: bold;
+}
+
+.token.important {
+	color: #f92672;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+pre > code.highlight {
+	outline: 0.4em solid #f92672;
+	outline-offset: .4em;
+}

@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('en');
+
+// Try to get English content, fallback to French
+let articles = await getCollection('articles', ({ id }) => id.startsWith('en/'));
+const showTranslationNotice = articles.length === 0;
+
+if (showTranslationNotice) {
+  articles = await getCollection('articles', ({ id }) => id.startsWith('fr/'));
+}
+
+const sortedArticles = articles.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+// Format date for display
+function formatDate(date: Date): string {
+  return date.toLocaleDateString('en-GB', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+---
+
+<BaseLayout 
+  title="Articles - Cocoweb" 
+  description="Technical articles about web development and technologies."
+  lang="en"
+>
+  <div class="articles-page">
+    <h1>Articles</h1>
+    
+    {showTranslationNotice && (
+      <div class="translation-notice">
+        {t('post.translation-notice')}
+      </div>
+    )}
+    
+    <p class="articles-description">
+      In-depth technical articles about web development.
+    </p>
+
+    {sortedArticles.length > 0 ? (
+      <ul class="articles-list">
+        {sortedArticles.map((article) => (
+          <li class="article-item">
+            <a href={`/articles/${article.slug.replace(/^(en|fr)\//, '')}/`} class="article-link">
+              <time datetime={article.data.date.toISOString()}>
+                {formatDate(article.data.date)}
+              </time>
+              <h2>{article.data.title}</h2>
+              <p class="article-description">{article.data.description}</p>
+            </a>
+            {article.data.tags.length > 0 && (
+              <div class="article-tags">
+                {article.data.tags.map((tag) => (
+                  <a
+                    href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
+                    class="article-tag"
+                  >
+                    #{tag}
+                  </a>
+                ))}
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
+    ) : (
+      <p class="no-articles">No articles yet.</p>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,121 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  posts: CollectionEntry<'blog'>[];
+  limit?: number;
+  showTags?: boolean;
+  filterTag?: string;
+  basePath?: string;
+  lang?: 'fr' | 'en';
+  totalCount?: number;
+}
+
+const { posts, limit, showTags = true, filterTag, basePath = '/blog', lang = 'fr', totalCount } = Astro.props;
+
+// Determine tags base path based on language
+const tagsBasePath = lang === 'en' ? '/en/tags' : '/tags';
+
+// Filter by tag if specified
+let filteredPosts = filterTag
+  ? posts.filter((post) =>
+      post.data.tags.some((tag) => tag.toLowerCase() === filterTag.toLowerCase())
+    )
+  : posts;
+
+// Sort by date (newest first)
+filteredPosts = filteredPosts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const counterStart = (totalCount || posts.length) + 1;
+
+// Apply limit if specified
+if (limit) {
+  filteredPosts = filteredPosts.slice(0, limit);
+}
+
+// Format date for display
+function formatDate(date: Date): string {
+  const locale = lang === 'en' ? 'en-GB' : 'fr-FR';
+  return date.toLocaleDateString(locale, {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  });
+}
+---
+
+<ol class="postlist" reversed style={`counter-reset: start-from ${counterStart}`}>
+  {filteredPosts.map((post) => {
+    // Remove language prefix from slug for URL
+    const urlSlug = post.slug.replace(/^(en|fr)\//, '');
+    return (
+    <li class="postlist-item">
+      <a href={`${basePath}/${urlSlug}/`} class="postlist-link">
+        {post.data.title}
+      </a>
+      <time class="postlist-date" datetime={post.data.date.toISOString()}>
+        {formatDate(post.data.date)}
+      </time>
+      {showTags && post.data.tags.length > 0 && (
+        <div class="post-tag__container">
+          {post.data.tags.map((tag) => (
+            <a
+              href={`${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
+              class="post-tag"
+            >
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )}
+    </li>
+    );
+  })}
+</ol>
+
+{filteredPosts.length === 0 && (
+  <p class="no-posts">{lang === 'en' ? 'No posts found.' : 'Aucun article trouve.'}</p>
+)}
+
+<style>
+  .postlist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .postlist-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .postlist-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 0.25rem;
+  }
+
+  .postlist-date {
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+
+  .postlist-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .post-tag__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .no-posts {
+    font-style: italic;
+    opacity: 0.7;
+  }
+</style>

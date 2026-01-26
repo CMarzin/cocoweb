@@ -1,0 +1,81 @@
+---
+/**
+ * LanguageSwitcher component
+ * Allows users to switch between available languages (FR/EN).
+ */
+import { languages, defaultLang, type Lang } from '../i18n/ui';
+import { getLocalizedUrl } from '../i18n/utils';
+
+interface Props {
+  currentLang?: Lang;
+}
+
+const { currentLang = defaultLang } = Astro.props;
+
+// Get current path without language prefix
+const currentPath = Astro.url.pathname;
+
+// Get path without any language prefix
+function getPathWithoutLang(path: string): string {
+  // Remove language prefix if present
+  const cleanPath = path.replace(/^\/(en|fr)\//, '/');
+  return cleanPath;
+}
+
+// Build alternate language URLs
+function getAlternatePath(targetLang: Lang): string {
+  const pathWithoutLang = getPathWithoutLang(currentPath);
+  return getLocalizedUrl(pathWithoutLang, targetLang);
+}
+
+const languagesList = [
+  { code: 'fr' as Lang, label: 'FR', name: 'Français' },
+  { code: 'en' as Lang, label: 'EN', name: 'English' },
+];
+---
+
+<div class="language-switcher">
+  {languagesList.map((lang) => (
+    <a
+      href={getAlternatePath(lang.code)}
+      class:list={['lang-link', { 'lang-active': currentLang === lang.code }]}
+      aria-label={currentLang === 'fr' ? `Changer la langue vers ${lang.name}` : `Switch language to ${lang.name}`}
+      aria-current={currentLang === lang.code ? 'true' : undefined}
+      hreflang={lang.code}
+    >
+      {lang.label}
+    </a>
+  ))}
+</div>
+
+<style>
+  .language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .lang-link {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    opacity: 0.7;
+  }
+
+  .lang-link:hover {
+    opacity: 1;
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+
+  .lang-active {
+    opacity: 1;
+    font-weight: 600;
+    background-color: rgba(128, 128, 128, 0.15);
+  }
+
+  .lang-active:hover {
+    background-color: rgba(128, 128, 128, 0.25);
+  }
+</style>
