@@ -156,13 +156,13 @@
 
 html,
 body {
-  font-family: Montserrat, system-ui, sans-serif;
+  font-family: iA Writer Duo, system-ui, sans-serif;
   color: light-dark(var(--flexoki-900), var(--flexoki-200));
   background-color: light-dark(var(--flexoki-paper), var(--flexoki-black));
   max-width: 70ch;
   margin: auto;
-  line-height: 1.75;
-  font-size: 1.125rem;
+  // line-height: 1.75;
+  // font-size: 1.125rem;
 }
 
 body {
@@ -174,25 +174,28 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: CormorantGaramond, system-ui, sans-serif;
+  font-family: iA Writer Duo, system-ui, sans-serif;
   font-weight: 700;
 }
-
 
 p:last-child {
   margin-bottom: 0;
 }
 
+p {
+  line-height: 1.8;
+}
+
 p strong {
-  font-family: CormorantGaramond, system-ui, sans-serif;
+  font-family: iA Writer Duo, system-ui, sans-serif;
   font-weight: 700;
 }
 
-p,
-li,
-img {
-  max-width: 37.5em; /* 600px /16 */
-}
+// p,
+// li,
+// img {
+//   max-width: 37.5em; /* 600px /16 */
+// }
 
 .previous-next-page-link a {
   text-decoration-skip-ink: none;
@@ -215,7 +218,6 @@ img {
 .content-sources a,
 a.postlist-link {
   text-decoration-skip-ink: none;
-  text-decoration-line: underline;
   color: light-dark(var(--flexoki-black), var(--flexoki-200));
 
   &:hover {
@@ -372,7 +374,7 @@ code {
 
 .nav-item {
   padding: .5em;
-  font-family: CormorantGaramond;
+  font-family: iA Writer Duo;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -416,7 +418,7 @@ code {
   flex-wrap: wrap;
   align-items: baseline;
   counter-increment: start-from -1;
-  line-height: 1.8;
+  // line-height: 1.8;
   padding: 20px;
   margin-top: 1.5em;
   border-radius: 5px;
@@ -456,15 +458,12 @@ code {
 .postlist-link {
   width: 100%;
   max-width: 80%;
-  margin-top: .25em;
   text-underline-position: from-font;
   text-underline-offset: 0;
   text-decoration-thickness: 1px;
 
   @include mq($from: 'tablet') {
     width: auto;
-    margin-left: 5px;
-    margin-top: .25em;
     padding-left: .25em;
     padding-right: .25em;
   }
@@ -472,13 +471,13 @@ code {
 
 .postlist-item-active .postlist-link {
   font-weight: bold;
-  font-family: CormorantGaramond;
+  font-family: iA Writer Duo;
 }
 
 .postlist-link {
   font-size: 1.3em; /* 19px /16 */
   font-weight: 700;
-  font-family: CormorantGaramond;
+  font-family: iA Writer Duo;
   text-decoration-line: none;
 
   @include mq($from: 'tablet') {
