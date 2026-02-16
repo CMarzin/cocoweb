@@ -243,12 +243,32 @@ header {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  gap: .5em;
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400))
+}
+
+.footer__webring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  font-size: 0.875em
+}
+
+.footer__webring--previous,
+.footer__webring--next {
+  text-decoration: none;
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
+}
+
+.footer__webring-label {
+  text-decoration: none;
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 header:after {

@@ -107,8 +107,10 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addShortcode("footerCopyright", function () {
     return `
-    <span>© cocoweb.fr</span>
-    <span> ${new Date().getFullYear()}</span>
+    <div>
+      <span>© cocoweb.fr</span>
+      <span> ${new Date().getFullYear()}</span>
+    </div>
     `;
   });
 
