@@ -1,0 +1,44 @@
+---
+interface NavItem {
+  title: string;
+  url: string;
+  key: string;
+}
+
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '/' } = Astro.props;
+
+// Navigation items with i18n support
+const navItems: NavItem[] = [
+  { title: 'Cocoweb', url: '/', key: 'Home' },
+  { title: 'À propos', url: '/about/', key: 'About' },
+  { title: 'Tips', url: '/blog/', key: 'Tips' },
+  { title: 'Articles', url: '/articles/', key: 'Articles' },
+  { title: 'Recherche', url: '/search/', key: 'Search' },
+];
+
+// Check if a nav item is active (exact match or starts with for nested routes)
+function isActive(itemUrl: string): boolean {
+  if (itemUrl === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(itemUrl);
+}
+---
+
+<nav>
+  <ul class="nav">
+    {navItems.map((item) => (
+      <li
+        title={item.title}
+        class:list={['nav-item', { 'nav-item-active': isActive(item.url) }]}
+      >
+        <a href={item.url}>{item.title}</a>
+      </li>
+    ))}
+    <slot />
+  </ul>
+</nav>

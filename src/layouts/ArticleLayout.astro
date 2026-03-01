@@ -1,0 +1,110 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import { getLangFromUrl, useTranslations, getLocalizedUrl, type Lang } from '../i18n/utils';
+
+interface Props {
+  frontmatter: CollectionEntry<'articles'>['data'];
+  slug: string;
+  lang?: Lang;
+  showTranslationNotice?: boolean;
+}
+
+const { frontmatter, slug, lang: propLang, showTranslationNotice = false } = Astro.props;
+const { title, description, date, tags, ogImage } = frontmatter;
+
+// Determine language from prop or URL
+const lang = propLang || getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Get articles for the current language for prev/next navigation
+const langPrefix = lang === 'en' ? 'en/' : 'fr/';
+let articlesForNav = await getCollection('articles', ({ id }) => id.startsWith(langPrefix));
+
+// Fallback to French if no English articles
+if (articlesForNav.length === 0 && lang === 'en') {
+  articlesForNav = await getCollection('articles', ({ id }) => id.startsWith('fr/'));
+}
+
+const sortedArticles = articlesForNav.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+
+// Find current article index (comparing without language prefix)
+const slugWithoutLang = slug.replace(/^(en|fr)\//, '');
+const currentIndex = sortedArticles.findIndex((article) => 
+  article.slug.replace(/^(en|fr)\//, '') === slugWithoutLang
+);
+const previousArticle = currentIndex > 0 ? sortedArticles[currentIndex - 1] : null;
+const nextArticle = currentIndex < sortedArticles.length - 1 ? sortedArticles[currentIndex + 1] : null;
+
+// Format date for display
+function formatDate(date: Date): string {
+  return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+// Format date for datetime attribute
+function formatDateISO(date: Date): string {
+  return date.toISOString().split('T')[0];
+}
+
+// Get localized paths
+const articlesBasePath = getLocalizedUrl('/articles/', lang);
+const tagsBasePath = getLocalizedUrl('/tags/', lang);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogImage={ogImage || '/img/og-tips.webp'}
+  date={date}
+  type="article"
+  tags={tags}
+  templateClass="tmpl-articles"
+  lang={lang}
+>
+  {showTranslationNotice && (
+    <div class="translation-notice">
+      {t('post.translation-notice')}
+    </div>
+  )}
+
+  <h1>{title}</h1>
+
+  <time class="postlist-date" datetime={formatDateISO(date)}>
+    {formatDate(date)}
+  </time>
+
+  <div class="post-tag__container">
+    {tags.map((tag) => (
+      <a href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="post-tag">
+        #{tag}
+      </a>
+    ))}
+  </div>
+
+  <section class="content-section">
+    <slot />
+  </section>
+
+  {(nextArticle || previousArticle) && (
+    <>
+      <hr class="content-rule-footer" />
+
+      <ul>
+        {nextArticle && (
+          <li class="previous-next-page-link">
+            {t('post.next')}: <a href={`${articlesBasePath}${nextArticle.slug.replace(/^(en|fr)\//, '')}/`}>{nextArticle.data.title}</a>
+          </li>
+        )}
+        {previousArticle && (
+          <li class="previous-next-page-link">
+            {t('post.previous')}: <a href={`${articlesBasePath}${previousArticle.slug.replace(/^(en|fr)\//, '')}/`}>{previousArticle.data.title}</a>
+          </li>
+        )}
+      </ul>
+    </>
+  )}
+</BaseLayout>

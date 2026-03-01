@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostList from '../../components/PostList.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('fr');
+const posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+---
+
+<BaseLayout 
+  title="Cocoweb" 
+  description="Voici mon blog où je poste ma veille technologique."
+  lang="fr"
+>
+<article class="about">
+  <h1>About</h1>
+  
+  <p>Welcome to my corner of the web.</p>
+  
+  <p>I am Corentin, I make digital interfaces for people.</p>
+  
+  <p>
+    In this blog, I share my tech watch mainly and sometimes I write articles 
+    about things I do at work.
+  </p>
+  
+  <h2>My projects and links</h2>
+  
+  <ul>
+    <li>
+      <a href="https://github.com/CMarzin/cli-mr-creator" target="_blank" rel="noopener">
+        An npm package for creating merge request from your cli
+      </a>
+    </li>
+    <li>
+      <a href="https://corentinmarzin.fr" target="_blank" rel="noopener">
+        My personal and lastest folio
+      </a>
+    </li>
+    <li>
+      <a href="https://unsplash.com/@marzin_corentin" target="_blank" rel="noopener">
+        My photography portfolio on Unsplash
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/CMarzin" target="_blank" rel="noopener">
+        My Github account
+      </a>
+    </li>
+    <li>
+      <a href="https://ysf.cocommit.fr/" target="_blank" rel="noopener">
+        A never published project, but I am still proud of the animations
+      </a>
+    </li>
+    <li>
+      <a href="https://x.com/marz_coco" target="_blank" rel="noopener">
+        My twitter account
+      </a>
+    </li>
+    <li>
+      <a href="https://haddock-fury.cocommit.fr/" target="_blank" rel="noopener">
+        A vibe coded yolo insult generator
+      </a>
+    </li>
+  </ul>
+</article>
+  <section class="home">
+    <p class="home-description">
+      Voici mon blog où je poste ma veille technologique.
+    </p>
+    
+    <h2>Derniers 10 tips</h2>
+    <PostList posts={posts} limit={10} basePath="/fr/blog" lang="fr" />
+    
+    <a href="/fr/blog/" class="view-all">Voir tous les articles →</a>
+  </section>
+</BaseLayout>

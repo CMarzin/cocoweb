@@ -1,15 +1,20 @@
 {
-  "name": "eleventy-base-blog",
-  "version": "5.0.2",
-  "description": "A starter repository for a blog web site using the Eleventy static site generator.",
+  "name": "cocoweb",
+  "version": "6.0.0",
+  "description": "Blog personnel Cocoweb - propulsé par Astro",
+  "type": "module",
   "scripts": {
-    "build": "eleventy && pnpm run build:sass",
-    "watch": "eleventy --watch",
-    "serve": "eleventy --serve",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "eleventy:build": "eleventy && pnpm run build:sass",
+    "eleventy:watch": "eleventy --watch",
+    "eleventy:serve": "eleventy --serve",
     "watch:sass": "sass sass:_site/css --watch",
     "build:sass": "sass sass/theme.scss _site/css/theme.css",
-    "start": "eleventy --serve & pnpm run watch:sass",
-    "debug": "DEBUG=* eleventy"
+    "eleventy:start": "eleventy --serve & pnpm run watch:sass",
+    "eleventy:debug": "DEBUG=* eleventy"
   },
   "repository": {
     "type": "git",
@@ -30,16 +35,19 @@
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@astrojs/mdx": "^4.3.13",
     "luxon": "^3.5.0",
     "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^9.2.0"
   },
   "dependencies": {
+    "@astrojs/rss": "^4.0.15",
     "@quasibit/eleventy-plugin-schema": "^1.11.1",
+    "astro": "^5.16.15",
     "markdown-it-attrs": "^4.3.1",
     "sass": "^1.83.0"
   },
   "engines": {
-    "node": "20.19.4"
+    "node": "20.20.0"
   }
 }
