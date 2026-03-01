@@ -1,5 +1,5 @@
 ---
-import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+// import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 import { getLangFromUrl, useTranslations, getLocalizedUrl, type Lang } from '../i18n/utils';
 
 interface Props {
@@ -39,10 +39,11 @@ const finalDescription = description || (lang === 'fr'
 // Navigation items with i18n support
 const navItems = [
   { title: t('nav.home'), url: getLocalizedUrl('/', lang), key: 'Home' },
-  { title: t('nav.about'), url: getLocalizedUrl('/about/', lang), key: 'About' },
   { title: t('nav.tips'), url: getLocalizedUrl('/blog/', lang), key: 'Tips' },
+  { title: t('nav.tags'), url: getLocalizedUrl('/tags/', lang), key: 'Tags' },
   { title: t('nav.articles'), url: getLocalizedUrl('/articles/', lang), key: 'Articles' },
-  { title: t('nav.search'), url: getLocalizedUrl('/search/', lang), key: 'Search' },
+  { title: t('nav.about'), url: getLocalizedUrl('/about/', lang), key: 'About' },
+  // { title: t('nav.search'), url: getLocalizedUrl('/search/', lang), key: 'Search' },
 ];
 
 // JSON-LD Schema generation
@@ -110,6 +111,9 @@ const jsonLd = generateJsonLd();
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="/img/favicon/favicon-144x144.png" />
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
+    
+    <!-- IndieWeb -->
+    <link href="https://github.com/CMarzin" rel="me" />
 
     <!-- RSS Feeds -->
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Cocoweb" />
@@ -139,7 +143,7 @@ const jsonLd = generateJsonLd();
             <a href={item.url}>{item.title}</a>
           </li>
         ))}
-        <LanguageSwitcher currentLang={lang} />
+        <!-- <LanguageSwitcher currentLang={lang} /> -->
         <div class="color-scheme">
           <input
             class="radio dark-checkbox"
@@ -191,7 +195,14 @@ const jsonLd = generateJsonLd();
     </main>
 
     <footer>
-      <span>&copy; {new Date().getFullYear()} {t('footer.copyright')}</span>
+      <div>
+        &copy; {t('footer.copyright')} - {new Date().getFullYear()}
+      </div>
+      <div class="footer__webring">
+        <a href="https://xn--sr8hvo.ws/previous" class="footer__webring--previous">←</a>
+        <a href="https://xn--sr8hvo.ws" class="footer__webring-label">An IndieWeb Webring 🕸💍</a>
+        <a href="https://xn--sr8hvo.ws/next" class="footer__webring--next">→</a>
+      </div>
     </footer>
 
     <!-- JSON-LD Schema -->

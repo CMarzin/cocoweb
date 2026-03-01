@@ -36,7 +36,6 @@ interface Props {
 }
 
 const { tag, posts } = Astro.props;
-const postCount = posts.length;
 ---
 
 <BaseLayout 
@@ -46,11 +45,7 @@ const postCount = posts.length;
 >
   <div class="tag-page">
     <header class="tag-header">
-      <a href="/tags/" class="back-link">← All tags</a>
-      <h1>#{tag}</h1>
-      <p class="post-count">
-        {postCount} post{postCount > 1 ? 's' : ''}
-      </p>
+      <h1>Tagged "{tag}"</h1>
     </header>
 
     <PostList posts={posts} showTags={true} basePath="/blog" lang="en" />

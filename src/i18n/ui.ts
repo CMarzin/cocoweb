@@ -12,6 +12,7 @@ export const ui = {
     // Navigation
     'nav.home': 'Cocoweb',
     'nav.about': 'A propos',
+    'nav.tags': 'Tags',
     'nav.tips': 'Tips',
     'nav.articles': 'Articles',
     'nav.search': 'Recherche',
@@ -41,12 +42,14 @@ export const ui = {
     '404.back': 'Retour a l\'accueil',
 
     // Footer
-    'footer.copyright': 'Cocoweb - Corentin Marzin',
+    'footer.copyright': 'cocoweb.fr',
+    'footer.webring': 'An IndieWeb Webring 🕸💍',
   },
   en: {
     // Navigation
     'nav.home': 'Cocoweb',
     'nav.about': 'About',
+    'nav.tags': 'Tags',
     'nav.tips': 'Tips',
     'nav.articles': 'Articles',
     'nav.search': 'Search',
@@ -76,7 +79,8 @@ export const ui = {
     '404.back': 'Back to home',
 
     // Footer
-    'footer.copyright': 'Cocoweb - Corentin Marzin',
+    'footer.copyright': 'cocoweb.fr',
+    'footer.webring': 'An IndieWeb Webring 🕸💍',
   },
 } as const;
 

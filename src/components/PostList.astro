@@ -14,7 +14,7 @@ interface Props {
 const { posts, limit, showTags = true, filterTag, basePath = '/blog', lang = 'fr', totalCount } = Astro.props;
 
 // Determine tags base path based on language
-const tagsBasePath = lang === 'en' ? '/en/tags' : '/tags';
+const tagsBasePath = lang === 'en' ? '/tags' : '/fr/tags';
 
 // Filter by tag if specified
 let filteredPosts = filterTag

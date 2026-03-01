@@ -17,6 +17,8 @@ const sortedArticles = articles.sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
 
+const counterStart = sortedArticles.length + 1;
+
 // Format date for display
 function formatDate(date: Date): string {
   return date.toLocaleDateString('en-GB', {
@@ -41,27 +43,26 @@ function formatDate(date: Date): string {
       </div>
     )}
     
-    <p class="articles-description">
+    <p class="postlist-description">
       In-depth technical articles about web development.
     </p>
 
     {sortedArticles.length > 0 ? (
-      <ul class="articles-list">
+      <ol class="postlist" reversed style={`counter-reset: start-from ${counterStart}`}>
         {sortedArticles.map((article) => (
-          <li class="article-item">
-            <a href={`/articles/${article.slug.replace(/^(en|fr)\//, '')}/`} class="article-link">
-              <time datetime={article.data.date.toISOString()}>
-                {formatDate(article.data.date)}
-              </time>
-              <h2>{article.data.title}</h2>
-              <p class="article-description">{article.data.description}</p>
+          <li class="postlist-item">
+            <a href={`/articles/${article.slug.replace(/^(en|fr)\//, '')}/`} class="postlist-link">
+              {article.data.title}
             </a>
+            <time class="postlist-date" datetime={article.data.date.toISOString()}>
+              {formatDate(article.data.date)}
+            </time>
             {article.data.tags.length > 0 && (
-              <div class="article-tags">
+              <div class="post-tag__container">
                 {article.data.tags.map((tag) => (
                   <a
                     href={`/tags/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
-                    class="article-tag"
+                    class="post-tag"
                   >
                     #{tag}
                   </a>
@@ -70,7 +71,7 @@ function formatDate(date: Date): string {
             )}
           </li>
         ))}
-      </ul>
+      </ol>
     ) : (
       <p class="no-articles">No articles yet.</p>
     )}

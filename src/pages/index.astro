@@ -21,56 +21,6 @@ if (showTranslationNotice) {
   lang="en"
 >
 
-  <article class="about">    
-    <p>Welcome to my corner of the web.</p>
-    <p>I am Corentin Marzin, I make digital interfaces for people.</p>
-    
-    <p>
-      In this blog, I share my tech watch mainly and sometimes I write articles 
-      about things I do at work.
-    </p>
-    
-    <h2>My projects and links</h2>
-    
-    <ul>
-      <li>
-        <a href="https://github.com/CMarzin/cli-mr-creator" target="_blank" rel="noopener">
-          An npm package for creating merge request from your cli
-        </a>
-      </li>
-      <li>
-        <a href="https://corentinmarzin.fr" target="_blank" rel="noopener">
-          My personal and lastest folio
-        </a>
-      </li>
-      <li>
-        <a href="https://unsplash.com/@marzin_corentin" target="_blank" rel="noopener">
-          My place where I publish the best photo I took
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/CMarzin" target="_blank" rel="noopener">
-          My Github account
-        </a>
-      </li>
-      <li>
-        <a href="https://ysf.cocommit.fr/" target="_blank" rel="noopener">
-          A never published project, but I am still proud of the animations
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/marz_coco" target="_blank" rel="noopener">
-          My twitter account
-        </a>
-      </li>
-      <li>
-        <a href="https://haddock-fury.cocommit.fr/" target="_blank" rel="noopener">
-          A vibe coded yolo insult generator
-        </a>
-      </li>
-    </ul>
-  </article>
-
   <section class="home">
     {showTranslationNotice && (
       <div class="translation-notice">
@@ -78,9 +28,9 @@ if (showTranslationNotice) {
       </div>
     )}
     
-    <h2>Latest 10 tips</h2>
+    <h1>Latest 10 tips</h2>
     <PostList posts={posts} limit={10} basePath="/blog" lang="en" />
     
-    <a href="/blog/" class="view-all">View all posts →</a>
+    More tips can be found at<a href="/blog/" class="view-all">All tips →</a>
   </section>
 </BaseLayout>

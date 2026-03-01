@@ -21,18 +21,13 @@ if (showTranslationNotice) {
   lang="en"
 >
   <div class="blog-page">
-    <h1>Tips</h1>
+    <h1>All Tips</h1>
     
     {showTranslationNotice && (
       <div class="translation-notice">
         {t('post.translation-notice')}
       </div>
     )}
-    
-    <p class="blog-description">
-      My tech watch and web discoveries.
-      {posts.length} articles published.
-    </p>
 
     <PostList posts={posts} showTags={true} basePath="/blog" lang="en" />
   </div>

@@ -156,13 +156,15 @@
 
 html,
 body {
-  font-family: iA Writer Duo, system-ui, sans-serif;
+  font-family: Montserrat, system-ui, sans-serif;
   color: light-dark(var(--flexoki-900), var(--flexoki-200));
   background-color: light-dark(var(--flexoki-paper), var(--flexoki-black));
   max-width: 70ch;
   margin: auto;
-  // line-height: 1.75;
-  // font-size: 1.125rem;
+  @include mq($from: 'tablet') {
+    line-height: 1.75;
+    font-size: 1.125rem;
+  }
 }
 
 body {
@@ -174,7 +176,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: iA Writer Duo, system-ui, sans-serif;
+  font-family: CormorantGaramond, system-ui, sans-serif;
   font-weight: 700;
 }
 
@@ -187,15 +189,9 @@ p {
 }
 
 p strong {
-  font-family: iA Writer Duo, system-ui, sans-serif;
+  font-family: Montserrat, system-ui, sans-serif;
   font-weight: 700;
 }
-
-// p,
-// li,
-// img {
-//   max-width: 37.5em; /* 600px /16 */
-// }
 
 .previous-next-page-link a {
   text-decoration-skip-ink: none;
@@ -225,19 +221,6 @@ a.postlist-link {
   }
 }
 
-// .home a,
-// .home a:visited,
-// .nav .nav-item a,
-// .nav .nav-item a:visited {
-//   color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
-// }
-
-main {
-  @include mq($from: 'tablet') {
-    margin-top: 1em;
-  }
-}
-
 header {
   border-bottom: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
   display: flex;
@@ -245,12 +228,33 @@ header {
 
 footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
   gap: .5em;
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400))
+}
+
+.footer__webring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  font-size: 0.875em
+}
+
+.footer__webring--previous,
+.footer__webring--next {
+  text-decoration: none;
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
+}
+
+.footer__webring-label {
+  text-decoration: none;
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 header:after {
@@ -357,7 +361,6 @@ code {
   text-decoration: none;
 }
 
-/* Nav */
 .nav {
   display: flex;
   gap: .5em;
@@ -374,7 +377,7 @@ code {
 
 .nav-item {
   padding: .5em;
-  font-family: iA Writer Duo;
+  font-family: CormorantGaramond;
 }
 
 .nav-item a[href]:not(:hover) {
@@ -471,13 +474,13 @@ code {
 
 .postlist-item-active .postlist-link {
   font-weight: bold;
-  font-family: iA Writer Duo;
+  font-family: CormorantGaramond;
 }
 
 .postlist-link {
   font-size: 1.3em; /* 19px /16 */
   font-weight: 700;
-  font-family: iA Writer Duo;
+  font-family: CormorantGaramond;
   text-decoration-line: none;
 
   @include mq($from: 'tablet') {

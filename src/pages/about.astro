@@ -61,3 +61,27 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </ul>
   </article>
 </BaseLayout>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0;
+    padding: .5rem;
+  }
+  ul li {
+    list-style: square inside;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: light-dark(var(--flexoki-black), var(--flexoki-200));
+    text-decoration: underline;
+    text-decoration-skip-ink: none;;
+    &:hover {
+      color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
+      text-decoration: underline;
+    }
+  }
+</style>
