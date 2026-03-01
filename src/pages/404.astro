@@ -22,7 +22,6 @@ const t = useTranslations('en');
   .not-found h1 {
     font-size: 6rem;
     margin-bottom: 1rem;
-    opacity: 0.3;
   }
 
   .not-found p {
@@ -33,14 +32,15 @@ const t = useTranslations('en');
   .not-found a {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: var(--color-primary, #0066cc);
-    color: white;
+    background: light-dark(var(--flexoki-purple-200), var(--flexoki-purple-400));
+    color: light-dark(var(--flexoki-black), var(--flexoki-50));
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
   }
 
   .not-found a:hover {
-    opacity: 0.9;
+    background: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+    color: light-dark(var(--flexoki-50), var(--flexoki-black));
   }
 </style>

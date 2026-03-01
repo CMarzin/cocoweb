@@ -7,44 +7,28 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "eleventy:build": "eleventy && pnpm run build:sass",
-    "eleventy:watch": "eleventy --watch",
-    "eleventy:serve": "eleventy --serve",
-    "watch:sass": "sass sass:_site/css --watch",
-    "build:sass": "sass sass/theme.scss _site/css/theme.css",
-    "eleventy:start": "eleventy --serve & pnpm run watch:sass",
-    "eleventy:debug": "DEBUG=* eleventy"
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/11ty/eleventy-base-blog.git"
+    "url": "git://github.com/CMarzin/cocoweb.git"
   },
   "author": {
-    "name": "Zach Leatherman",
-    "email": "zachleatherman@gmail.com",
-    "url": "https://zachleat.com/"
+    "name": "Corentin Marzin",
+    "email": "corentinmarzin@gmail.com",
+    "url": "https://cocoweb.fr"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/11ty/eleventy-base-blog/issues"
+    "url": "https://github.com/CMarzin/cocoweb/issues"
   },
-  "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
+  "homepage": "https://cocoweb.fr",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@astrojs/mdx": "^4.3.13",
-    "luxon": "^3.5.0",
-    "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0"
+    "@astrojs/mdx": "^4.3.13"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
-    "@quasibit/eleventy-plugin-schema": "^1.11.1",
-    "astro": "^5.16.15",
-    "markdown-it-attrs": "^4.3.1",
+    "astro": "^5.18.0",
     "sass": "^1.83.0"
   },
   "engines": {
