@@ -378,6 +378,7 @@ code {
 .nav-item {
   padding: .5em;
   font-family: CormorantGaramond;
+  color: light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
 }
 
 .nav-item a[href]:not(:hover) {
