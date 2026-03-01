@@ -1,0 +1,117 @@
+---
+/**
+ * ThemeToggle component
+ * Allows users to switch between dark and light color schemes.
+ * Uses CSS-only approach with radio buttons for accessibility.
+ * Persists preference to localStorage.
+ */
+---
+
+<div class="color-scheme">
+  <input
+    class="radio dark-checkbox"
+    name="color-scheme"
+    type="radio"
+    value="dark"
+    id="theme-dark"
+    checked
+    aria-label="Mode sombre"
+  />
+  <label for="theme-dark" class="theme-label theme-label-dark" title="Mode sombre">
+    <span class="visually-hidden">Mode sombre</span>
+    🌙
+  </label>
+  
+  <input
+    class="radio light-checkbox"
+    name="color-scheme"
+    type="radio"
+    value="light"
+    id="theme-light"
+    aria-label="Mode clair"
+  />
+  <label for="theme-light" class="theme-label theme-label-light" title="Mode clair">
+    <span class="visually-hidden">Mode clair</span>
+    ☀️
+  </label>
+</div>
+
+<script is:inline>
+  // Theme toggle functionality - runs immediately to avoid flash
+  (function() {
+    const darkCheckbox = document.querySelector('.dark-checkbox');
+    const lightCheckbox = document.querySelector('.light-checkbox');
+
+    if (!darkCheckbox || !lightCheckbox) return;
+
+    // Apply saved preference on load
+    const savedTheme = localStorage.getItem('color-scheme');
+    if (savedTheme === 'light') {
+      lightCheckbox.checked = true;
+      darkCheckbox.checked = false;
+    } else {
+      darkCheckbox.checked = true;
+      lightCheckbox.checked = false;
+    }
+
+    // Handle theme changes
+    darkCheckbox.addEventListener('change', () => {
+      if (darkCheckbox.checked) {
+        localStorage.setItem('color-scheme', 'dark');
+      }
+    });
+
+    lightCheckbox.addEventListener('change', () => {
+      if (lightCheckbox.checked) {
+        localStorage.setItem('color-scheme', 'light');
+      }
+    });
+  })();
+</script>
+
+<style>
+  .color-scheme {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .theme-label {
+    cursor: pointer;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+  }
+
+  .theme-label:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+  }
+
+  .radio:checked + .theme-label {
+    background-color: rgba(128, 128, 128, 0.3);
+  }
+
+  .radio:focus-visible + .theme-label {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>

@@ -1,0 +1,211 @@
+---
+// import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { getLangFromUrl, useTranslations, getLocalizedUrl, type Lang } from '../i18n/utils';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  date?: Date;
+  type?: 'website' | 'article';
+  tags?: string[];
+  templateClass?: string;
+  lang?: Lang;
+}
+
+const {
+  title = 'Cocoweb',
+  description,
+  ogImage = '/img/og-default.webp',
+  date,
+  type = 'website',
+  tags = [],
+  templateClass = 'tmpl-home',
+  lang: propLang,
+} = Astro.props;
+
+const siteUrl = 'https://cocoweb.fr';
+const currentPath = Astro.url.pathname;
+
+// Determine language from prop or URL
+const lang = propLang || getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Default description based on language
+const finalDescription = description || (lang === 'fr' 
+  ? 'Voici mon blog où je poste ma veille technologique.'
+  : 'Welcome to my blog where I share my tech watch and web discoveries.');
+
+// Navigation items with i18n support
+const navItems = [
+  { title: t('nav.home'), url: getLocalizedUrl('/', lang), key: 'Home' },
+  { title: t('nav.tips'), url: getLocalizedUrl('/blog/', lang), key: 'Tips' },
+  { title: t('nav.tags'), url: getLocalizedUrl('/tags/', lang), key: 'Tags' },
+  { title: t('nav.articles'), url: getLocalizedUrl('/articles/', lang), key: 'Articles' },
+  { title: t('nav.about'), url: getLocalizedUrl('/about/', lang), key: 'About' },
+  // { title: t('nav.search'), url: getLocalizedUrl('/search/', lang), key: 'Search' },
+];
+
+// JSON-LD Schema generation
+function generateJsonLd() {
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@type': type === 'article' ? 'BlogPosting' : 'WebSite',
+    name: title,
+    description: description,
+    url: `${siteUrl}${currentPath}`,
+    author: {
+      '@type': 'Person',
+      name: 'Corentin Marzin',
+      email: 'corentinmarzin@gmail.com',
+      url: `${siteUrl}/about/`,
+    },
+  };
+
+  if (type === 'article' && date) {
+    return {
+      ...baseSchema,
+      datePublished: date.toISOString(),
+      keywords: tags.join(', '),
+      image: `${siteUrl}${ogImage}`,
+    };
+  }
+
+  return baseSchema;
+}
+
+const jsonLd = generateJsonLd();
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={finalDescription} />
+    
+    <!-- Open Graph -->
+    <meta property="og:image" content={`${siteUrl}${ogImage}`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={finalDescription} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={`${siteUrl}${currentPath}`} />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/favicon-57x57.webp" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/favicon-60x60.webp" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/favicon-72x72.webp" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/favicon-76x76.webp" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/favicon-114x114.webp" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/favicon-120x120.webp" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/favicon-144x144.webp" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/favicon-152x152.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/favicon-180x180.webp" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="/img/favicon/favicon-16x16.webp" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="/img/favicon/favicon-32x32.webp" />
+    <link rel="icon" type="image/webp" sizes="96x96" href="/img/favicon/favicon-96x96.webp" />
+    <link rel="icon" type="image/webp" sizes="192x192" href="/img/favicon/favicon-192x192.webp" />
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon/favicon.webp" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.webp" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/img/favicon/favicon-144x144.png" />
+    <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
+    
+    <!-- IndieWeb -->
+    <link href="https://github.com/CMarzin" rel="me" />
+
+    <!-- RSS Feeds -->
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Cocoweb" />
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Cocoweb" />
+
+    <!-- Styles -->
+    <style is:global>
+      @import '../styles/theme.scss';
+    </style>
+
+    <!-- Plausible Analytics -->
+    <script
+      defer
+      data-domain="cocoweb.fr"
+      src="https://plausible.cocommit.fr/js/script.hash.outbound-links.tagged-events.js"
+      is:inline
+    ></script>
+  </head>
+  <body>
+    <header>
+      <ul class="nav">
+        {navItems.map((item) => (
+          <li
+            title={item.title}
+            class:list={['nav-item', { 'nav-item-active': currentPath === item.url }]}
+          >
+            <a href={item.url}>{item.title}</a>
+          </li>
+        ))}
+        <!-- <LanguageSwitcher currentLang={lang} /> -->
+        <div class="color-scheme">
+          <input
+            class="radio dark-checkbox"
+            name="color-scheme"
+            type="radio"
+            value="dark"
+            checked
+          />
+          <input
+            class="radio light-checkbox"
+            name="color-scheme"
+            type="radio"
+            value="light"
+          />
+        </div>
+      </ul>
+    </header>
+
+    <script is:inline>
+      // Theme toggle script - runs immediately to avoid flash
+      const darkCheckbox = document.querySelector('.dark-checkbox');
+      const lightCheckbox = document.querySelector('.light-checkbox');
+
+      // Apply saved preference on load
+      if (localStorage.getItem('color-scheme') === 'light') {
+        lightCheckbox.checked = true;
+        darkCheckbox.checked = false;
+      } else {
+        darkCheckbox.checked = true;
+        lightCheckbox.checked = false;
+      }
+
+      // Handle theme changes
+      darkCheckbox.addEventListener('click', () => {
+        if (darkCheckbox.checked) {
+          localStorage.setItem('color-scheme', 'dark');
+        }
+      });
+
+      lightCheckbox.addEventListener('click', () => {
+        if (lightCheckbox.checked) {
+          localStorage.setItem('color-scheme', 'light');
+        }
+      });
+    </script>
+
+    <main class={templateClass}>
+      <slot />
+    </main>
+
+    <footer>
+      <div>
+        &copy; {t('footer.copyright')} - {new Date().getFullYear()}
+      </div>
+      <div class="footer__webring">
+        <a href="https://xn--sr8hvo.ws/previous" class="footer__webring--previous">←</a>
+        <a href="https://xn--sr8hvo.ws" class="footer__webring-label">An IndieWeb Webring 🕸💍</a>
+        <a href="https://xn--sr8hvo.ws/next" class="footer__webring--next">→</a>
+      </div>
+    </footer>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </body>
+</html>

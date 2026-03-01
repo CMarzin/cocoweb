@@ -1,0 +1,29 @@
+---
+/**
+ * AnchorSection component
+ * Creates a section with an id anchor and emoji prefix.
+ * Replaces the Eleventy paired shortcode: {% anchorSection "emoji", "id" %}...{% endanchorSection %}
+ * 
+ * @example
+ * <AnchorSection emoji="📖" id="introduction">
+ *   Contenu de la section...
+ * </AnchorSection>
+ * Renders: <span id="introduction">📖</span> [slot content]
+ */
+
+interface Props {
+  emoji: string;
+  id: string;
+}
+
+const { emoji, id } = Astro.props;
+---
+
+<span id={id} class="anchor-section-emoji">{emoji}</span>
+<slot />
+
+<style>
+  .anchor-section-emoji {
+    scroll-margin-top: 2rem;
+  }
+</style>

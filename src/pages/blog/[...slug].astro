@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+import { useTranslations } from '../../i18n/utils';
+
+const t = useTranslations('en');
+
+export async function getStaticPaths() {
+  // Try English content first, fallback to French
+  let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+  let isFallback = false;
+  
+  if (posts.length === 0) {
+    posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+    isFallback = true;
+  }
+  
+  return posts.map((post) => ({
+    // Remove language prefix from slug for URL
+    params: { slug: post.slug.replace(/^(en|fr)\//, '') },
+    props: { post, isFallback },
+  }));
+}
+
+const { post, isFallback } = Astro.props;
+const { Content } = await post.render();
+---
+
+<PostLayout frontmatter={post.data} slug={post.slug} lang="en" showTranslationNotice={isFallback}>
+  <Content />
+</PostLayout>
