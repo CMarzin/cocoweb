@@ -157,13 +157,16 @@ body {
   background-color: light-dark(var(--flexoki-paper), var(--flexoki-black));
   max-width: 70ch;
   margin: auto;
-  padding: .5em .5em;
 
   @include mq($from: 'tablet') {
     padding: 1em 1em;
     line-height: 1.75;
     font-size: 1.125rem;
   }
+}
+
+body {
+  padding: .5em .5em;
 }
 
 @view-transition {
@@ -173,6 +176,11 @@ body {
 h1, h2, h3 {
   font-family: CormorantGaramond, system-ui, sans-serif;
   font-weight: 700;
+}
+
+h1 {
+  margin-block-start: 0.5em;
+  margin-block-end: 0;
 }
 
 p:last-child {
@@ -223,7 +231,7 @@ footer {
   align-items: center;
   width: 100%;
   gap: .5em;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-top: 1em;
   border-top: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400))
 }
@@ -321,22 +329,17 @@ code {
   background-color: #902f2f;
 }
 
-.home a {
-  padding: 1rem;
-  padding-left: 0;
-
-  @include mq($from: 'tablet') {
-    padding: .5rem;
-  }
-}
-
 .home :link:not(:hover) {
   text-decoration: none;
 }
 
 .nav-wrapper {
   display: flex;
+  padding-bottom: 1em;
+  padding-top: 1em;
   border-bottom: 1px dashed light-dark(var(--flexoki-purple-600), var(--flexoki-purple-400));
+  gap: .5em;
+  justify-content: space-between;
 
   @include mq($from: 'tablet') {
     gap: 1em;
@@ -349,10 +352,7 @@ code {
   list-style: none;
   flex-wrap: wrap;
   margin: 0;
-
-  @include mq($from: 'tablet') {
-    gap: 1em;
-  }
+  gap: 1em;
 }
 
 .nav .nav-item:first-child {
@@ -360,22 +360,13 @@ code {
 }
 
 .nav-item {
-  padding: .5em;
   font-family: CormorantGaramond;
-}
-
-.nav-item a {
-  color: light-dark(var(--flexoki-black), var(--flexoki-200));
-}
-
-.nav-item a[href]:not(:hover) {
-  text-decoration: none;
 }
 
 .nav-item:hover a {
   font-weight: bold;
   text-decoration: underline;
-  text-underline-offset: .25em;
+  text-underline-offset: .5em;
   text-decoration-thickness: 3px;
   text-decoration-color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
 }
@@ -390,15 +381,22 @@ code {
   visibility: hidden;
 }
 
-.nav-item-active {
+.nav-item a[href]:not(:hover) {
+  text-decoration: none;
+}
+
+.nav-item a {
+  color: light-dark(var(--flexoki-black), var(--flexoki-paper))
+}
+
+.nav-item.nav-item-active a[href]:not(:hover) {
   font-weight: bold;
   text-decoration: underline;
-  text-underline-offset: .25em;
+  text-underline-offset: .5em;
   text-decoration-thickness: 3px;
   text-decoration-color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
 }
 
-/* Posts list */
 .postlist {
   list-style: none;
   padding: 0;
@@ -434,9 +432,8 @@ code {
   word-spacing: -0.5px;
   font-style: italic;
   margin-left: auto;
-  width: 100%;
-
-
+  width: fit-content;
+  
   @include mq($from: 'tablet') {
     width: auto;
     margin-top: 0;
@@ -447,10 +444,10 @@ code {
 
 .postlist-link {
   width: 100%;
-  max-width: 70%;
   text-underline-position: from-font;
   text-underline-offset: 0;
   text-decoration-thickness: 1px;
+  max-width: 60%;
 
   @include mq($from: 'tablet') {
     width: auto;
@@ -495,7 +492,6 @@ a.post-tag {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase;
   font-size: 0.75em; /* 12px /16 */
   padding: 0.08333333333333em 0.3333333333333em; /* 1px 4px /12 */
   color: light-dark(var(--flexoki-black), var(--flexoki-200));
@@ -525,26 +521,26 @@ a[href].post-tag:focus {
   margin: 0;
 }
 
-/* Direct Links / Markdown Headers */
-.direct-link {
-  font-family: sans-serif;
-  text-decoration: none;
-  font-style: normal;
-  margin-left: .1em;
-}
-a[href].direct-link,
-a[href].direct-link:visited {
-  color: transparent;
-}
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
-  color: #aaa;
-}
-
 .color-scheme {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.view-all {
+  display: block;
+  width: 100%;
+  font-family: CormorantGaramond;
+  font-weight: 700;
+  text-align: center;
+  color: light-dark(var(--flexoki-black), var(--flexoki-paper));
+  text-decoration-skip-ink: none;
+  text-underline-offset: .25em;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  color: light-dark(var(--flexoki-black), var(--flexoki-200));
+
+  &:hover {
+    text-decoration-color: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
+  }
 }
