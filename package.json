@@ -1,7 +1,7 @@
 {
   "name": "cocoweb",
   "version": "6.0.0",
-  "description": "Blog personnel Cocoweb - propulsé par Astro",
+  "description": "Cocoweb personal blog",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -32,6 +32,6 @@
     "sass": "^1.83.0"
   },
   "engines": {
-    "node": "20.20.0"
+    "node": "20.20.1"
   }
 }
