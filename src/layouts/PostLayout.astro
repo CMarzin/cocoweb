@@ -66,20 +66,20 @@ const tagsBasePath = getLocalizedUrl('/tags/', lang);
   lang={lang}
 >
   {showTranslationNotice && (
-    <div class="translation-notice">
+    <div class="italic text-sm mb-4 p-2 border border-dashed border-accent rounded">
       {t('post.translation-notice')}
     </div>
   )}
 
-  <h1>{title}</h1>
+  <h1 class="font-serif font-bold">{title}</h1>
 
-  <time class="postlist-date" datetime={formatDateISO(date)}>
+  <time class="text-adaptive-secondary text-sm italic block mb-2" datetime={formatDateISO(date)}>
     {formatDate(date)}
   </time>
 
-  <div class="post-tag__container">
+  <div class="flex gap-2 flex-wrap mb-4">
     {tags.map((tag) => (
-      <a href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="post-tag">
+      <a href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="inline-flex items-center justify-center text-xs px-1 py-0.5 text-adaptive border border-adaptive rounded no-underline leading-relaxed hover:text-accent hover:border-accent">
         #{tag}
       </a>
     ))}
@@ -91,16 +91,16 @@ const tagsBasePath = getLocalizedUrl('/tags/', lang);
 
   {(nextPost || previousPost) && (
     <>
-      <hr class="content-rule-footer" />
+      <hr class="my-6 border-t border-dashed border-accent" />
 
-      <div class="content-sources">
-        <h3>📖 {t('post.sources')}</h3>
+      <div class="content-sources p-2">
+        <h3 class="font-serif font-bold">📖 {t('post.sources')}</h3>
         <p>
-          Every news are mainly from my <a href="https://twitter.com/marz_coco" target="_blank">Twitter feed</a>, my <a href="https://github.com/CMarzin" target="_blank">Github feed</a>, <a href="https://tympanus.net/codrops/collective/?utm_source=cocoweb.fr" target="_blank">The collective</>, <a href="https://michaelnthiessen.com/?utm_source=cocoweb.fr" target="_blank">Michael Thiessen</a>, <a href="https://mokkapps.de/?utm_source=cocoweb.fr" target="_blank">Michael Hoffmann</a>, <a href="https://www.stefanjudis.com/about/?utm_source=cocoweb.fr" target="_blank">Stefan</a> and more recently by my friends <a href="https://adrienzaganelli.com/?utm_source=cocoweb.fr" target="_blank">Adrien Zaganelli</a>.
+          Every news are mainly from my <a href="https://twitter.com/marz_coco" target="_blank">Twitter feed</a>, my <a href="https://github.com/CMarzin" target="_blank">Github feed</a>, <a href="https://tympanus.net/codrops/collective/?utm_source=cocoweb.fr" target="_blank">The collective</a>, <a href="https://michaelnthiessen.com/?utm_source=cocoweb.fr" target="_blank">Michael Thiessen</a>, <a href="https://mokkapps.de/?utm_source=cocoweb.fr" target="_blank">Michael Hoffmann</a>, <a href="https://www.stefanjudis.com/about/?utm_source=cocoweb.fr" target="_blank">Stefan</a> and more recently by my friends <a href="https://adrienzaganelli.com/?utm_source=cocoweb.fr" target="_blank">Adrien Zaganelli</a>.
         </p>
       </div>
 
-      <ul>
+      <ul class="list-none p-0">
         {nextPost && (
           <li class="previous-next-page-link">
             {t('post.next')}: <a href={`${blogBasePath}${nextPost.slug.replace(/^(en|fr)\//, '')}/`}>{nextPost.data.title}</a>

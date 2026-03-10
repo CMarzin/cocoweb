@@ -24,12 +24,13 @@
   },
   "homepage": "https://cocoweb.fr",
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.13"
+    "@astrojs/mdx": "^4.3.13",
+    "@tailwindcss/vite": "^4.2.1",
+    "tailwindcss": "^4.2.1"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.15",
-    "astro": "^5.18.0",
-    "sass": "^1.83.0"
+    "astro": "^5.18.0"
   },
   "engines": {
     "node": "20.20.1"
