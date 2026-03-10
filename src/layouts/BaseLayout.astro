@@ -121,7 +121,7 @@ const jsonLd = generateJsonLd();
 
     <!-- Styles -->
     <style is:global>
-      @import '../styles/theme.scss';
+      @import '../styles/main.css';
     </style>
 
     <!-- Plausible Analytics -->
@@ -132,19 +132,19 @@ const jsonLd = generateJsonLd();
       is:inline
     ></script>
   </head>
-  <body>
-    <header class="nav-wrapper">
-      <ul class="nav">
+  <body class="font-sans text-adaptive-muted bg-adaptive max-w-prose mx-auto p-2 tablet:p-4 tablet:leading-relaxed tablet:text-lg">
+    <header class="flex pb-4 pt-4 border-b border-dashed border-accent gap-2 tablet:gap-4 justify-between">
+      <ul class="flex p-0 list-none flex-wrap m-0 gap-4">
         {navItems.map((item) => (
           <li
             title={item.title}
-            class:list={['nav-item', { 'nav-item-active': currentPath === item.url }]}
+            class:list={['nav-item font-serif', { 'nav-item-active': currentPath === item.url }]}
           >
-            <a href={item.url}>{item.title}</a>
+            <a href={item.url} class="text-adaptive-inverse no-underline hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent">{item.title}</a>
           </li>
         ))}
       </ul>
-      <form id="color-scheme-form" class="color-scheme">
+      <form id="color-scheme-form" class="flex items-center justify-center">
         <input
           name="toggle-scheme-mode"
           class="theme-toggle"
@@ -158,14 +158,14 @@ const jsonLd = generateJsonLd();
       <slot />
     </main>
 
-    <footer>
+    <footer class="flex flex-col justify-center items-center w-full gap-2 mt-4 pt-4 border-t border-dashed border-accent">
       <div>
         &copy; {t('footer.copyright')} - {new Date().getFullYear()}
       </div>
-      <div class="footer__webring">
-        <a href="https://xn--sr8hvo.ws/previous" class="footer__webring--previous">←</a>
-        <a href="https://xn--sr8hvo.ws" class="footer__webring-label">An IndieWeb Webring 🕸💍</a>
-        <a href="https://xn--sr8hvo.ws/next" class="footer__webring--next">→</a>
+      <div class="flex items-center justify-center gap-2 text-sm">
+        <a href="https://xn--sr8hvo.ws/previous" class="no-underline text-accent-alt">←</a>
+        <a href="https://xn--sr8hvo.ws" class="no-underline text-accent-alt">An IndieWeb Webring 🕸💍</a>
+        <a href="https://xn--sr8hvo.ws/next" class="no-underline text-accent-alt">→</a>
       </div>
     </footer>
 

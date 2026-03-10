@@ -1,0 +1,89 @@
+/* === COULEURS DE TEXTE === */
+
+.text-adaptive {
+  color: light-dark(var(--color-flexoki-black), var(--color-flexoki-base-200));
+}
+
+.text-adaptive-muted {
+  color: light-dark(var(--color-flexoki-base-900), var(--color-flexoki-base-200));
+}
+
+.text-adaptive-secondary {
+  color: light-dark(var(--color-flexoki-base-600), var(--color-flexoki-base-200));
+}
+
+.text-adaptive-inverse {
+  color: light-dark(var(--color-flexoki-black), var(--color-flexoki-paper));
+}
+
+.text-accent {
+  color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
+}
+
+.text-accent-alt {
+  color: light-dark(var(--color-flexoki-purple-600), var(--color-flexoki-purple-400));
+}
+
+/* === COULEURS DE FOND === */
+
+.bg-adaptive {
+  background-color: light-dark(var(--color-flexoki-paper), var(--color-flexoki-black));
+}
+
+.bg-adaptive-inverse {
+  background-color: light-dark(var(--color-flexoki-black), var(--color-flexoki-paper));
+}
+
+.bg-adaptive-ui {
+  background-color: light-dark(var(--color-flexoki-base-200), var(--color-flexoki-base-900));
+}
+
+.bg-adaptive-code {
+  background-color: light-dark(var(--color-flexoki-base-50), var(--color-flexoki-base-950));
+}
+
+/* === COULEURS DE BORDURE === */
+
+.border-adaptive {
+  border-color: light-dark(var(--color-flexoki-black), var(--color-flexoki-base-200));
+}
+
+.border-adaptive-ui {
+  border-color: light-dark(var(--color-flexoki-base-200), var(--color-flexoki-base-900));
+}
+
+.border-accent {
+  border-color: light-dark(var(--color-flexoki-purple-600), var(--color-flexoki-purple-400));
+}
+
+.border-accent-alt {
+  border-color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
+}
+
+/* === DECORATION DE TEXTE === */
+
+.decoration-accent {
+  text-decoration-color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
+}
+
+.decoration-accent-alt {
+  text-decoration-color: light-dark(var(--color-flexoki-purple-600), var(--color-flexoki-purple-400));
+}
+
+/* === HOVER STATES === */
+
+.hover\:text-accent:hover {
+  color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
+}
+
+.hover\:text-accent-alt:hover {
+  color: light-dark(var(--color-flexoki-purple-600), var(--color-flexoki-purple-400));
+}
+
+.hover\:border-accent:hover {
+  border-color: light-dark(var(--color-flexoki-purple-600), var(--color-flexoki-purple-400));
+}
+
+.hover\:decoration-accent:hover {
+  text-decoration-color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
+}

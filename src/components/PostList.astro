@@ -46,24 +46,24 @@ function formatDate(date: Date): string {
 }
 ---
 
-<ol class="postlist" reversed style={`counter-reset: start-from ${counterStart}`}>
+<ol class="list-none p-0" reversed style={`counter-reset: start-from ${counterStart}`}>
   {filteredPosts.map((post) => {
     // Remove language prefix from slug for URL
     const urlSlug = post.slug.replace(/^(en|fr)\//, '');
     return (
-    <li class="postlist-item">
-      <a href={`${basePath}/${urlSlug}/`} class="postlist-link">
+    <li class="postlist-item flex flex-wrap items-baseline gap-3 p-5 mt-6 rounded border-2 border-accent">
+      <a href={`${basePath}/${urlSlug}/`} class="w-full tablet:w-auto tablet:px-1 font-serif font-bold text-xl tablet:text-2xl no-underline text-adaptive hover:text-accent max-w-[60%]">
         {post.data.title}
       </a>
-      <time class="postlist-date" datetime={post.data.date.toISOString()}>
+      <time class="text-adaptive-secondary text-sm italic w-fit tablet:w-auto tablet:mt-0 tablet:grow tablet:text-end" datetime={post.data.date.toISOString()}>
         {formatDate(post.data.date)}
       </time>
       {showTags && post.data.tags.length > 0 && (
-        <div class="post-tag__container">
+        <div class="flex gap-2 flex-wrap tablet:w-full">
           {post.data.tags.map((tag) => (
             <a
               href={`${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
-              class="post-tag"
+              class="inline-flex items-center justify-center text-xs px-1 py-0.5 text-adaptive border border-adaptive rounded no-underline leading-relaxed hover:text-accent hover:border-accent"
             >
               #{tag}
             </a>
@@ -76,6 +76,6 @@ function formatDate(date: Date): string {
 </ol>
 
 {filteredPosts.length === 0 && (
-  <p class="no-posts">{lang === 'en' ? 'No posts found.' : 'Aucun article trouve.'}</p>
+  <p>{lang === 'en' ? 'No posts found.' : 'Aucun article trouve.'}</p>
 )}
 

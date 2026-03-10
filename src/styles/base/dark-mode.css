@@ -1,0 +1,7 @@
+:root {
+  color-scheme: dark;
+}
+
+:root:has(.theme-toggle:checked) {
+  color-scheme: light;
+}
