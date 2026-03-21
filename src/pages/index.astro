@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../layouts/BaseLayout.astro';
-import PostList from '../components/PostList.astro';
-import { useTranslations } from '../i18n/utils';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostList from '@/components/PostList.astro';
+import { useTranslations } from '@/i18n/utils';
 
 const t = useTranslations('en');
 
@@ -28,9 +28,10 @@ if (showTranslationNotice) {
       </div>
     )}
     
+    
     <h1>Latest 10 tips</h2>
+    
     <PostList posts={posts} limit={10} basePath="/blog" lang="en" />
     
-    <a href="/blog/" class="view-all">View all tips</a>
   </section>
 </BaseLayout>
