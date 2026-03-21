@@ -1,6 +1,6 @@
 ---
 name: blog-anchor-pattern
-description: Adds AnchorLink and AnchorSection components to blog posts for a clickable table of contents and section anchors. Use when creating or editing "tips" blog posts in src/content/blog/ (MDX files) or when the user asks to add anchor links or a table of contents to a blog post.
+description: Adds AnchorLink and AnchorSection components to blog posts for a clickable table of contents and section anchors; external links must use utm_source=cocoweb.fr. Use when creating or editing "tips" blog posts in src/content/blog/ (MDX files) or when the user asks to add anchor links or a table of contents to a blog post.
 ---
 
 # Blog Anchor Pattern (AnchorLink + AnchorSection)
@@ -31,6 +31,17 @@ import AnchorSection from "@/components/AnchorSection.astro";
 
 **Rule:** Order of AnchorLinks in the intro must match the order of AnchorSections in the content.
 
+## Outbound links (UTM)
+
+Every **external** markdown link in the post (`[label](https://...)` or `http://...`) must include the site attribution parameter:
+
+- If the URL has **no** query string yet: append `?utm_source=cocoweb.fr`.
+- If the URL **already** has a query string (`?` in the path): append `&utm_source=cocoweb.fr` instead of a second `?`.
+
+**Skip** in-page anchors only: `[text](#section-id)` — no UTM.
+
+Apply the same rule to links inside `AnchorSection` titles and anywhere else in the MDX body.
+
 ## ID generation
 
 From `AnchorLink` text to `AnchorSection` id:
@@ -50,16 +61,16 @@ From `AnchorLink` text to `AnchorSection` id:
 **Body (sections):**
 
 ```mdx
-<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem">[Performance Is Not a Technical Problem](https://example.com/...)</AnchorSection>
+<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem">[Performance Is Not a Technical Problem](https://example.com/article?utm_source=cocoweb.fr)</AnchorSection>
 
 Paragraph content here...
 
-<AnchorSection emoji="🏢" id="isometric-nyc">[Isometric NYC](https://example.com/...)</AnchorSection>
+<AnchorSection emoji="🏢" id="isometric-nyc">[Isometric NYC](https://example.com/other?utm_source=cocoweb.fr)</AnchorSection>
 
 Paragraph content here...
 ```
 
 ## Reference posts
 
-- [src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx](src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx)
-- [src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx](src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx)
+- [src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx](../../../src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx)
+- [src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx](../../../src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx)
