@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+
 @import './base/fonts.css';
 @import './base/dark-mode.css';
 @import './base/theme-colors.css';
@@ -142,8 +143,12 @@
   --color-flexoki-magenta-900: #39172B;
   --color-flexoki-magenta-950: #24131D;
 
+  --color-mondrian-red: #D81712;
+  --color-mondrian-yellow: #EFB400;
+  --color-mondrian-blue: #0159A4;
+
   /* Polices */
   --font-serif: 'CormorantGaramond', system-ui, sans-serif;
-  --font-sans: 'Montserrat', system-ui, sans-serif;
-  --font-mono: 'iA Writer Duo', Consolas, Menlo, Monaco, monospace;
+  --font-sans: 'Geist', system-ui, sans-serif;
+  --font-mono: 'Geist', Consolas, Menlo, Monaco, monospace;
 }

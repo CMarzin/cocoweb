@@ -1,31 +1,42 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import TagsWrapper from "./TagsWrapper.astro";
 
 interface Props {
-  posts: CollectionEntry<'blog'>[];
+  posts: CollectionEntry<"blog">[];
   limit?: number;
   showTags?: boolean;
   filterTag?: string;
   basePath?: string;
-  lang?: 'fr' | 'en';
+  lang?: "fr" | "en";
   totalCount?: number;
 }
 
-const { posts, limit, showTags = true, filterTag, basePath = '/blog', lang = 'fr', totalCount } = Astro.props;
+const {
+  posts,
+  limit,
+  showTags = true,
+  filterTag,
+  basePath = "/blog",
+  lang = "fr",
+  totalCount,
+} = Astro.props;
 
 // Determine tags base path based on language
-const tagsBasePath = lang === 'en' ? '/tags' : '/fr/tags';
+const tagsBasePath = lang === "en" ? "/tags" : "/fr/tags";
 
 // Filter by tag if specified
 let filteredPosts = filterTag
   ? posts.filter((post) =>
-      post.data.tags.some((tag) => tag.toLowerCase() === filterTag.toLowerCase())
+      post.data.tags.some(
+        (tag) => tag.toLowerCase() === filterTag.toLowerCase(),
+      ),
     )
   : posts;
 
 // Sort by date (newest first)
 filteredPosts = filteredPosts.sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
 const counterStart = (totalCount || posts.length) + 1;
@@ -37,45 +48,68 @@ if (limit) {
 
 // Format date for display
 function formatDate(date: Date): string {
-  const locale = lang === 'en' ? 'en-GB' : 'fr-FR';
+  const locale = lang === "en" ? "en-GB" : "fr-FR";
   return date.toLocaleDateString(locale, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
+    year: "numeric",
+    month: "short",
+    day: "numeric",
   });
 }
+
+const mondrianColors = [
+  "border-flexoki-red-400",
+  "border-flexoki-yellow-400",
+  "border-flexoki-blue-400",
+] as const;
 ---
 
-<ol class="list-none p-0" reversed style={`counter-reset: start-from ${counterStart}`}>
-  {filteredPosts.map((post) => {
-    // Remove language prefix from slug for URL
-    const urlSlug = post.slug.replace(/^(en|fr)\//, '');
-    return (
-    <li class="postlist-item flex flex-wrap items-baseline gap-3 p-5 mt-6 rounded border-2 border-accent">
-      <a href={`${basePath}/${urlSlug}/`} class="w-full tablet:w-auto tablet:px-1 font-serif font-bold text-xl tablet:text-2xl no-underline text-adaptive hover:text-accent max-w-[60%]">
-        {post.data.title}
-      </a>
-      <time class="text-adaptive-secondary text-sm italic w-fit tablet:w-auto tablet:mt-0 tablet:grow tablet:text-end" datetime={post.data.date.toISOString()}>
-        {formatDate(post.data.date)}
-      </time>
-      {showTags && post.data.tags.length > 0 && (
-        <div class="flex gap-2 flex-wrap tablet:w-full">
-          {post.data.tags.map((tag) => (
-            <a
-              href={`${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
-              class="inline-flex items-center justify-center text-xs px-1 py-0.5 text-adaptive border border-adaptive rounded no-underline leading-relaxed hover:text-accent hover:border-accent"
-            >
-              #{tag}
-            </a>
-          ))}
-        </div>
-      )}
-    </li>
-    );
-  })}
+<ol
+  class="list-none flex flex-col gap-4"
+  reversed
+  style={`counter-reset: start-from ${counterStart}`}
+>
+  {
+    filteredPosts.map((post) => {
+      // Remove language prefix from slug for URL
+      const urlSlug = post.slug.replace(/^(en|fr)\//, "");
+      return (
+        <li class="postlist-item flex flex-col items-baseline p-5 rounded border border-dashed relative">
+          <div class="mondrian-tunnel" aria-hidden="true" />
+          <a
+            href={`${basePath}/${urlSlug}/`}
+            class="w-full tablet:w-auto font-serif font-bold text-xl tablet:text-2xl mt-2.5 hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent"
+          >
+            {post.data.title}
+          </a>
+          <time
+            class="text-adaptive-secondary text-sm mt-5 w-fit tablet:w-auto tablet:grow tablet:text-end"
+            datetime={post.data.date.toISOString()}
+          >
+            {formatDate(post.data.date)}
+          </time>
+          {showTags && post.data.tags.length > 0 && (
+            <div class="flex gap-4 flex-wrap tablet:w-full mt-2.5">
+              <TagsWrapper tags={post.data.tags} />
+            </div>
+          )}
+        </li>
+      );
+    })
+  }
 </ol>
 
-{filteredPosts.length === 0 && (
-  <p>{lang === 'en' ? 'No posts found.' : 'Aucun article trouve.'}</p>
-)}
+{
+  filteredPosts.length === 0 && (
+    <p>{lang === "en" ? "No posts found." : "Aucun article trouve."}</p>
+  )
+}
 
+<style>
+  .mondrian-tunnel {
+    position: sticky;
+    top: 0;
+    width: 20px;
+    height: 40px;
+    border: 2px solid red;
+  }
+</style>

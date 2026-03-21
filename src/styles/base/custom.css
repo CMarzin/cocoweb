@@ -22,6 +22,8 @@
 }
 
 .postlist-item::before {
+  font-size: .8125em;
+  color: light-dark(var(--flexoki-600), var(--flexoki-200));
   display: inline-block;
   pointer-events: none;
   content: "" counter(start-from, decimal-leading-zero) ". ";
@@ -107,23 +109,16 @@
   text-decoration-color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
 }
 
-/* Home link styling */
-.home :link:not(:hover) {
-  text-decoration: none;
-}
-
-/* Typography headings */
 h1, h2, h3 {
   font-family: 'CormorantGaramond', system-ui, sans-serif;
   font-weight: 700;
 }
 
 h1 {
-  margin-block-start: 0.5em;
-  margin-block-end: 0;
+  font-size: 2rem;
+  margin: 0;
 }
 
-/* Paragraph styling */
 p {
   line-height: 1.8;
 }
