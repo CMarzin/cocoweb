@@ -1,29 +1,25 @@
 ---
-
 interface Props {
   tags: string[];
   lang?: "fr" | "en";
 }
 
-const { tags, lang } = Astro.props
+const { tags, lang } = Astro.props;
 
-const tagsBasePath = lang === 'en' ? '/tags' : '/fr/tags';
-
-const mondrianColors = ['decoration-flexoki-red-400', 'decoration-flexoki-yellow-400', 'decoration-flexoki-blue-400'] as const
+const tagsBasePath = lang === "en" ? "/tags" : "/fr/tags";
 
 function tagPath(tag: string) {
-    return `${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, '-')}/`
+  return `${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, "-")}/`;
 }
 ---
 
-{tags.map((tag) => (
+{
+  tags.map((tag) => (
     <a
-        href={tagPath(tag)}
-        class=`
-            flex items-center justify-center text-sm hover:font-bold transition-colors underline underline-offset-4 decoration-2
-            ${mondrianColors[Math.floor(Math.random() * mondrianColors.length)]}
-        `
+      href={tagPath(tag)}
+      class="text-[10px] uppercase tracking-[0.15em] px-2 py-0.5 border border-border text-muted-foreground transition-colors duration-200 hover:border-primary/40 hover:text-primary cursor-pointer active:scale-[0.96] z-10"
     >
-        {tag}
+      #{tag}
     </a>
-))}
+  ))
+}

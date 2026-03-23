@@ -1,16 +1,31 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-import BaseLayout from './BaseLayout.astro';
-import { getLangFromUrl, useTranslations, getLocalizedUrl, formatDate as formatDateI18n, type Lang } from '../i18n/utils';
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+
+import TagsWrapper from "@/components/TagsWrapper.astro";
+
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedUrl,
+  formatDate as formatDateI18n,
+  type Lang,
+} from "../i18n/utils";
 
 interface Props {
-  frontmatter: CollectionEntry<'blog'>['data'];
+  frontmatter: CollectionEntry<"blog">["data"];
   slug: string;
   lang?: Lang;
   showTranslationNotice?: boolean;
 }
 
-const { frontmatter, slug, lang: propLang, showTranslationNotice = false } = Astro.props;
+const {
+  frontmatter,
+  slug,
+  lang: propLang,
+  showTranslationNotice = false,
+} = Astro.props;
+
 const { title, description, date, tags, ogImage } = frontmatter;
 
 // Determine language from prop or URL
@@ -18,100 +33,206 @@ const lang = propLang || getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // Get posts for the current language for prev/next navigation
-const langPrefix = lang === 'en' ? 'en/' : 'fr/';
-let postsForNav = await getCollection('blog', ({ id }) => id.startsWith(langPrefix));
+const langPrefix = lang === "en" ? "en/" : "fr/";
+let postsForNav = await getCollection("blog", ({ id }) =>
+  id.startsWith(langPrefix),
+);
 
 // Fallback to French if no English posts
-if (postsForNav.length === 0 && lang === 'en') {
-  postsForNav = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+if (postsForNav.length === 0 && lang === "en") {
+  postsForNav = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
 }
 
-const sortedPosts = postsForNav.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const sortedPosts = postsForNav.sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
 
 // Find current post index (comparing without language prefix)
-const slugWithoutLang = slug.replace(/^(en|fr)\//, '');
-const currentIndex = sortedPosts.findIndex((post) => 
-  post.slug.replace(/^(en|fr)\//, '') === slugWithoutLang
+const slugWithoutLang = slug.replace(/^(en|fr)\//, "");
+const currentIndex = sortedPosts.findIndex(
+  (post) => post.slug.replace(/^(en|fr)\//, "") === slugWithoutLang,
 );
 const previousPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
-const nextPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
+const nextPost =
+  currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
 
 // Format date for display using i18n
 function formatDate(date: Date): string {
-  return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  return date.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 }
 
 // Format date for datetime attribute
 function formatDateISO(date: Date): string {
-  return date.toISOString().split('T')[0];
+  return date.toISOString().split("T")[0];
 }
 
 // Get localized blog path
-const blogBasePath = getLocalizedUrl('/blog/', lang);
-const tagsBasePath = getLocalizedUrl('/tags/', lang);
+const blogBasePath = getLocalizedUrl("/blog/", lang);
+const tagsBasePath = getLocalizedUrl("/tags/", lang);
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  ogImage={ogImage || '/img/og-tips.webp'}
+  ogImage={ogImage || "/img/og-tips.webp"}
   date={date}
   type="article"
   tags={tags}
-  templateClass="tmpl-post"
+  templateClass="tmpl-post animate-fade-up"
   lang={lang}
 >
-  {showTranslationNotice && (
-    <div class="italic text-sm mb-4 p-2 border border-dashed border-accent rounded">
-      {t('post.translation-notice')}
-    </div>
-  )}
+  {
+    showTranslationNotice && (
+      <div class="italic text-sm mb-4 p-2 border border-dashed border-accent rounded">
+        {t("post.translation-notice")}
+      </div>
+    )
+  }
 
-  <h1 class="font-serif font-bold">{title}</h1>
+  <h1
+    class="font-display text-4xl sm:text-5xl font-light text-foreground leading-[1.1]"
+  >
+    {title}
+  </h1>
 
-  <time class="text-adaptive-secondary text-sm italic block mb-2" datetime={formatDateISO(date)}>
+  <time
+    class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
+    datetime={formatDateISO(date)}
+  >
     {formatDate(date)}
   </time>
 
-  <div class="flex gap-2 flex-wrap mb-4">
-    {tags.map((tag) => (
-      <a href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="inline-flex items-center justify-center text-xs px-1 py-0.5 text-adaptive border border-adaptive rounded no-underline leading-relaxed hover:text-accent hover:border-accent">
-        #{tag}
-      </a>
-    ))}
+  <div class="flex gap-2 flex-wrap tablet:w-full mt-3">
+    <TagsWrapper tags={tags} lang="en" />
   </div>
 
   <section class="content-section">
-    <slot />
+    <h2
+      class="font-display text-2xl text-primary text-glow mt-8 animate-fade-up"
+      style="animation-delay: 200ms;"
+    >
+      Salut, web dev friends! 🧑‍💻
+    </h2>
+    <article class="mt-4 text-sm leading-relaxed text-foreground">
+      <slot />
+    </article>
   </section>
 
-  {(nextPost || previousPost) && (
-    <>
-      <hr class="my-6 border-t border-dashed border-accent" />
+  {
+    (nextPost || previousPost) && (
+      <>
+        <hr class="my-8" />
 
-      <div class="content-sources p-2">
-        <h3 class="font-serif font-bold">📖 {t('post.sources')}</h3>
-        <p>
-          Every news are mainly from my <a href="https://twitter.com/marz_coco" target="_blank">Twitter feed</a>, my <a href="https://github.com/CMarzin" target="_blank">Github feed</a>, <a href="https://tympanus.net/codrops/collective/?utm_source=cocoweb.fr" target="_blank">The collective</a>, <a href="https://michaelnthiessen.com/?utm_source=cocoweb.fr" target="_blank">Michael Thiessen</a>, <a href="https://mokkapps.de/?utm_source=cocoweb.fr" target="_blank">Michael Hoffmann</a>, <a href="https://www.stefanjudis.com/about/?utm_source=cocoweb.fr" target="_blank">Stefan</a> and more recently by my friends <a href="https://adrienzaganelli.com/?utm_source=cocoweb.fr" target="_blank">Adrien Zaganelli</a>.
-        </p>
-      </div>
+        <div class="border-ascii p-5 space-y-3 animate-fade-up">
+          <h3 class="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+            📚 {t("post.sources")}
+          </h3>
+          <p class="text-sm text-foreground leading-relaxed">
+            Every news are mainly from my
+            <a
+              href="https://twitter.com/marz_coco"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Twitter feed
+            </a>
+            ,
+            <a
+              href="https://github.com/CMarzin"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Github feed
+            </a>
+            ,
+            <a
+              href="https://tympanus.net/codrops/collective/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              The collective
+            </a>
+            ,
+            <a
+              href="https://piccalil.li/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Picallili
+            </a>
+            ,
+            <a
+              href="https://michaelnthiessen.com/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Michael Thiessen
+            </a>
+            ,
+            <a
+              href="https://mokkapps.de/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Michael Hoffmann
+            </a>
+            ,
+            <a
+              href="https://www.stefanjudis.com/about/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Stefan Judis
+            </a>
+            ,
+            <a
+              href="https://cassidoo.co/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Cassidy Williams
+            </a>
+            ,
+            <a
+              href="https://adrienzaganelli.com/?utm_source=cocoweb.fr"
+              class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              target="_blank"
+            >
+              Adrien Zaganelli
+            </a>
+            .
+          </p>
+        </div>
 
-      <ul class="list-none p-0">
-        {nextPost && (
-          <li class="previous-next-page-link">
-            {t('post.next')}: <a href={`${blogBasePath}${nextPost.slug.replace(/^(en|fr)\//, '')}/`}>{nextPost.data.title}</a>
-          </li>
-        )}
-        {previousPost && (
-          <li class="previous-next-page-link">
-            {t('post.previous')}: <a href={`${blogBasePath}${previousPost.slug.replace(/^(en|fr)\//, '')}/`}>{previousPost.data.title}</a>
-          </li>
-        )}
-      </ul>
-    </>
-  )}
+        <ul class="mt-8 text-sm text-foreground animate-fade-up list-disc list-inside">
+          {nextPost && (
+            <li class="previous-next-page-link">
+              <span class="text-muted-foreground">{t("post.next")}:</span>
+              <a
+                href={`${blogBasePath}${nextPost.slug.replace(/^(en|fr)\//, "")}/`}
+                class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              >
+                {nextPost.data.title}
+              </a>
+            </li>
+          )}
+          {previousPost && (
+            <li class="previous-next-page-link">
+              <span class="text-muted-foreground">{t("post.previous")}:</span>
+              <a
+                href={`${blogBasePath}${previousPost.slug.replace(/^(en|fr)\//, "")}/`}
+                class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+              >
+                {previousPost.data.title}
+              </a>
+            </li>
+          )}
+        </ul>
+      </>
+    )
+  }
 </BaseLayout>

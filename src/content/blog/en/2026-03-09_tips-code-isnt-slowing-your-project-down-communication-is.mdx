@@ -13,59 +13,77 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro"
 
-## Salut, web dev friends! 🧑‍💻
+<StarterText>
+This week, I started reading a lot of things about accessibility, I started using more [storybook](https://storybook.js.org/) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y). I discover some accessibility bugs into this very blog and fixed them ! I now have 100 score in lighthouse, its a start :).
+</StarterText>
 
-This week, I started reading a lot of things about accessiblity , I started using more [storybook](https://storybook.js.org/) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y). I discover some accessiblity bugs into this very blog and fixed them ! I now have 100 score in lighthouse, its a start :).
+<AnchorWrapper>
+  <AnchorLink emoji="📢" text="Code Isn't Slowing Your Project Down, Communication Is" />
+  <AnchorLink emoji="🌈" text="Finding an accessibility-first culture in npmx" />
+  <AnchorLink emoji="👀" text="Accessibility in Vue" />
+  <AnchorLink emoji="⚒️" text="Oxfmt Beta" />
+</AnchorWrapper>
 
-<AnchorLink emoji="📢" text="Code Isn't Slowing Your Project Down, Communication Is" />
-<AnchorLink emoji="🌈" text="Finding an accessibility-first culture in npmx" />
-<AnchorLink emoji="👀" text="Accessibility in Vue" />
-<AnchorLink emoji="⚒️" text="Oxfmt Beta" />
+<TextSeparator />
 
-**Have a great week.**
+<AnchorSection emoji="📢" id="code-isn't-slowing-your-project-down,-communication-is" text="Code Isn't Slowing Your Project Down, Communication Is" url="https://shiftmag.dev/code-isnt-slowing-your-project-down-communication-is-7889/" />
 
-___
+<p class="mt-2">
+I like the conclusion, « Sit down and listen to other teams ». Listening the problem of others, shape the architecture of the company. Because if you understand why team A and team B exist, it's easier for everyone to do their jobs more rapidly.
+</p>
 
-<AnchorSection emoji="📢" id="code-isn't-slowing-your-project-down,-communication-is">[Code Isn't Slowing Your Project Down, Communication Is](https://shiftmag.dev/code-isnt-slowing-your-project-down-communication-is-7889/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🌈" id="finding-an-accessibility-first-culture-in-npmx" text="Finding an accessibility-first culture in npmx" url="https://piccalil.li/blog/finding-an-accessibility-first-culture-in-npmx/" />
 
-I like the conlusion, « Sit down and listen to other teams ». Listening the problem of others, shape the architecture of the company. Because if you understand why team A and team B exist, it's easier for everyone to do their jobs more rapidly.
+<p class="mt-2">
+I agree it's easier to thinks about accessibility from the start, I will know try to be more alert about theses issues. I am already trying to use html semantic element, good contrast, «  the basics », but I have a lot of things to learn about keyboard navigation , voice over etc…
+</p>
 
-<AnchorSection emoji="🌈" id="finding-an-accessibility-first-culture-in-npmx">[Finding an accessibility-first culture in npmx](https://piccalil.li/blog/finding-an-accessibility-first-culture-in-npmx/?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="👀" id="accessibility-in-vue" text="Accessibility in Vue: Quick Tips for Building Inclusive Apps" url="https://dev.to/jacobandrewsky/accessibility-in-vue-quick-tips-for-building-inclusive-apps-2ne0" />
 
-I aggree it's easier to thinks about accessibility from the start, I will know try to be more alert about theses issues. I am already trying to use html semantic element, good contrast, «  the basics », but I have a lot of things to learn about keyboard navigation , voice over etc…
-
-<AnchorSection emoji="👀" id="accessibility-in-vue">[Accessibility in Vue: Quick Tips for Building Inclusive Apps](https://dev.to/jacobandrewsky/accessibility-in-vue-quick-tips-for-building-inclusive-apps-2ne0)</AnchorSection>
-
+<p class="mt-2">
 I started to use [storybook](https://storybook.js.org/) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y).  They are some nice tips, I need to make sure my website are accessible too.
+</p>
 
-<AnchorSection emoji="⚒️" id="oxfmt-beta">[Oxfmt Beta](https://oxc.rs/blog/2026-02-24-oxfmt-beta)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="⚒️" id="oxfmt-beta" text="Oxfmt Beta" url="https://oxc.rs/blog/2026-02-24-oxfmt-beta/" />
 
+<p class="mt-2">
 Announcing the Beta of Oxfmt, the stable release is near ! In a near future, I will migrate all my project on it, really excited for the performance improvment.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-📜 [vue-scrollama](https://vue-scrollama.pages.dev/)
+<WebLinkSection emoji="📜" url="https://vue-scrollama.pages.dev" text="vue-scrollama" templateClass="mt-4">
 Scroll down to explore component primitives and real-world scrollytelling patterns.
+</ WebLinkSection>
 
-📹 [Frame Zero](https://www.framezero.app/)
+<WebLinkSection emoji="📹" url="https://www.framezero.app/" text="Frame Zero" templateClass="mt-4">
 The Whiteboard Video Editor
-Built for explainers, tutorials, and video essays. Turn a blank canvas into a polished animated video without complex tools or steep learning curves.
+Built for explainers, tutorials, and video essays. Turn a blank canvas into a polished animated video without complex tools or steep learning curves. 
+</ WebLinkSection>
 
-🔦 [Torph](https://torph.lochie.me/)
+<WebLinkSection emoji="🔦" url="https://torph.lochie.me/" text="Frame Zero" templateClass="mt-4">
 Dependency-free animated text component.
+</ WebLinkSection>
 
-🌈 [WebHaptics](https://haptics.lochie.me/)
+<WebLinkSection emoji="🌈" url="https://haptics.lochie.me/" text="WebHaptics" templateClass="mt-4">
 Haptic feedback for the mobile web.
+</ WebLinkSection>
 
-## Cool Websites
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
 
-🤩 [PersonalSit.es](https://personalsit.es/?utm_source=cocoweb.fr)
-An index of ~912 personnal websites of REAL people.
+<WebLinkSection emoji="🤩" url="https://personalsit.es/" text="PersonalSit.es" templateClass="mt-4">
+An index of ~912 personal websites of REAL people.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-🔣 [DJR Glyph Navigator](https://glyphs.djr.com/)
+<WebLinkSection emoji="🔣" url="https://glyphs.djr.com/" text="DJR Glyph Navigator" templateClass="mt-4">
 An infinite collection of glyph, very nice for inspirations.
+</ WebLinkSection>

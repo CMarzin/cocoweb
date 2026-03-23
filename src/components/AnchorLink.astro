@@ -16,21 +16,7 @@ interface Props {
 
 const { emoji, text } = Astro.props;
 
-// Generate href from text (lowercase, spaces to dashes)
 const href = `#${text.toLowerCase().replace(/\s+/g, '-')}`;
 ---
 
-<a href={href} class="anchor-link">{emoji} {text}</a>
-
-<style>
-  .anchor-link {
-    display: block;
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-  }
-
-  .anchor-link:hover {
-    opacity: 0.8;
-    text-decoration: underline;
-  }
-</style>
+<a href={href} class="underline underline-offset-4">{emoji} {text}</a>

@@ -55,41 +55,40 @@ function formatDate(date: Date): string {
     day: "numeric",
   });
 }
-
-const mondrianColors = [
-  "border-flexoki-red-400",
-  "border-flexoki-yellow-400",
-  "border-flexoki-blue-400",
-] as const;
 ---
 
 <ol
-  class="list-none flex flex-col gap-4"
+  class="list-none flex flex-col gap-4 stagger-children"
   reversed
   style={`counter-reset: start-from ${counterStart}`}
 >
   {
-    filteredPosts.map((post) => {
-      // Remove language prefix from slug for URL
+    filteredPosts.map((post, index) => {
       const urlSlug = post.slug.replace(/^(en|fr)\//, "");
       return (
-        <li class="postlist-item flex flex-col items-baseline p-5 rounded border border-dashed relative">
-          <div class="mondrian-tunnel" aria-hidden="true" />
+        <li class="flex flex-col gap-5 items-baseline p-5 group border-ascii hover-glow animate-fade-up relative">
           <a
             href={`${basePath}/${urlSlug}/`}
-            class="w-full tablet:w-auto font-serif font-bold text-xl tablet:text-2xl mt-2.5 hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent"
+            class="post-url w-full tablet:w-auto"
           >
-            {post.data.title}
+            <div class="flex gap-2">
+              <span class="font-mono text-xs text-muted-foreground tabular-nums shrink-0 w-min pt-2.5">
+                {counterStart - index}.
+              </span>
+              <span class="font-display text-xl sm:text-2xl font-medium text-foreground leading-snug group-hover:text-primary transition-colors duration-200 text-pretty w-full">
+                {post.data.title}
+              </span>
+              <time
+                class="font-mono text-xs text-muted-foreground tabular-nums whitespace-nowrap shrink-0 w-min pt-2.5"
+                datetime={post.data.date.toISOString()}
+              >
+                {formatDate(post.data.date)}
+              </time>
+            </div>
           </a>
-          <time
-            class="text-adaptive-secondary text-sm mt-5 w-fit tablet:w-auto tablet:grow tablet:text-end"
-            datetime={post.data.date.toISOString()}
-          >
-            {formatDate(post.data.date)}
-          </time>
           {showTags && post.data.tags.length > 0 && (
-            <div class="flex gap-4 flex-wrap tablet:w-full mt-2.5">
-              <TagsWrapper tags={post.data.tags} />
+            <div class="flex gap-2 flex-wrap tablet:w-full">
+              <TagsWrapper tags={post.data.tags} lang="en" />
             </div>
           )}
         </li>
@@ -104,12 +103,14 @@ const mondrianColors = [
   )
 }
 
-<style>
-  .mondrian-tunnel {
-    position: sticky;
+<style scoped>
+  .post-url:before {
+    content: "";
+    position: absolute;
     top: 0;
-    width: 20px;
-    height: 40px;
-    border: 2px solid red;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
   }
 </style>

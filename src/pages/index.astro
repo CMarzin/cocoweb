@@ -1,37 +1,38 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import PostList from '@/components/PostList.astro';
-import { useTranslations } from '@/i18n/utils';
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostList from "@/components/PostList.astro";
+import { useTranslations } from "@/i18n/utils";
 
-const t = useTranslations('en');
+const t = useTranslations("en");
 
 // Try to get English content, fallback to French
-let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+let posts = await getCollection("blog", ({ id }) => id.startsWith("en/"));
 const showTranslationNotice = posts.length === 0;
 
 if (showTranslationNotice) {
-  posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+  posts = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
 }
 ---
 
-<BaseLayout 
-  title="Cocoweb" 
+<BaseLayout
+  title="Cocoweb"
   description="Welcome to my blog where I share my tech watch and web discoveries."
   lang="en"
 >
+  <section class="flex flex-col gap-5">
+    {
+      showTranslationNotice && (
+        <div class="translation-notice">{t("post.translation-notice")}</div>
+      )
+    }
 
-  <section class="home">
-    {showTranslationNotice && (
-      <div class="translation-notice">
-        {t('post.translation-notice')}
-      </div>
-    )}
-    
-    
-    <h1>Latest 10 tips</h2>
-    
+    <h1
+      class="font-display text-3xl sm:text-4xl font-light text-foreground animate-fade-up mt-1"
+    >
+      Latest <span class="text-primary text-glow tabular-nums">10</span> tips
+    </h1>
+
     <PostList posts={posts} limit={10} basePath="/blog" lang="en" />
-    
   </section>
 </BaseLayout>

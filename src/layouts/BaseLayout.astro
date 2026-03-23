@@ -220,24 +220,27 @@ const jsonLd = generateJsonLd();
       is:inline></script>
   </head>
   <body
-    class="font-sans text-adaptive-muted bg-adaptive max-w-prose mx-auto px-2 pb-2 tablet:pb-4 tablet:px-4 tablet:leading-relaxed tablet:text-lg"
+    class="text-adaptive-muted bg-adaptive max-w-prose mx-auto py-12 px-2 pb-2 tablet:pb-4 tablet:px-4 tablet:leading-relaxed tablet:text-lg"
   >
-    <header
-      class="flex pb-4 pt-4 border-b border-dashed gap-2 tablet:gap-4 justify-between"
-    >
-      <ul class="flex p-0 list-none flex-wrap m-0 gap-4">
+    <header class="flex pb-4 gap-2 tablet:gap-4 justify-between items-baseline">
+      <ul
+        class="flex p-0 list-none flex-wrap items-baseline m-0 gap-4 border-b pb-4"
+      >
         {
-          navItems.map((item) => (
-            <li
-              title={item.title}
-              class:list={[
-                "nav-item font-serif",
-                { "nav-item-active": currentPath === item.url },
-              ]}
-            >
+          navItems.map((item, index) => (
+            <li title={item.title}>
               <a
                 href={item.url}
-                class="text-adaptive-inverse no-underline hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent"
+                class:list={[
+                  {
+                    "font-display text-4xl font-light tracking-tight text-primary text-glow transition-opacity hover:opacity-80 active:scale-[0.98]":
+                      index === 0,
+                  },
+                  {
+                    "text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-200 hover:text-primary active:scale-[0.97]":
+                      index !== 0,
+                  },
+                ]}
               >
                 {item.title}
               </a>
@@ -245,45 +248,90 @@ const jsonLd = generateJsonLd();
           ))
         }
       </ul>
-      <form id="color-scheme-form" class="flex items-center justify-center">
-        <input
-          name="toggle-scheme-mode"
-          class="theme-toggle"
-          aria-label="Toggle scheme mode"
-          type="checkbox"
-        />
-      </form>
+      <div class="flex gap-4 pb-4 items-baseline">
+        <button
+          class="text-xs text-muted-foreground hover:text-primary transition-colors duration-200 active:scale-[0.96] tabular-nums cursor-pointer mt-auto"
+          data-theme-toggle
+          aria-label="Switch to light mode">[◐ light]</button
+        >
+        <div class="flex items-baseline">
+          <span
+            id="clock"
+            class="text-xs text-muted-foreground mt-auto tabular-nums font-mono"
+          >
+          </span>
+          <span class="cursor-blink mt-auto text-primary">_</span>
+        </div>
+      </div>
     </header>
 
-    <main class={templateClass}>
+    <main class={templateClass} style="animation-delay: 100ms">
       <slot />
     </main>
 
-    <footer class="flex justify-center items-center w-full gap-2 pt-4">
+    <footer
+      class="flex flex-col justify-center items-center w-full gap-4 pt-4 my-8 border-t text-xs text-muted-foreground"
+    >
       <div>
         &copy; {t("footer.copyright")} - {new Date().getFullYear()}
       </div>
-      <div class="flex items-center justify-center gap-2 text-sm">
-        <a href="https://xn--sr8hvo.ws/previous" class="no-underline">←</a>
-        <a href="https://xn--sr8hvo.ws" class="no-underline"
-          >An IndieWeb Webring 🕸💍</a
-        >
-        <a href="https://xn--sr8hvo.ws/next" class="no-underline">→</a>
+      <div class="flex items-center justify-center gap-2">
+        <a href="https://xn--sr8hvo.ws/previous" class="text-glow-cyan">←</a>
+        <a href="https://xn--sr8hvo.ws" class="text-accent text-glow-cyan transition-colors duration-200 active:scale-[0.97]">An IndieWeb Webring 🕸💍</a>
+        <a href="https://xn--sr8hvo.ws/next" class="text-glow-cyan">→</a>
       </div>
     </footer>
 
     <script is:inline defer>
-      if (localStorage.getItem("color-scheme") === "light") {
-        document.querySelector(".theme-toggle").checked = true;
+      const btn = document.querySelector("[data-theme-toggle]");
+      function getInitialTheme() {
+        if (localStorage.getItem("theme") === "undefined") {
+          return "light";
+        } else {
+          return "dark";
+        }
       }
-      document
-        .querySelector(".theme-toggle")
-        .addEventListener("change", (e) => {
-          localStorage.setItem(
-            "color-scheme",
-            e.target.checked ? "light" : "dark",
-          );
+
+      function setTheme(value) {
+        localStorage.setItem("theme", value);
+        btn.setAttribute(
+          "aria-label",
+          value === "dark" ? "Switch to light mode" : "Switch to dark mode",
+        );
+        btn.textContent = value === "dark" ? "[◐ light]" : "[◑ dark]";
+      }
+
+      setTheme(getInitialTheme());
+
+      if (btn) {
+        btn.addEventListener("click", () => {
+          if (localStorage.getItem("theme") === "dark") {
+            setTheme("light");
+          } else {
+            setTheme("dark");
+          }
         });
+      }
+
+      function formatTime() {
+        return new Date().toLocaleTimeString("fr-FR", {
+          hour12: false,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        });
+      }
+      function startClock() {
+        const el = document.getElementById("clock");
+        if (!el) return;
+        const tick = () => {
+          el.textContent = formatTime();
+        };
+        tick();
+        const id = setInterval(tick, 1000);
+        return () => clearInterval(id);
+      }
+      startClock();
     </script>
 
     <!-- JSON-LD Schema -->

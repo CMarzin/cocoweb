@@ -1,0 +1,20 @@
+---
+interface Props {
+  emoji: string;
+  text: string;
+  url: string;
+  templateClass: string;
+}
+
+const { emoji, text, url, templateClass } = Astro.props;
+---
+
+<div class={templateClass}>
+  <span>{emoji}</span>
+  <a
+    href={`${url}?utm_source=cocoweb.fr`}
+    class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+    >{text}</a
+  >
+  <slot />
+</div>

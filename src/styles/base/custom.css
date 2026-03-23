@@ -31,25 +31,6 @@
   text-align: right;
 }
 
-/* Trick pour éviter le changement de largeur au hover (nav items) */
-.nav-item::before {
-  display: block;
-  content: attr(title);
-  font-weight: bold;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-/* Nav item active state */
-.nav-item-active a {
-  font-weight: bold;
-  text-decoration: underline;
-  text-underline-offset: 0.5em;
-  text-decoration-thickness: 3px;
-  text-decoration-color: light-dark(var(--color-flexoki-purple-400), var(--color-flexoki-purple-600));
-}
-
 /* Highlight line styles (code blocks) */
 .highlight-line {
   display: block;
