@@ -8,140 +8,137 @@
   /* Dark mode (default) */
   :root,
   .dark {
-    --background: 30 5% 7%;       /* #100F0F */
-    --foreground: 45 7% 73%;      /* #B7B5AC - base-300 */
+    --background: 0 3% 6%;         /* #100F0F - black */
+    --foreground: 49 7% 70%;       /* #B7B5AC - base-300 */
 
-    --card: 30 4% 10%;            /* #1C1B1A - base-950 */
-    --card-foreground: 45 7% 73%;
+    --card: 30 4% 11%;             /* #1C1B1A - base-950 */
+    --card-foreground: 49 7% 70%;
 
-    --popover: 30 4% 10%;
-    --popover-foreground: 45 7% 73%;
+    --popover: 30 4% 11%;
+    --popover-foreground: 49 7% 70%;
 
-    --primary: 45 82% 45%;       /* #A02F6F - yellow-400 */
+    --primary: 45 82% 45%;         /* #D0A215 - yellow-400 */
     --primary-foreground: 48 100% 97%;
 
-    --secondary: 30 3% 15%;       /* #282726 - base-900 */
-    --secondary-foreground: 45 7% 73%;
+    --secondary: 30 3% 15%;        /* #282726 - base-900 */
+    --secondary-foreground: 49 7% 70%;
 
-    --muted: 30 3% 20%;           /* #343331 - base-850 */
-    --muted-foreground: 50 3% 42%; /* #6F6E69 - base-600 */
+    --accent: 175 49% 45%;         /* #3AA99F - cyan-400 */
+    --accent-foreground: 0 3% 6%;
 
-    --accent: 174 48% 45%;        /* #3AA99F - cyan-400 */
-    --accent-foreground: 30 5% 7%;
+    --destructive: 3 62% 42%;      /* #AF3029 - red-600 */
+    --destructive-foreground: 49 7% 70%;
 
-    --destructive: 4 60% 43%;     /* #AF3029 - red-600 */
-    --destructive-foreground: 45 7% 73%;
-
-    --border: 30 2% 25%;          /* #403E3C - base-800 */
-    --input: 30 2% 25%;
-    --ring: 338 55% 41%;
+    --border: 30 3% 24%;           /* #403E3C - base-800 */
+    --input: 30 3% 24%;
+    --ring: 329 54% 59%;
 
     --radius: 0px;
 
-    --flexoki-black: 30 5% 7%;
-    --flexoki-950: 30 4% 10%;
+    --flexoki-black: 0 3% 6%;
+    --flexoki-950: 30 4% 11%;
     --flexoki-900: 30 3% 15%;
-    --flexoki-850: 30 3% 20%;
-    --flexoki-800: 30 2% 25%;
-    --flexoki-700: 40 2% 33%;
+    --flexoki-850: 40 3% 20%;
+    --flexoki-800: 30 3% 24%;
+    --flexoki-700: 45 2% 33%;
     --flexoki-600: 50 3% 42%;
-    --flexoki-500: 45 3% 52%;
-    --flexoki-300: 45 7% 73%;
-    --flexoki-200: 46 8% 81%;
-    --flexoki-150: 43 9% 83%;
-    --flexoki-100: 47 9% 89%;
-    --flexoki-50: 47 15% 93%;
+    --flexoki-500: 43 3% 52%;
+    --flexoki-300: 49 7% 70%;
+    --flexoki-200: 55 10% 79%;
+    --flexoki-150: 50 14% 83%;
+    --flexoki-100: 51 21% 88%;
+    --flexoki-50: 51 33% 92%;
     --flexoki-paper: 48 100% 97%;
 
-    --flexoki-red: 4 60% 43%;
-    --flexoki-orange: 24 73% 41%;
-    --flexoki-yellow: 45 99% 34%;
-    --flexoki-green: 72 62% 41%;
-    --flexoki-cyan: 174 48% 45%;
-    --flexoki-blue: 210 63% 47%;
-    --flexoki-purple: 262 32% 47%;
-    --flexoki-magenta: 338 55% 41%;
+    --flexoki-red: 5 61% 54%;
+    --flexoki-orange: 23 70% 51%;
+    --flexoki-yellow: 45 82% 45%;
+    --flexoki-green: 72 46% 41%;
+    --flexoki-cyan: 175 49% 45%;
+    --flexoki-blue: 208 49% 50%;
+    --flexoki-purple: 251 40% 64%;
+    --flexoki-magenta: 329 54% 59%;
 
     --scanline-opacity: 0.04;
-    --glow-green: 338 55% 41%;
+    --glow-green: 329 54% 59%;
 
-    --sidebar-background: 30 4% 10%;
-    --sidebar-foreground: 45 7% 73%;
-    --sidebar-primary: 338 55% 41%;
-    --sidebar-primary-foreground: 30 5% 7%;
+    --sidebar-background: 30 4% 11%;
+    --sidebar-foreground: 49 7% 70%;
+    --sidebar-primary: 329 54% 59%;
+    --sidebar-primary-foreground: 0 3% 6%;
     --sidebar-accent: 30 3% 15%;
-    --sidebar-accent-foreground: 45 7% 73%;
-    --sidebar-border: 30 2% 25%;
-    --sidebar-ring: 338 55% 41%;
+    --sidebar-accent-foreground: 49 7% 70%;
+    --sidebar-border: 30 3% 24%;
+    --sidebar-ring: 329 54% 59%;
   }
 
   /* Light mode - Flexoki Light palette */
   .light {
     --background: 48 100% 97%;     /* #FFFCF0 - paper */
-    --foreground: 30 5% 7%;        /* #100F0F - black */
+    --foreground: 0 3% 6%;         /* #100F0F - black */
 
-    --card: 47 15% 93%;            /* #F2F0E5 - base-50 */
-    --card-foreground: 30 5% 7%;
+    --card: 51 33% 92%;            /* #F2F0E5 - base-50 */
+    --card-foreground: 0 3% 6%;
 
-    --popover: 47 15% 93%;
-    --popover-foreground: 30 5% 7%;
+    --popover: 51 33% 92%;
+    --popover-foreground: 0 3% 6%;
 
-    --primary: 338 55% 41%;        /* #A02F6F - magenta */
+    --primary: 326 55% 41%;        /* #A02F6F - magenta-600 */
     --primary-foreground: 48 100% 97%;
 
-    --secondary: 47 9% 89%;        /* #E6E4D9 - base-100 */
-    --secondary-foreground: 30 5% 7%;
+    --secondary: 51 21% 88%;       /* #E6E4D9 - base-100 */
+    --secondary-foreground: 0 3% 6%;
 
-    --muted: 45 2% 33%;            /* #DAD8CE - base-150 */
-    --muted-foreground: 43 3% 52%; /* #6F6E69 - base-600 */
+    --muted: 50 14% 83%;           /* #DAD8CE - base-150 */
+    --muted-foreground: 50 3% 42%; /* #6F6E69 - base-600 */
 
-    --accent: 174 48% 45%;         /* #3AA99F - cyan */
+    --accent: 175 49% 45%;         /* #3AA99F - cyan-400 */
     --accent-foreground: 48 100% 97%;
 
-    --destructive: 4 60% 43%;
+    --destructive: 3 62% 42%;      /* #AF3029 - red-600 */
     --destructive-foreground: 48 100% 97%;
 
-    --border: 46 8% 81%;           /* #CECDC3 - base-200 */
-    --input: 46 8% 81%;
-    --ring: 338 55% 41%;
+    --border: 55 10% 79%;          /* #CECDC3 - base-200 */
+    --input: 55 10% 79%;
+    --ring: 326 55% 41%;
 
     --radius: 0px;
 
-    --flexoki-black: 30 5% 7%;
-    --flexoki-950: 30 4% 10%;
+    --flexoki-black: 0 3% 6%;
+    --flexoki-950: 30 4% 11%;
     --flexoki-900: 30 3% 15%;
-    --flexoki-850: 30 3% 20%;
-    --flexoki-800: 30 2% 25%;
-    --flexoki-700: 40 2% 33%;
+    --flexoki-850: 40 3% 20%;
+    --flexoki-800: 30 3% 24%;
+    --flexoki-700: 45 2% 33%;
     --flexoki-600: 50 3% 42%;
-    --flexoki-500: 45 3% 52%;
-    --flexoki-300: 45 7% 73%;
-    --flexoki-200: 46 8% 81%;
-    --flexoki-150: 43 9% 83%;
-    --flexoki-100: 47 9% 89%;
-    --flexoki-50: 47 15% 93%;
+    --flexoki-500: 43 3% 52%;
+    --flexoki-300: 49 7% 70%;
+    --flexoki-200: 55 10% 79%;
+    --flexoki-150: 50 14% 83%;
+    --flexoki-100: 51 21% 88%;
+    --flexoki-50: 51 33% 92%;
     --flexoki-paper: 48 100% 97%;
 
-    --flexoki-red: 4 60% 43%;
-    --flexoki-orange: 24 73% 41%;
-    --flexoki-yellow: 45 99% 34%;
-    --flexoki-green: 72 62% 41%;
-    --flexoki-cyan: 174 48% 45%;
-    --flexoki-blue: 210 63% 47%;
-    --flexoki-purple: 262 32% 47%;
-    --flexoki-magenta: 338 55% 41%;
+    --flexoki-red: 5 61% 54%;
+    --flexoki-orange: 23 70% 51%;
+    --flexoki-yellow: 45 82% 45%;
+    --flexoki-green: 72 46% 41%;
+    --flexoki-cyan: 175 49% 45%;
+    --flexoki-blue: 208 49% 50%;
+    --flexoki-purple: 251 40% 64%;
+    --flexoki-magenta: 329 54% 59%;
 
     --scanline-opacity: 0;
-    --glow-green: 338 55% 41%;
+    --glow-green: 326 55% 41%;
 
-    --sidebar-background: 47 15% 93%;
-    --sidebar-foreground: 30 5% 7%;
-    --sidebar-primary: 338 55% 41%;
+    --sidebar-background: 51 33% 92%;
+    --sidebar-foreground: 0 3% 6%;
+    --sidebar-primary: 326 55% 41%;
     --sidebar-primary-foreground: 48 100% 97%;
-    --sidebar-accent: 47 9% 89%;
-    --sidebar-accent-foreground: 30 5% 7%;
-    --sidebar-border: 46 8% 81%;
-    --sidebar-ring: 338 55% 41%;
+    --sidebar-accent: 51 21% 88%;
+    --sidebar-accent-foreground: 0 3% 6%;
+    --sidebar-border: 55 10% 79%;
+    --sidebar-ring: 326 55% 41%;
   }
 }
 
