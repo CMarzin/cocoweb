@@ -31,7 +31,7 @@ function formatDate(date: Date): string {
       <ol class="postlist">
         {sortedArticles.map((article) => (
           <li class="postlist-item">
-            <a href={`/fr/articles/${article.slug.replace(/^fr\//, '')}/`} class="article-link">
+            <a href={`/fr/articles/${article.id.replace(/^fr\//, '')}/`} class="article-link">
               <time datetime={article.data.date.toISOString()}>
                 {formatDate(article.data.date)}
               </time>

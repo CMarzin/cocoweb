@@ -212,10 +212,10 @@ const jsonLd = generateJsonLd();
       title="Cocoweb"
     />
 
-    <!-- Plausible Analytics -->
     <script
+      type="text/partytown"
       defer
-      data-domain="cocoweb.fr"
+      data-domain="testing.cocoweb.fr"
       src="https://plausible.cocommit.fr/js/script.hash.outbound-links.tagged-events.js"
       is:inline></script>
   </head>
@@ -277,7 +277,11 @@ const jsonLd = generateJsonLd();
       </div>
       <div class="flex items-center justify-center gap-2">
         <a href="https://xn--sr8hvo.ws/previous" class="text-glow-cyan">←</a>
-        <a href="https://xn--sr8hvo.ws" class="text-accent text-glow-cyan transition-colors duration-200 active:scale-[0.97]">An IndieWeb Webring 🕸💍</a>
+        <a
+          href="https://xn--sr8hvo.ws"
+          class="text-accent text-glow-cyan transition-colors duration-200 active:scale-[0.97]"
+          >An IndieWeb Webring 🕸💍</a
+        >
         <a href="https://xn--sr8hvo.ws/next" class="text-glow-cyan">→</a>
       </div>
     </footer>
@@ -332,6 +336,14 @@ const jsonLd = generateJsonLd();
         return () => clearInterval(id);
       }
       startClock();
+    </script>
+
+    <script is:inline>
+      window.plausible =
+        window.plausible ||
+        function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments);
+        };
     </script>
 
     <!-- JSON-LD Schema -->

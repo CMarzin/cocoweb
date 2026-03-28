@@ -23,18 +23,19 @@
     "url": "https://github.com/CMarzin/cocoweb/issues"
   },
   "homepage": "https://cocoweb.fr",
+  "dependencies": {
+    "@astrojs/partytown": "^2.1.6",
+    "@astrojs/rss": "^4.0.18",
+    "astro": "^6.1.1"
+  },
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.13",
-    "@tailwindcss/vite": "^4.2.1",
+    "@astrojs/mdx": "^5.0.3",
+    "@tailwindcss/vite": "^4.2.2",
     "tailwind-merge": "^3.5.0",
-    "tailwindcss": "^4.2.1",
+    "tailwindcss": "^4.2.2",
     "tailwindcss-animate": "^1.0.7"
   },
-  "dependencies": {
-    "@astrojs/rss": "^4.0.15",
-    "astro": "^5.18.0"
-  },
   "engines": {
-    "node": "20.20.1"
+    "node": "22.22.2"
   }
 }

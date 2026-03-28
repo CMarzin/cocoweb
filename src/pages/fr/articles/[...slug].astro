@@ -1,19 +1,19 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ArticleLayout from '../../../layouts/ArticleLayout.astro';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ id }) => id.startsWith('fr/'));
   return articles.map((article) => ({
-    params: { slug: article.slug.replace(/^fr\//, '') },
+    params: { slug: article.id.replace(/^fr\//, '') },
     props: { article },
   }));
 }
 
 const { article } = Astro.props;
-const { Content } = await article.render();
+const { Content } = await render(article);
 ---
 
-<ArticleLayout frontmatter={article.data} slug={article.slug} lang="fr">
+<ArticleLayout frontmatter={article.data} slug={article.id} lang="fr">
   <Content />
 </ArticleLayout>

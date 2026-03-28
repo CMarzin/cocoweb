@@ -64,7 +64,7 @@ function formatDate(date: Date): string {
 >
   {
     filteredPosts.map((post, index) => {
-      const urlSlug = post.slug.replace(/^(en|fr)\//, "");
+      const urlSlug = post.id.replace(/^(en|fr)\//, "");
       return (
         <li class="flex flex-col gap-5 items-baseline p-5 group border-ascii hover-glow animate-fade-up relative">
           <a

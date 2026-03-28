@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-
 import mdx from '@astrojs/mdx';
+
+import partytown from '@astrojs/partytown';
 
 export default defineConfig({
   vite: {
@@ -23,5 +24,5 @@ export default defineConfig({
     format: 'directory',
   },
 
-  integrations: [mdx()],
+  integrations: [mdx(), partytown()],
 });

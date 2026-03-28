@@ -1,0 +1,471 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const baseColors = [
+  { name: "black",    hex: "#100F0F", hsl: "0 3% 6%",      cssVar: "--flexoki-black" },
+  { name: "base-950", hex: "#1C1B1A", hsl: "30 4% 11%",    cssVar: "--flexoki-950" },
+  { name: "base-900", hex: "#282726", hsl: "30 3% 15%",    cssVar: "--flexoki-900" },
+  { name: "base-850", hex: "#343331", hsl: "40 3% 20%",    cssVar: "--flexoki-850" },
+  { name: "base-800", hex: "#403E3C", hsl: "30 3% 24%",    cssVar: "--flexoki-800" },
+  { name: "base-700", hex: "#575653", hsl: "45 2% 33%",    cssVar: "--flexoki-700" },
+  { name: "base-600", hex: "#6F6E69", hsl: "50 3% 42%",    cssVar: "--flexoki-600" },
+  { name: "base-500", hex: "#878580", hsl: "43 3% 52%",    cssVar: "--flexoki-500" },
+  { name: "base-300", hex: "#B7B5AC", hsl: "49 7% 70%",    cssVar: "--flexoki-300" },
+  { name: "base-200", hex: "#CECDC3", hsl: "55 10% 79%",   cssVar: "--flexoki-200" },
+  { name: "base-150", hex: "#DAD8CE", hsl: "50 14% 83%",   cssVar: "--flexoki-150" },
+  { name: "base-100", hex: "#E6E4D9", hsl: "51 21% 88%",   cssVar: "--flexoki-100" },
+  { name: "base-50",  hex: "#F2F0E5", hsl: "51 33% 92%",   cssVar: "--flexoki-50" },
+  { name: "paper",    hex: "#FFFCF0", hsl: "48 100% 97%",  cssVar: "--flexoki-paper" },
+];
+
+const accentColors400 = [
+  { name: "red-400",     hex: "#D14D41", hsl: "5 61% 54%",    cssVar: "--flexoki-red" },
+  { name: "orange-400",  hex: "#DA702C", hsl: "23 70% 51%",   cssVar: "--flexoki-orange" },
+  { name: "yellow-400",  hex: "#D0A215", hsl: "45 82% 45%",   cssVar: "--flexoki-yellow" },
+  { name: "green-400",   hex: "#879A39", hsl: "72 46% 41%",   cssVar: "--flexoki-green" },
+  { name: "cyan-400",    hex: "#3AA99F", hsl: "175 49% 45%",  cssVar: "--flexoki-cyan" },
+  { name: "blue-400",    hex: "#4385BE", hsl: "208 49% 50%",  cssVar: "--flexoki-blue" },
+  { name: "purple-400",  hex: "#8B7EC8", hsl: "251 40% 64%",  cssVar: "--flexoki-purple" },
+  { name: "magenta-400", hex: "#CE5D97", hsl: "329 54% 59%",  cssVar: "--flexoki-magenta" },
+];
+
+const accentColors600 = [
+  { name: "red-600",     hex: "#AF3029" },
+  { name: "orange-600",  hex: "#BC5215" },
+  { name: "yellow-600",  hex: "#AD8301" },
+  { name: "green-600",   hex: "#66800B" },
+  { name: "cyan-600",    hex: "#24837B" },
+  { name: "blue-600",    hex: "#205EA6" },
+  { name: "purple-600",  hex: "#5E409D" },
+  { name: "magenta-600", hex: "#A02F6F" },
+];
+
+const extendedPalette = {
+  red: [
+    { step: "50",  hex: "#FFE1D5" },
+    { step: "100", hex: "#FFCABB" },
+    { step: "150", hex: "#FDB2A2" },
+    { step: "200", hex: "#F89A8A" },
+    { step: "300", hex: "#E8705F" },
+    { step: "400", hex: "#D14D41" },
+    { step: "500", hex: "#C03E35" },
+    { step: "600", hex: "#AF3029" },
+    { step: "700", hex: "#942822" },
+    { step: "800", hex: "#6C201C" },
+    { step: "850", hex: "#551B18" },
+    { step: "900", hex: "#3E1715" },
+    { step: "950", hex: "#261312" },
+  ],
+  orange: [
+    { step: "50",  hex: "#FFE7CE" },
+    { step: "100", hex: "#FED3AF" },
+    { step: "150", hex: "#FCC192" },
+    { step: "200", hex: "#F9AE77" },
+    { step: "300", hex: "#EC8B49" },
+    { step: "400", hex: "#DA702C" },
+    { step: "500", hex: "#CB6120" },
+    { step: "600", hex: "#BC5215" },
+    { step: "700", hex: "#9D4310" },
+    { step: "800", hex: "#71320D" },
+    { step: "850", hex: "#59290D" },
+    { step: "900", hex: "#40200D" },
+    { step: "950", hex: "#27180E" },
+  ],
+  yellow: [
+    { step: "50",  hex: "#FAEEC6" },
+    { step: "100", hex: "#F6E2A0" },
+    { step: "150", hex: "#F1D67E" },
+    { step: "200", hex: "#ECCB60" },
+    { step: "300", hex: "#DFB431" },
+    { step: "400", hex: "#D0A215" },
+    { step: "500", hex: "#BE9207" },
+    { step: "600", hex: "#AD8301" },
+    { step: "700", hex: "#8E6B01" },
+    { step: "800", hex: "#664D01" },
+    { step: "850", hex: "#503D02" },
+    { step: "900", hex: "#3A2D04" },
+    { step: "950", hex: "#241E08" },
+  ],
+  green: [
+    { step: "50",  hex: "#EDEECF" },
+    { step: "100", hex: "#DDE2B2" },
+    { step: "150", hex: "#CDD597" },
+    { step: "200", hex: "#BEC97E" },
+    { step: "300", hex: "#A0AF54" },
+    { step: "400", hex: "#879A39" },
+    { step: "500", hex: "#768D21" },
+    { step: "600", hex: "#66800B" },
+    { step: "700", hex: "#536907" },
+    { step: "800", hex: "#3D4C07" },
+    { step: "850", hex: "#313D07" },
+    { step: "900", hex: "#252D09" },
+    { step: "950", hex: "#1A1E0C" },
+  ],
+  cyan: [
+    { step: "50",  hex: "#DDF1E4" },
+    { step: "100", hex: "#BFE8D9" },
+    { step: "150", hex: "#A2DECE" },
+    { step: "200", hex: "#87D3C3" },
+    { step: "300", hex: "#5ABDAC" },
+    { step: "400", hex: "#3AA99F" },
+    { step: "500", hex: "#2F968D" },
+    { step: "600", hex: "#24837B" },
+    { step: "700", hex: "#1C6C66" },
+    { step: "800", hex: "#164F4A" },
+    { step: "850", hex: "#143F3C" },
+    { step: "900", hex: "#122F2C" },
+    { step: "950", hex: "#101F1D" },
+  ],
+  blue: [
+    { step: "50",  hex: "#E1ECEB" },
+    { step: "100", hex: "#C6DDE8" },
+    { step: "150", hex: "#ABCFE2" },
+    { step: "200", hex: "#92BFDB" },
+    { step: "300", hex: "#66A0C8" },
+    { step: "400", hex: "#4385BE" },
+    { step: "500", hex: "#3171B2" },
+    { step: "600", hex: "#205EA6" },
+    { step: "700", hex: "#1A4F8C" },
+    { step: "800", hex: "#163B66" },
+    { step: "850", hex: "#133051" },
+    { step: "900", hex: "#12253B" },
+    { step: "950", hex: "#101A24" },
+  ],
+  purple: [
+    { step: "50",  hex: "#F0EAEC" },
+    { step: "100", hex: "#E2D9E9" },
+    { step: "150", hex: "#D3CAE6" },
+    { step: "200", hex: "#C4B9E0" },
+    { step: "300", hex: "#A699D0" },
+    { step: "400", hex: "#8B7EC8" },
+    { step: "500", hex: "#735EB5" },
+    { step: "600", hex: "#5E409D" },
+    { step: "700", hex: "#4F3685" },
+    { step: "800", hex: "#3C2A62" },
+    { step: "850", hex: "#31234E" },
+    { step: "900", hex: "#261C39" },
+    { step: "950", hex: "#1A1623" },
+  ],
+  magenta: [
+    { step: "50",  hex: "#FEE4E5" },
+    { step: "100", hex: "#FCCFDA" },
+    { step: "150", hex: "#F9B9CF" },
+    { step: "200", hex: "#F4A4C2" },
+    { step: "300", hex: "#E47DA8" },
+    { step: "400", hex: "#CE5D97" },
+    { step: "500", hex: "#B74583" },
+    { step: "600", hex: "#A02F6F" },
+    { step: "700", hex: "#87285E" },
+    { step: "800", hex: "#641F46" },
+    { step: "850", hex: "#4F1B39" },
+    { step: "900", hex: "#39172B" },
+    { step: "950", hex: "#24131D" },
+  ],
+};
+
+function hexToHsl(hex: string): string {
+  const r = parseInt(hex.slice(1, 3), 16) / 255;
+  const g = parseInt(hex.slice(3, 5), 16) / 255;
+  const b = parseInt(hex.slice(5, 7), 16) / 255;
+  const max = Math.max(r, g, b);
+  const min = Math.min(r, g, b);
+  const l = (max + min) / 2;
+  if (max === min) return `0 0% ${Math.round(l * 100)}%`;
+  const d = max - min;
+  const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+  let h = 0;
+  if (max === r) h = ((g - b) / d + (g < b ? 6 : 0)) / 6;
+  else if (max === g) h = ((b - r) / d + 2) / 6;
+  else h = ((r - g) / d + 4) / 6;
+  return `${Math.round(h * 360)} ${Math.round(s * 100)}% ${Math.round(l * 100)}%`;
+}
+
+const semanticMappings = [
+  { role: "background",      darkVar: "--background",      lightVar: "--background",      darkDesc: "bg", lightDesc: "bg" },
+  { role: "foreground",       darkVar: "--foreground",       lightVar: "--foreground",       darkDesc: "tx", lightDesc: "tx" },
+  { role: "card",             darkVar: "--card",             lightVar: "--card",             darkDesc: "bg-2", lightDesc: "bg-2" },
+  { role: "primary",          darkVar: "--primary",          lightVar: "--primary",          darkDesc: "yellow-400", lightDesc: "magenta" },
+  { role: "secondary",        darkVar: "--secondary",        lightVar: "--secondary",        darkDesc: "base-900", lightDesc: "base-100" },
+  { role: "muted",            darkVar: "--muted",            lightVar: "--muted",            darkDesc: "base-850", lightDesc: "base-150" },
+  { role: "muted-foreground", darkVar: "--muted-foreground", lightVar: "--muted-foreground", darkDesc: "base-600", lightDesc: "base-600" },
+  { role: "accent",           darkVar: "--accent",           lightVar: "--accent",           darkDesc: "cyan-400", lightDesc: "cyan-400" },
+  { role: "destructive",      darkVar: "--destructive",      lightVar: "--destructive",      darkDesc: "red-600", lightDesc: "red-600" },
+  { role: "border",           darkVar: "--border",           lightVar: "--border",           darkDesc: "base-800", lightDesc: "base-200" },
+];
+---
+
+<BaseLayout title="Theme — Flexoki Color Reference" description="Comparison of Flexoki official hex colors and the HSL values used on this site.">
+  <div class="space-y-12 animate-fade-up">
+
+    <section>
+      <h1 class="font-display text-4xl font-light tracking-tight text-primary text-glow mb-2">
+        Flexoki Theme
+      </h1>
+      <p class="text-muted-foreground text-sm mb-8">
+        Comparaison des couleurs hex officielles <a href="https://stephango.com/flexoki" class="text-accent hover:underline" target="_blank" rel="noopener">Flexoki</a> avec les valeurs HSL utilisées sur ce site.
+      </p>
+    </section>
+
+    <!-- Semantic Mappings -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-4">Semantic tokens</h2>
+      <p class="text-muted-foreground text-xs mb-4">Correspondances des variables CSS du design system — valeurs dark / light.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs border-collapse">
+          <thead>
+            <tr class="border-b text-left text-muted-foreground">
+              <th class="py-2 pr-3">Rôle</th>
+              <th class="py-2 pr-3">Dark (source)</th>
+              <th class="py-2 pr-3">Light (source)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {semanticMappings.map(m => (
+              <tr class="border-b border-border/50">
+                <td class="py-2 pr-3 font-mono">{m.role}</td>
+                <td class="py-2 pr-3">
+                  <div class="flex items-center gap-2">
+                    <span class="text-muted-foreground">{m.darkDesc}</span>
+                  </div>
+                </td>
+                <td class="py-2 pr-3">
+                  <div class="flex items-center gap-2">
+                    <span class="text-muted-foreground">{m.lightDesc}</span>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Base Colors -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-4">Base colors</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs border-collapse">
+          <thead>
+            <tr class="border-b text-left text-muted-foreground">
+              <th class="py-2 pr-3">Nom</th>
+              <th class="py-2 pr-3">Officiel (hex)</th>
+              <th class="py-2 pr-3">HSL exact</th>
+              <th class="py-2 pr-3">Mon HSL</th>
+              <th class="py-2 pr-3">Diff visuelle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {baseColors.map(c => {
+              const exactHsl = hexToHsl(c.hex);
+              const match = exactHsl === c.hsl;
+              return (
+                <tr class="border-b border-border/50">
+                  <td class="py-2 pr-3 font-mono">{c.name}</td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:${c.hex}`} />
+                      <span class="font-mono">{c.hex}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:hsl(${exactHsl})`} />
+                      <span class="font-mono text-muted-foreground">{exactHsl}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:hsl(${c.hsl})`} />
+                      <span class="font-mono">{c.hsl}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <div class="inline-flex rounded-sm border border-border/50 overflow-hidden shrink-0" title={match ? "Identique" : `Hex: ${c.hex} vs HSL: ${c.hsl}`}>
+                        <span class="block w-5 h-8" style={`background:${c.hex}`} />
+                        <span class="block w-[1px] h-8 bg-foreground/20" />
+                        <span class="block w-5 h-8" style={`background:hsl(${c.hsl})`} />
+                      </div>
+                      {match
+                        ? <span class="text-green-400">✓</span>
+                        : <span class="text-yellow-400">≠</span>
+                      }
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Accent Colors 400 (Dark mode) -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-2">Accent colors — 400 (dark mode)</h2>
+      <p class="text-muted-foreground text-xs mb-4">Utilisées en dark mode pour la syntaxe et les accents.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs border-collapse">
+          <thead>
+            <tr class="border-b text-left text-muted-foreground">
+              <th class="py-2 pr-3">Nom</th>
+              <th class="py-2 pr-3">Officiel (hex)</th>
+              <th class="py-2 pr-3">HSL exact</th>
+              <th class="py-2 pr-3">Mon HSL</th>
+              <th class="py-2 pr-3">Diff visuelle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {accentColors400.map(c => {
+              const exactHsl = hexToHsl(c.hex);
+              const match = exactHsl === c.hsl;
+              return (
+                <tr class="border-b border-border/50">
+                  <td class="py-2 pr-3 font-mono">{c.name}</td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:${c.hex}`} />
+                      <span class="font-mono">{c.hex}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:hsl(${exactHsl})`} />
+                      <span class="font-mono text-muted-foreground">{exactHsl}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:hsl(${c.hsl})`} />
+                      <span class="font-mono">{c.hsl}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <div class="inline-flex rounded-sm border border-border/50 overflow-hidden shrink-0" title={match ? "Identique" : `Hex: ${c.hex} vs HSL: ${c.hsl}`}>
+                        <span class="block w-5 h-8" style={`background:${c.hex}`} />
+                        <span class="block w-[1px] h-8 bg-foreground/20" />
+                        <span class="block w-5 h-8" style={`background:hsl(${c.hsl})`} />
+                      </div>
+                      {match
+                        ? <span class="text-green-400">✓</span>
+                        : <span class="text-yellow-400">≠</span>
+                      }
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Accent Colors 600 (Light mode) -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-2">Accent colors — 600 (light mode)</h2>
+      <p class="text-muted-foreground text-xs mb-4">Utilisées en light mode pour la syntaxe et les accents.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs border-collapse">
+          <thead>
+            <tr class="border-b text-left text-muted-foreground">
+              <th class="py-2 pr-3">Nom</th>
+              <th class="py-2 pr-3">Officiel (hex)</th>
+              <th class="py-2 pr-3">HSL exact</th>
+              <th class="py-2 pr-3">Swatch</th>
+            </tr>
+          </thead>
+          <tbody>
+            {accentColors600.map(c => {
+              const exactHsl = hexToHsl(c.hex);
+              return (
+                <tr class="border-b border-border/50">
+                  <td class="py-2 pr-3 font-mono">{c.name}</td>
+                  <td class="py-2 pr-3">
+                    <div class="flex items-center gap-2">
+                      <span class="inline-block w-6 h-6 rounded-sm border border-border/50 shrink-0" style={`background:${c.hex}`} />
+                      <span class="font-mono">{c.hex}</span>
+                    </div>
+                  </td>
+                  <td class="py-2 pr-3 font-mono text-muted-foreground">{exactHsl}</td>
+                  <td class="py-2 pr-3">
+                    <span class="inline-block w-6 h-6 rounded-sm border border-border/50" style={`background:hsl(${exactHsl})`} />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Extended Palette -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-2">Extended palette</h2>
+      <p class="text-muted-foreground text-xs mb-6">La palette complète Flexoki 2.0 — valeurs 50 à 950 pour chaque couleur d'accent.</p>
+
+      {Object.entries(extendedPalette).map(([colorName, steps]) => (
+        <div class="mb-8">
+          <h3 class="font-mono text-sm text-foreground mb-3 capitalize">{colorName}</h3>
+          <div class="flex flex-wrap gap-1">
+            {steps.map(s => (
+              <div class="flex flex-col items-center gap-1">
+                <span
+                  class="block w-10 h-10 rounded-sm border border-border/50"
+                  style={`background:${s.hex}`}
+                  title={`${colorName}-${s.step}: ${s.hex}`}
+                />
+                <span class="text-[10px] text-muted-foreground font-mono">{s.step}</span>
+              </div>
+            ))}
+          </div>
+          <div class="flex flex-wrap gap-1 mt-1">
+            {steps.map(s => (
+              <div class="w-10 text-center">
+                <span class="text-[9px] text-muted-foreground/60 font-mono break-all leading-tight">{s.hex}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- Base ramp visual -->
+    <section>
+      <h2 class="font-display text-2xl font-light text-primary mb-4">Base ramp</h2>
+      <div class="flex gap-1 mb-2">
+        {baseColors.map(c => (
+          <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
+            <span
+              class="block w-full h-16 rounded-sm border border-border/50"
+              style={`background:${c.hex}`}
+              title={`${c.name}: ${c.hex}`}
+            />
+            <span class="text-[9px] text-muted-foreground font-mono truncate w-full text-center">{c.name}</span>
+          </div>
+        ))}
+      </div>
+      <p class="text-[10px] text-muted-foreground/60">Hex officiel ↑ / HSL du site ↓</p>
+      <div class="flex gap-1 mt-1">
+        {baseColors.map(c => (
+          <div class="flex flex-col items-center gap-1 flex-1 min-w-0">
+            <span
+              class="block w-full h-16 rounded-sm border border-border/50"
+              style={`background:hsl(${c.hsl})`}
+              title={`${c.name}: hsl(${c.hsl})`}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Reference link -->
+    <section class="border-t pt-6 text-xs text-muted-foreground">
+      <p>
+        Référence : <a href="https://stephango.com/flexoki" class="text-accent hover:underline" target="_blank" rel="noopener">stephango.com/flexoki</a>
+        — Flexoki par Steph Ango, MIT License.
+      </p>
+    </section>
+
+  </div>
+</BaseLayout>

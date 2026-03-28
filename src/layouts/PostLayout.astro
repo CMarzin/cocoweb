@@ -50,7 +50,7 @@ const sortedPosts = postsForNav.sort(
 // Find current post index (comparing without language prefix)
 const slugWithoutLang = slug.replace(/^(en|fr)\//, "");
 const currentIndex = sortedPosts.findIndex(
-  (post) => post.slug.replace(/^(en|fr)\//, "") === slugWithoutLang,
+  (post) => post.id.replace(/^(en|fr)\//, "") === slugWithoutLang,
 );
 const previousPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 const nextPost =
@@ -213,7 +213,7 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
             <li class="previous-next-page-link">
               <span class="text-muted-foreground">{t("post.next")}:</span>
               <a
-                href={`${blogBasePath}${nextPost.slug.replace(/^(en|fr)\//, "")}/`}
+                href={`${blogBasePath}${nextPost.id.replace(/^(en|fr)\//, "")}/`}
                 class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
               >
                 {nextPost.data.title}
@@ -224,7 +224,7 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
             <li class="previous-next-page-link">
               <span class="text-muted-foreground">{t("post.previous")}:</span>
               <a
-                href={`${blogBasePath}${previousPost.slug.replace(/^(en|fr)\//, "")}/`}
+                href={`${blogBasePath}${previousPost.id.replace(/^(en|fr)\//, "")}/`}
                 class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
               >
                 {previousPost.data.title}

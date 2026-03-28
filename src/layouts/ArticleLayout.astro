@@ -47,7 +47,7 @@ const sortedArticles = articlesForNav.sort(
 // Find current article index (comparing without language prefix)
 const slugWithoutLang = slug.replace(/^(en|fr)\//, "");
 const currentIndex = sortedArticles.findIndex(
-  (article) => article.slug.replace(/^(en|fr)\//, "") === slugWithoutLang,
+  (article) => article.id.replace(/^(en|fr)\//, "") === slugWithoutLang,
 );
 const previousArticle =
   currentIndex > 0 ? sortedArticles[currentIndex - 1] : null;
@@ -133,7 +133,7 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
             <li class="previous-next-page-link">
               {t("post.next")}:{" "}
               <a
-                href={`${articlesBasePath}${nextArticle.slug.replace(/^(en|fr)\//, "")}/`}
+                href={`${articlesBasePath}${nextArticle.id.replace(/^(en|fr)\//, "")}/`}
               >
                 {nextArticle.data.title}
               </a>
@@ -143,7 +143,7 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
             <li class="previous-next-page-link">
               {t("post.previous")}:{" "}
               <a
-                href={`${articlesBasePath}${previousArticle.slug.replace(/^(en|fr)\//, "")}/`}
+                href={`${articlesBasePath}${previousArticle.id.replace(/^(en|fr)\//, "")}/`}
               >
                 {previousArticle.data.title}
               </a>
