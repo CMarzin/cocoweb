@@ -1,8 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
 
-const posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+const posts = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
 
 const tagCounts = new Map<string, number>();
 
@@ -19,22 +19,32 @@ const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => {
 });
 ---
 
-<BaseLayout title="Tags - Cocoweb" description="Tous les tags du blog Cocoweb." lang="fr">
+<BaseLayout
+  title="Tags - Cocoweb"
+  description="Tous les tags du blog Cocoweb."
+  lang="fr"
+>
   <div class="tags-page">
-    <h1>Tags</h1>
+    <h1
+      class="font-display text-4xl font-light tracking-tight text-primary text-glow mb-2"
+    >
+      Tags
+    </h1>
     <p class="tags-description">
       Explorer les articles par sujet. {sortedTags.length} tags disponibles.
     </p>
-    
+
     <ul class="tags-list">
-      {sortedTags.map(([tag, count]) => (
-        <li>
-          <a href={`/fr/tags/${tag.replace(/\s+/g, '-')}/`} class="tag-link">
-            <span class="tag-name">#{tag}</span>
-            <span class="tag-count">{count}</span>
-          </a>
-        </li>
-      ))}
+      {
+        sortedTags.map(([tag, count]) => (
+          <li>
+            <a href={`/fr/tags/${tag.replace(/\s+/g, "-")}/`} class="tag-link">
+              <span class="tag-name">#{tag}</span>
+              <span class="tag-count">{count}</span>
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </BaseLayout>

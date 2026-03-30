@@ -5,140 +5,75 @@
 @config "../../tailwind.config.ts";
 
 @layer base {
-  /* Dark mode (default) */
-  :root,
-  .dark {
-    --background: 0 3% 6%;         /* #100F0F - black */
-    --foreground: 49 7% 70%;       /* #B7B5AC - base-300 */
+  :root {
+    /* light-dark(LIGHT, DARK) — resolved by color-scheme in dark-mode.css */
+    --background: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
+    --foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
 
-    --card: 30 4% 11%;             /* #1C1B1A - base-950 */
-    --card-foreground: 49 7% 70%;
+    --card: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --card-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
 
-    --popover: 30 4% 11%;
-    --popover-foreground: 49 7% 70%;
+    --popover: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --popover-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
 
-    --primary: 45 82% 45%;         /* #D0A215 - yellow-400 */
-    --primary-foreground: 48 100% 97%;
+    --primary: light-dark(hsl(326 55% 41%), hsl(45 82% 45%));
+    --primary-foreground: hsl(48 100% 97%);
 
-    --secondary: 30 3% 15%;        /* #282726 - base-900 */
-    --secondary-foreground: 49 7% 70%;
+    --secondary: light-dark(hsl(51 21% 88%), hsl(30 3% 15%));
+    --secondary-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
 
-    --accent: 175 49% 45%;         /* #3AA99F - cyan-400 */
-    --accent-foreground: 0 3% 6%;
+    --muted: light-dark(hsl(50 14% 83%), hsl(30 3% 15%));
+    --muted-foreground: light-dark(hsl(50 3% 42%), hsl(43 3% 52%));
 
-    --destructive: 3 62% 42%;      /* #AF3029 - red-600 */
-    --destructive-foreground: 49 7% 70%;
+    --accent: light-dark(hsl(175 56% 32%),hsl(175 49% 45%));
+    --accent-foreground: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
 
-    --border: 30 3% 24%;           /* #403E3C - base-800 */
-    --input: 30 3% 24%;
-    --ring: 329 54% 59%;
+    --destructive: hsl(3 62% 42%);
+    --destructive-foreground: light-dark(hsl(48 100% 97%), hsl(49 7% 70%));
 
-    --radius: 0px;
-
-    --flexoki-black: 0 3% 6%;
-    --flexoki-950: 30 4% 11%;
-    --flexoki-900: 30 3% 15%;
-    --flexoki-850: 40 3% 20%;
-    --flexoki-800: 30 3% 24%;
-    --flexoki-700: 45 2% 33%;
-    --flexoki-600: 50 3% 42%;
-    --flexoki-500: 43 3% 52%;
-    --flexoki-300: 49 7% 70%;
-    --flexoki-200: 55 10% 79%;
-    --flexoki-150: 50 14% 83%;
-    --flexoki-100: 51 21% 88%;
-    --flexoki-50: 51 33% 92%;
-    --flexoki-paper: 48 100% 97%;
-
-    --flexoki-red: 5 61% 54%;
-    --flexoki-orange: 23 70% 51%;
-    --flexoki-yellow: 45 82% 45%;
-    --flexoki-green: 72 46% 41%;
-    --flexoki-cyan: 175 49% 45%;
-    --flexoki-blue: 208 49% 50%;
-    --flexoki-purple: 251 40% 64%;
-    --flexoki-magenta: 329 54% 59%;
-
-    --scanline-opacity: 0.04;
-    --glow-green: 329 54% 59%;
-
-    --sidebar-background: 30 4% 11%;
-    --sidebar-foreground: 49 7% 70%;
-    --sidebar-primary: 329 54% 59%;
-    --sidebar-primary-foreground: 0 3% 6%;
-    --sidebar-accent: 30 3% 15%;
-    --sidebar-accent-foreground: 49 7% 70%;
-    --sidebar-border: 30 3% 24%;
-    --sidebar-ring: 329 54% 59%;
-  }
-
-  /* Light mode - Flexoki Light palette */
-  .light {
-    --background: 48 100% 97%;     /* #FFFCF0 - paper */
-    --foreground: 0 3% 6%;         /* #100F0F - black */
-
-    --card: 51 33% 92%;            /* #F2F0E5 - base-50 */
-    --card-foreground: 0 3% 6%;
-
-    --popover: 51 33% 92%;
-    --popover-foreground: 0 3% 6%;
-
-    --primary: 326 55% 41%;        /* #A02F6F - magenta-600 */
-    --primary-foreground: 48 100% 97%;
-
-    --secondary: 51 21% 88%;       /* #E6E4D9 - base-100 */
-    --secondary-foreground: 0 3% 6%;
-
-    --muted: 50 14% 83%;           /* #DAD8CE - base-150 */
-    --muted-foreground: 50 3% 42%; /* #6F6E69 - base-600 */
-
-    --accent: 175 49% 45%;         /* #3AA99F - cyan-400 */
-    --accent-foreground: 48 100% 97%;
-
-    --destructive: 3 62% 42%;      /* #AF3029 - red-600 */
-    --destructive-foreground: 48 100% 97%;
-
-    --border: 55 10% 79%;          /* #CECDC3 - base-200 */
-    --input: 55 10% 79%;
-    --ring: 326 55% 41%;
+    --border: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --input: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --ring: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
 
     --radius: 0px;
 
-    --flexoki-black: 0 3% 6%;
-    --flexoki-950: 30 4% 11%;
-    --flexoki-900: 30 3% 15%;
-    --flexoki-850: 40 3% 20%;
-    --flexoki-800: 30 3% 24%;
-    --flexoki-700: 45 2% 33%;
-    --flexoki-600: 50 3% 42%;
-    --flexoki-500: 43 3% 52%;
-    --flexoki-300: 49 7% 70%;
-    --flexoki-200: 55 10% 79%;
-    --flexoki-150: 50 14% 83%;
-    --flexoki-100: 51 21% 88%;
-    --flexoki-50: 51 33% 92%;
-    --flexoki-paper: 48 100% 97%;
+    --flexoki-black: hsl(0 3% 6%);
+    --flexoki-950: hsl(30 4% 11%);
+    --flexoki-900: hsl(30 3% 15%);
+    --flexoki-850: hsl(40 3% 20%);
+    --flexoki-800: hsl(30 3% 24%);
+    --flexoki-700: hsl(45 2% 33%);
+    --flexoki-600: hsl(50 3% 42%);
+    --flexoki-500: hsl(43 3% 52%);
+    --flexoki-300: hsl(49 7% 70%);
+    --flexoki-200: hsl(55 10% 79%);
+    --flexoki-150: hsl(50 14% 83%);
+    --flexoki-100: hsl(51 21% 88%);
+    --flexoki-50: hsl(51 33% 92%);
+    --flexoki-paper: hsl(48 100% 97%);
 
-    --flexoki-red: 5 61% 54%;
-    --flexoki-orange: 23 70% 51%;
-    --flexoki-yellow: 45 82% 45%;
-    --flexoki-green: 72 46% 41%;
-    --flexoki-cyan: 175 49% 45%;
-    --flexoki-blue: 208 49% 50%;
-    --flexoki-purple: 251 40% 64%;
-    --flexoki-magenta: 329 54% 59%;
+    --flexoki-red: hsl(5 61% 54%);
+    --flexoki-orange: hsl(23 70% 51%);
+    --flexoki-yellow: hsl(45 82% 45%);
+    --flexoki-green: hsl(72 46% 41%);
+    --flexoki-cyan: hsl(175 49% 45%);
+    --flexoki-blue: hsl(208 49% 50%);
+    --flexoki-purple: hsl(251 40% 64%);
+    --flexoki-magenta: hsl(329 54% 59%);
 
-    --scanline-opacity: 0;
-    --glow-green: 326 55% 41%;
+    --glow: light-dark(hsl(329 54% 59%), var(--flexoki-yellow));
 
-    --sidebar-background: 51 33% 92%;
-    --sidebar-foreground: 0 3% 6%;
-    --sidebar-primary: 326 55% 41%;
-    --sidebar-primary-foreground: 48 100% 97%;
-    --sidebar-accent: 51 21% 88%;
-    --sidebar-accent-foreground: 0 3% 6%;
-    --sidebar-border: 55 10% 79%;
-    --sidebar-ring: 326 55% 41%;
+    --scanline-opacity: light-dark(0, 0.04);
+    --glow-green: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+
+    --sidebar-background: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --sidebar-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+    --sidebar-primary: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+    --sidebar-primary-foreground: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
+    --sidebar-accent: light-dark(hsl(51 21% 88%), hsl(30 3% 15%));
+    --sidebar-accent-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+    --sidebar-border: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --sidebar-ring: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
   }
 }
 
@@ -151,8 +86,8 @@
     @apply bg-background text-foreground font-mono antialiased;
   }
   ::selection {
-    background: hsl(var(--primary) / 0.3);
-    color: hsl(var(--flexoki-paper));
+    background: color-mix(in srgb, var(--primary) 30%, transparent);
+    color: var(--flexoki-paper);
   }
 
   /* Scrollbar */
@@ -160,13 +95,13 @@
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: hsl(var(--flexoki-950));
+    background: var(--flexoki-950);
   }
   ::-webkit-scrollbar-thumb {
-    background: hsl(var(--flexoki-800));
+    background: var(--flexoki-800);
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: hsl(var(--flexoki-700));
+    background: var(--flexoki-700);
   }
 }
 
@@ -180,24 +115,24 @@
   }
 
   .text-glow {
-    text-shadow: 0 0 8px hsl(var(--flexoki-yellow) / 0.5), 0 0 20px hsl(var(--flexoki-yellow) / 0.2);
+    text-shadow: 0 0 8px color-mix(in srgb, var(--glow) 50%, transparent), 0 0 20px color-mix(in srgb, var(--glow) 20%, transparent);
   }
 
   .text-glow-cyan {
-    text-shadow: 0 0 8px hsl(var(--flexoki-cyan) / 0.5), 0 0 20px hsl(var(--flexoki-cyan) / 0.2);
+    text-shadow: 0 0 8px color-mix(in srgb, var(--flexoki-cyan) 50%, transparent), 0 0 20px color-mix(in srgb, var(--flexoki-cyan) 20%, transparent);
   }
 
   .border-ascii {
-    border: 1px solid hsl(var(--flexoki-800));
-    box-shadow: inset 0 0 0 1px hsl(var(--flexoki-850));
+    border: 1px solid var(--flexoki-800);
+    box-shadow: inset 0 0 0 1px var(--flexoki-850);
   }
 
   .hover-glow {
     transition: box-shadow 300ms ease-out, border-color 300ms ease-out;
   }
   .hover-glow:hover {
-    border-color: hsl(var(--primary) / 0.4);
-    box-shadow: 0 0 12px hsl(var(--glow-green) / 0.1), inset 0 0 12px hsl(var(--glow-green) / 0.03);
+    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--glow-green) 10%, transparent), inset 0 0 12px color-mix(in srgb, var(--glow-green) 3%, transparent);
   }
 
   /* Blinking cursor */

@@ -9,21 +9,21 @@ interface Props {
   currentPath?: string;
 }
 
-const { currentPath = '/' } = Astro.props;
+const { currentPath = "/" } = Astro.props;
 
 // Navigation items with i18n support
 const navItems: NavItem[] = [
-  { title: 'Cocoweb', url: '/', key: 'Home' },
-  { title: 'À propos', url: '/about/', key: 'About' },
-  { title: 'Tips', url: '/blog/', key: 'Tips' },
-  { title: 'Articles', url: '/articles/', key: 'Articles' },
-  { title: 'Recherche', url: '/search/', key: 'Search' },
+  { title: "Cocoweb", url: "/", key: "Home" },
+  { title: "À propos", url: "/about/", key: "About" },
+  { title: "Tips", url: "/blog/", key: "Tips" },
+  { title: "Articles", url: "/articles/", key: "Articles" },
+  { title: "Recherche", url: "/search/", key: "Search" },
 ];
 
 // Check if a nav item is active (exact match or starts with for nested routes)
 function isActive(itemUrl: string): boolean {
-  if (itemUrl === '/') {
-    return currentPath === '/';
+  if (itemUrl === "/") {
+    return currentPath === "/";
   }
   return currentPath.startsWith(itemUrl);
 }
@@ -31,14 +31,24 @@ function isActive(itemUrl: string): boolean {
 
 <nav>
   <ul class="flex p-0 list-none flex-wrap m-0 gap-4">
-    {navItems.map((item) => (
-      <li
-        title={item.title}
-        class:list={['nav-item font-serif', { 'nav-item-active': isActive(item.url) }]}
-      >
-        <a href={item.url} class="text-adaptive-inverse no-underline hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent">{item.title}</a>
-      </li>
-    ))}
+    {
+      navItems.map((item) => (
+        <li
+          title={item.title}
+          class:list={[
+            "nav-item font-serif",
+            { "nav-item-active": isActive(item.url) },
+          ]}
+        >
+          <a
+            href={item.url}
+            class="text-adaptive-inverse no-underline hover:font-bold hover:underline hover:underline-offset-8 hover:decoration-3 hover:decoration-accent"
+          >
+            {item.title}
+          </a>
+        </li>
+      ))
+    }
     <slot />
   </ul>
 </nav>

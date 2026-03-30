@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import TagsWrapper from "./TagsWrapper.astro";
 
 interface Props {
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<"blog" | "articles">[];
   limit?: number;
   showTags?: boolean;
   filterTag?: string;
@@ -39,7 +39,7 @@ filteredPosts = filteredPosts.sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-const counterStart = (totalCount || posts.length) + 1;
+const counterStart = (totalCount || posts.length);
 
 // Apply limit if specified
 if (limit) {

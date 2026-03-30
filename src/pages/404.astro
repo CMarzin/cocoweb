@@ -1,46 +1,25 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { useTranslations } from '../i18n/utils';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { useTranslations } from "../i18n/utils";
 
-const t = useTranslations('en');
+const t = useTranslations("en");
 ---
 
-<BaseLayout title="Page not found - Cocoweb" description="The page you are looking for does not exist." lang="en">
-  <div class="not-found">
-    <h1>404</h1>
-    <p>{t('404.description')}</p>
-    <a href="/">{t('404.back')}</a>
+<BaseLayout
+  title="Page not found - Cocoweb"
+  description="The page you are looking for does not exist."
+  lang="en"
+>
+  <div class="flex flex-col justify-center items-center">
+    <h1
+      class="font-display text-3xl sm:text-4xl font-light text-foreground animate-fade-up mt-1"
+    >
+      404
+    </h1>
+    <p class="mt-8">{t("404.description")}</p>
+    <a
+      class="mt-5 text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+      href="/">{t("404.back")}</a
+    >
   </div>
 </BaseLayout>
-
-<style>
-  .not-found {
-    text-align: center;
-    padding: 4rem 1rem;
-  }
-
-  .not-found h1 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
-  }
-
-  .not-found p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .not-found a {
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background: light-dark(var(--flexoki-purple-200), var(--flexoki-purple-400));
-    color: light-dark(var(--flexoki-black), var(--flexoki-50));
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-
-  .not-found a:hover {
-    background: light-dark(var(--flexoki-purple-400), var(--flexoki-purple-600));
-    color: light-dark(var(--flexoki-50), var(--flexoki-black));
-  }
-</style>
