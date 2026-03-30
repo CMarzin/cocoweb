@@ -85,6 +85,12 @@
   body {
     @apply bg-background text-foreground font-mono antialiased;
   }
+
+  ::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 250ms;
+  animation-timing-function: ease-in-out;
+}
   ::selection {
     background: color-mix(in srgb, var(--primary) 30%, transparent);
     color: var(--flexoki-paper);

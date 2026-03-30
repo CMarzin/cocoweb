@@ -220,8 +220,8 @@ const jsonLd = generateJsonLd();
       is:inline></script>
 
     <script is:inline>
-      (function() {
-        var t = localStorage.getItem('theme');
+      (function () {
+        var t = localStorage.getItem("theme");
         if (t) document.documentElement.style.colorScheme = t;
       })();
     </script>
@@ -294,38 +294,53 @@ const jsonLd = generateJsonLd();
     </footer>
 
     <script is:inline>
-      (function() {
-        var btn = document.querySelector('[data-theme-toggle]');
+      (function () {
+        var btn = document.querySelector("[data-theme-toggle]");
         if (!btn) return;
 
         function currentScheme() {
-          return getComputedStyle(document.documentElement).colorScheme || 'dark';
+          return (
+            getComputedStyle(document.documentElement).colorScheme || "dark"
+          );
         }
 
         function updateButton() {
           var scheme = currentScheme();
-          btn.textContent = scheme === 'dark' ? '[◐ light]' : '[◑ dark]';
-          btn.setAttribute('aria-label',
-            scheme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'
+          btn.textContent = scheme === "dark" ? "[◐ light]" : "[◑ dark]";
+          btn.setAttribute(
+            "aria-label",
+            scheme === "dark"
+              ? "Passer en mode clair"
+              : "Passer en mode sombre",
           );
         }
 
         updateButton();
 
-        btn.addEventListener('click', function() {
-          var next = currentScheme() === 'dark' ? 'light' : 'dark';
-          document.documentElement.style.colorScheme = next;
-          localStorage.setItem('theme', next);
-          updateButton();
+        btn.addEventListener("click", function () {
+          var next = currentScheme() === "dark" ? "light" : "dark";
+          function apply() {
+            document.documentElement.style.colorScheme = next;
+            localStorage.setItem("theme", next);
+            updateButton();
+          }
+          if (document.startViewTransition) {
+            document.startViewTransition(apply);
+          } else {
+            apply();
+          }
         });
       })();
 
-      (function() {
-        var el = document.getElementById('clock');
+      (function () {
+        var el = document.getElementById("clock");
         if (!el) return;
         function tick() {
-          el.textContent = new Date().toLocaleTimeString('fr-FR', {
-            hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit'
+          el.textContent = new Date().toLocaleTimeString("fr-FR", {
+            hour12: false,
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
           });
         }
         tick();
