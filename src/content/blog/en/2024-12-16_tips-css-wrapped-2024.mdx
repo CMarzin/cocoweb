@@ -12,38 +12,62 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✨ CSS Wrapped 2024
-💅 Top 100 most creative portfolio of 2024
-🖼️ Pantone colour of the year 2025
-📗 Using Generics in Vue components
+<AnchorWrapper>
+  <AnchorLink emoji="✨" text="CSS Wrapped 2024" />
+  <AnchorLink emoji="💅" text="Top 100 most creative portfolio of 2024" />
+  <AnchorLink emoji="🖼️" text="Pantone colour of the year 2025" />
+  <AnchorLink emoji="📗" text="Using Generics in Vue components" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="css-wrapped-2024" text="CSS Wrapped 2024" url="https://chrome.dev/css-wrapped-2024/" />
 
-✨ [CSS Wrapped 2024](https://chrome.dev/css-wrapped-2024/)
+<p class="mt-2">
 Enjoy the highlight of the 17 new features launched in CSS by the chrome dev team in 2024.
+</p>
 
-💅 [Top 100 Most Creative and Unique Portfolio Websites of 2024](https://muz.li/blog/top-100-most-creative-and-unique-portfolio-websites-of-2024/)
+<AnchorSection componentClass="mt-2" emoji="💅" id="top-100-most-creative-and-unique-portfolio-websites-of-2024" text="Top 100 Most Creative and Unique Portfolio Websites of 2024" url="https://muz.li/blog/top-100-most-creative-and-unique-portfolio-websites-of-2024/" />
+
+<p class="mt-2">
 I have a preference or the 1 and the 5, they are all incredible. It’s amazing what can we do in 2024 in term of aesthetic and interface.
+</p>
 
-🖼️ [Pantone Color of the Year 2025](https://www.pantone.com/color-of-the-year/2025)
+<AnchorSection componentClass="mt-2" emoji="🖼️" id="pantone-color-of-the-year-2025" text="Pantone Color of the Year 2025" url="https://www.pantone.com/color-of-the-year/2025" />
+
+<p class="mt-2">
 ANTONE 17-1230 Mocha Mousse, is the color of 2025 by Pantone. The colour for next year will be delicious 😋.
+</p>
 
-📗 [Using Generics in Vue components](https://dev.to/jacobandrewsky/using-generics-in-vue-components-1lnn)
+<AnchorSection componentClass="mt-2" emoji="📗" id="using-generics-in-vue-components" text="Using Generics in Vue components" url="https://dev.to/jacobandrewsky/using-generics-in-vue-components-1lnn" />
+
+<p class="mt-2">
 Generics are powerful things in Typescript, this article describe some way to use it in Vue.js in order to have a cleaner and more robust codebase
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🤖 [zaidmukaddam/miniperplx](https://github.com/zaidmukaddam/miniperplx)
+<WebLinkSection emoji="🤖" url="https://github.com/zaidmukaddam/miniperplx" text="zaidmukaddam/miniperplx" templateClass="mt-4">
 A minimalistic AI-powered search engine that helps you find information on the internet.
+</ WebLinkSection>
 
-📊 [AI Model Comparison](https://countless.dev/)
+<WebLinkSection emoji="📊" url="https://countless.dev/" text="AI Model Comparison" templateClass="mt-4">
 See and compare every AI model easily. 100% free & open-source.
+</ WebLinkSection>
 
-🔂 [microsoft/markitdown](https://github.com/microsoft/markitdown)
+<WebLinkSection emoji="🔂" url="https://github.com/microsoft/markitdown" text="microsoft/markitdown" templateClass="mt-4">
 Python tool for converting files and office documents to Markdown.
+</ WebLinkSection>

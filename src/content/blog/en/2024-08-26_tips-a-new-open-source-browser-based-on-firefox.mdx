@@ -10,43 +10,66 @@ tags:
   - CLI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🎍 Zen browser, a brand new open source browser based on Firefox
-🎪 Picallili brand new redesign
-♿️ Things to Do Before Asking “Is This Accessible?”
-🎥 Vue is getting faster
+<AnchorWrapper>
+  <AnchorLink emoji="🎍" text="Zen browser, a brand new open source browser based on Firefox" />
+  <AnchorLink emoji="🎪" text="Picallili brand new redesign" />
+  <AnchorLink emoji="♿️" text="Things to Do Before Asking “Is This Accessible?”" />
+  <AnchorLink emoji="🎥" text="Vue is getting faster" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🎍" id="zen-browser-a-brand-new-open-source-browser-based-on-firefox" text="Zen browser, a brand new open source browser based on Firefox" url="https://docs.zen-browser.app/" />
 
-🎍[Zen browser, a brand new open source browser based on Firefox](https://docs.zen-browser.app/)
+<p class="mt-2">
 A beautifully designed, privacy-focused browser that offers features like split views, workspaces, and profile switching.
+</p>
 
-🎪 [Picallili brand new redesign](https://piccalil.li/)
-Picallili offer high quality, approachable and transferable Front-end content from people with decades of elite industry experience. If you want to learn how they did it you can read the[list of article about the redesign.](https://piccalil.li/blog/redesigning-piccalilli-the-first-part-of-the-design-process/)
+<AnchorSection componentClass="mt-2" emoji="🎪" id="picallili-brand-new-redesign" text="Picallili brand new redesign" url="https://piccalil.li/" />
 
-♿️ [Things to Do Before Asking “Is This Accessible?”](https://adrianroselli.com/2024/08/things-to-do-before-asking-is-this-accessible.html)
-A list of questions and checks to do before asking to an accessibility expert like [Adrien Roselli](https://adrianroselli.com/contact).
+<p class="mt-2">
+Picallili offer high quality, approachable and transferable Front-end content from people with decades of elite industry experience. If you want to learn how they did it you can read the[list of article about the redesign.](https://piccalil.li/blog/redesigning-piccalilli-the-first-part-of-the-design-process/?utm_source=cocoweb.fr)
+</p>
 
-🎥 [Vue is getting faster](https://www.youtube.com/watch?v=Pz-jnSYJnjk)
+<AnchorSection componentClass="mt-2" emoji="♿️" id="things-to-do-before-asking-is-this-accessible" text="Things to Do Before Asking “Is This Accessible?”" url="https://adrianroselli.com/2024/08/things-to-do-before-asking-is-this-accessible.html" />
+
+<p class="mt-2">
+A list of questions and checks to do before asking to an accessibility expert like [Adrien Roselli](https://adrianroselli.com/contact?utm_source=cocoweb.fr).
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🎥" id="vue-is-getting-faster" text="Vue is getting faster" url="https://www.youtube.com/watch?v=Pz-jnSYJnjk" />
+
+<p class="mt-2">
 In Vuejs 3.5 we will get a better system for hydration and async components.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-⚡️ [pkg.pr.new](https://github.com/stackblitz-labs/pkg.pr.new)
+<WebLinkSection emoji="⚡️" url="https://github.com/stackblitz-labs/pkg.pr.new" text="pkg.pr.new" templateClass="mt-4">
 Each of your commits and pull requests will trigger an instant preview release without publishing anything to NPM.
+</ WebLinkSection>
 
-⏰ [vercel/little-date](https://github.com/vercel/little-date)
+<WebLinkSection emoji="⏰" url="https://github.com/vercel/little-date" text="vercel/little-date" templateClass="mt-4">
 A friendly formatter to make date ranges small & sweet
+</ WebLinkSection>
 
-🎉 [loonywizard/js-confetti](https://github.com/loonywizard/js-confetti?tab=readme-ov-file)
+<WebLinkSection emoji="🎉" url="https://github.com/loonywizard/js-confetti?tab=readme-ov-file" text="loonywizard/js-confetti" templateClass="mt-4">
 JS Confetti library that supports emojis 🦄 🎉 ⚡️
+</ WebLinkSection>
 
-⚡️ [Blazing Fast Terminal File Manager](https://github.com/sxyazi/yazi)
+<WebLinkSection emoji="⚡️" url="https://github.com/sxyazi/yazi" text="Blazing Fast Terminal File Manager" templateClass="mt-4">
 Yazi (means "duck") is a terminal file manager written in Rust, based on non-blocking async I/O. It aims to provide an efficient, user-friendly, and customizable file management experience.
+</ WebLinkSection>

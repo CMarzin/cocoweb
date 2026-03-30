@@ -10,37 +10,60 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-👏 Migrating 3.7 Million Lines of Flow Code to TypeScript
-🤖 The Model Context Protocol (MCP) for Web Developers
-😎 Stop White Box Testing Vue Components Use Testing Library Instead
-👀 You should try these VueUse composables
+<AnchorWrapper>
+  <AnchorLink emoji="👏" text="Migrating 3.7 Million Lines of Flow Code to TypeScript" />
+  <AnchorLink emoji="🤖" text="The Model Context Protocol (MCP) for Web Developers" />
+  <AnchorLink emoji="😎" text="Stop White Box Testing Vue Components Use Testing Library Instead" />
+  <AnchorLink emoji="👀" text="You should try these VueUse composables" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="👏" id="migrating-37-million-lines-of-flow-code-to-typescript" text="Migrating 3.7 Million Lines of Flow Code to TypeScript" url="https://medium.com/pinterest-engineering/migrating-3-7-million-lines-of-flow-code-to-typescript-8a836c88fea5" />
 
-👏 [Migrating 3.7 Million Lines of Flow Code to TypeScript](https://medium.com/pinterest-engineering/migrating-3-7-million-lines-of-flow-code-to-typescript-8a836c88fea5)
+<p class="mt-2">
 Pinterest wrote about the migration from Flow Code to Typescript, In 8 months and no disruption of service 👏👏. They had a lot of planning and did the rollout in one take without any issues.
+</p>
 
-🤖 [The Model Context Protocol \(MCP\) for Web Developers](https://vueschool.io/articles/vuejs-tutorials/the-model-context-protocol-mcp-for-web-developers/)
+<AnchorSection componentClass="mt-2" emoji="🤖" id="the-model-context-protocol-mcp-for-web-developers" text="The Model Context Protocol \(MCP\) for Web Developers" url="https://vueschool.io/articles/vuejs-tutorials/the-model-context-protocol-mcp-for-web-developers/" />
+
+<p class="mt-2">
 MCP is a protocol which make it easier for LLM’s to do some stuff for you, instead of creating a Jira ticket manually from your notes. You can just ask the LLM to read your notes and create the ticket instead.
+</p>
 
-😎 [Stop White Box Testing Vue Components Use Testing Library Instead](https://alexop.dev/posts/stop-white-box-testing-vue/)
+<AnchorSection componentClass="mt-2" emoji="😎" id="stop-white-box-testing-vue-components-use-testing-library-instead" text="Stop White Box Testing Vue Components Use Testing Library Instead" url="https://alexop.dev/posts/stop-white-box-testing-vue/" />
+
+<p class="mt-2">
 White box testing is focusing on testing internal logic of Vue components, Its better to focus on the black box testing. When you use black box testing, you don’t test the internals instead you test like you are a user of your application.
+</p>
 
-👀 [You should try these VueUse composables](https://www.youtube.com/watch?v=HaeNQXJ-sgs)
+<AnchorSection componentClass="mt-2" emoji="👀" id="you-should-try-these-vueuse-composables" text="You should try these VueUse composables" url="https://www.youtube.com/watch?v=HaeNQXJ-sgs" />
+
+<p class="mt-2">
 7 composantes explained by Alexander Richter, shootout to : onClickOutside, whenever and until.
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🤖 [Awesome MCP servers](https://github.com/punkpeye/awesome-mcp-servers)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🤖" url="https://github.com/punkpeye/awesome-mcp-servers" text="Awesome MCP servers" templateClass="mt-4">
 A collection of MCP servers.
+</ WebLinkSection>
 
-## Fun of the week
+<h2 class="font-display text-2xl text-foreground mt-8">Fun of the week</h2>
 
-🤘 [CSS Hell](https://csshell.com/)
+<WebLinkSection emoji="🤘" url="https://csshell.com/" text="CSS Hell" templateClass="mt-4">
 Solve 15 unimaginably torturous CSS puzzles. Good luck.
+</ WebLinkSection>

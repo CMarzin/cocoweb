@@ -9,27 +9,54 @@ tags:
   - Humor
 ---
 
-## Humor
-😄 [Regex for HTML](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags)
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="😄" text="Regex for HTML" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="😄" id="regex-for-html" text="Regex for HTML" url="https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags" />
+
+<p class="mt-2">
 Don’t write regex for HTML never, you have been warned.
+</p>
 
-## Veille
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-📗[Schedule-X](https://schedule-x.dev/)
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
+
+<WebLinkSection emoji="📗" url="https://schedule-x.dev/" text="Schedule-X" templateClass="mt-4">
 Material design calendar and date picker.
 React, Vue and plain JS components that make scheduling simple and elegant in your web project
+</ WebLinkSection>
 
-📗[Zed the new coding editor](https://zed.dev/)
+<WebLinkSection emoji="📗" url="https://zed.dev/" text="Zed the new coding editor" templateClass="mt-4">
 Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter. It's also open source.
+</ WebLinkSection>
 
-📗 [Expressive Code](https://expressive-code.com/)
+<WebLinkSection emoji="📗" url="https://expressive-code.com/" text="Expressive Code" templateClass="mt-4">
 JS package which allow you to present your code with any VSCode theme directly on your own site.
+</ WebLinkSection>
 
-📗 [Calligrapher AI](https://www.calligrapher.ai/)
+<WebLinkSection emoji="📗" url="https://www.calligrapher.ai/" text="Calligrapher AI" templateClass="mt-4">
 Write anything and the website will generate a realistic computer-generated handwriting, which you can download for free without watermark.
+</ WebLinkSection>
 
-📗 [Release notes tool and changelog software](https://releasesapp.com/#pricing)
+<WebLinkSection emoji="📗" url="https://releasesapp.com/#pricing" text="Release notes tool and changelog software" templateClass="mt-4">
 Transform your changelog into a magnificent website for your customer or shareholders. It will motivate you to write code.
+</ WebLinkSection>
 
-📗 [Listmonk App](https://listmonk.app/)
+<WebLinkSection emoji="📗" url="https://listmonk.app/" text="Listmonk App" templateClass="mt-4">
 If you want to stop using Mailchimp give a try to this free and open source self-hosted newsletter, mailing list manager, and transactional mails.
+</ WebLinkSection>

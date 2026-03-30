@@ -13,42 +13,61 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🤖" text="Don't fall into the anti-AI hype" />
-<AnchorLink emoji="👀" text="Design Engineering" />
-<AnchorLink emoji="📝" text="A Complete Guide To AGENTS.md" />
-<AnchorLink emoji="📢" text="Why AI isn't writing my code yet" />
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="Don't fall into the anti-AI hype" />
+  <AnchorLink emoji="👀" text="Design Engineering" />
+  <AnchorLink emoji="📝" text="A Complete Guide To AGENTS.md" />
+  <AnchorLink emoji="📢" text="Why AI isn't writing my code yet" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="dont-fall-into-the-anti-ai-hype" text="Don't fall into the anti-AI hype" url="https://antirez.com/news/158" />
 
-<AnchorSection emoji="🤖" id="don't-fall-into-the-anti-ai-hype">[Don't fall into the anti-AI hype](https://antirez.com/news/158?utm_source=cocoweb.fr)</AnchorSection>
+<p class="mt-2">
 I agree with this article, building stuff is the most important part. I still love seeing good architecturered codebase.
+</p>
 
-<AnchorSection emoji="👀" id="design-engineering">[Design Engineering](https://www.designengineer.xyz/design-engineering?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="👀" id="design-engineering" text="Design Engineering" url="https://www.designengineer.xyz/design-engineering" />
+
+<p class="mt-2">
 I didn't know this «  role » existed, but I am glad I found out ! I need to work on my design skill now :) ( I am not affiliated with the company ).
+</p>
 
-<AnchorSection emoji="📝" id="a-complete-guide-to-agents.md">[A Complete Guide to AGENTS.md](https://www.aihero.dev/a-complete-guide-to-agents-md?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📝" id="a-complete-guide-to-agentsmd" text="A Complete Guide to AGENTS.md" url="https://www.aihero.dev/a-complete-guide-to-agents-md" />
+
+<p class="mt-2">
 I think I might try this really soon.
+</p>
 
-<AnchorSection emoji="📢" id="why-ai-isn't-writing-my-code-yet">[DHH: Why AI Isn't Writing My Code (Yet)](https://www.youtube.com/watch?v=uWqno4HM4xA?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📢" id="dhh-why-ai-isnt-writing-my-code-yet" text="DHH: Why AI Isn't Writing My Code (Yet)" url="https://www.youtube.com/watch?v=uWqno4HM4xA%3Futm_source%3Dcocoweb.fr" />
+
+<p class="mt-2">
 Where is the line between leaving the AI do everything for you or knowing to do everything ?
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🥸 [snarktank/ralph](https://github.com/snarktank/ralph)
+<WebLinkSection emoji="🥸" url="https://github.com/snarktank/ralph" text="snarktank/ralph" templateClass="mt-4">
 Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete.
+</ WebLinkSection>
 
-✨ [originalankur/maptoposter](https://github.com/originalankur/maptoposter?tab=readme-ov-file)
+<WebLinkSection emoji="✨" url="https://github.com/originalankur/maptoposter?tab=readme-ov-file" text="originalankur/maptoposter" templateClass="mt-4">
 Transform your favorite cities into beautiful, minimalist designs. MapToPoster lets you create and export visually striking map posters with code.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-👌 [Cathy Dolle portoflio](https://www.cathydolle.com/)
+<WebLinkSection emoji="👌" url="https://www.cathydolle.com/" text="Cathy Dolle portoflio" templateClass="mt-4">
+</ WebLinkSection>

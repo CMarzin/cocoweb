@@ -9,35 +9,57 @@ tags:
   - AI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤖 Human
-🦺 Better Error Handling in TS
-🖼️ Default H1 style are changing
-📝 Thymer
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="Human" />
+  <AnchorLink emoji="🦺" text="Better Error Handling in TS" />
+  <AnchorLink emoji="🖼️" text="Default H1 style are changing" />
+  <AnchorLink emoji="📝" text="Thymer" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="human" text="Human" url="https://quarter--mile.com/Human" />
 
-🤖 [Human](https://quarter--mile.com/Human)
+<p class="mt-2">
 What if we are just an experiment from another civilisation ?
+</p>
 
-🦺 [Better error handling](https://meowbark.dev/Better-error-handling)
+<AnchorSection componentClass="mt-2" emoji="🦺" id="better-error-handling" text="Better error handling" url="https://meowbark.dev/Better-error-handling" />
+
+<p class="mt-2">
 Use neverThrow or oxide-ts for new projects.
+</p>
 
-🖼️[Default styles for h1 elements are changing | MDN Blog](https://developer.mozilla.org/en-US/blog/h1-element-styles/)
+<AnchorSection componentClass="mt-2" emoji="🖼️" id="default-styles-for-h1-elements-are-changing-mdn-blog" text="Default styles for h1 elements are changing | MDN Blog" url="https://developer.mozilla.org/en-US/blog/h1-element-styles/" />
 
-📝 [Thymer](https://thymer.com/)
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📝" id="thymer" text="Thymer" url="https://thymer.com/" />
+
+<p class="mt-2">
 The editor for tasks, notes and planning.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🏎️ [Typia : Super-fast/easy runtime validators and serializers via transformation](https://github.com/samchon/typia)
+<WebLinkSection emoji="🏎️" url="https://github.com/samchon/typia" text="Typia : Super-fast/easy runtime validators and serializers via transformation" templateClass="mt-4">
 Typia is a transformer library converting TypeScript types to runtime function.
+</ WebLinkSection>
 
-🙅 [NeverThrow](https://github.com/supermacro/neverthrow)
+<WebLinkSection emoji="🙅" url="https://github.com/supermacro/neverthrow" text="NeverThrow" templateClass="mt-4">
 Encode failure into your program, Type-Safe Errors for JS & TypeScript.
+</ WebLinkSection>

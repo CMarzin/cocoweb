@@ -9,47 +9,68 @@ tags:
   - design
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧐 NuxtLabs joins Vercel
-👏 A revisit of the Every Layout sidebar with :has() and selector performance
-👀 How To Create An NPM Package
-🤯 Code highlighting with Cursor AI for $500,000
+<AnchorWrapper>
+  <AnchorLink emoji="🧐" text="NuxtLabs joins Vercel" />
+  <AnchorLink emoji="👏" text="A revisit of the Every Layout sidebar with :has() and selector performance" />
+  <AnchorLink emoji="👀" text="How To Create An NPM Package" />
+  <AnchorLink emoji="🤯" text="Code highlighting with Cursor AI for $500,000" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧐" id="nuxtlabs-joins-vercel" text="NuxtLabs joins Vercel" url="https://vercel.com/blog/nuxtlabs-joins-vercel" />
 
-🧐 [NuxtLabs joins Vercel](https://vercel.com/blog/nuxtlabs-joins-vercel)
+<p class="mt-2">
 NuxtLabs the company founded by the creator of the Nuxt framework is acquired by Vercel, a company known to have the framework Next.js and SvelteKit. They claim to let Nuxt and Nitro open source and completely independent. I am a little skeptical about it because its very hard to use Next.js in other places than Vercel, I really hope I am wrong about them but we will see.
+</p>
 
-They will make Nuxt Studio MDC, Nuxt UI Pro, and NuxtHub Admin free for everyone which is a cool things.
+<AnchorSection componentClass="mt-2" emoji="👏" id="a-revisit-of-the-every-layout-sidebar-with-has-and-selector-performance" text="A revisit of the Every Layout sidebar with :has\(\) and selector performance" url="https://piccalil.li/blog/a-revisit-of-the-every-layout-sidebar-with-has-and-selector-performance/" />
 
-👏 [A revisit of the Every Layout sidebar with :has\(\) and selector performance](https://piccalil.li/blog/a-revisit-of-the-every-layout-sidebar-with-has-and-selector-performance/)
+<p class="mt-2">
 The modern css selectors are now very powerful, with less than 15 lines of code you can make pretty decent layout.
+</p>
 
-👀 [How To Create An NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package)
+<AnchorSection componentClass="mt-2" emoji="👀" id="how-to-create-an-npm-package" text="How To Create An NPM Package" url="https://www.totaltypescript.com/how-to-create-an-npm-package" />
+
+<p class="mt-2">
 Matt Pocock a well known Typescript guy publish a guide for creating a modern NPM package with latest Typescript settings, tests, CI and a system for the release.
+</p>
 
-🤯 [Code highlighting with Cursor AI for $500,000](https://securelist.com/open-source-package-for-cursor-ai-turned-into-a-crypto-heist/116908/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="code-highlighting-with-cursor-ai-for-500000" text="Code highlighting with Cursor AI for $500,000" url="https://securelist.com/open-source-package-for-cursor-ai-turned-into-a-crypto-heist/116908/" />
+
+<p class="mt-2">
 A extension for highlighting code for the solidity language stole a guy 500,000 of crypto.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🐒 [colinhacks/zshy](https://github.com/colinhacks/zshy)
+<WebLinkSection emoji="🐒" url="https://github.com/colinhacks/zshy" text="colinhacks/zshy" templateClass="mt-4">
 Bundler-free build tool for TypeScript libraries. Powered by tsc.
+</ WebLinkSection>
 
-🚀 [Transform Your Vectors in a New Dimension](https://www.vecto3d.xyz/)
+<WebLinkSection emoji="🚀" url="https://www.vecto3d.xyz/" text="Transform Your Vectors in a New Dimension" templateClass="mt-4">
 Transform any SVG file into a 3D assets in seconds, you can edit some colour and style but the better part is the export to 3D file.
+</ WebLinkSection>
 
-## Design Inspiration
+<h2 class="font-display text-2xl text-foreground mt-8">Design Inspiration</h2>
 
-💅 [Jordan Amblin \(@JordanAmblin\) sur X](https://x.com/JordanAmblin/status/1938233221139075543)
+<WebLinkSection emoji="💅" url="https://x.com/JordanAmblin/status/1938233221139075543" text="Jordan Amblin \(@JordanAmblin\) sur X" templateClass="mt-4">
 Sexy changelog timeline.
+</ WebLinkSection>
 
-🤩 [Wondermake.xyz](https://wondermake.xyz/)
+<WebLinkSection emoji="🤩" url="https://wondermake.xyz/" text="Wondermake.xyz" templateClass="mt-4">
 Creative studio for brands, web, apps & games.
+</ WebLinkSection>

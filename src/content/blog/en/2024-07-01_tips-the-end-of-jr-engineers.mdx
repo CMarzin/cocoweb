@@ -10,42 +10,63 @@ tags:
   - AI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 Sorry I didn’t publish the news of the 2024/07/01, I was busy preparing the Hellfest 🤘.
-
 Here are the news of the week :)
+</StarterText>
 
-🙄 The End of Jr Engineers
-🧑‍💻 The real 10x developer makes their whole team better
-🤯 An LLM in a font file ??
-🎨 Card stack demo
+<AnchorWrapper>
+  <AnchorLink emoji="🙄" text="The End of Jr Engineers" />
+  <AnchorLink emoji="🧑‍💻" text="The real 10x developer makes their whole team better" />
+  <AnchorLink emoji="🤯" text="An LLM in a font file ??" />
+  <AnchorLink emoji="🎨" text="Card stack demo" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🙄" id="the-end-of-jr-engineers" text="The End Of Jr Engineers" url="https://www.youtube.com/watch?v=_cgONVgHzRw" />
 
-🙄 [The End Of Jr Engineers](https://www.youtube.com/watch?v=_cgONVgHzRw)
-A video of [ThePrimeTime](https://www.youtube.com/@ThePrimeTimeagen) talking about an article which depict « The death of Jr engineers » in profit of senior engineers with the help of AI. Very interesting take and I agree with ThePrimeTime at the end, which is not the end.
+<p class="mt-2">
+A video of [ThePrimeTime](https://www.youtube.com/@ThePrimeTimeagen?utm_source=cocoweb.fr) talking about an article which depict « The death of Jr engineers » in profit of senior engineers with the help of AI. Very interesting take and I agree with ThePrimeTime at the end, which is not the end.
+</p>
 
-🧑‍💻 [The real 10x developer makes their whole team better](https://stackoverflow.blog/2024/06/19/the-real-10x-developer-makes-their-whole-team-better/)
+<AnchorSection componentClass="mt-2" emoji="🧑‍💻" id="the-real-10x-developer-makes-their-whole-team-better" text="The real 10x developer makes their whole team better" url="https://stackoverflow.blog/2024/06/19/the-real-10x-developer-makes-their-whole-team-better/" />
+
+<p class="mt-2">
 Sharing your knowledge is 10x better than having only one person which know it all.
+</p>
 
-🤯 [LLama.ttf](https://fuglede.github.io/llama.ttf/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="llamattf" text="LLama.ttf" url="https://fuglede.github.io/llama.ttf/" />
+
+<p class="mt-2">
 llama.ttf is a font file which is also a large language model and an inference engine for that model.
+</p>
 
-🎨 [Card stack demo](https://www.abjt.dev/lab/card-stack)
+<AnchorSection componentClass="mt-2" emoji="🎨" id="card-stack-demo" text="Card stack demo" url="https://www.abjt.dev/lab/card-stack" />
+
+<p class="mt-2">
 An modern carousel for the web made with the scroll-snap property.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🐦‍⬛ [Cyber Scarecrow](https://www.cyberscarecrow.com/)
+<WebLinkSection emoji="🐦‍⬛" url="https://www.cyberscarecrow.com/" text="Cyber Scarecrow" templateClass="mt-4">
 Software that runs in the background of your computer, which makes it look 'scary' to viruses and malware.
+</ WebLinkSection>
 
-🐶 [Doggo DNS](https://github.com/mr-karan/doggo)
+<WebLinkSection emoji="🐶" url="https://github.com/mr-karan/doggo" text="Doggo DNS" templateClass="mt-4">
 Command-line DNS Client for Humans. Written in Golang.
+</ WebLinkSection>
 
-🔧 [Google ZX](https://google.github.io/zx/)
+<WebLinkSection emoji="🔧" url="https://google.github.io/zx/" text="Google ZX" templateClass="mt-4">
 A tool for writing better scripts. This tools allow us to write bash script in Javascript.
+</ WebLinkSection>

@@ -8,18 +8,48 @@ tags:
   - CSS
   - design
 ---
-## Veille
 
-📗 [An Interactive Guide to CSS Grid](https://www.joshwcomeau.com/css/interactive-guide-to-grid/)
-Josh Comeau the author of the course [CSS for JavaScript Developers](https://css-for-js.dev/), give us again a stunning and well crafted explanation of how CSS grid work. 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Untools](https://untools.co/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="An Interactive Guide to CSS Grid" />
+  <AnchorLink emoji="📗" text="Untools" />
+  <AnchorLink emoji="📗" text="How large pull requests slow down development" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="an-interactive-guide-to-css-grid" text="An Interactive Guide to CSS Grid" url="https://www.joshwcomeau.com/css/interactive-guide-to-grid/" />
+
+<p class="mt-2">
+Josh Comeau the author of the course [CSS for JavaScript Developers](https://css-for-js.dev/?utm_source=cocoweb.fr), give us again a stunning and well crafted explanation of how CSS grid work.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📗" id="untools" text="Untools" url="https://untools.co/" />
+
+<p class="mt-2">
 Collection of thinking tools and frameworks to help you solve problems, make decisions and understand systems.
+</p>
 
-📗 [How large pull requests slow down development](https://graphite.dev/blog/how-large-prs-slow-down-development)
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-large-pull-requests-slow-down-development" text="How large pull requests slow down development" url="https://graphite.dev/blog/how-large-prs-slow-down-development" />
+
+<p class="mt-2">
 ![Christmas Parrot](/img/2023-12-04/joke-pr.png)
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/ajeetdsouza/zoxide" text="ajeetdsouza/zoxide" templateClass="mt-4">
 A smarter cd command. Supports all major shells.
+</ WebLinkSection>

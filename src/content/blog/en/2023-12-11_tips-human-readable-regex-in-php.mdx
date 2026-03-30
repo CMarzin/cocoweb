@@ -9,23 +9,47 @@ tags:
   - repo git
 ---
 
-## Repository Github
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-🐙 [gherkins/regexpbuilderphp](https://github.com/gherkins/regexpbuilderphp)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🐙" text="gherkins/regexpbuilderphp" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🐙" id="gherkinsregexpbuilderphp" text="gherkins/regexpbuilderphp" url="https://github.com/gherkins/regexpbuilderphp" />
+
+<p class="mt-2">
 🦉 human-readable regular expressions in PHP.
+</p>
 
-## Veille
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-📗 [Understanding accessibility](https://www.understandingaccessibility.com/)
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
+
+<WebLinkSection emoji="📗" url="https://www.understandingaccessibility.com/" text="Understanding accessibility" templateClass="mt-4">
 A really nice website which help to understand how accessibility for the web user is important.
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-🎨 [Practice design](https://practicedesign.io/explore/designs)
+<WebLinkSection emoji="🎨" url="https://practicedesign.io/explore/designs" text="Practice design" templateClass="mt-4">
 A collections of design example for your next project.
+</ WebLinkSection>
 
-🎨 [Deck gallery](https://www.deck.gallery/)
+<WebLinkSection emoji="🎨" url="https://www.deck.gallery/" text="Deck gallery" templateClass="mt-4">
 A collections of beautifully designed decks, slides, keynotes, guidelines. Another really good design resources.
+</ WebLinkSection>
 
-🎨 [Central](https://iconists.co/central)
+<WebLinkSection emoji="🎨" url="https://iconists.co/central" text="Central" templateClass="mt-4">
 Central is a set of 30 icon system.
+</ WebLinkSection>

@@ -11,40 +11,62 @@ tags:
   - api
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧙 Programming advice for your younger self
-🖼️ Is visual programming useless ?
-✨ A guide to CSS grid areas
-🤯 A uniq 3D experience
+<AnchorWrapper>
+  <AnchorLink emoji="🧙" text="Programming advice for your younger self" />
+  <AnchorLink emoji="🖼️" text="Is visual programming useless ?" />
+  <AnchorLink emoji="✨" text="A guide to CSS grid areas" />
+  <AnchorLink emoji="🤯" text="A uniq 3D experience" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧙" id="programming-advice-for-your-younger-self" text="Programming advice for your younger self" url="https://mbuffett.com/posts/programming-advice-younger-self/" />
 
-🧙 [Programming advice for your younger self](https://mbuffett.com/posts/programming-advice-younger-self/)
+<p class="mt-2">
 10 advices about programming. I really like the first one about not wanting to fix a small issue because it takes only 10 minutes to fix and you tell yourself, you can always fix it later.
+</p>
 
-✨ [CSS Grid Areas](https://ishadeed.com/article/css-grid-area/)
+<AnchorSection componentClass="mt-2" emoji="✨" id="css-grid-areas" text="CSS Grid Areas" url="https://ishadeed.com/article/css-grid-area/" />
+
+<p class="mt-2">
 A fresh look at the CSS grid template areas and how to take advantage of its full potential today.
+</p>
 
-🖼️ [We need visual programming. No, not like that.](https://blog.sbensu.com/posts/demand-for-visual-programming/)
+<AnchorSection componentClass="mt-2" emoji="🖼️" id="we-need-visual-programming-no-not-like-that" text="We need visual programming. No, not like that." url="https://blog.sbensu.com/posts/demand-for-visual-programming/" />
+
+<p class="mt-2">
 Visual programming is rarely used in programming but why is that ? This article try to explain it.
+</p>
 
-🤯 [Project Cost Calculator](https://contra.com/project-rate-hiring-calculator/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="project-cost-calculator" text="Project Cost Calculator" url="https://contra.com/project-rate-hiring-calculator/" />
+
+<p class="mt-2">
 A uniq and superb way for calculating costs of hiring freelancers. Made by Unseen Studio.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-💪 [Hercules](https://github.com/src-d/hercules)
+<WebLinkSection emoji="💪" url="https://github.com/src-d/hercules" text="Hercules" templateClass="mt-4">
 Fast, insightful and highly customizable Git history analysis.
+</ WebLinkSection>
 
-🛸 [Hoppscotch](https://github.com/hoppscotch/hoppscotch)
+<WebLinkSection emoji="🛸" url="https://github.com/hoppscotch/hoppscotch" text="Hoppscotch" templateClass="mt-4">
 Open Source API Development Ecosystem, an open source alternative to insomnia and postman.
+</ WebLinkSection>
 
-🤖 [AI renamer](https://github.com/ozgrozer/ai-renamer)
+<WebLinkSection emoji="🤖" url="https://github.com/ozgrozer/ai-renamer" text="AI renamer" templateClass="mt-4">
 A Node.js CLI that uses Ollama and LM Studio models (Llava, Gemma, Llama etc.) to intelligently rename files by their contents.
+</ WebLinkSection>

@@ -7,37 +7,58 @@ tags:
   - Veille
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🏜️ The testing pyramid is Dead
-❤️ Care doesn’t  scale
-🤔 Start with the Interface
-🍪 Guillermo Rauch's take on cookie banners
+<AnchorWrapper>
+  <AnchorLink emoji="🏜️" text="The testing pyramid is Dead" />
+  <AnchorLink emoji="❤️" text="Care doesn’t  scale" />
+  <AnchorLink emoji="🤔" text="Start with the Interface" />
+  <AnchorLink emoji="🍪" text="Guillermo Rauch's take on cookie banners" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🏜️" id="the-testing-pyramid-is-dead-draw-your-own-shape-instead" text="The Testing Pyramid is Dead. Draw Your Own Shape Instead" url="https://michaelnthiessen.com/testing-pyramid-is-dead" />
 
-🏜️ [The Testing Pyramid is Dead. Draw Your Own Shape Instead](https://michaelnthiessen.com/testing-pyramid-is-dead)
+<p class="mt-2">
 Some really nice advices about choosing the right type of test for your applications or product.
+</p>
 
-❤️ [Care doesn't scale](https://stevenscrawls.com/care-doesnt-scale/)
+<AnchorSection componentClass="mt-2" emoji="❤️" id="care-doesnt-scale" text="Care doesn't scale" url="https://stevenscrawls.com/care-doesnt-scale/" />
+
+<p class="mt-2">
 Steven Scrawls challenges our obsession with scalability. Caring for one people is different to caring to thousands, he suggest that « real care » is personal and not scalable because their is a limit for the caring you can give.
+</p>
 
-🤔 [Start with the interface](https://michaelnthiessen.com/start-with-the-interface)
+<AnchorSection componentClass="mt-2" emoji="🤔" id="start-with-the-interface" text="Start with the interface" url="https://michaelnthiessen.com/start-with-the-interface" />
+
+<p class="mt-2">
 An article which made you think about the order of things to do when coding. The example here is to code a simple composable and find the right balance between YAGNI, gold plating or over engineering.
+</p>
 
-🍪 [Guillermo Rauch's take on cookie banners](https://x.com/rauchg/status/1848177989152043032)
+<AnchorSection componentClass="mt-2" emoji="🍪" id="guillermo-rauchs-take-on-cookie-banners" text="Guillermo Rauch's take on cookie banners" url="https://x.com/rauchg/status/1848177989152043032" />
+
+<p class="mt-2">
 How cookie banners destroy the web experiences and the work of talented engineers.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🍭 [Frontend for Home Assistant](https://github.com/home-assistant/frontend)
+<WebLinkSection emoji="🍭" url="https://github.com/home-assistant/frontend" text="Frontend for Home Assistant" templateClass="mt-4">
 Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
+</ WebLinkSection>
 
-💅 [Delta](https://github.com/dandavison/delta)
+<WebLinkSection emoji="💅" url="https://github.com/dandavison/delta" text="Delta" templateClass="mt-4">
 A syntax-highlighting pager for git, diff, grep, and blame output
+</ WebLinkSection>

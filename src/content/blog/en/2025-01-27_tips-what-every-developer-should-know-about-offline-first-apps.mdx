@@ -10,41 +10,66 @@ tags:
   - CSS
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📴 What Every Developer Should Know About Offline-First Apps
-💅 6 CSS Snippets Every Front-End Developer Should Know In 2025
-🏎️ The Vite Ecosystem
-📗 Vue Land FAQ
+<AnchorWrapper>
+  <AnchorLink emoji="📴" text="What Every Developer Should Know About Offline-First Apps" />
+  <AnchorLink emoji="💅" text="6 CSS Snippets Every Front-End Developer Should Know In 2025" />
+  <AnchorLink emoji="🏎️" text="The Vite Ecosystem" />
+  <AnchorLink emoji="📗" text="Vue Land FAQ" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📴" id="what-every-developer-should-know-about-offline-first-apps" text="What Every Developer Should Know About Offline-First Apps" url="https://devstarterpacks.com/blog/what-every-developer-should-know-about-offline-first-apps" />
 
-📴 [What Every Developer Should Know About Offline-First Apps](https://devstarterpacks.com/blog/what-every-developer-should-know-about-offline-first-apps)
+<p class="mt-2">
 Another way to think about the development of a web app. Its more difficult to build an app that way but the user satisfaction is way higher and nearly zero data lost.
+</p>
 
-💅 [6 CSS Snippets Every Front-End Developer Should Know In 2025 · 19 janvier 2025](https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025)
+<AnchorSection componentClass="mt-2" emoji="💅" id="6-css-snippets-every-front-end-developer-should-know-in-2025-19-janvier-2025" text="6 CSS Snippets Every Front-End Developer Should Know In 2025 · 19 janvier 2025" url="https://nerdy.dev/6-css-snippets-every-front-end-developer-should-know-in-2025" />
+
+<p class="mt-2">
 Page transitions, transition a `<dialog>`, popover and `<details>`, animate gradient test, type sage CSS and some easing.
+</p>
 
-🏎️ [The Vite Ecosystem](https://patak.dev/vite/ecosystem)
+<AnchorSection componentClass="mt-2" emoji="🏎️" id="the-vite-ecosystem" text="The Vite Ecosystem" url="https://patak.dev/vite/ecosystem" />
+
+<p class="mt-2">
 An exhaustive list of project using Vite, the list is very impressive and keep growing. I thanks Evan You the creator and the others maintainer for their incredible work.
+</p>
 
-📗 [FAQ | Vue Land FAQ](https://vue-land.github.io/faq/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="faq-vue-land-faq" text="FAQ | Vue Land FAQ" url="https://vue-land.github.io/faq/" />
+
+<p class="mt-2">
 This FAQ aims to answer some of the most common programming questions that get asked on the Vue Land Discord server.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🌐 [Automated localization infrastructure for your applications](https://languine.ai/en)
+<WebLinkSection emoji="🌐" url="https://languine.ai/en" text="Automated localization infrastructure for your applications" templateClass="mt-4">
 Streamline your localization process with an AI-powered CLI and pipeline designed to automate translations for developers.
+</ WebLinkSection>
 
-👖 [slimtoolkit/slim](https://github.com/slimtoolkit/slim)
+<WebLinkSection emoji="👖" url="https://github.com/slimtoolkit/slim" text="slimtoolkit/slim" templateClass="mt-4">
 Don't change anything in your container image and minify it by up to 30x (and for compiled languages even more) making it secure too ! (free and open source)
+</ WebLinkSection>
 
-🤿 [Dive](https://github.com/wagoodman/dive)
+<WebLinkSection emoji="🤿" url="https://github.com/wagoodman/dive" text="Dive" templateClass="mt-4">
 A tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image.
+</ WebLinkSection>
 
-🎮 [google/wireit](https://github.com/google/wireit)
+<WebLinkSection emoji="🎮" url="https://github.com/google/wireit" text="google/wireit" templateClass="mt-4">
 Wireit upgrades your npm/pnpm/yarn scripts to make them smarter and more efficient.
+</ WebLinkSection>

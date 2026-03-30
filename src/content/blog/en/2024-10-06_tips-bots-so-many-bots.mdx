@@ -9,50 +9,84 @@ tags:
   - CLI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
-
-🤖 Bots, so many Bots
-✨ An ode to the zero config too
 🚀 Better Vue Components with TypeScript [12 examples]
+</StarterText>
 
-**Have a great week.**
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="Bots, so many Bots" />
+  <AnchorLink emoji="✨" text="An ode to the zero config too" />
+</AnchorWrapper>
 
-___
+<TextSeparator />
 
-🤖 [Bots, so many Bots](https://wakatime.com/blog/67-bots-so-many-bots)
+<AnchorSection emoji="🤖" id="bots-so-many-bots" text="Bots, so many Bots" url="https://wakatime.com/blog/67-bots-so-many-bots" />
+
+<p class="mt-2">
 Alan Hamlett examine the rise of creating bot account to support your product when launching on a platform like ProductHunt. Since 2018, there are more Bot than human on ProductHunt,
 Same for the upvotes, the comments etc…
 Time to go outside to see some real people if the internent if filled with bot lol
+</p>
 
-✨ [An ode to the zero config tool](https://arne.me/blog/we-need-more-zero-config-tools)
+<AnchorSection componentClass="mt-2" emoji="✨" id="an-ode-to-the-zero-config-tool" text="An ode to the zero config tool" url="https://arne.me/blog/we-need-more-zero-config-tools" />
+
+<p class="mt-2">
 A list of tool which  require little to zero configuration :
-- [Fish](https://fishshell.com/)
-- [Helix](https://helix-editor.com/)
-- [Lazygit](https://github.com/jesseduffield/lazygit)
-- [Zellij](https://zellij.dev/)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="-" id="fish" text="Fish" url="https://fishshell.com/" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="-" id="helix" text="Helix" url="https://helix-editor.com/" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="-" id="lazygit" text="Lazygit" url="https://github.com/jesseduffield/lazygit" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="-" id="zellij" text="Zellij" url="https://zellij.dev/" />
+
+<p class="mt-2">
 🚀 [Better Vue Components with TypeScript \[12 examples\]](qdqdq)
 Fotis demonstrate the value of using Typescript even if you are really familiar with Javascript.
 Really nice example with Pinia for the state management, typed slots and generics are also a must.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Demonstration
+<h2 class="font-display text-2xl text-foreground">Demonstration</h2>
 
-🤯 [Vue 3 Delayed Loading Spinner](https://stackblitz.com/edit/vue-gb4kdb?file=src/App.vue)
-[Michael Hoffmann](https://mokkapps.de/) created a nice demo of delaying the appearance of a spinner, to avoid the reader delay experience, which is not good for the user experience.
+<WebLinkSection emoji="🤯" url="https://stackblitz.com/edit/vue-gb4kdb?file=src%2FApp.vue" text="Vue 3 Delayed Loading Spinner" templateClass="mt-4">
+[Michael Hoffmann](https://mokkapps.de/?utm_source=cocoweb.fr) created a nice demo of delaying the appearance of a spinner, to avoid the reader delay experience, which is not good for the user experience.
+</ WebLinkSection>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground mt-8">Web tools and Library</h2>
 
-😴 [jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)
- Simple terminal UI for git commands.
+<WebLinkSection emoji="😴" url="https://github.com/jesseduffield/lazygit" text="jesseduffield/lazygit" templateClass="mt-4">
+Simple terminal UI for git commands.
+</ WebLinkSection>
 
-🔥 [wobsoriano/vue-input-otp](https://github.com/wobsoriano/vue-input-otp)
+<WebLinkSection emoji="🔥" url="https://github.com/wobsoriano/vue-input-otp" text="wobsoriano/vue-input-otp" templateClass="mt-4">
 One time passcode Input. Accessible & unstyled.
+</ WebLinkSection>
 
-👼 [victorqribeiro/TinyJS](https://github.com/victorqribeiro/TinyJS)
+<WebLinkSection emoji="👼" url="https://github.com/victorqribeiro/TinyJS" text="victorqribeiro/TinyJS" templateClass="mt-4">
 Tiny JS is a lightweight JavaScript utility for dynamically creating HTML elements
+</ WebLinkSection>
 
-⚡️ [dimdenGD/Ultimate-express](https://github.com/dimdenGD/ultimate-express)
+<WebLinkSection emoji="⚡️" url="https://github.com/dimdenGD/ultimate-express" text="dimdenGD/Ultimate-express" templateClass="mt-4">
 The Ultimate Express. Fastest http server with full Express compatibility, based on µWebSockets.
+</ WebLinkSection>

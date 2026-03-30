@@ -11,32 +11,65 @@ tags:
   - DX
 ---
 
-## VUEJS && Courses
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-Document for the preparation of the vuejs certification.
-[Certification vuejs level 1](https://vueschool.notion.site/Cert-Prep-Guide-Level-1-822297fa6037439b937a380ab4101f90)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Certification vuejs level 1" />
+  <AnchorLink emoji="📗" text="Vue flow" />
+  <AnchorLink emoji="📗" text="Github - Vue Sonner" />
+  <AnchorLink emoji="📗" text="Suspense in vuejs" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="certification-vuejs-level-1" text="Certification vuejs level 1" url="https://vueschool.notion.site/Cert-Prep-Guide-Level-1-822297fa6037439b937a380ab4101f90" />
+
+<p class="mt-2">
 Library vuejs for creating reactive and complexe flowchart.
-[Vue flow](https://vueflow.dev/)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="vue-flow" text="Vue flow" url="https://vueflow.dev/" />
+
+<p class="mt-2">
 An opinionated toast component for Vue. It's a Vue port of Sonner
-[Github - Vue Sonner](https://github.com/xiaoluoboding/vue-sonner)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="github-vue-sonner" text="Github - Vue Sonner" url="https://github.com/xiaoluoboding/vue-sonner" />
+
+<p class="mt-2">
 Tutorial about how you can use suspense in vuejs.
-[Suspense in vuejs](https://vueschool.io/articles/vuejs-tutorials/suspense-everything-you-need-to-know/)
+</p>
 
-## Veille
+<AnchorSection componentClass="mt-2" emoji="📗" id="suspense-in-vuejs" text="Suspense in vuejs" url="https://vueschool.io/articles/vuejs-tutorials/suspense-everything-you-need-to-know/" />
 
-Thought of grady of the "after" GTP, how our developer job will evolve with the new AI paradigm.
-[Post-gpt computing article](https://grady.io/post-gpt-computing/)
+<p class="mt-2">
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
+
+<WebLinkSection emoji="📌" url="https://grady.io/post-gpt-computing/" text="Post-gpt computing article" templateClass="mt-4">
 Create a cross mobile app with the new version of Tauri mobile.
-[Tauri mobile](https://betterprogramming.pub/getting-started-using-tauri-mobile-6f90de5b098)
+</ WebLinkSection>
 
+<WebLinkSection emoji="📌" url="https://betterprogramming.pub/getting-started-using-tauri-mobile-6f90de5b098" text="Tauri mobile" templateClass="mt-4">
 If you ever wanted to have a mac folder in legan leather.
-[Nikolas Bentel Studio](https://www.nikolasbentelstudio.com/)
+</ WebLinkSection>
 
-## VSCODE && DX
+<WebLinkSection emoji="📌" url="https://www.nikolasbentelstudio.com/" text="Nikolas Bentel Studio" templateClass="mt-4">
+</ WebLinkSection>
 
-Transform TS stack error in a more human readable error.
-[Pretty TS error](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+<h2 class="font-display text-2xl text-foreground mt-8">VSCODE && DX</h2>
+
+<WebLinkSection emoji="📌" url="https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors" text="Pretty TS error" templateClass="mt-4">
+</ WebLinkSection>

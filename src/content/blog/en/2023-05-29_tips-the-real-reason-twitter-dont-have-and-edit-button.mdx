@@ -11,29 +11,66 @@ tags:
   - typescript
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-The real reason why twitter don’t have an edit button. [Oisín Moran | How I Made a Self-Quoting Tweet](https://oisinmoran.com/quinetweet)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-The headless editor framework for web artisans. [Headless WYSIWYG Text Editor – Tiptap Editor](https://tiptap.dev/)
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Oisín Moran | How I Made a Self-Quoting Tweet" />
+  <AnchorLink emoji="📗" text="Headless WYSIWYG Text Editor – Tiptap Editor" />
+  <AnchorLink emoji="📗" text="Built At Lightspeed - 4000+ Themes, Templates &amp; UI Kits" />
+</AnchorWrapper>
 
-A directory of 4000+ templates & UI kits for the modern stack.
-[Built At Lightspeed - 4000+ Themes, Templates & UI Kits](https://builtatlightspeed.com/)
+<TextSeparator />
 
-Authentication, simple and clean with [Lucia](https://lucia-auth.com/start-here/introduction?nuxt).
+<AnchorSection emoji="📗" id="oisn-moran-how-i-made-a-self-quoting-tweet" text="Oisín Moran | How I Made a Self-Quoting Tweet" url="https://oisinmoran.com/quinetweet" />
 
-## CSS
-[Fully stacked article ](https://fullystacked.net/posts/linear/) about using the linear function for better animation.
+<p class="mt-2">
+The real reason why twitter don’t have an edit button. [Oisín Moran | How I Made a Self-Quoting Tweet](https://oisinmoran.com/quinetweet?utm_source=cocoweb.fr)
+</p>
 
-## TS
-[Welcome generics type in Vue 3.3](https://www.frsource.org/blog/post/welcome-generics-in-vue/?source=weeklyVueNews&campaign=95)
+<AnchorSection componentClass="mt-2" emoji="📗" id="headless-wysiwyg-text-editor-tiptap-editor" text="Headless WYSIWYG Text Editor – Tiptap Editor" url="https://tiptap.dev/" />
 
-## Repository GitHub
+<p class="mt-2">
+The headless editor framework for web artisans. [Headless WYSIWYG Text Editor – Tiptap Editor](https://tiptap.dev/?utm_source=cocoweb.fr)
+</p>
 
-[ColonelParrot/jscanify](https://github.com/ColonelParrot/jscanify?source=weeklyVueNews&campaign=95), Open-source pure Javascript implemented mobile document scanner. 
+<AnchorSection componentClass="mt-2" emoji="📗" id="built-at-lightspeed-4000-themes-templates-ui-kits" text="Built At Lightspeed - 4000+ Themes, Templates &amp; UI Kits" url="https://builtatlightspeed.com/" />
 
-## Veille FR
+<p class="mt-2">
+Authentication, simple and clean with [Lucia](https://lucia-auth.com/start-here/introduction?nuxt=&utm_source=cocoweb.fr).
+</p>
 
-[On essaie d’être une agence responsable](https://pureemaison.com/on-essaie-detre-une-agence-responsable/)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-[VPN Outline - Accéder à l’Internet gratuit et ouvert](https://getoutline.org/fr/)
+<h2 class="font-display text-2xl text-foreground">CSS</h2>
+
+<WebLinkSection emoji="📌" url="https://fullystacked.net/posts/linear/" text="Fully stacked article" templateClass="mt-4">
+[Fully stacked article ](https://fullystacked.net/posts/linear/?utm_source=cocoweb.fr) about using the linear function for better animation.
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">TS</h2>
+
+<WebLinkSection emoji="📌" url="https://www.frsource.org/blog/post/welcome-generics-in-vue/?source=weeklyVueNews&amp;campaign=95" text="Welcome generics type in Vue 3.3" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Repository GitHub</h2>
+
+<WebLinkSection emoji="📌" url="https://github.com/ColonelParrot/jscanify?source=weeklyVueNews&amp;campaign=95" text="ColonelParrot/jscanify" templateClass="mt-4">
+[ColonelParrot/jscanify](https://github.com/ColonelParrot/jscanify?source=weeklyVueNews&campaign=95&utm_source=cocoweb.fr), Open-source pure Javascript implemented mobile document scanner.
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Veille FR</h2>
+
+<WebLinkSection emoji="📌" url="https://pureemaison.com/on-essaie-detre-une-agence-responsable/" text="On essaie d’être une agence responsable" templateClass="mt-4">
+</ WebLinkSection>
+
+<WebLinkSection emoji="📌" url="https://getoutline.org/fr/" text="VPN Outline - Accéder à l’Internet gratuit et ouvert" templateClass="mt-4">
+</ WebLinkSection>

@@ -13,37 +13,47 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 Salut, web dev friends! 🧑‍💻
-
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🤔" text="Code Is Cheap Now. Software Isn't." />
-<AnchorLink emoji="🖊️" text="Introducing Geist Pixel" />
-<AnchorLink emoji="🎨" text="ui.sh" />
-<AnchorLink emoji="📗" text="How to Structure Vue Projects" />
-<AnchorLink emoji="💚" text="Vue Router V5" />
+<AnchorWrapper>
+  <AnchorLink emoji="🤔" text="Code Is Cheap Now. Software Isn't." />
+  <AnchorLink emoji="🖊️" text="Introducing Geist Pixel" />
+  <AnchorLink emoji="🎨" text="ui.sh" />
+  <AnchorLink emoji="📗" text="How to Structure Vue Projects" />
+  <AnchorLink emoji="💚" text="Vue Router V5" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤔" id="code-is-cheap-now-software-isnt" text="Code Is Cheap Now. Software Isn't." url="https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt" />
 
-<AnchorSection emoji="🤔" id="code-is-cheap-now.-software-isn't.">[Code Is Cheap Now. Software Isn't.](https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt)</AnchorSection>
-
+<p class="mt-2">
 I 100% agree, the barrier to code has dropped to zero but building an infrastructure, scaling, UX/UI theses things don't disapear when you build sofware :).
+</p>
 
-<AnchorSection emoji="🖊️" id="introducing-geist-pixel">[Introducing Geist Pixel](https://vercel.com/blog/introducing-geist-pixel)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🖊️" id="introducing-geist-pixel" text="Introducing Geist Pixel" url="https://vercel.com/blog/introducing-geist-pixel" />
 
+<p class="mt-2">
 New font to add of the family of Geist font by the people from Vercel.
+</p>
 
-<AnchorSection emoji="🎨" id="ui.sh">[ui.sh](https://ui.sh/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🎨" id="uish" text="ui.sh" url="https://ui.sh/" />
 
+<p class="mt-2">
 The creator of Tailwind CSS & Refactoring UI is cooking an AI toolkit for finally have good looking website from AI assistant lol.
+</p>
 
-<AnchorSection emoji="📗" id="how-to-structure-vue-projects">[How to Structure Vue Projects](https://alexop.dev/posts/how-to-structure-vue-projects/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-to-structure-vue-projects" text="How to Structure Vue Projects" url="https://alexop.dev/posts/how-to-structure-vue-projects/" />
 
+<p class="mt-2">
 Very interesting article which compare 5 types of architecture for frontend project. Each architecture has their pros/cons and there are articles to learn more about each types.
 Here are the 5 types of architectures :
 * Flat structure for small projects
@@ -51,30 +61,37 @@ Here are the 5 types of architectures :
 * Modular approach for larger projects
 * Feature Sliced Design for complex applications
 * Micro frontends for enterprise-level solutions
+</p>
 
-<AnchorSection emoji="💚" id="vue-router-v5">[Release v5.0.0 · vuejs/router](https://github.com/vuejs/router/releases/tag/v5.0.0)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="💚" id="release-v500-vuejsrouter" text="Release v5.0.0 · vuejs/router" url="https://github.com/vuejs/router/releases/tag/v5.0.0" />
 
-A release with fixes and no breaking !! It merge [unplugin-vue-router](https://uvr.esm.is/) which enabled typed route by default now.
+<p class="mt-2">
+A release with fixes and no breaking !! It merge [unplugin-vue-router](https://uvr.esm.is/?utm_source=cocoweb.fr) which enabled typed route by default now.
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
-
-📒 [Minimal](https://minimal.so/)
+<WebLinkSection emoji="📒" url="https://minimal.so/" text="Minimal" templateClass="mt-4">
 simple, fast, and minimal bookmark manager.
+</ WebLinkSection>
 
-## Cool Websites
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
 
-🤩 [Humanity's Last Machine](https://www.humanityslastmachine.com/)
+<WebLinkSection emoji="🤩" url="https://www.humanityslastmachine.com/" text="Humanity's Last Machine" templateClass="mt-4">
 Beautifuly designed website, which talk about «  A deep dive on humanoid hardware ».
+</ WebLinkSection>
 
-💻 [Making Software](https://www.makingsoftware.com/)
+<WebLinkSection emoji="💻" url="https://www.makingsoftware.com/" text="Making Software" templateClass="mt-4">
 A reference manual for people who design and build software.
+</ WebLinkSection>
 
-📚 [Xikipedia](https://xikipedia.org/)
+<WebLinkSection emoji="📚" url="https://xikipedia.org/" text="Xikipedia" templateClass="mt-4">
 Instead of doomScroll Twitter or Instagram why not doom scroll on a feed with only things from Wikipedia.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-👀 [Cool hover link effects](https://x.com/verse_/status/2018740432440533300?s=20)
+<WebLinkSection emoji="👀" url="https://x.com/verse_/status/2018740432440533300?s=20" text="Cool hover link effects" templateClass="mt-4">
+</ WebLinkSection>

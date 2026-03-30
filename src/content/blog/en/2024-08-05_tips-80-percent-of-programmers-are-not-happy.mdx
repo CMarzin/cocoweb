@@ -10,41 +10,62 @@ tags:
   - svg
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-😡 80% of programmers are NOT happy… why ?
-😱 Anyone can Access Deleted and Private Repository Data on GitHub
-😎 So good, they can’t ignore you
-✨ CSS One-liners to improve almost every project
+<AnchorWrapper>
+  <AnchorLink emoji="😡" text="80% of programmers are NOT happy… why ?" />
+  <AnchorLink emoji="😱" text="Anyone can Access Deleted and Private Repository Data on GitHub" />
+  <AnchorLink emoji="😎" text="So good, they can’t ignore you" />
+  <AnchorLink emoji="✨" text="CSS One-liners to improve almost every project" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="😡" id="80-of-programmers-are-not-happy-why" text="80% of programmers are NOT happy… why?" url="https://www.youtube.com/watch?v=-pSf9_MgsZ4" />
 
-😡 [80% of programmers are NOT happy… why?](https://www.youtube.com/watch?v=-pSf9_MgsZ4)
+<p class="mt-2">
 An analysis of the 2024 StackOverflow survey results where only 20% of programmers reported being happy at their software engineering jobs.
+</p>
 
-😱 [Anyone can Access Deleted and Private Repository Data on GitHub](https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github)
+<AnchorSection componentClass="mt-2" emoji="😱" id="anyone-can-access-deleted-and-private-repository-data-on-github" text="Anyone can Access Deleted and Private Repository Data on GitHub" url="https://trufflesecurity.com/blog/anyone-can-access-deleted-and-private-repo-data-github" />
+
+<p class="mt-2">
 This article show 4 different ways to access deleted and private repository data from Github.
+</p>
 
-😎 [So good, they can't ignore you](https://kartikay.bearblog.dev/so-good-they-cant-ignore-you/)
+<AnchorSection componentClass="mt-2" emoji="😎" id="so-good-they-cant-ignore-you" text="So good, they can't ignore you" url="https://kartikay.bearblog.dev/so-good-they-cant-ignore-you/" />
+
+<p class="mt-2">
 Be so good, you don’t have to accommodate to the job, the job has to accommodate to you.
+</p>
 
-✨ [CSS One-Liners to Improve \(Almost\) Every Project](https://alvaromontoro.com/blog/68055/ten-css-one-liners-for-almost-every-project)
+<AnchorSection componentClass="mt-2" emoji="✨" id="css-one-liners-to-improve-almost-every-project" text="CSS One-Liners to Improve \(Almost\) Every Project" url="https://alvaromontoro.com/blog/68055/ten-css-one-liners-for-almost-every-project" />
+
+<p class="mt-2">
 10 way to improve readability, and overall UX of a good number of website.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-
-✉️ [Plunk](https://www.useplunk.com/)
+<WebLinkSection emoji="✉️" url="https://www.useplunk.com/" text="Plunk" templateClass="mt-4">
 Plunk is the open-source, affordable email platform that brings together marketing, transactional and broadcast emails into one single, complete solution
+</ WebLinkSection>
 
-🔁 [Swapy](https://swapy.tahazsh.com/)
+<WebLinkSection emoji="🔁" url="https://swapy.tahazsh.com/" text="Swapy" templateClass="mt-4">
 A simple JavaScript tool for converting any layout you have to drag-to-swap layout
+</ WebLinkSection>
 
-😳 [SVG WTF](https://svg.wtf/?activeTab=gui&shapes=%5B%5B%22tag%22%2C%22attributes%22%2C%22metadata%22%2C%22id%22%2C%22children%22%2C%22path%22%2C%22a%7C0%7C1%7C2%7C3%7C4%7C5%22%2C%22svg%22%2C%22width%22%2C%22height%22%2C%22a%7C8%7C9%22%2C%22800%22%2C%22o%7CA%7CB%7CB%22%2C%22transform%22%2C%22inheritedAttributes%22%2C%22styles%22%2C%22a%7CD%7CE%7CF%22%2C%22matrix%281%2C0%2C0%2C1%2C0%2C0%29%22%2C%22o%7C%22%2C%22o%7CG%7CH%7CI%7CI%22%2C%22root%22%2C%22a%7C%22%2C%22o%7C6%7C7%7CC%7CJ%7CK%7CL%7CK%22%2C%22a%7CM%22%5D%2C%22N%22%5D)
+<WebLinkSection emoji="😳" url="https://svg.wtf/?activeTab=gui&amp;shapes=%5B%5B%22tag%22%2C%22attributes%22%2C%22metadata%22%2C%22id%22%2C%22children%22%2C%22path%22%2C%22a%7C0%7C1%7C2%7C3%7C4%7C5%22%2C%22svg%22%2C%22width%22%2C%22height%22%2C%22a%7C8%7C9%22%2C%22800%22%2C%22o%7CA%7CB%7CB%22%2C%22transform%22%2C%22inheritedAttributes%22%2C%22styles%22%2C%22a%7CD%7CE%7CF%22%2C%22matrix%281%2C0%2C0%2C1%2C0%2C0%29%22%2C%22o%7C%22%2C%22o%7CG%7CH%7CI%7CI%22%2C%22root%22%2C%22a%7C%22%2C%22o%7C6%7C7%7CC%7CJ%7CK%7CL%7CK%22%2C%22a%7CM%22%5D%2C%22N%22%5D" text="SVG WTF" templateClass="mt-4">
 A svp learning tool, to try and harness the power of svg.
+</ WebLinkSection>

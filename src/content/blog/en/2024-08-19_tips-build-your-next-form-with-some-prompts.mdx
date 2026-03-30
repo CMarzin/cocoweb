@@ -10,41 +10,65 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤖 KickStart, a next generation form builder from FormKit
-🛠️ Just build websites
-🤯 Font with Built-In Syntax Highlighting
-📗 How to Build Your Own Vue-like Reactivity System from Scratch
-🧑‍💻 A list of HTML semantics elements
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="KickStart, a next generation form builder from FormKit" />
+  <AnchorLink emoji="🛠️" text="Just build websites" />
+  <AnchorLink emoji="🤯" text="Font with Built-In Syntax Highlighting" />
+  <AnchorLink emoji="📗" text="How to Build Your Own Vue-like Reactivity System from Scratch" />
+  <AnchorLink emoji="🧑‍💻" text="A list of HTML semantics elements" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="kickstart-a-next-generation-form-builder-from-formkit" text="KickStart, a next generation form builder from FormKit" url="https://kickstart.formkit.com/" />
 
-🤖 [KickStart, a next generation form builder from FormKit](https://kickstart.formkit.com/)
-Generate a form, edit it with manual controls or AI prompts, then copy and paste [@vuejs](https://x.com/vuejs) components or schema into your project.
+<p class="mt-2">
+Generate a form, edit it with manual controls or AI prompts, then copy and paste [@vuejs](https://x.com/vuejs?utm_source=cocoweb.fr) components or schema into your project.
+</p>
 
-🛠️ [Just build websites](https://blog.jim-nielsen.com/2024/just-build-websites/)
+<AnchorSection componentClass="mt-2" emoji="🛠️" id="just-build-websites" text="Just build websites" url="https://blog.jim-nielsen.com/2024/just-build-websites/" />
+
+<p class="mt-2">
 An advice to junior developer, don’t wait to learn the perfect framework, have the latest MacBook or latest smartphones. Just start building websites with what you have, you can always upgrade later.
+</p>
 
-🤯 [Font with Built-In Syntax Highlighting](https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="font-with-built-in-syntax-highlighting" text="Font with Built-In Syntax Highlighting" url="https://blog.glyphdrawing.club/font-with-built-in-syntax-highlighting/" />
+
+<p class="mt-2">
 This articles is an experiment to create a syntax highlighter for HTML/CSS/JS code for a blog without HTML/CSS/JS. To do that, the logic is directly in the font file.
+</p>
 
-📗 [How to Build Your Own Vue-like Reactivity System from Scratch](https://dev.to/alexanderop/how-to-build-your-own-vue-like-reactivity-system-from-scratch-1d2d)
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-to-build-your-own-vue-like-reactivity-system-from-scratch" text="How to Build Your Own Vue-like Reactivity System from Scratch" url="https://dev.to/alexanderop/how-to-build-your-own-vue-like-reactivity-system-from-scratch-1d2d" />
+
+<p class="mt-2">
 A tutorial to create your own version of *ref()* and *watchEffect()*.
+</p>
 
-🧑‍💻 [A list of HTML semantics elements](https://x.com/csaba_kissi/status/1822668552374997281)
+<AnchorSection componentClass="mt-2" emoji="🧑‍💻" id="a-list-of-html-semantics-elements" text="A list of HTML semantics elements" url="https://x.com/csaba_kissi/status/1822668552374997281" />
+
+<p class="mt-2">
 15 HTML element with their semantics explanations.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🐘 [PGlite - Postgres in WASM](https://github.com/electric-sql/pglite)
+<WebLinkSection emoji="🐘" url="https://github.com/electric-sql/pglite" text="PGlite - Postgres in WASM" templateClass="mt-4">
 Lightweight Postgres packaged as WASM into a TypeScript library for the browser, Node.js, Bun and Deno from https://electric-sql.com.
+</ WebLinkSection>
 
-🤡 [PatrickJS/everyone-ssn-usa](https://github.com/PatrickJS/everyone-ssn-usa)
+<WebLinkSection emoji="🤡" url="https://github.com/PatrickJS/everyone-ssn-usa" text="PatrickJS/everyone-ssn-usa" templateClass="mt-4">
 Releasing everyone's SSN and the hacks used to acquire them.
+</ WebLinkSection>

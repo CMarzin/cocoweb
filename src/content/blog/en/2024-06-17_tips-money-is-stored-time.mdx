@@ -10,56 +10,69 @@ tags:
   - CSS
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have a wonderful news, I have officially passes my Vuejs developer certifications 🥳 🥳 🥳
 Many thanks to the Vuejs team and Evan You the creator of Vuejs for making such a beautiful framework.
-Thanks also to my friend [Adrien Zaganelli](https://adrienzaganelli.com/) for his support during the certifications ( he also have the certification ).
+Thanks also to my friend [Adrien Zaganelli](https://adrienzaganelli.com/?utm_source=cocoweb.fr) for his support during the certifications ( he also have the certification ).
+Here is the link of my certificates of [Vuejs developer level 1 💚](https://certificates.dev/c/9c44c0fe-21f7-4884-9b78-dfe951d5df69?utm_source=cocoweb.fr).
+</StarterText>
 
-Here is the link of my certificates of [Vuejs developer level 1 💚](https://certificates.dev/c/9c44c0fe-21f7-4884-9b78-dfe951d5df69).
+<AnchorWrapper>
+  <AnchorLink emoji="💰" text="Money is stored time" />
+  <AnchorLink emoji="🌶️" text="5 hard truths for young designers" />
+  <AnchorLink emoji="✨" text="Inline property condition in CSS" />
+  <AnchorLink emoji="🚀" text="Type Predicate Inference: The TS 5.5 Feature No One Expected" />
+  <AnchorLink emoji="🤓" text="State of Frontend 2024 is out" />
+</AnchorWrapper>
 
-___
+<TextSeparator />
 
-But anyway, here is the selected news of the week :
+<AnchorSection emoji="💰" id="money-is-stored-time" text="Money is stored time" url="https://kartikay.bearblog.dev/money-is-stored-time/" />
 
-💰 [Money is stored time](https://kartikay.bearblog.dev/money-is-stored-time/)
-🌶️ [5 hard truths for young designers](https://vanschneider.com/blog/5-hard-truths-for-young-designers/)
-✨ [Inline property condition in CSS](https://github.com/w3c/csswg-drafts/issues/10064)
-🚀 [Type Predicate Inference: The TS 5.5 Feature No One Expected](https://www.totaltypescript.com/type-predicate-inference)
-🤓 [State of Frontend 2024 is out](https://stateoffrontend2024.typeform.com/survey)
+<p class="mt-2">
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="🌶️" id="5-hard-truths-for-young-designers" text="5 hard truths for young designers" url="https://vanschneider.com/blog/5-hard-truths-for-young-designers/" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="✨" id="inline-property-condition-in-css" text="Inline property condition in CSS" url="https://github.com/w3c/csswg-drafts/issues/10064" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🚀" id="type-predicate-inference-the-ts-55-feature-no-one-expected" text="Type Predicate Inference: The TS 5.5 Feature No One Expected" url="https://www.totaltypescript.com/type-predicate-inference" />
+
+<p class="mt-2">
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤓" id="state-of-frontend-2024-is-out" text="State of Frontend 2024 is out" url="https://stateoffrontend2024.typeform.com/survey" />
+
+<p class="mt-2">
 **Have a great week.**
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-💰 [Money is stored time](https://kartikay.bearblog.dev/money-is-stored-time/)
-A new paradigm to think about time and money, if you think about it, when you buy something you buy the time it take to create it. Have you ever thinking about putting a price for your time ? For freelancers, it might be easier but as someone who as a day to day job its not so easy.
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🌶️ [5 hard truths for young designers](https://vanschneider.com/blog/5-hard-truths-for-young-designers/)
-TLDR : don’t wait for others to help you achieve your dream, take matter in your own hand. ( Very American point of view )
+<WebLinkSection emoji="🚀" url="https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/" text="CSS-only Custom Range Slider with Motion" templateClass="mt-4">
+Fun stuff by [Bramus](https://www.bram.us/about/?utm_source=cocoweb.fr).
+</ WebLinkSection>
 
-✨[Inline property condition in CSS](https://github.com/w3c/csswg-drafts/issues/10064)
-A new incoming feature in the CSS language, we will soon have the ability to write code like this :
-```css
-background: if(style(--variant: success), var(--green));
-```
-
-🚀 [Type Predicate Inference: The TS 5.5 Feature No One Expected](https://www.totaltypescript.com/type-predicate-inference)
-Typescript will be smarter, it will predicate correctly the return type of a function, no more forced return type.
-
-🤓 [State of Frontend 2024 is out](https://stateoffrontend2024.typeform.com/survey)
-In 2022 more than 4000 developer filled the survey, maybe we can do more this year.
-
-___
-
-## Web tools and Library
-
-🚀 [CSS-only Custom Range Slider with Motion](https://www.bram.us/2024/06/06/css-only-custom-range-slider-with-motion/)
-Fun stuff by [Bramus](https://www.bram.us/about/).
-
-🧑‍💻 [Changelog simplified.](https://changes.page/)
+<WebLinkSection emoji="🧑‍💻" url="https://changes.page/" text="Changelog simplified." templateClass="mt-4">
 Effortlessly `create compelling changelogs` and seamlessly `deliver product updates`.
+</ WebLinkSection>
 
-🐙 [ʕ•ᴥ•ʔ Bear Blog](https://bearblog.dev/)
+<WebLinkSection emoji="🐙" url="https://bearblog.dev/" text="ʕ•ᴥ•ʔ Bear Blog" templateClass="mt-4">
 A privacy-first, no-nonsense, super-fast blogging platform.
 No trackers, no javascript, no stylesheets. Just your words.
+</ WebLinkSection>

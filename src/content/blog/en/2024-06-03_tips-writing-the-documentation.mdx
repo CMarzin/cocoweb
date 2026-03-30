@@ -11,42 +11,59 @@ tags:
   - CSS
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📚 W.T.D ( Write The Documentation )
-🫡 Giving up on open source
-🗣️ No more hello
-📗 Optimizing a Vue App
+<AnchorWrapper>
+  <AnchorLink emoji="📚" text="W.T.D ( Write The Documentation )" />
+  <AnchorLink emoji="🫡" text="Giving up on open source" />
+  <AnchorLink emoji="🗣️" text="No more hello" />
+  <AnchorLink emoji="📗" text="Optimizing a Vue App" />
+</AnchorWrapper>
 
-**Have a great week.**
-___
+<TextSeparator />
 
-📚 [Write the docs](https://www.writethedocs.org/)
+<AnchorSection emoji="📚" id="write-the-docs" text="Write the docs" url="https://www.writethedocs.org/" />
+
+<p class="mt-2">
 Write the Docs is a global community of people who care about documentation. They have a lots of tips, tutorial, a slack ( 21k+ members ) and conferences to help you write documentation.
 Come joins us to write the docs of the future.
+</p>
 
-🫡 [I'm giving up on open source](https://nutjs.dev/blog/i-give-up)
-The maintenir of [nutjs.dev](https://nutjs.dev/) a desktop automation tool, write his letter of resignation about open source. Again another example of how hard it is to live from open source.
+<AnchorSection componentClass="mt-2" emoji="🫡" id="im-giving-up-on-open-source" text="I'm giving up on open source" url="https://nutjs.dev/blog/i-give-up" />
+
+<p class="mt-2">
+The maintenir of [nutjs.dev](https://nutjs.dev/?utm_source=cocoweb.fr) a desktop automation tool, write his letter of resignation about open source. Again another example of how hard it is to live from open source.
 If you use open source code, consider helping the mainteneer they deserve it :).
+</p>
 
-🗣️ [No hello](https://nohello.net/en/) ->  [🇫🇷 version](https://nohello.net/fr/)
-A little guide to make asynchronous conversation better. Avoid saying only **hello** on a chat, put some context, some humour 😁.
+<AnchorSection componentClass="mt-2" emoji="📗" id="optimizing-a-vue-app" text="Optimizing A Vue App" url="https://www.smashingmagazine.com/2022/11/optimizing-vue-app/" />
 
-📗 [Optimizing A Vue App](https://www.smashingmagazine.com/2022/11/optimizing-vue-app/)
+<p class="mt-2">
 Some great tips to optimise the bundle size and user experience in an SPA with realtime data.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-✨ [UI Playbook](https://uiplaybook.dev/)
+<WebLinkSection emoji="✨" url="https://uiplaybook.dev/" text="UI Playbook" templateClass="mt-4">
 A documented collection of UI components.
+</ WebLinkSection>
 
-🎨 [Iconists](https://www.lottielab.com/iconists)
+<WebLinkSection emoji="🎨" url="https://www.lottielab.com/iconists" text="Iconists" templateClass="mt-4">
 A beautiful collection of animated icon brought to you by the dynamic duo Andreas Storm and Martin David.
+</ WebLinkSection>
 
-🧋 [Matcha CSS](https://matcha.mizu.sh/)
+<WebLinkSection emoji="🧋" url="https://matcha.mizu.sh/" text="Matcha CSS" templateClass="mt-4">
 ***matcha.css*** is a pure CSS library designed to style HTML elements similarly to a default browser stylesheet, eliminating the need for users to manually patch their documents.
-Ideal for fast prototyping, static HTML pages, Markdown-generated documents, and developers seeking to streamline their workflow without delving into CSS intricacies and want to make use of [the full range of available HTML elements](https://developer.mozilla.org/docs/Web/HTML/Element).
+Ideal for fast prototyping, static HTML pages, Markdown-generated documents, and developers seeking to streamline their workflow without delving into CSS intricacies and want to make use of [the full range of available HTML elements](https://developer.mozilla.org/docs/Web/HTML/Element?utm_source=cocoweb.fr).
+</ WebLinkSection>

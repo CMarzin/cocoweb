@@ -290,9 +290,9 @@ const jsonLd = generateJsonLd();
       const btn = document.querySelector("[data-theme-toggle]");
       function getInitialTheme() {
         if (localStorage.getItem("theme") === "undefined") {
-          return "light";
-        } else {
           return "dark";
+        } else {
+          return "light";
         }
       }
 
@@ -302,7 +302,16 @@ const jsonLd = generateJsonLd();
           "aria-label",
           value === "dark" ? "Switch to light mode" : "Switch to dark mode",
         );
-        btn.textContent = value === "dark" ? "[◐ light]" : "[◑ dark]";
+        btn.textContent = value === "dark" ? "[◐ dark]" : "[◑ light]";
+        const body = document.querySelector("body");
+
+        if (value === "dark") {
+          body.classList.remove("dark");
+          body.classList.add("light");
+        } else {
+          body.classList.remove("light");
+          body.classList.add("dark");
+        }
       }
 
       setTheme(getInitialTheme());

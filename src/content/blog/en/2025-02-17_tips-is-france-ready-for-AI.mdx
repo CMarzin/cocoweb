@@ -9,36 +9,58 @@ tags:
   - TS
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🇫🇷 Is France ready for IA ?
-🐱 Mistral AI founder interview
-👨‍🦯 AI is Creating a Generation of Illiterate Programmers
-📝 Standards schema
+<AnchorWrapper>
+  <AnchorLink emoji="🇫🇷" text="Is France ready for IA ?" />
+  <AnchorLink emoji="🐱" text="Mistral AI founder interview" />
+  <AnchorLink emoji="👨‍🦯" text="AI is Creating a Generation of Illiterate Programmers" />
+  <AnchorLink emoji="📝" text="Standards schema" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🇫🇷" id="is-france-is-ready-for-ai" text="Is France is ready for AI ?" url="https://www.youtube.com/watch?v=2pFdfjz7wNc" />
 
-🇫🇷 [Is France is ready for AI ?](https://www.youtube.com/watch?v=2pFdfjz7wNc)
+<p class="mt-2">
 For the French people following, an interview from Micode of Emmanuel Macron the French president in the AI summit at Paris.
+</p>
 
-🐱 [Mistral AI founder interview](https://www.youtube.com/watch?v=bzs0wFP_6ck)
+<AnchorSection componentClass="mt-2" emoji="🐱" id="mistral-ai-founder-interview" text="Mistral AI founder interview" url="https://www.youtube.com/watch?v=bzs0wFP_6ck" />
+
+<p class="mt-2">
 How open source can kill Chatgpt ?
+</p>
 
-👨‍🦯 [AI is Creating a Generation of Illiterate Programmers](https://nmn.gl/blog/ai-illiterate-programmers)
+<AnchorSection componentClass="mt-2" emoji="👨‍🦯" id="ai-is-creating-a-generation-of-illiterate-programmers" text="AI is Creating a Generation of Illiterate Programmers" url="https://nmn.gl/blog/ai-illiterate-programmers" />
+
+<p class="mt-2">
 An article which states some rules as of when and why using AI in order not to become over relient on AI.
+</p>
 
-📝 [Standard Schema](https://standardschema.dev/)
+<AnchorSection componentClass="mt-2" emoji="📝" id="standard-schema" text="Standard Schema" url="https://standardschema.dev/" />
+
+<p class="mt-2">
 A common interface for TypeScript which goal is to make easier for ecosystem tools to accept validators, without needing to write custom logic or adapters for each supported library.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🤖 [Discover, download, and run local LLMs](https://lmstudio.ai/)
+<WebLinkSection emoji="🤖" url="https://lmstudio.ai/" text="Discover, download, and run local LLMs" templateClass="mt-4">
 Discover, download, and run local LLMs
+</ WebLinkSection>
 
-📗 [hey-api/openapi-ts: 🚀](https://github.com/hey-api/openapi-ts)
+<WebLinkSection emoji="📗" url="https://github.com/hey-api/openapi-ts" text="hey-api/openapi-ts: 🚀" templateClass="mt-4">
 The OpenAPI to TypeScript codegen. Generate clients, SDKs, validators, and more.
+</ WebLinkSection>

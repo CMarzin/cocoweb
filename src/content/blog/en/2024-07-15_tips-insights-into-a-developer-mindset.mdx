@@ -9,43 +9,65 @@ tags:
   - CLI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧠 Insights into developer mindset
-📗 Laravel or Full-Stack javascript framework ?
-🌵 The Valley of Code
-🪽 News of Volar 2
+<AnchorWrapper>
+  <AnchorLink emoji="🧠" text="Insights into developer mindset" />
+  <AnchorLink emoji="📗" text="Laravel or Full-Stack javascript framework ?" />
+  <AnchorLink emoji="🌵" text="The Valley of Code" />
+  <AnchorLink emoji="🪽" text="News of Volar 2" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧠" id="insights-into-a-developer-mindset" text="Insights into a developer mindset" url="https://dev.to/middleware/how-i-stopped-my-procrastination-insights-into-developer-mindset-23hl" />
 
-🧠 [Insights into a developer mindset](https://dev.to/middleware/how-i-stopped-my-procrastination-insights-into-developer-mindset-23hl)
+<p class="mt-2">
 Eshaan write about why we are more likely to procrastinate as a developer and share some thought about it. The key is to reduce the cognitive overload of your work !
+</p>
 
-📗 [On Laravel, Full-Stack JavaScript, and Productive Frameworks](https://www.jplhomer.org/posts/on-laravel-full-stack-javascript-and-productive-frameworks/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="on-laravel-full-stack-javascript-and-productive-frameworks" text="On Laravel, Full-Stack JavaScript, and Productive Frameworks" url="https://www.jplhomer.org/posts/on-laravel-full-stack-javascript-and-productive-frameworks/" />
+
+<p class="mt-2">
 Some thoughts about whether Laravel/Rails  are better than Full-Stack javascript framework.
 TLDR :
 - JS is cheap to host, immensely better for the frontend, but its difficult to navigate between the bundler, the different runtime and the endless list of ORM.
 - Laravel/Rails are more expensive to host, the syntaxe are « verbose » and they lack of tooling.
+</p>
 
-🌵 [The Valley of Code](https://thevalleyofcode.com/)
+<AnchorSection componentClass="mt-2" emoji="🌵" id="the-valley-of-code" text="The Valley of Code" url="https://thevalleyofcode.com/" />
+
+<p class="mt-2">
 A website which have a lots of great ressources for everything web dev related.
+</p>
 
-🪽 [Volar 2.0](https://gist.github.com/johnsoncodehk/62580d04cb86e576e0e8d6bf1cb44e73)
+<AnchorSection componentClass="mt-2" emoji="🪽" id="volar-20" text="Volar 2.0" url="https://gist.github.com/johnsoncodehk/62580d04cb86e576e0e8d6bf1cb44e73" />
+
+<p class="mt-2">
 Johnson, the author of Volar, talk about how he push the DX for the Vuejs ecosystem to be exceptional. But sometimes, when he moves too fast he can burn his wings.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-✨ [Middleware, OS for Engineering Leadership](https://www.middlewarehq.com/#features)
+<WebLinkSection emoji="✨" url="https://www.middlewarehq.com/#features" text="Middleware, OS for Engineering Leadership" templateClass="mt-4">
 Middleware is a ✨ Open-source DORA metrics platform for engineering teams ✨
+</ WebLinkSection>
 
-🤖 [Terminal Apps](https://terminal-apps.dev/)
+<WebLinkSection emoji="🤖" url="https://terminal-apps.dev/" text="Terminal Apps" templateClass="mt-4">
 A collection of terminal apps.
+</ WebLinkSection>
 
-📡 [Verdaccio](https://verdaccio.org/)
+<WebLinkSection emoji="📡" url="https://verdaccio.org/" text="Verdaccio" templateClass="mt-4">
 A lightweight Node.js private proxy registry
+</ WebLinkSection>

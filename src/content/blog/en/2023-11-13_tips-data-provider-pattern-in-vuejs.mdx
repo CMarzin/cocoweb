@@ -10,26 +10,54 @@ tags:
   - design
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-💚 [Data Provider Pattern in Vuejs](https://www.patterns.dev/vue/data-provider)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="💚" text="Data Provider Pattern in Vuejs" />
+  <AnchorLink emoji="📗" text="HTML First" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="💚" id="data-provider-pattern-in-vuejs" text="Data Provider Pattern in Vuejs" url="https://www.patterns.dev/vue/data-provider" />
+
+<p class="mt-2">
 Learn the data provider pattern in Vuejs, basically its a headless component which contain your data logic which are reusable in other component similar to a composable.
+</p>
 
-📗 [HTML First](https://html-first.com)
+<AnchorSection componentClass="mt-2" emoji="📗" id="html-first" text="HTML First" url="https://html-first.com" />
+
+<p class="mt-2">
 HTML First is a set of principles that aims to make building web software easier, faster, more inclusive, and more maintainable
+</p>
 
-## CSS
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🎨 [CSS Layout — Phuoc Nguyen](http://phuoc.ng/collection/css-layout)
+<h2 class="font-display text-2xl text-foreground">CSS</h2>
+
+<WebLinkSection emoji="🎨" url="http://phuoc.ng/collection/css-layout" text="CSS Layout — Phuoc Nguyen" templateClass="mt-4">
 A collection of popular CSS layouts and patterns that you can use right away
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-🎨 [Apple Design Resources](https://developer.apple.com/design/resources/)
+<WebLinkSection emoji="🎨" url="https://developer.apple.com/design/resources/" text="Apple Design Resources" templateClass="mt-4">
 Every available ressources from Apple for all devices.
+</ WebLinkSection>
 
-🎨 [UI & UX Design Tips](http://uidesign.tips)
+<WebLinkSection emoji="🎨" url="http://uidesign.tips" text="UI &amp; UX Design Tips" templateClass="mt-4">
 Newsletter UI & UX by Jim Raptis.
+</ WebLinkSection>
 
-🎨 [When life gives you lemons, write better error messages](https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f)
+<WebLinkSection emoji="🎨" url="https://wix-ux.com/when-life-gives-you-lemons-write-better-error-messages-46c5223e1a2f" text="When life gives you lemons, write better error messages" templateClass="mt-4">
 Learn how you can write a useful error message
+</ WebLinkSection>

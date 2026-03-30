@@ -10,46 +10,68 @@ tags:
   - AI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 The sun 🌞 is finally here, enjoy this edition of the week with cold beverage outside 🍹.
-
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🦸‍♂️ Heroism in the engineering industry
-🚀 A new creative dev community okaydev.co
-🤯 You can use Vuejs APIs without installing Vue
-🎉 Valibot v.0.31.0 is available
+<AnchorWrapper>
+  <AnchorLink emoji="🦸‍♂️" text="Heroism in the engineering industry" />
+  <AnchorLink emoji="🚀" text="A new creative dev community okaydev.co" />
+  <AnchorLink emoji="🤯" text="You can use Vuejs APIs without installing Vue" />
+  <AnchorLink emoji="🎉" text="Valibot v.0.31.0 is available" />
+</AnchorWrapper>
 
-**Have a great week.**
-___
+<TextSeparator />
 
-🦸‍♂️ [I am not a fan of heroism in the engineering industry](https://newsletter.eng-leadership.com/p/i-am-not-a-fan-of-heroism-in-the)
-[GREGOR OJSTERSEK](https://substack.com/@gregorojstersek) write about the difference between long term consistent work and short spikes of great work. Short burst of great work lead inevitably to burn out, but consistency to good work leads to get better everywhere in addition to preserve your work-life balance.
+<AnchorSection emoji="🦸‍♂️" id="i-am-not-a-fan-of-heroism-in-the-engineering-industry" text="I am not a fan of heroism in the engineering industry" url="https://newsletter.eng-leadership.com/p/i-am-not-a-fan-of-heroism-in-the" />
 
-🚀 [Okey Dev](https://okaydev.co/)
+<p class="mt-2">
+[GREGOR OJSTERSEK](https://substack.com/@gregorojstersek?utm_source=cocoweb.fr) write about the difference between long term consistent work and short spikes of great work. Short burst of great work lead inevitably to burn out, but consistency to good work leads to get better everywhere in addition to preserve your work-life balance.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🚀" id="okey-dev" text="Okey Dev" url="https://okaydev.co/" />
+
+<p class="mt-2">
 A new creative development community, to connect and showcase the talent of freelancers, studio and agencies.
+</p>
 
-🤯 [Vuejs APIs without installing Vue](https://x.com/wobsoriano/status/1803820002987888774?s=46)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="vuejs-apis-without-installing-vue" text="Vuejs APIs without installing Vue" url="https://x.com/wobsoriano/status/1803820002987888774?s=46" />
+
+<p class="mt-2">
 TIL, you can use the APIs of Vuejs in simple js file, no build step, just plain javascript.
+</p>
 
-🎉 [Valibot v0.31.0 is finally available](https://valibot.dev/blog/valibot-v0.31.0-is-finally-available/)
+<AnchorSection componentClass="mt-2" emoji="🎉" id="valibot-v0310-is-finally-available" text="Valibot v0.31.0 is finally available" url="https://valibot.dev/blog/valibot-v0.31.0-is-finally-available/" />
+
+<p class="mt-2">
 Valibot is an open source library whose goal is to validate unknown source of data.
 In this version, the library was rewritten from scratch to improve the mental model, the bundle size and the type safety of the library.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-📚 [Omnivore](https://omnivore.app/)
+<WebLinkSection emoji="📚" url="https://omnivore.app/" text="Omnivore" templateClass="mt-4">
 Omnivore is the free, open source, read-it-later app for serious readers.
+</ WebLinkSection>
 
-🧑‍💻 [PDF Embed Web Component Available Via NPM](https://www.raymondcamden.com/2024/06/19/pdf-embed-web-component-available-via-npm)
-A web component that adds support for Adobe's **[PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/)**. This (free) library lets you add a PDF display to your web page, controlling the size, reading experience and so forth.
+<WebLinkSection emoji="🧑‍💻" url="https://www.raymondcamden.com/2024/06/19/pdf-embed-web-component-available-via-npm" text="PDF Embed Web Component Available Via NPM" templateClass="mt-4">
+A web component that adds support for Adobe's **[PDF Embed API](https://developer.adobe.com/document-services/apis/pdf-embed/?utm_source=cocoweb.fr)**. This (free) library lets you add a PDF display to your web page, controlling the size, reading experience and so forth.
+</ WebLinkSection>
 
-✨ [VUE XYZ](https://vuexyz.org/)
+<WebLinkSection emoji="✨" url="https://vuexyz.org/" text="VUE XYZ" templateClass="mt-4">
 A collection of composables for creative coding with Vue 3.
+</ WebLinkSection>
 
-🕵️ [Micro agent](https://github.com/BuilderIO/micro-agent)
+<WebLinkSection emoji="🕵️" url="https://github.com/BuilderIO/micro-agent" text="Micro agent" templateClass="mt-4">
 An AI agent that writes (actually useful) code for you.
+</ WebLinkSection>

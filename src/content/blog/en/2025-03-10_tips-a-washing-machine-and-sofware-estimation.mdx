@@ -10,46 +10,67 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧼 My Washing Machine Refreshed My Thinking on Software Effort Estimation
-📝 Introducing the world’s best document understanding API with Mistral OCR
-🚧 This page is under construction
-🔥 Doom now runs in Typescript types !
+<AnchorWrapper>
+  <AnchorLink emoji="🧼" text="My Washing Machine Refreshed My Thinking on Software Effort Estimation" />
+  <AnchorLink emoji="📝" text="Introducing the world’s best document understanding API with Mistral OCR" />
+  <AnchorLink emoji="🚧" text="This page is under construction" />
+  <AnchorLink emoji="🔥" text="Doom now runs in Typescript types !" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧼" id="my-washing-machine-refreshed-my-thinking-on-software-effort-estimation" text="My Washing Machine Refreshed My Thinking on Software Effort Estimation" url="https://www.cosive.com/blog/my-washing-machine-refreshed-my-thinking-on-software-effort-estimation" />
 
-🧼 [My Washing Machine Refreshed My Thinking on Software Effort Estimation](https://www.cosive.com/blog/my-washing-machine-refreshed-my-thinking-on-software-effort-estimation)
+<p class="mt-2">
 A 10 minutes task of setting up a washing machine transformed into 4 hours of struggles.
+</p>
 
-📝 [Introducing the world’s best document understanding API with Mistral OCR](https://mistral.ai/fr/news/mistral-ocr)
+<AnchorSection componentClass="mt-2" emoji="📝" id="introducing-the-worlds-best-document-understanding-api-with-mistral-ocr" text="Introducing the world’s best document understanding API with Mistral OCR" url="https://mistral.ai/fr/news/mistral-ocr" />
+
+<p class="mt-2">
 Mistral introduce the best model yet to read and parse PDF documents, its score 94% overall on Math, Multilingual, Scanned and documents with tables in it.
+</p>
 
-🚧  [This page is under construction](https://localghost.dev/blog/this-page-is-under-construction/)
+<AnchorSection componentClass="mt-2" emoji="🚧" id="this-page-is-under-construction" text="This page is under construction" url="https://localghost.dev/blog/this-page-is-under-construction/" />
+
+<p class="mt-2">
 This article is a message to create your own website, you can own a piece of the web. A website is not only marketing, app, or e-commerce. You can just build random, write random stuff and experiment without doing it for money.
+</p>
 
-🔥 [Doom now runs in Typescript types !](https://x.com/mitypescript/status/1894764784983113780)
+<AnchorSection componentClass="mt-2" emoji="🔥" id="doom-now-runs-in-typescript-types" text="Doom now runs in Typescript types !" url="https://x.com/mitypescript/status/1894764784983113780" />
+
+<p class="mt-2">
 Lets kick some demons with TS.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [Kong/swrv: Stale-while-revalidate data fetching for Vue](https://github.com/Kong/swrv)
+<WebLinkSection emoji="🔧" url="https://github.com/Kong/swrv" text="Kong/swrv: Stale-while-revalidate data fetching for Vue" templateClass="mt-4">
 A Vue library for data fetching
 With swrv, components will get a stream of data updates constantly and automatically. The UI will always be fast and reactive.
+</ WebLinkSection>
 
-✨ [ElyaConrad/zoompinch](https://github.com/ElyaConrad/zoompinch)
+<WebLinkSection emoji="✨" url="https://github.com/ElyaConrad/zoompinch" text="ElyaConrad/zoompinch" templateClass="mt-4">
 Apply a pinch-and-zoom experience that’s feels native, communicates the transform reactively and lets you project any layer on top of the transformed canvas.
+</ WebLinkSection>
 
-___
+<h2 class="font-display text-2xl text-foreground mt-8">Fun stuff</h2>
 
-## Fun stuff
+<WebLinkSection emoji="💩" url="https://makefrontendshitagain.party/" text="Make Frontend Shit Again" templateClass="mt-4">
+</ WebLinkSection>
 
-💩 [Make Frontend Shit Again](https://makefrontendshitagain.party/)
-
-🤘 [Turn your logo into liquid metal](https://liquid.paper.design/?refraction=0.022&edge=0.4&patternBlur=0.005&liquid=0.07&speed=0.3&patternScale=2&background=metal)
+<WebLinkSection emoji="🤘" url="https://liquid.paper.design/?refraction=0.022&amp;edge=0.4&amp;patternBlur=0.005&amp;liquid=0.07&amp;speed=0.3&amp;patternScale=2&amp;background=metal" text="Turn your logo into liquid metal" templateClass="mt-4">
+</ WebLinkSection>

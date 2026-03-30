@@ -8,41 +8,63 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤯 The power of the spread and rest syntax in JavaScript
-🛣️ Vue.js: Propagating Props Like a Pro
-📗 Handling internationalisation (I18N) in Vue
-🇫🇷 Quel framework JS backend choisir ?
+<AnchorWrapper>
+  <AnchorLink emoji="🤯" text="The power of the spread and rest syntax in JavaScript" />
+  <AnchorLink emoji="🛣️" text="Vue.js: Propagating Props Like a Pro" />
+  <AnchorLink emoji="📗" text="Handling internationalisation (I18N) in Vue" />
+  <AnchorLink emoji="🇫🇷" text="Quel framework JS backend choisir ?" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤯" id="the-power-of-the-spread-and-rest-syntax-in-javascript-matt-smith" text="The power of the spread and rest syntax in JavaScript - Matt Smith" url="https://allthingssmitty.com/2025/05/05/the-power-of-spread-and-rest-patterns-in-javascript.md/" />
 
-🤯 [The power of the spread and rest syntax in JavaScript - Matt Smith](https://allthingssmitty.com/2025/05/05/the-power-of-spread-and-rest-patterns-in-javascript.md/)
+<p class="mt-2">
 I didn’t know you could use easily spread a variable into a function argument, very handy.
+</p>
 
-🛣️ [Vue.js: Propagating Props Like a Pro](https://hackernoon.com/vuejs-propagating-props-like-a-pro)
+<AnchorSection componentClass="mt-2" emoji="🛣️" id="vuejs-propagating-props-like-a-pro" text="Vue.js: Propagating Props Like a Pro" url="https://hackernoon.com/vuejs-propagating-props-like-a-pro" />
+
+<p class="mt-2">
 A way to deal with reusable components in Vuejs AND with Typescript.
+</p>
 
-📗 [Handling internationalisation \(I18N\) in Vue](https://dev.to/jacobandrewsky/handling-internalisation-i18n-in-vue-2nof)
+<AnchorSection componentClass="mt-2" emoji="📗" id="handling-internationalisation-i18n-in-vue" text="Handling internationalisation \(I18N\) in Vue" url="https://dev.to/jacobandrewsky/handling-internalisation-i18n-in-vue-2nof" />
+
+<p class="mt-2">
 Basic example of using I18N with Vue.
+</p>
 
-🇫🇷 [Quel framework JS backend choisir ?](https://www.youtube.com/watch?v=Q_oVDDevPw8)
+<AnchorSection componentClass="mt-2" emoji="🇫🇷" id="quel-framework-js-backend-choisir" text="Quel framework JS backend choisir ?" url="https://www.youtube.com/watch?v=Q_oVDDevPw8" />
+
+<p class="mt-2">
 The biggest content creator for developer in France talks about which JS backend to choose when you want to choose Node for your backend.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🧰 [Mobbin Apps](https://mobbin.com/discover/apps/web/latest)
+<WebLinkSection emoji="🧰" url="https://mobbin.com/discover/apps/web/latest" text="Mobbin Apps" templateClass="mt-4">
 UI & UX design inspiration for mobile & web apps, the new dribbble.
+</ WebLinkSection>
 
-🔧 [Sink](https://sink.cool/)
+<WebLinkSection emoji="🔧" url="https://sink.cool/" text="Sink" templateClass="mt-4">
 A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.
+</ WebLinkSection>
 
-## Technical demo
+<h2 class="font-display text-2xl text-foreground mt-8">Technical demo</h2>
 
-💬 [border-radius and shape-outside](https://codepen.io/shannonmoeller/pen/XJbyQre)
+<WebLinkSection emoji="💬" url="https://codepen.io/shannonmoeller/pen/XJbyQre" text="border-radius and shape-outside" templateClass="mt-4">
+</ WebLinkSection>

@@ -13,60 +13,73 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 I have selected some news from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="📝" text="Performance Is Not a Technical Problem" />
-<AnchorLink emoji="🏢" text="Isometric NYC" />
-<AnchorLink emoji="🦙" text="Claude Code with Anthropic API compatibility" />
-<AnchorLink emoji="🫡" text="jQuery 4.0.0" />
+<AnchorWrapper>
+  <AnchorLink emoji="📝" text="Performance Is Not a Technical Problem" />
+  <AnchorLink emoji="🏢" text="Isometric NYC" />
+  <AnchorLink emoji="🦙" text="Claude Code with Anthropic API compatibility" />
+  <AnchorLink emoji="🫡" text="jQuery 4.0.0" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem" text="Performance Is Not a Technical Problem" url="https://shud.in/thoughts/performance-is-not-a-technical-problem" />
 
-<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem">[Performance Is Not a Technical Problem](https://shud.in/thoughts/performance-is-not-a-technical-problem?utm_source=cocoweb.fr)</AnchorSection>
-
+<p class="mt-2">
 I love this view, « performance is not a technical problem, entropy is. »
 Before our problem was you don't have the context of « ALL » the codebase, if you optimise something, another person can break it even with careful human review. Now, with LLM, you can have rules about every optimisation, and it will enforce it everywhere.
+</p>
 
-<AnchorSection emoji="🏢" id="isometric-nyc">[Isometric NYC](https://cannoneyed.com/projects/isometric-nyc?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🏢" id="isometric-nyc" text="Isometric NYC" url="https://cannoneyed.com/projects/isometric-nyc" />
 
+<p class="mt-2">
 A little project about generating NYC in a 2000s *Roller Coaster Tycoon style* with the help of AI to do the hard tasks.
 You can see the [result here](https://cannoneyed.com/isometric-nyc/?utm_source=cocoweb.fr).
+</p>
 
-<AnchorSection emoji="🦙" id="claude-code-with-anthropic-api-compatibility">[Claude Code with Anthropic API compatibility](https://ollama.com/blog/claude?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🦙" id="claude-code-with-anthropic-api-compatibility" text="Claude Code with Anthropic API compatibility" url="https://ollama.com/blog/claude" />
 
+<p class="mt-2">
 You can now use Claude Code with any local model you want 🍾.
+</p>
 
-<AnchorSection emoji="🫡" id="jquery-4.0.0">[jQuery 4.0.0](https://blog.jquery.com/2026/01/17/jquery-4-0-0/?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🫡" id="jquery-400" text="jQuery 4.0.0" url="https://blog.jquery.com/2026/01/17/jquery-4-0-0/" />
 
+<p class="mt-2">
 20 years after the first version, here is the release of version 4.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-✍️ [Agentation](https://agentation.dev/?utm_source=cocoweb.fr)
-
+<WebLinkSection emoji="✍️" url="https://agentation.dev/" text="Agentation" templateClass="mt-4">
 Agentation (agent + annotation) is a dev tool that lets you annotate elements on your webpage and generate structured feedback for AI coding agents.
+</ WebLinkSection>
 
-🦾 [Oxen AI](https://www.oxen.ai/?utm_source=cocoweb.fr)
-
+<WebLinkSection emoji="🦾" url="https://www.oxen.ai/" text="Oxen AI" templateClass="mt-4">
 Build Datasets, Train Models, Ship Custom AI.
+</ WebLinkSection>
 
-## Cool Websites
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
 
-💊 [Pharmaicy](https://www.pharmaicy.store/?utm_source=cocoweb.fr)
-
+<WebLinkSection emoji="💊" url="https://www.pharmaicy.store/" text="Pharmaicy" templateClass="mt-4">
 Code-Based Drugs for AI. PHARMAICY* brings you research-based drugs to unlock your AI's full potential. Feed it modules like Ayahuasca, Weed or Ketamine, and watch it push into the unknown.
+</ WebLinkSection>
 
-💡 [The Startup Graveyard](https://loot-drop.vercel.app/?utm_source=cocoweb.fr)
-
+<WebLinkSection emoji="💡" url="https://loot-drop.vercel.app/" text="The Startup Graveyard" templateClass="mt-4">
 A list of 925 dead startups, why they failed and some tips if you want try again their ideas.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-⭐️ [Dominik Sobe Portofolio](https://dominiksobe.com/?utm_source=cocoweb.fr)
+<WebLinkSection emoji="⭐️" url="https://dominiksobe.com/" text="Dominik Sobe Portofolio" templateClass="mt-4">
+</ WebLinkSection>

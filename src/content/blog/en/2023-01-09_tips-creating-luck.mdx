@@ -9,55 +9,62 @@ tags:
   - web tools
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 ## Veille
-
-### [How to create luck](https://www.swyx.io/create-luck/)
-In this post [swyx](https://www.swyx.io/about) briefly review the “Literature of Luck”, and then I’ll end with some personal thoughts on how it could be extended.
-
-### [Tamagui 1.0 🎉](https://tamagui.dev/blog/version-one)
-
+### [How to create luck](https://www.swyx.io/create-luck/?utm_source=cocoweb.fr)
+In this post [swyx](https://www.swyx.io/about?utm_source=cocoweb.fr) briefly review the “Literature of Luck”, and then I’ll end with some personal thoughts on how it could be extended.
+### [Tamagui 1.0 🎉](https://tamagui.dev/blog/version-one?utm_source=cocoweb.fr)
 Ship cross-platform React apps in ½ the time with 2x performance.
-
-
-### [The ultimate UI kit and design system for Figma](https://www.untitledui.com/)
+### [The ultimate UI kit and design system for Figma](https://www.untitledui.com/?utm_source=cocoweb.fr)
 Untitled UI is the largest UI kit and design system for Figma in the world. Kickstart any project and level up as a designer.
-
-### [UI Learn](https://uilearn.com/)
+### [UI Learn](https://uilearn.com/?utm_source=cocoweb.fr)
 The no bullshit way to learn user interface design. Instagram and TikTok tips won’t get you better at design. Start building your design skills with practical exercises and by designing more.
-
-### [Error.prototype.cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause#examples)
+### [Error.prototype.cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause?utm_source=cocoweb.fr#examples)
 The cause data property of an Error instance indicates the specific original cause of the error.
-
 It is used when catching and re-throwing an error with a more-specific or useful error message in order to still have access to the original error.
-
-
-### [Compress an image before uploading it](https://pqina.nl/blog/compress-image-before-upload/)
+### [Compress an image before uploading it](https://pqina.nl/blog/compress-image-before-upload/?utm_source=cocoweb.fr)
 In this quick tutorial we’ll use JavaScript to compress images selected with a file input element. We’ll compress images and save them back to the file input ready for upload.
-
-### [Tensai](https://twitter.com/mathemagic1an/status/1610023513334878208?s=20&t=3Tynu1lclZOvZyn1ejJhzA)
+### [Tensai](https://twitter.com/mathemagic1an/status/1610023513334878208?s=20&t=3Tynu1lclZOvZyn1ejJhzA&utm_source=cocoweb.fr)
 Conversational UI for your Codebase.
 Introducing Tensai, your repo-level code assistant.
-- Ask complex questions
-- ✅ Automatically generate PRs for complex tasks
+</StarterText>
 
-___
+<AnchorWrapper>
+  <AnchorLink emoji="📌" text="Ask complex questions" />
+  <AnchorLink emoji="📌" text="✅ Automatically generate PRs for complex tasks" />
+</AnchorWrapper>
 
-## Web tools
+<TextSeparator />
 
-### [Polar Habits](https://polarhabits.com/)
+<AnchorSection emoji="###" id="polar-habits" text="Polar Habits" url="https://polarhabits.com/" />
+
+<p class="mt-2">
 Polar Habits is a guilt-free habit tracker that focuses on creating a positive, fun, encouraging environment for tracking your habits. 🙌
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="###" id="pintura-image-editor" text="Pintura Image Editor" url="https://pqina.nl/pintura/" />
 
-
-### [Pintura Image Editor](https://pqina.nl/pintura/)
+<p class="mt-2">
 A powerful JavaScript Image Editor that integrates with every stack.
+</p>
 
-### [Easy File Uploading With JavaScript | FilePond](https://pqina.nl/filepond/)
+<AnchorSection componentClass="mt-2" emoji="###" id="easy-file-uploading-with-javascript-filepond" text="Easy File Uploading With JavaScript | FilePond" url="https://pqina.nl/filepond/" />
+
+<p class="mt-2">
 A JavaScript library that can upload anything you throw at it, optimizes images for faster uploads, and offers a great, accessible, silky smooth user experience.
+</p>
 
----
+<AnchorSection componentClass="mt-2" emoji="###" id="github-artalaract" text="GitHub - artalar/act" url="https://github.com/artalar/act" />
 
-## Repository Github
-
-### [GitHub - artalar/act](https://github.com/artalar/act)
+<p class="mt-2">
 Act is the most efficient reactive library in both: speed, size, correctness.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>

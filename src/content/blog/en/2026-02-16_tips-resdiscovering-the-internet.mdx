@@ -11,50 +11,67 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🤩" text="Rediscovering the Internet" />
-<AnchorLink emoji="🇫🇷" text="La suite" />
-<AnchorLink emoji="🤖" text="AI Doesn't Reduce Work—It Intensifies It" />
-<AnchorLink emoji="🏹" text="Outcome Engineering" />
+<AnchorWrapper>
+  <AnchorLink emoji="🤩" text="Rediscovering the Internet" />
+  <AnchorLink emoji="🇫🇷" text="La suite" />
+  <AnchorLink emoji="🤖" text="AI Doesn't Reduce Work—It Intensifies It" />
+  <AnchorLink emoji="🏹" text="Outcome Engineering" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤩" id="rediscovering-the-internet" text="Rediscovering the Internet" url="https://darylcecile.net/notes/rediscovering-the-internet" />
 
-<AnchorSection emoji="🤩" id="rediscovering-the-internet">[Rediscovering the Internet](https://darylcecile.net/notes/rediscovering-the-internet)</AnchorSection>
+<p class="mt-2">
+I really love this, I discovered what is a [webring](https://indieweb.org/webring?utm_source=cocoweb.fr) and I really want to be part of one :D. It's refreshing to see some stuff build by people just because they can and want to do fun stuff outside the social networks.
+</p>
 
-I really love this, I discovered what is a [webring](https://indieweb.org/webring) and I really want to be part of one :D. It's refreshing to see some stuff build by people just because they can and want to do fun stuff outside the social networks.
+<AnchorSection componentClass="mt-2" emoji="🇫🇷" id="la-suite" text="La suite" url="https://lasuite.numerique.gouv.fr" />
 
-<AnchorSection emoji="🇫🇷" id="la-suite">[La suite](https://lasuite.numerique.gouv.fr)</AnchorSection>
+<p class="mt-2">
+As a french, it's very refreshing to see my gouvernement try to be more independent from the US tech. It's like «  Office 365 » but fully open source and MIT licensed. Check the [Github](https://github.com/suitenumerique/?utm_source=cocoweb.fr).
+</p>
 
-As a french, it's very refreshing to see my gouvernement try to be more independent from the US tech. It's like «  Office 365 » but fully open source and MIT licensed. Check the [Github](https://github.com/suitenumerique/).
+<AnchorSection componentClass="mt-2" emoji="🤖" id="ai-doesnt-reduce-workit-intensifies-it" text="AI Doesn't Reduce Work—It Intensifies It" url="https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it" />
 
-<AnchorSection emoji="🤖" id="ai-doesn't-reduce-work—it-intensifies-it">[AI Doesn't Reduce Work—It Intensifies It](https://hbr.org/2026/02/ai-doesnt-reduce-work-it-intensifies-it)</AnchorSection>
-
+<p class="mt-2">
 Because with AI we can do a lot more alone, we can have multiple AI working at the same times, you can become designers, developers, product… It give us a lot more possibility on the short term. I agree with the end of the article, we need to have some « AI practice guide » in order to not burn our wings with it :).
+</p>
 
-<AnchorSection emoji="🏹" id="outcome-engineering">[Outcome Engineering](https://o16g.com/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🏹" id="outcome-engineering" text="Outcome Engineering" url="https://o16g.com/" />
 
+<p class="mt-2">
 The o16g Manifesto, It was never about the code.
 In the same vibes of the laws of the robotic by Isaac Asimov, it's 16 principles to interact with agentic coding.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🧠 [Orbits](https://www.orbits.so/)
+<WebLinkSection emoji="🧠" url="https://www.orbits.so/" text="Orbits" templateClass="mt-4">
 Your second brain for who you know and who you meet.
+</ WebLinkSection>
 
-## Cool Websites
-💚 [A digital neighbourhood](https://www.veopia.net/)
-« Veopia is a digital neighbourhood inspired by the towns of Neopets, the vibes of Stardew Valley, ~[webrings](https://indieweb.org/webring)~, this article about ~[rediscovering the internet](https://darylcecile.net/notes/rediscovering-the-internet)~, and a mission to create a community space to discover and connect with other cool humans in the digital world. »
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
 
-⭐ [hml.nekoweb.org](https://hml.nekoweb.org/)
+<WebLinkSection emoji="💚" url="https://www.veopia.net/" text="A digital neighbourhood" templateClass="mt-4">
+« Veopia is a digital neighbourhood inspired by the towns of Neopets, the vibes of Stardew Valley, ~[webrings](https://indieweb.org/webring?utm_source=cocoweb.fr)~, this article about ~[rediscovering the internet](https://darylcecile.net/notes/rediscovering-the-internet?utm_source=cocoweb.fr)~, and a mission to create a community space to discover and connect with other cool humans in the digital world. »
+</ WebLinkSection>
+
+<WebLinkSection emoji="⭐" url="https://hml.nekoweb.org/" text="hml.nekoweb.org" templateClass="mt-4">
 A fun website, i love the design very 90.
+</ WebLinkSection>
 
-🏳️‍🌈 [WELCOME!!!!!!!!!](https://minxie.likesyou.org/?i=1)
+<WebLinkSection emoji="🏳️‍🌈" url="https://minxie.likesyou.org/?i=1" text="WELCOME!!!!!!!!!" templateClass="mt-4">
 I don't know what it this website but I love the vibes.
+</ WebLinkSection>

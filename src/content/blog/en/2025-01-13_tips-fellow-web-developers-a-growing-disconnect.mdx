@@ -8,39 +8,54 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🛰️ Fellow web developers, a growing disconnect ?
-🤺 HTML is programming language, fight me
-😮 Creating a git commit the hard way
-🔥 Composables design pattern course
+<AnchorWrapper>
+  <AnchorLink emoji="🛰️" text="Fellow web developers, a growing disconnect ?" />
+  <AnchorLink emoji="🤺" text="HTML is programming language, fight me" />
+  <AnchorLink emoji="😮" text="Creating a git commit the hard way" />
+  <AnchorLink emoji="🔥" text="Composables design pattern course" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🛰️" id="how-do-you-do-fellow-web-developers-a-growing-disconnect" text="How do you do, fellow web developers? A growing disconnect." url="https://rakhim.exotext.com/web-developers-a-growing-disconnect" />
 
-🛰️  [How do you do, fellow web developers? A growing disconnect.](https://rakhim.exotext.com/web-developers-a-growing-disconnect)
+<p class="mt-2">
 A lot of new folk now don’t know how to make a webpage without a SPA, because the paradigm of making a website has changed a lot since the author of the post started programming.
+</p>
 
-🤺 [HTML is a programming language, fight me](https://www.wired.com/story/html-is-actually-a-programming-language-fight-me/)
+<AnchorSection componentClass="mt-2" emoji="🤺" id="html-is-a-programming-language-fight-me" text="HTML is a programming language, fight me" url="https://www.wired.com/story/html-is-actually-a-programming-language-fight-me/" />
+
+<p class="mt-2">
 I agree with this statement, those who claim otherwise are juste gatekeepers and don’t want others to code !
+</p>
 
-😮 [Creating a git commit the hard way](https://avestura.dev/blog/creating-a-git-commit-the-hard-way)
+<AnchorSection componentClass="mt-2" emoji="😮" id="creating-a-git-commit-the-hard-way" text="Creating a git commit the hard way" url="https://avestura.dev/blog/creating-a-git-commit-the-hard-way" />
+
+<p class="mt-2">
 How to write a git commit without using git commit ?
+</p>
 
-🔥 [Composable design patterns courses](https://michaelnthiessen.com/composable-design-patterns)
+<AnchorSection componentClass="mt-2" emoji="🔥" id="composable-design-patterns-courses" text="Composable design patterns courses" url="https://michaelnthiessen.com/composable-design-patterns" />
+
+<p class="mt-2">
 A course by Micheal Tiessen for writing Vuejs composables the right way !
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🔧 [PocketBase](https://github.com/pocketbase/pocketbase) is an open source Go backend that includes:
-* embedded database (*SQLite*) with **realtime subscriptions**
-* built-in **files and users management**
-* convenient**Admin dashboard UI**
-* and simple **REST-ish API**
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔥 [Reactive VSCode](https://github.com/KermanX/reactive-vscode?tab=readme-ov-file)
+<WebLinkSection emoji="🔥" url="https://github.com/KermanX/reactive-vscode?tab=readme-ov-file" text="Reactive VSCode" templateClass="mt-4">
 Develop VSCode extension with Vue Reactivity API
+</ WebLinkSection>

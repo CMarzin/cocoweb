@@ -9,45 +9,66 @@ tags:
   - design
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+This week I wanted to mentioned for my friend [Margaux Tellier](https://margauxtellier.com/?utm_source=cocoweb.fr) because her Portfolio is simply 🔥 !
+</StarterText>
 
-🏥 No work is worth dying for
-🍦 You might not need that framework
-🎩 A guide to destructuring in Javascript
-📈 Why I still blog after 15 years
+<AnchorWrapper>
+  <AnchorLink emoji="🏥" text="No work is worth dying for" />
+  <AnchorLink emoji="🍦" text="You might not need that framework" />
+  <AnchorLink emoji="🎩" text="A guide to destructuring in Javascript" />
+  <AnchorLink emoji="📈" text="Why I still blog after 15 years" />
+</AnchorWrapper>
 
-This week I wanted to mentioned for my friend [Margaux Tellier](https://margauxtellier.com/) because her Portfolio is simply 🔥 !
+<TextSeparator />
 
-**Have a great week.**
+<AnchorSection emoji="🏥" id="work-is-meaningless" text="Work is meaningless" url="https://whitep4nth3r.com/blog/work-is-meaningless/" />
 
-___
-
-🏥 [Work is meaningless](https://whitep4nth3r.com/blog/work-is-meaningless/)
+<p class="mt-2">
 An article about the husband of Salma, which work in IT and nearly died because he wouldn’t let his coworkers down by taking sick days. Work is an exchange of time for money, 99% of the times your work can be done by someone else, but the someone else cannot replace you for your loved ones.
 Take care of yourself ❤️
+</p>
 
-🍦 [You might not need that framework](https://frontendmasters.com/blog/you-might-not-need-that-framework/)
+<AnchorSection componentClass="mt-2" emoji="🍦" id="you-might-not-need-that-framework" text="You might not need that framework" url="https://frontendmasters.com/blog/you-might-not-need-that-framework/" />
+
+<p class="mt-2">
 An article which state some of the reasons why a lot of new dev are stuck in the framework of their choice. By learning the vanilla way, you can have another tool in your toolbox and have more control and power over the tool you use.
 Sometime an HTML, a CSS and a JS file is all you need for a project.
+</p>
 
-🎩 [A guide to destructuring in Javascript](https://piccalil.li/blog/a-guide-to-destructuring-in-javascript/)
+<AnchorSection componentClass="mt-2" emoji="🎩" id="a-guide-to-destructuring-in-javascript" text="A guide to destructuring in Javascript" url="https://piccalil.li/blog/a-guide-to-destructuring-in-javascript/" />
+
+<p class="mt-2">
 A very cool concept explained really well.
+</p>
 
-📈 [Why I still blog after 15 years](https://www.jonashietala.se/blog/2024/09/25/why_i_still_blog_after_15_years/#Why-Ive-continued-to-blog)
+<AnchorSection componentClass="mt-2" emoji="📈" id="why-i-still-blog-after-15-years" text="Why I still blog after 15 years" url="https://www.jonashietala.se/blog/2024/09/25/why_i_still_blog_after_15_years/#Why-Ive-continued-to-blog" />
+
+<p class="mt-2">
 A blog is your little corner of the internet, you can put anything you want, try new things etc…
 I think everyone need to have a little blog instead of only social network account.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-✨ [Vue Transitions](https://learnvue.co/transitions)
+<WebLinkSection emoji="✨" url="https://learnvue.co/transitions" text="Vue Transitions" templateClass="mt-4">
 Vue \<Transition\> with Tailwind CSS
+</ WebLinkSection>
 
-📊 [Easing Graphs](https://www.easing.dev/)
+<WebLinkSection emoji="📊" url="https://www.easing.dev/" text="Easing Graphs" templateClass="mt-4">
 A curated gallery of easings and springs where you can fine-tune your own in an editor.
+</ WebLinkSection>
 
-📶 [maverick-js/signals](https://github.com/maverick-js/signals)
+<WebLinkSection emoji="📶" url="https://github.com/maverick-js/signals" text="maverick-js/signals" templateClass="mt-4">
 A tiny (~1kB minzipped) and extremely fast library for creating reactive observables via functions.
+</ WebLinkSection>

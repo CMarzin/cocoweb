@@ -13,49 +13,69 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🛝" text="Serious results unserious methods Shopify's AI playground" />
-<AnchorLink emoji="🚢" text="How We Reduced a Container Image by 99.7%" />
-<AnchorLink emoji="👷" text="Inside the AI Workflows of Every’s Six Engineers" />
-<AnchorLink emoji="📗" text="3 Kinds of Props in Vue" />
+<AnchorWrapper>
+  <AnchorLink emoji="🛝" text="Serious results unserious methods Shopify's AI playground" />
+  <AnchorLink emoji="🚢" text="How We Reduced a Container Image by 99.7%" />
+  <AnchorLink emoji="👷" text="Inside the AI Workflows of Every’s Six Engineers" />
+  <AnchorLink emoji="📗" text="3 Kinds of Props in Vue" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🛝" id="serious-results-unserious-methods-shopifys-ai-playground" text="Serious results, unserious methods: Shopify’s AI playground" url="https://www.shopify.com/news/unserious-exploration" />
 
-<AnchorSection emoji="🛝" id="serious-results-unserious-methods-shopify's-ai-playground">[Serious results, unserious methods: Shopify’s AI playground](https://www.shopify.com/news/unserious-exploration)</AnchorSection>
+<p class="mt-2">
 In order to always be at the edge each people at shopify can make an experiment and share it with the company. I think it’s cool if in a company you can test stuff and see if it sticks.
 Before it was limited to some technical person and now the barrier is gone and everyone can play in the playground.
+</p>
 
-<AnchorSection emoji="🚢" id="how-we-reduced-a-container-image-by-99.7%">[Case Study: How We Reduced a Container Image by 99.7% ( 800GB to 2GB )](https://sealos.io/blog/reduce-container-image-size-case-study)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🚢" id="case-study-how-we-reduced-a-container-image-by-997-800gb-to-2gb" text="Case Study: How We Reduced a Container Image by 99.7% ( 800GB to 2GB )" url="https://sealos.io/blog/reduce-container-image-size-case-study" />
+
+<p class="mt-2">
 The perfect example to check the documentation, and when you took a little care of your configuration you can optimize a lot without so much hassle.
+</p>
 
-<AnchorSection emoji="👷" id="inside-the-ai-workflows-of-every’s-six-engineers">[Inside the AI Workflows of Every’s Six Engineers](https://every.to/source-code/inside-the-ai-workflows-of-every-s-six-engineers)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="👷" id="inside-the-ai-workflows-of-everys-six-engineers" text="Inside the AI Workflows of Every’s Six Engineers" url="https://every.to/source-code/inside-the-ai-workflows-of-every-s-six-engineers" />
+
+<p class="mt-2">
 Codex and Claude code are very used in every workflow.
+</p>
 
-<AnchorSection emoji="📗" id="3-kinds-of-props-in-vue">[3 Kinds of Props in Vue](https://michaelnthiessen.com/3-kinds-of-props)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📗" id="3-kinds-of-props-in-vue" text="3 Kinds of Props in Vue" url="https://michaelnthiessen.com/3-kinds-of-props" />
+
+<p class="mt-2">
 1. Templace Props
 2. Configuration Props
 3. State Props ( or Data Props )
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
-
-📚 [upstash/context7](https://github.com/upstash/context7)
+<WebLinkSection emoji="📚" url="https://github.com/upstash/context7" text="upstash/context7" templateClass="mt-4">
 Context7 MCP Server -- Up-to-date code documentation for LLMs and AI code editors
+</ WebLinkSection>
 
-👀 [Agent Watch](https://agentwatch.lovable.app/)
+<WebLinkSection emoji="👀" url="https://agentwatch.lovable.app/" text="Agent Watch" templateClass="mt-4">
 Track sessions in your menu bar and run agents. Monitor your Claude coding sessions with precision and optimize your AI-assisted workflow.
-## Design inspirations
+</ WebLinkSection>
 
-[Keya Vadgama | Portfolio](https://keyavadgama.com/)
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="📌" url="https://keyavadgama.com/" text="Keya Vadgama | Portfolio" templateClass="mt-4">
 Clean and beautiful display in grid of the project.
+</ WebLinkSection>
 
-[Charmin Kumar Vemula | Portfolio](https://vemula.me/)
+<WebLinkSection emoji="📌" url="https://vemula.me/" text="Charmin Kumar Vemula | Portfolio" templateClass="mt-4">
 Fun and clean use of cards to change page.
+</ WebLinkSection>

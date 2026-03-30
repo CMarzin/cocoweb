@@ -11,38 +11,56 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="😍" text="The correct Aesthetic of Software" />
-<AnchorLink emoji="🔎" text="Formulas for optical adjustments" />
-<AnchorLink emoji="👀" text="Internet without interruptions" />
-<AnchorLink emoji="🚄" text="Local daily commute" />
+<AnchorWrapper>
+  <AnchorLink emoji="😍" text="The correct Aesthetic of Software" />
+  <AnchorLink emoji="🔎" text="Formulas for optical adjustments" />
+  <AnchorLink emoji="👀" text="Internet without interruptions" />
+  <AnchorLink emoji="🚄" text="Local daily commute" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="😍" id="the-correct-aesthetic-of-software" text="The correct Aesthetic of Software" url="https://x.com/parkerhendo/status/1973904521257759183" />
 
-<AnchorSection emoji="😍" id="the-correct-aesthetic-of-software">[The correct Aesthetic of Software](https://x.com/parkerhendo/status/1973904521257759183)</AnchorSection>
+<p class="mt-2">
 Four screen of beautiful UI, maybe one day I can make one.
+</p>
 
-<AnchorSection emoji="🔎" id="formulas-for-optical-adjustments">[Formulas for optical adjustments](https://bjango.com/articles/opticaladjustments/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🔎" id="formulas-for-optical-adjustments" text="Formulas for optical adjustments" url="https://bjango.com/articles/opticaladjustments/" />
+
+<p class="mt-2">
 Instead of guessing how to center icon on a circle for example, this articles give us an helpful formula to do it.
+</p>
 
-<AnchorSection emoji="👀" id="internet-without-interruptions">[Internet without interruptions](https://helium.computer/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="👀" id="internet-without-interruptions" text="Internet without interruptions" url="https://helium.computer/" />
+
+<p class="mt-2">
 A new browser based on Chromium named Helium.
+</p>
 
-<AnchorSection emoji="🚄" id="local-daily-commute">[Local daily commute](https://www.commuting.to/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🚄" id="local-daily-commute" text="Local daily commute" url="https://www.commuting.to/" />
+
+<p class="mt-2">
 A window to the sky.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🤔 [emilwidlund/bitspace](https://github.com/emilwidlund/bitspace)
+<WebLinkSection emoji="🤔" url="https://github.com/emilwidlund/bitspace" text="emilwidlund/bitspace" templateClass="mt-4">
 A prototype of a creative environment for the 21st century
+</ WebLinkSection>
 
-✨ [shadcn-ui/ui](https://github.com/shadcn-ui/ui)
+<WebLinkSection emoji="✨" url="https://github.com/shadcn-ui/ui" text="shadcn-ui/ui" templateClass="mt-4">
 A set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks. Open Source. Open Code.
+</ WebLinkSection>

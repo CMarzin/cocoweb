@@ -11,32 +11,71 @@ tags:
   - photography
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Measuring developer productivity](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Measuring developer productivity" />
+  <AnchorLink emoji="📗" text="Exploring Exif files" />
+  <AnchorLink emoji="📗" text="Laravel Folio" />
+  <AnchorLink emoji="📗" text="Practica js blog" />
+  <AnchorLink emoji="📗" text="Tech's broken promises" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="measuring-developer-productivity" text="Measuring developer productivity" url="https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/yes-you-can-measure-software-developer-productivity" />
+
+<p class="mt-2">
 Mc Kinsey think they can measure developer productivity, another try to put numbers on the value of a developer.
+</p>
 
-📗 [Exploring Exif files](https://hturan.com/writing/exploring-exif)
+<AnchorSection componentClass="mt-2" emoji="📗" id="exploring-exif-files" text="Exploring Exif files" url="https://hturan.com/writing/exploring-exif" />
+
+<p class="mt-2">
 Harley Turan explore how you can use and access metadata from the exif file of an iPhone.
+</p>
 
-📗 [Laravel Folio](https://laravel.com/docs/10.x/folio)
+<AnchorSection componentClass="mt-2" emoji="📗" id="laravel-folio" text="Laravel Folio" url="https://laravel.com/docs/10.x/folio" />
+
+<p class="mt-2">
 New powerful router system by the Laravel team
+</p>
 
-📗 [Practica js blog](https://practica.dev/blog/a-compilation-of-outstanding-testing-articles-with-javaScript/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="practica-js-blog" text="Practica js blog" url="https://practica.dev/blog/a-compilation-of-outstanding-testing-articles-with-javaScript/" />
+
+<p class="mt-2">
 A compilation of outstanding testing articles \(with JavaScript\)
+</p>
 
-📗 [Tech's broken promises](https://www.businessinsider.com/tech-broken-promises-streaming-ride-hailing-cloud-computing-2023-8)
+<AnchorSection componentClass="mt-2" emoji="📗" id="techs-broken-promises" text="Tech's broken promises" url="https://www.businessinsider.com/tech-broken-promises-streaming-ride-hailing-cloud-computing-2023-8" />
+
+<p class="mt-2">
 The cloud is not the heaven it once was.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [Web Check](https://web-check.as93.net/)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://web-check.as93.net/" text="Web Check" templateClass="mt-4">
 All-in-one OSINT🕵️‍♂️ tool for analysing any website. Very cool tool, for checking basic informations about your server, and upgrade your security rapidly.
+</ WebLinkSection>
 
-🐙 [Naive UI](https://www.naiveui.com/en-US/light)
+<WebLinkSection emoji="🐙" url="https://www.naiveui.com/en-US/light" text="Naive UI" templateClass="mt-4">
 A Vue 3 💚 Component Library. Fairly Complete. Theme Customizable. Uses TypeScript. Fast.
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-🎨 [Deck Gallery](https://deck.gallery/)
+<WebLinkSection emoji="🎨" url="https://deck.gallery/" text="Deck Gallery" templateClass="mt-4">
 Curated designed desks, slides, keynotes, guidelines and other aspiration for your next presentation.
+</ WebLinkSection>

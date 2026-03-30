@@ -11,53 +11,63 @@ tags:
   - AI
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
-
-I use Arch BTW now, thanks to [DHH](https://dhh.dk/) and to his opinionated setup [Omarchy](https://youtu.be/I5Mnni7cea8?si=Rhbrj8UmCV7KmQF2), I linked his setup in a previous version of the tips of the weeks. Very easy setup, in like 25 minutes I have brought back from the dead an old window laptop.
-
+<StarterText>
+I use Arch BTW now, thanks to [DHH](https://dhh.dk/?utm_source=cocoweb.fr) and to his opinionated setup [Omarchy](https://youtu.be/I5Mnni7cea8?si=Rhbrj8UmCV7KmQF2&utm_source=cocoweb.fr), I linked his setup in a previous version of the tips of the weeks. Very easy setup, in like 25 minutes I have brought back from the dead an old window laptop.
 ![Omarchy on a laptop](/img/2025-08-04/omarchy.jpeg)
-
 In other news :
+</StarterText>
 
-📕 An interactive guide to caching
-📗 Statisfies in Typescript
-🧐 The State of Software Development in 2025
+<AnchorWrapper>
+  <AnchorLink emoji="📕" text="An interactive guide to caching" />
+  <AnchorLink emoji="📗" text="Statisfies in Typescript" />
+  <AnchorLink emoji="🧐" text="The State of Software Development in 2025" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📕" id="an-interactive-guide-to-caching" text="An interactive guide to caching" url="https://planetscale.com/blog/caching" />
 
-📕 [An interactive guide to caching](https://planetscale.com/blog/caching)
+<p class="mt-2">
 This article explains really well, the foundation, the hit rat, temporal and spatial locality and the algorithm used for handle caching. With every chapter there is an interactive bit which help visualize how the cache work with modern systems.
+</p>
 
-📗 [Satisfies in TypeScript](https://frontendmasters.com/blog/satisfies-in-typescript/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="satisfies-in-typescript" text="Satisfies in TypeScript" url="https://frontendmasters.com/blog/satisfies-in-typescript/" />
+
+<p class="mt-2">
 TLDR :
 Use satisfies when you want to prevent *type* *widenings* ( when you want only want the declared type exclusively ), in situations where a top-level variable declaration doesn’t quite fit well.
+</p>
 
-🧐 [The State of Software Development in 2025](https://survey.stackoverflow.co/2025/)
+<AnchorSection componentClass="mt-2" emoji="🧐" id="the-state-of-software-development-in-2025" text="The State of Software Development in 2025" url="https://survey.stackoverflow.co/2025/" />
+
+<p class="mt-2">
 The 2025 stack overflow is here with more than 49k responses from +177 countries.
+</p>
 
-Some key insights :
-* Trust in AI accuracy worsened -> 46% of engineers now distrust AI outputs (versus 31% in 2024)
-* Experienced engineers are the most skeptical -> only ~2.5% highly trust AI, and 20.7% highly distrust it (versus 8.3% in 2024)
-* AI-generated code lacks context or project-specific nuance → 45% of engineers reported that (versus 39% in 2024)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-If you are in Webdev, I don’t thinks our jobs is in danger because of AI yet…
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-___
-
-## Web tools and Library
-
-👀 [Typed Routing in Vue](https://github.com/dmitry-lavrik/vue-routes-to-types)
+<WebLinkSection emoji="👀" url="https://github.com/dmitry-lavrik/vue-routes-to-types" text="Typed Routing in Vue" templateClass="mt-4">
 Library for creating typescript types based on routes of vue router routes.
+</ WebLinkSection>
 
-🔬 [zcf0508/vue-scan](https://github.com/zcf0508/vue-scan)
+<WebLinkSection emoji="🔬" url="https://github.com/zcf0508/vue-scan" text="zcf0508/vue-scan" templateClass="mt-4">
 Flashing when components updating to troubleshoot performance issues.
+</ WebLinkSection>
 
-📊 [Git qucik stats](https://git-quick-stats.sh/)
+<WebLinkSection emoji="📊" url="https://git-quick-stats.sh/" text="Git qucik stats" templateClass="mt-4">
 Git quick statistics is a simple and efficient way to access various statistics in git repository.
+</ WebLinkSection>
 
-## Look at this
+<h2 class="font-display text-2xl text-foreground mt-8">Look at this</h2>
 
-🤯 [CSS Design award, Website Of The Day is Terminal Industries](https://terminal-industries.com/)
+<WebLinkSection emoji="🤯" url="https://terminal-industries.com/" text="CSS Design award, Website Of The Day is Terminal Industries" templateClass="mt-4">
+</ WebLinkSection>

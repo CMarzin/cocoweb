@@ -9,43 +9,67 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🚀 The Post-Developer Era
-📉 Ex Chrome Engineer
-✨ Motion for Vue
-👏 Unhead v2
+<AnchorWrapper>
+  <AnchorLink emoji="🚀" text="The Post-Developer Era" />
+  <AnchorLink emoji="📉" text="Ex Chrome Engineer" />
+  <AnchorLink emoji="✨" text="Motion for Vue" />
+  <AnchorLink emoji="👏" text="Unhead v2" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🚀" id="the-post-developer-era-josh-w-comeau" text="The Post-Developer Era • Josh W. Comeau" url="https://www.joshwcomeau.com/blog/the-post-developer-era/" />
 
-🚀 [The Post-Developer Era • Josh W. Comeau](https://www.joshwcomeau.com/blog/the-post-developer-era/)
+<p class="mt-2">
 The Post-Developer Era is not near, but the company still need to understand that AI will not replace skilled developer’s but rather enhance existing one. AI is not good at leading things, for now its very good a being a good copilot.
+</p>
 
-📉 [Ex Chrome Engineering](https://nerdy.dev/ex-googler)
+<AnchorSection componentClass="mt-2" emoji="📉" id="ex-chrome-engineering" text="Ex Chrome Engineering" url="https://nerdy.dev/ex-googler" />
+
+<p class="mt-2">
 Adam Argyle shares the shock and heartbreak of being suddenly laid off from Google, despite years of impactful work on Chrome and the web platform.
+</p>
 
-✨ [Introducing Motion for Vue - Motion Blog](https://motion.dev/blog/introducing-motion-for-vue)
+<AnchorSection componentClass="mt-2" emoji="✨" id="introducing-motion-for-vue-motion-blog" text="Introducing Motion for Vue - Motion Blog" url="https://motion.dev/blog/introducing-motion-for-vue" />
+
+<p class="mt-2">
 Finally the port of Motion for React but in Vuejs.
+</p>
 
-👏 [Unhead v2: The full-stack \<head\> package for any framework.](https://unhead.unjs.io/v2)
+<AnchorSection componentClass="mt-2" emoji="👏" id="unhead-v2-the-full-stack-head-package-for-any-framework" text="Unhead v2: The full-stack \<head\> package for any framework." url="https://unhead.unjs.io/v2" />
+
+<p class="mt-2">
 The version 2 of the agnostic head package is available, support for all major framework, more performance, bundle size reduced and new documentations.
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🤖 [Open Ai CODEX](https://github.com/openai/codex)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🤖" url="https://github.com/openai/codex" text="Open Ai CODEX" templateClass="mt-4">
 Lightweight coding agent that runs in your terminal
+</ WebLinkSection>
 
-🔧 [antfu/node-modules-inspector: Interactive UI for local node modules inspection](https://github.com/antfu/node-modules-inspector)
+<WebLinkSection emoji="🔧" url="https://github.com/antfu/node-modules-inspector" text="antfu/node-modules-inspector: Interactive UI for local node modules inspection" templateClass="mt-4">
 Visualize your node_modules, inspect dependencies, and more.
+</ WebLinkSection>
 
-📗 [Vue Tips Collection](https://michaelnthiessen.com/vue-tips-collection)
+<WebLinkSection emoji="📗" url="https://michaelnthiessen.com/vue-tips-collection" text="Vue Tips Collection" templateClass="mt-4">
 Hard-cover tips collection on sale.
+</ WebLinkSection>
 
-## Joke of the week
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
 
-["we're using tailwind to solve our CSS problems" Very cool i'm using cigarettes to solve my stress problem](https://front-end.social/@henry/114354952049470924)
+<WebLinkSection emoji="📌" url="https://front-end.social/@henry/114354952049470924" text="&quot;we're using tailwind to solve our CSS problems&quot; Very cool i'm using cigarettes to solve my stress problem" templateClass="mt-4">
+</ WebLinkSection>

@@ -9,43 +9,63 @@ tags:
   - GO
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✊ Kill your Feeds - Stop letting algorithms dictate how you think
-📝 How to write exceptional documentations
-🌐 Free and open access in the age of generative AI
-🤖 The Scaling Era: An Oral History of AI, 2019–2025
+<AnchorWrapper>
+  <AnchorLink emoji="✊" text="Kill your Feeds - Stop letting algorithms dictate how you think" />
+  <AnchorLink emoji="📝" text="How to write exceptional documentations" />
+  <AnchorLink emoji="🌐" text="Free and open access in the age of generative AI" />
+  <AnchorLink emoji="🤖" text="The Scaling Era: An Oral History of AI, 2019–2025" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✊" id="kill-your-feeds-stop-letting-algorithms-dictate-how-you-think" text="Kill your Feeds - Stop letting algorithms dictate how you think" url="https://usher.dev/posts/2025-03-08-kill-your-feeds/" />
 
-✊ [Kill your Feeds - Stop letting algorithms dictate how you think](https://usher.dev/posts/2025-03-08-kill-your-feeds/)
+<p class="mt-2">
 This article advocates to create your own feed, your subscription feed from Youtube and others instead of the « for you » feed dictated by the platform. The internet should serve you, not the other way around.
+</p>
 
-📝 [How to write exceptional documentation](https://chrisnicholas.dev/blog/how-to-write-exceptional-documentation)
+<AnchorSection componentClass="mt-2" emoji="📝" id="how-to-write-exceptional-documentation" text="How to write exceptional documentation" url="https://chrisnicholas.dev/blog/how-to-write-exceptional-documentation" />
+
+<p class="mt-2">
 Great write-up about writing very concise and well thought documentation. But the key learning is to write, write, write, write.
+</p>
 
-🌐 [“Wait, not like that”: Free and open access in the age of generative AI](https://www.citationneeded.news/free-and-open-access-in-the-age-of-generative-ai/)
-This article discuss the importance of how the data is used by the AI and what can we do to maintain open source data without seeing all our free work used in a way we don’t like. 
+<AnchorSection componentClass="mt-2" emoji="🌐" id="wait-not-like-that-free-and-open-access-in-the-age-of-generative-ai" text="“Wait, not like that”: Free and open access in the age of generative AI" url="https://www.citationneeded.news/free-and-open-access-in-the-age-of-generative-ai/" />
 
-🤖  [The Scaling Era: An Oral History of AI, 2019–2025](https://www.stripe.press/scaling)
+<p class="mt-2">
+This article discuss the importance of how the data is used by the AI and what can we do to maintain open source data without seeing all our free work used in a way we don’t like.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="the-scaling-era-an-oral-history-of-ai-20192025" text="The Scaling Era: An Oral History of AI, 2019–2025" url="https://www.stripe.press/scaling" />
+
+<p class="mt-2">
 An inside view of the AI revolution, from the people and companies making it happen.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [Goravel](https://github.com/goravel/goravel)
+<WebLinkSection emoji="🔧" url="https://github.com/goravel/goravel" text="Goravel" templateClass="mt-4">
 A Golang framework for web artisans. Tribute to Laravel.
+</ WebLinkSection>
 
-🔥[Kode](https://github.com/dnakov/anon-kode)
+<WebLinkSection emoji="🔥" url="https://github.com/dnakov/anon-kode" text="Kode" templateClass="mt-4">
 Terminal-based AI coding tool that can use any model that supports the OpenAI-style API.
+</ WebLinkSection>
 
-## Joke of the week
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
 
-Did you know about the new type of coding ? Vibe coding is very hot right now, it consists of people without any technical background using cursor or other AI editors to write code and create SAAS for them. For this guy it doesn’t end well x)
-
-[Poor vibe coder :\(](https://cloudisland.nz/@daisy/114182826781681792)
+<WebLinkSection emoji="📌" url="https://cloudisland.nz/@daisy/114182826781681792" text="Poor vibe coder :\(" templateClass="mt-4">
+</ WebLinkSection>

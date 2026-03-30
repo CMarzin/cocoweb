@@ -12,40 +12,59 @@ tags:
   - web performance
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✨ A design reset - part I
-💅 A design reset - part II
-🛜 Latency numbers every frontend developer should know
+<AnchorWrapper>
+  <AnchorLink emoji="✨" text="A design reset - part I" />
+  <AnchorLink emoji="💅" text="A design reset - part II" />
+  <AnchorLink emoji="🛜" text="Latency numbers every frontend developer should know" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="a-design-reset-part-i" text="A design reset - part I" url="https://linear.app/blog/a-design-reset" />
 
-✨ [A design reset - part I](https://linear.app/blog/a-design-reset)
+<p class="mt-2">
 How the design team at Linear, find a way to convince their CEO and to do a full redesign of their product. Creating some design concept is very powerful to implement change into an existing product.
+</p>
 
-💅 [How we redesigned the Linear UI - part II](https://linear.app/blog/how-we-redesigned-the-linear-ui)
-The process behind the redesign of Linear, how the engineers and the designers came together to make a full redesign in 6 weeks. I really loved the part where they used [LCH colour](https://en.wikipedia.org/wiki/HCL_color_space) to simplify their colour system and have colours more true to the human eye.
+<AnchorSection componentClass="mt-2" emoji="💅" id="how-we-redesigned-the-linear-ui-part-ii" text="How we redesigned the Linear UI - part II" url="https://linear.app/blog/how-we-redesigned-the-linear-ui" />
 
-🛜 [Latency numbers every frontend developer should know](https://vercel.com/blog/latency-numbers-every-web-developer-should-know)
-Vercel's CTO, Malte Ubl put some context and link the numbers to performance metric. It allow us to better understand the result of the popular tools [PageSpeed Insights](https://pagespeed.web.dev/) or [Lightouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=fr).
+<p class="mt-2">
+The process behind the redesign of Linear, how the engineers and the designers came together to make a full redesign in 6 weeks. I really loved the part where they used [LCH colour](https://en.wikipedia.org/wiki/HCL_color_space?utm_source=cocoweb.fr) to simplify their colour system and have colours more true to the human eye.
+</p>
 
-___
+<AnchorSection componentClass="mt-2" emoji="🛜" id="latency-numbers-every-frontend-developer-should-know" text="Latency numbers every frontend developer should know" url="https://vercel.com/blog/latency-numbers-every-web-developer-should-know" />
 
-## Web tools and Library
+<p class="mt-2">
+Vercel's CTO, Malte Ubl put some context and link the numbers to performance metric. It allow us to better understand the result of the popular tools [PageSpeed Insights](https://pagespeed.web.dev/?utm_source=cocoweb.fr) or [Lightouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=fr&utm_source=cocoweb.fr).
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-💅 [Franken UI](https://www.franken-ui.dev/)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="💅" url="https://www.franken-ui.dev/" text="Franken UI" templateClass="mt-4">
 HTML-first, framework-agnostic, beautifully designed components that you can truly copy and paste into your site. Accessible. Customizable. Open Source.
+</ WebLinkSection>
 
-🟧 [The Ultimate CSS Shapes Collection](https://css-shape.com/)
+<WebLinkSection emoji="🟧" url="https://css-shape.com/" text="The Ultimate CSS Shapes Collection" templateClass="mt-4">
 Pure CSS shapes made with a **single-element**, **modern CSS** and an **optimized code**. All the shapes are here, look no further !
+</ WebLinkSection>
 
-🤖 [LLocalSearch](https://github.com/nilsherzig/LLocalSearch)
+<WebLinkSection emoji="🤖" url="https://github.com/nilsherzig/LLocalSearch" text="LLocalSearch" templateClass="mt-4">
 LLocalSearch is a completely locally running search aggregator using LLM Agents. The user can ask a question and the system will use a chain of LLMs to find the answer. The user can see the progress of the agents and the final answer. No OpenAI or Google API keys are needed.
+</ WebLinkSection>
 
-🤓 [A list of developer newsletters](https://github.com/jackbridger/developer-newsletters)
+<WebLinkSection emoji="🤓" url="https://github.com/jackbridger/developer-newsletters" text="A list of developer newsletters" templateClass="mt-4">
 A list of 140 developer newsletters + how to sponsor them.
+</ WebLinkSection>

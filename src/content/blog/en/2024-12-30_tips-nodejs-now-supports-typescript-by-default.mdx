@@ -11,45 +11,62 @@ tags:
   - vuejs
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-
+<StarterText>
 Happy new year 🎆 !
-
 I hope 2025 will be a nice year, I wish to all my readers good health and I hope everything you wish will happen next year.
-
 See you next year 🎉
-
 And now the last news of 2024 :)
+</StarterText>
 
-🚀 Node.js Now Supports TypeScript By Default
-🤖 Building effective AI Agent
-🔭 What ’s new for Vuejs in 2025
-📗 How to Use the Variant Props Pattern in Vue
+<AnchorWrapper>
+  <AnchorLink emoji="🚀" text="Node.js Now Supports TypeScript By Default" />
+  <AnchorLink emoji="🤖" text="Building effective AI Agent" />
+  <AnchorLink emoji="🔭" text="What ’s new for Vuejs in 2025" />
+  <AnchorLink emoji="📗" text="How to Use the Variant Props Pattern in Vue" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🚀" id="nodejs-now-supports-typescript-by-default" text="Node.js Now Supports TypeScript By Default" url="https://www.totaltypescript.com/typescript-is-coming-to-node-23" />
 
-🚀[Node.js Now Supports TypeScript By Default](https://www.totaltypescript.com/typescript-is-coming-to-node-23)
+<p class="mt-2">
 In Node 23, TS is supported by default without any extra configuration ! Enjoy :)
+</p>
 
-🤖 [Building Effective AI Agents](https://www.anthropic.com/research/building-effective-agents)
+<AnchorSection componentClass="mt-2" emoji="🤖" id="building-effective-ai-agents" text="Building Effective AI Agents" url="https://www.anthropic.com/research/building-effective-agents" />
+
+<p class="mt-2">
 Great writing from the Anthropic blog.
 If you have enough documentation and guardrails, agents can automate coding or other workflows.
+</p>
 
-🔭 [What ’s new for Vuejs in 2025](https://www.vuemastery.com/blog/whats-next-for-vue-in-2025/)
+<AnchorSection componentClass="mt-2" emoji="🔭" id="what-s-new-for-vuejs-in-2025" text="What ’s new for Vuejs in 2025" url="https://www.vuemastery.com/blog/whats-next-for-vue-in-2025/" />
+
+<p class="mt-2">
 Nuxt 4, Vite 6, Vitest 3, Pinia 3 and Vapor Mode. Things will be interesting to see in 2025 for Vuejs devs.
+</p>
 
-📗 [How to Use the Variant Props Pattern in Vue](https://alexop.dev/posts/vue-typescript-variant-props-type-safe-props/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-to-use-the-variant-props-pattern-in-vue" text="How to Use the Variant Props Pattern in Vue" url="https://alexop.dev/posts/vue-typescript-variant-props-type-safe-props/" />
+
+<p class="mt-2">
 The Variant Props Pattern in Vue combines TypeScript’s discriminated unions with Vue’s prop system to create type-safe component variants. Instead of using complex type utilities, we explicitly mark incompatible props as never to prevent prop mixing at compile time.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-👻 [Ghostty](https://ghostty.org/)
+<WebLinkSection emoji="👻" url="https://ghostty.org/" text="Ghostty" templateClass="mt-4">
 Ghostty is a fast, feature-rich, and cross-platform terminal emulator that uses platform-native UI and GPU acceleration.
+</ WebLinkSection>
 
-
-👽 [Nostromo UI](https://marketplace.visualstudio.com/items?itemName=thomasgodden.nostromo-ui)
+<WebLinkSection emoji="👽" url="https://marketplace.visualstudio.com/items?itemName=thomasgodden.nostromo-ui" text="Nostromo UI" templateClass="mt-4">
 This is a vscode theme based on some of the landing control user interfaces from Alien's Nostromo spacecraft.
+</ WebLinkSection>

@@ -11,24 +11,48 @@ tags:
   - design
 ---
 
-## DX
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-Very light alternative to docker desktop, I reduced my ram usage by up to 20% with this software.
-[OrbStack · Fast, light, simple Docker & Linux on macOS](https://orbstack.dev/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-## Veille
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="OrbStack · Fast, light, simple Docker &amp; Linux on macOS" />
+</AnchorWrapper>
 
-Nuxtr VSCode 0.1.0 is out ✨
-[Twitter thread about Nuxtr](https://twitter.com/nuxtrdev/status/1667955791276670979?s=20)
+<TextSeparator />
 
-## Design
+<AnchorSection emoji="📗" id="orbstack-fast-light-simple-docker-linux-on-macos" text="OrbStack · Fast, light, simple Docker &amp; Linux on macOS" url="https://orbstack.dev/" />
 
-Inspiration site and resource site for interactive designers : [HUDS + GUIS](https://www.hudsandguis.com/)
+<p class="mt-2">
+</p>
 
-## Repo github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-Another style of writing Vue components : [Vue Vine](https://github.com/vue-vine/vue-vine)
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
 
-## Humor
+<WebLinkSection emoji="📌" url="https://twitter.com/nuxtrdev/status/1667955791276670979?s=20" text="Twitter thread about Nuxtr" templateClass="mt-4">
+</ WebLinkSection>
 
-[A student made react a million times faster](https://www.youtube.com/watch?v=VkezQMb1DHw)
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
+
+<WebLinkSection emoji="📌" url="https://www.hudsandguis.com/" text="HUDS + GUIS" templateClass="mt-4">
+Inspiration site and resource site for interactive designers : [HUDS + GUIS](https://www.hudsandguis.com/?utm_source=cocoweb.fr)
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Repo github</h2>
+
+<WebLinkSection emoji="📌" url="https://github.com/vue-vine/vue-vine" text="Vue Vine" templateClass="mt-4">
+Another style of writing Vue components : [Vue Vine](https://github.com/vue-vine/vue-vine?utm_source=cocoweb.fr)
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Humor</h2>
+
+<WebLinkSection emoji="📌" url="https://www.youtube.com/watch?v=VkezQMb1DHw" text="A student made react a million times faster" templateClass="mt-4">
+</ WebLinkSection>

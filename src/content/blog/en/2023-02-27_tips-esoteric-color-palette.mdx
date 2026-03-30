@@ -12,56 +12,93 @@ tags:
   - vuejs
 ---
 
-## CSS && Design
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-### [Poline](https://meodai.github.io/poline/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
+<AnchorWrapper>
+  <AnchorLink emoji="###" text="Poline" />
+  <AnchorLink emoji="###" text="Happy hues" />
+  <AnchorLink emoji="###" text="Tailscan" />
+  <AnchorLink emoji="###" text="Web Interface Guidelines" />
+  <AnchorLink emoji="###" text="Last baseline alignment" />
+  <AnchorLink emoji="###" text="Sharp &amp; Glowing dark card | Chrome only" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="###" id="poline" text="Poline" url="https://meodai.github.io/poline/" />
+
+<p class="mt-2">
 "Poline" is an enigmatic color palette generator, that harnesses the mystical witchcraft of polar coordinates. Its methodology, defying conventional color science, is steeped in the esoteric knowledge of the early 20th century.
+</p>
 
-### [Happy hues](https://www.happyhues.co/palettes/1)
+<AnchorSection componentClass="mt-2" emoji="###" id="happy-hues" text="Happy hues" url="https://www.happyhues.co/palettes/1" />
 
+<p class="mt-2">
 Not sure what colors to use in your designs or where to use them? Happy Hues is a color palette inspiration site that acts as a real world example as to how the colors could be used in your design projects.
+</p>
 
-### [Tailscan](https://tailscan.com/)
+<AnchorSection componentClass="mt-2" emoji="###" id="tailscan" text="Tailscan" url="https://tailscan.com/" />
 
+<p class="mt-2">
 The ultimate developer tool for Tailwind CSS. Build, design and debug your Tailwind website visually with Tailscan, right within the browser.
+</p>
 
-### [Web Interface Guidelines](https://rauno.me/interfaces)
+<AnchorSection componentClass="mt-2" emoji="###" id="web-interface-guidelines" text="Web Interface Guidelines" url="https://rauno.me/interfaces" />
 
+<p class="mt-2">
 This document outlines a non-exhaustive list of details that make a good (web) interface.
+</p>
 
-### [Last baseline alignment](https://web.dev/last-baseline/)
+<AnchorSection componentClass="mt-2" emoji="###" id="last-baseline-alignment" text="Last baseline alignment" url="https://web.dev/last-baseline/" />
 
+<p class="mt-2">
 All major browser engines now support last baseline alignment in CSS grid and flexbox.
+</p>
 
-### [Sharp & Glowing dark card | Chrome only](https://codepen.io/LukyVj/pen/YzOXepM)
+<AnchorSection componentClass="mt-2" emoji="###" id="sharp-glowing-dark-card-chrome-only" text="Sharp &amp; Glowing dark card | Chrome only" url="https://codepen.io/LukyVj/pen/YzOXepM" />
 
-## Vuejs
+<p class="mt-2">
+</p>
 
-### [Vue Tip: Re-Rendering Vue Routes When Path Parameters Change](https://twitter.com/Mokkapps/status/1628416747349868548)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-### [Build an accessible tooltip component efficiently with CSS and Vue](https://dev.to/mayashavin/build-an-accessible-tooltip-component-efficiently-with-css-and-vue-1p27)
+<h2 class="font-display text-2xl text-foreground">Vuejs</h2>
 
-## AI & Laravel
+<WebLinkSection emoji="###" url="https://twitter.com/Mokkapps/status/1628416747349868548" text="Vue Tip: Re-Rendering Vue Routes When Path Parameters Change" templateClass="mt-4">
+</ WebLinkSection>
 
-### [Query your Laravel database using natural language](https://beyondco.de/blog/query-your-laravel-database-using-natural-language)
+<WebLinkSection emoji="###" url="https://dev.to/mayashavin/build-an-accessible-tooltip-component-efficiently-with-css-and-vue-1p27" text="Build an accessible tooltip component efficiently with CSS and Vue" templateClass="mt-4">
+</ WebLinkSection>
 
+<h2 class="font-display text-2xl text-foreground mt-8">AI & Laravel</h2>
+
+<WebLinkSection emoji="###" url="https://beyondco.de/blog/query-your-laravel-database-using-natural-language" text="Query your Laravel database using natural language" templateClass="mt-4">
 Wrapper with chatgpt for laravel.
+</ WebLinkSection>
 
-### [Concurrent processes](https://laravel.com/docs/10.x/processes#concurrent-processes)
-
+<WebLinkSection emoji="###" url="https://laravel.com/docs/10.x/processes#concurrent-processes" text="Concurrent processes" templateClass="mt-4">
 Asynchronous processes in laravel 10.
+</ WebLinkSection>
 
-## Library
+<h2 class="font-display text-2xl text-foreground mt-8">Library</h2>
 
-### [Magic-regexp](https://regexp.dev/)
-
+<WebLinkSection emoji="###" url="https://regexp.dev/" text="Magic-regexp" templateClass="mt-4">
 A compiled-away, type-safe, readable RegExp alternative.
+</ WebLinkSection>
 
-### [Try tm](https://trytm.vercel.app/)
+<WebLinkSection emoji="###" url="https://trytm.vercel.app/" text="Try tm" templateClass="mt-4">
+One liner async-await wrapper with error handling inspired by this [Fireship short](https://www.youtube.com/watch?v=ITogH7lJTyE&utm_source=cocoweb.fr)
+</ WebLinkSection>
 
-One liner async-await wrapper with error handling inspired by this [Fireship short](https://www.youtube.com/watch?v=ITogH7lJTyE)
-
-### [Unovis](https://unovis.dev/)
-
+<WebLinkSection emoji="###" url="https://unovis.dev/" text="Unovis" templateClass="mt-4">
 A modular data visualization framework for React, Angular, Svelte, and vanilla TypeScript or JavaScript.
+</ WebLinkSection>
