@@ -35,9 +35,9 @@ function formatDate(date: Date): string {
   description="Technical articles about web development and technologies."
   lang="en"
 >
-  <div class="articles-page flex flex-col gap-5">
+  <div class="articles-page flex flex-col gap-5 stagger-children">
     <h1
-      class="font-display text-4xl font-light tracking-tight text-foreground animate-fade-up"
+      class="font-display text-4xl tracking-tight text-foreground animate-fade-up"
     >
       Articles
     </h1>
@@ -48,7 +48,7 @@ function formatDate(date: Date): string {
       )
     }
 
-    <p class="postlist-description">
+    <p class="postlist-description animate-fade-up">
       In-depth technical articles about web development.
     </p>
 

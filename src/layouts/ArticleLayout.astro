@@ -8,6 +8,8 @@ import {
   type Lang,
 } from "../i18n/utils";
 
+import TagsWrapper from "@/components/TagsWrapper.astro";
+
 interface Props {
   frontmatter: CollectionEntry<"articles">["data"];
   slug: string;
@@ -72,7 +74,6 @@ function formatDateISO(date: Date): string {
 
 // Get localized paths
 const articlesBasePath = getLocalizedUrl("/articles/", lang);
-const tagsBasePath = getLocalizedUrl("/tags/", lang);
 ---
 
 <BaseLayout
@@ -94,32 +95,23 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
   }
 
   <h1
-    class="font-display text-3xl sm:text-4xl font-light text-foreground animate-fade-up mt-1"
+    class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
   >
     {title}
   </h1>
 
   <time
-    class="text-adaptive-secondary text-sm italic block mb-2"
+    class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
     datetime={formatDateISO(date)}
   >
     {formatDate(date)}
   </time>
 
-  <div class="flex gap-2 flex-wrap mb-4">
-    {
-      tags.map((tag) => (
-        <a
-          href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, "-")}/`}
-          class="inline-flex items-center justify-center text-xs px-1 py-0.5 text-adaptive border border-adaptive rounded no-underline leading-relaxed hover:text-accent hover:border-accent"
-        >
-          #{tag}
-        </a>
-      ))
-    }
+  <div class="flex gap-2 flex-wrap tablet:w-full mt-2">
+    <TagsWrapper tags={tags} lang="en" />
   </div>
 
-  <section class="content-section">
+  <section class="content-section mt-8">
     <slot />
   </section>
 
@@ -153,16 +145,9 @@ const tagsBasePath = getLocalizedUrl("/tags/", lang);
       </>
     )
   }
+  <style>
+    .content-section :global(p) {
+      margin-top: calc(var(--spacing) * 2);
+    }
+  </style>
 </BaseLayout>
-
-<style>
-  ul {
-    counter-reset: index;
-    list-style-type: none;
-  }
-
-  li::before {
-    counter-increment: index;
-    content: counters(index, ".", decimal) " ";
-  }
-</style>

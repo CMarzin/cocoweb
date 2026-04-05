@@ -13,9 +13,8 @@ export default {
 			},
 		},
 		extend: {
-			fontFamily: {
-				display: ['"Cormorant Garamond"', 'serif'],
-				mono: ['"JetBrains Mono"', 'monospace'],
+			screens: {
+				tablet: "768px",
 			},
 			colors: {
 				border: "var(--border)",

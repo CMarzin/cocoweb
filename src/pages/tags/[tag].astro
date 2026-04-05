@@ -43,10 +43,10 @@ const { tag, posts } = Astro.props;
   description={`Articles tagged with #${tag} on Cocoweb.`}
   lang="en"
 >
-  <div class="flex flex-col gap-5">
+  <div class="flex flex-col gap-5 stagger-children">
     <header class="tag-header">
       <h1
-        class="font-display text-3xl sm:text-4xl font-light text-foreground animate-fade-up mt-1"
+        class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
       >
         Tagged <span class="text-primary text-glow">"{tag}"</span>
       </h1>
