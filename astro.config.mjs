@@ -3,8 +3,6 @@ import { defineConfig, fontProviders } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import mdx from '@astrojs/mdx';
 
-import partytown from '@astrojs/partytown';
-
 export default defineConfig({
   fonts: [
     {
@@ -67,5 +65,5 @@ export default defineConfig({
     }
   },
 
-  integrations: [mdx(), partytown()],
+  integrations: [mdx()],
 });

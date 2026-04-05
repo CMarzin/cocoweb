@@ -24,7 +24,6 @@
   },
   "homepage": "https://cocoweb.fr",
   "dependencies": {
-    "@astrojs/partytown": "^2.1.6",
     "@astrojs/rss": "^4.0.18",
     "astro": "^6.1.1"
   },
