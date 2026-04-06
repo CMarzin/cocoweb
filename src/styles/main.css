@@ -9,6 +9,25 @@
   --font-display: var(--font-cormorant), ui-serif, serif;
 }
 
+/* System fallbacks tuned to local webfonts (header only) — reduces FOUT jump */
+@font-face {
+  font-family: "JB Mono Fallback";
+  src: local("Menlo"), local("Monaco"), local("Consolas"), local("Courier New");
+  size-adjust: 94%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia"), local("Times New Roman");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
+
 @layer base {
   :root {
      color-scheme: dark;
@@ -165,6 +184,20 @@
     color: var(--muted-foreground);
     font-variant-numeric: tabular-nums;
   }
+
+  /**
+   * Header: metric fallbacks so system fonts approximate JetBrains Mono / Cormorant
+   * before webfonts swap (scoped via .header-font-metrics on <header>).
+   */
+  .header-font-metrics {
+    font-family: var(--font-jetbrains-mono), "JB Mono Fallback", ui-monospace,
+      monospace;
+  }
+
+  .header-font-metrics .font-display {
+    font-family: var(--font-cormorant), "Cormorant Fallback", Georgia, ui-serif,
+      serif;
+  }
 }
 
 @layer utilities {
@@ -223,6 +256,11 @@
   .stagger-children > *:nth-child(8) { animation-delay: 560ms; }
   .stagger-children > *:nth-child(9) { animation-delay: 640ms; }
   .stagger-children > *:nth-child(10) { animation-delay: 720ms; }
+
+  .header-font-metrics .font-mono {
+    font-family: var(--font-jetbrains-mono), "JB Mono Fallback", ui-monospace,
+      monospace;
+  }
 }
 
 pre {
