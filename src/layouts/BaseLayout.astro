@@ -273,27 +273,6 @@ const jsonLd = generateJsonLd();
       </div>
     </header>
 
-    <main class={templateClass} style="animation-delay: 100ms">
-      <slot />
-    </main>
-
-    <footer
-      class="flex flex-col justify-center items-center w-full gap-4 pt-4 my-8 border-t text-xs text-muted-foreground"
-    >
-      <div>
-        &copy; {t("footer.copyright")} - {new Date().getFullYear()}
-      </div>
-      <div class="flex items-center justify-center gap-2">
-        <a href="https://xn--sr8hvo.ws/previous" class="text-glow">←</a>
-        <a
-          href="https://xn--sr8hvo.ws"
-          class="text-primary text-glow transition-colors duration-200 active:scale-[0.97]"
-          >An IndieWeb Webring 🕸💍</a
-        >
-        <a href="https://xn--sr8hvo.ws/next" class="text-glow">→</a>
-      </div>
-    </footer>
-
     <script is:inline>
       (function () {
         var btn = document.querySelector("[data-theme-toggle]");
@@ -348,6 +327,27 @@ const jsonLd = generateJsonLd();
         setInterval(tick, 1000);
       })();
     </script>
+
+    <main class={templateClass} style="animation-delay: 100ms">
+      <slot />
+    </main>
+
+    <footer
+      class="flex flex-col justify-center items-center w-full gap-4 pt-4 my-8 border-t text-xs text-muted-foreground"
+    >
+      <div>
+        &copy; {t("footer.copyright")} - {new Date().getFullYear()}
+      </div>
+      <div class="flex items-center justify-center gap-2">
+        <a href="https://xn--sr8hvo.ws/previous" class="text-glow">←</a>
+        <a
+          href="https://xn--sr8hvo.ws"
+          class="text-primary text-glow transition-colors duration-200 active:scale-[0.97]"
+          >An IndieWeb Webring 🕸💍</a
+        >
+        <a href="https://xn--sr8hvo.ws/next" class="text-glow">→</a>
+      </div>
+    </footer>
 
     <script is:inline>
       window.plausible =
