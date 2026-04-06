@@ -1,0 +1,287 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap'); */
+/* @import url('https://fonts.bunny.net/css?family=jetbrains-mono:400,500,600,700,800&display=swap'); */
+
+@import "tailwindcss" source("..");
+@config "../../tailwind.config.ts";
+
+@theme inline {
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-display: var(--font-cormorant), ui-serif, serif;
+}
+
+/* System fallbacks tuned to local webfonts (header only) — reduces FOUT jump */
+@font-face {
+  font-family: "JB Mono Fallback";
+  src: local("Menlo"), local("Monaco"), local("Consolas"), local("Courier New");
+  size-adjust: 94%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Cormorant Fallback";
+  src: local("Georgia"), local("Times New Roman");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
+
+@layer base {
+  :root {
+     color-scheme: dark;
+
+    --background: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
+    --foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+
+    --card: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --card-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+
+    --popover: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --popover-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+
+    --primary: light-dark(hsl(326 55% 41%), hsl(45 82% 45%));
+    --primary-foreground: hsl(48 100% 97%);
+
+    --secondary: light-dark(hsl(51 21% 88%), hsl(30 3% 15%));
+    --secondary-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+
+    --muted: light-dark(hsl(50 14% 83%), hsl(30 3% 15%));
+    --muted-foreground: light-dark(hsl(50 3% 42%), hsl(43 3% 52%));
+
+    --accent: light-dark(hsl(175 56% 32%),hsl(175 49% 45%));
+    --accent-foreground: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
+
+    --destructive: hsl(3 62% 42%);
+    --destructive-foreground: light-dark(hsl(48 100% 97%), hsl(49 7% 70%));
+
+    --border: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --input: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --ring: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+
+    --radius: 0px;
+
+    --flexoki-black: hsl(0 3% 6%);
+    --flexoki-950: hsl(30 4% 11%);
+    --flexoki-900: hsl(30 3% 15%);
+    --flexoki-850: hsl(40 3% 20%);
+    --flexoki-800: hsl(30 3% 24%);
+    --flexoki-700: hsl(45 2% 33%);
+    --flexoki-600: hsl(50 3% 42%);
+    --flexoki-500: hsl(43 3% 52%);
+    --flexoki-300: hsl(49 7% 70%);
+    --flexoki-200: hsl(55 10% 79%);
+    --flexoki-150: hsl(50 14% 83%);
+    --flexoki-100: hsl(51 21% 88%);
+    --flexoki-50: hsl(51 33% 92%);
+    --flexoki-paper: hsl(48 100% 97%);
+
+    --flexoki-red: hsl(5 61% 54%);
+    --flexoki-orange: hsl(23 70% 51%);
+    --flexoki-yellow: hsl(45 82% 45%);
+    --flexoki-green: hsl(72 46% 41%);
+    --flexoki-cyan: hsl(175 49% 45%);
+    --flexoki-blue: hsl(208 49% 50%);
+    --flexoki-purple: hsl(251 40% 64%);
+    --flexoki-magenta: hsl(329 54% 59%);
+
+    --glow: light-dark(hsl(329 54% 59%), var(--flexoki-yellow));
+
+    --scanline-opacity: light-dark(0, 0.04);
+    --glow-green: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+
+    --sidebar-background: light-dark(hsl(51 33% 92%), hsl(30 4% 11%));
+    --sidebar-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+    --sidebar-primary: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+    --sidebar-primary-foreground: light-dark(hsl(48 100% 97%), hsl(0 3% 6%));
+    --sidebar-accent: light-dark(hsl(51 21% 88%), hsl(30 3% 15%));
+    --sidebar-accent-foreground: light-dark(hsl(0 3% 6%), hsl(49 7% 70%));
+    --sidebar-border: light-dark(hsl(55 10% 79%), hsl(30 3% 24%));
+    --sidebar-ring: light-dark(hsl(326 55% 41%), hsl(329 54% 59%));
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply border-border box-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased;
+  }
+
+  ::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: .6s;
+  animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+}
+  ::selection {
+    background: color-mix(in srgb, var(--primary) 30%, transparent);
+    color: var(--primary);
+  }
+
+  @supports selector(::-webkit-scrollbar) {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--flexoki-950);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: color-mix(in srgb, var(--primary) 70%, transparent);
+    }
+  }
+}
+
+@layer components {
+  /**
+   * Table des matières en liste ordonnée imbriquée (counters CSS), inspiré de
+   * https://4markdown.com/nested-lists-with-css-and-markdowntojsx/
+   */
+  .nested-toc > ol {
+    counter-reset: toc-section;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .nested-toc > ol > li {
+    counter-increment: toc-section;
+    counter-reset: toc-sub;
+    margin-top: 0.5rem;
+  }
+
+  .nested-toc > ol > li:first-child {
+    margin-top: 0;
+  }
+
+  .nested-toc > ol > li::before {
+    content: counter(toc-section) ". ";
+    font-weight: 600;
+    color: var(--foreground);
+  }
+
+  .nested-toc > ol > li > ol {
+    counter-reset: toc-sub;
+    list-style: none;
+    padding-left: 0;
+    margin: 0.35rem 0 0.25rem 1.125rem;
+  }
+
+  .nested-toc > ol > li > ol > li {
+    counter-increment: toc-sub;
+    margin-top: 0.25rem;
+  }
+
+  .nested-toc > ol > li > ol > li::before {
+    content: counter(toc-section) "." counter(toc-sub) " ";
+    color: var(--muted-foreground);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /**
+   * Header: metric fallbacks so system fonts approximate JetBrains Mono / Cormorant
+   * before webfonts swap (scoped via .header-font-metrics on <header>).
+   */
+  .header-font-metrics {
+    font-family: var(--font-jetbrains-mono), "JB Mono Fallback", ui-monospace,
+      monospace;
+  }
+
+  .header-font-metrics .font-display {
+    font-family: var(--font-cormorant), "Cormorant Fallback", Georgia, ui-serif,
+      serif;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 8px color-mix(in srgb, var(--glow) 50%, transparent), 0 0 20px color-mix(in srgb, var(--glow) 20%, transparent);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 8px color-mix(in srgb, var(--flexoki-cyan) 50%, transparent), 0 0 20px color-mix(in srgb, var(--flexoki-cyan) 20%, transparent);
+  }
+
+  .border-ascii {
+    border: 1px solid var(--flexoki-800);
+    box-shadow: inset 0 0 0 1px var(--flexoki-850);
+  }
+
+  .hover-glow {
+    transition: box-shadow 300ms ease-out, border-color 300ms ease-out;
+  }
+  .hover-glow:hover {
+    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+    box-shadow: 0 0 12px color-mix(in srgb, var(--glow-green) 10%, transparent), inset 0 0 12px color-mix(in srgb, var(--glow-green) 3%, transparent);
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .cursor-blink {
+    animation: blink 1s step-end infinite;
+    line-height: initial;
+  }
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+      filter: blur(4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+  .animate-fade-up {
+    animation: fade-up 600ms cubic-bezier(0.36, 0, 0.66, -0.56) both;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 80ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 160ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 240ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 320ms; }
+  .stagger-children > *:nth-child(6) { animation-delay: 400ms; }
+  .stagger-children > *:nth-child(7) { animation-delay: 480ms; }
+  .stagger-children > *:nth-child(8) { animation-delay: 560ms; }
+  .stagger-children > *:nth-child(9) { animation-delay: 640ms; }
+  .stagger-children > *:nth-child(10) { animation-delay: 720ms; }
+
+  .header-font-metrics .font-mono {
+    font-family: var(--font-jetbrains-mono), "JB Mono Fallback", ui-monospace,
+      monospace;
+  }
+}
+
+pre {
+    font-size: 14px;
+    line-height: 1.375;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+    padding: 1em;
+    margin: .5em 0;
+}
+
+code {
+    word-break: break-all
+}

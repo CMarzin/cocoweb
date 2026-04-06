@@ -9,55 +9,69 @@ tags:
   - CSS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-This week, I am really proud to have open a [pull request](https://github.com/xiaoluoboding/vue-sonner/pull/91)  for the vue-sonner project, a port of sonner from react to vuejs. I added some playwright test and fixed some bug 😃.
-
+<StarterText>
+This week, I am really proud to have open a [pull request](https://github.com/xiaoluoboding/vue-sonner/pull/91?utm_source=cocoweb.fr)  for the vue-sonner project, a port of sonner from react to vuejs. I added some playwright test and fixed some bug 😃.
 Anyway here the news.
+</StarterText>
 
-💅 Modernizing the CSS logo and branding
-🦕 Announcing Deno 2
-✨ GSAP is joining Webflow
-🍦 The web in vanilla mode
+<AnchorWrapper>
+  <AnchorLink emoji="💅" text="Modernizing the CSS logo and branding" />
+  <AnchorLink emoji="🦕" text="Announcing Deno 2" />
+  <AnchorLink emoji="✨" text="GSAP is joining Webflow" />
+  <AnchorLink emoji="🍦" text="The web in vanilla mode" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="💅" id="modernizing-the-css-logo-and-branding" text="Modernizing the CSS logo and branding" url="https://css-tricks.com/searching-for-a-new-css-logo/" />
 
-💅 [Modernizing the CSS logo and branding](https://css-tricks.com/searching-for-a-new-css-logo/)
+<p class="mt-2">
 It’s time to refresh the look and the branding behind CSS, the current logo is the same since 2011. There is a team at the css group which work to create a new logo, branding in order to modernise our view on CSS.
+</p>
 
-Here is the most popular proposition for now :
+<AnchorSection componentClass="mt-2" emoji="🦕" id="announcing-deno-2" text="Announcing Deno 2" url="https://deno.com/blog/v2.0" />
 
-<iframe src="//codepen.io/anon/embed/vYoYmMa?height=450&theme-id=1&slug-hash=vYoYmMa&default-tab=result" height="450px" width="100%" style="max-width:100%;"></iframe>
-
-🦕 [Announcing Deno 2](https://deno.com/blog/v2.0)
+<p class="mt-2">
 Deno 2 comes with features to simplify the developer life :
 - Native TypeScript support
 - Built on web standards: Promises, fetch, and ES Modules
 - Batteries included: builtin formatter, linter, type checker, test framework, compile to executable, and more
 - Secure by default, just like browsers
+</p>
 
-You can start a project with Deno and be productive immediately without the hassle to configure a ton of tools.
+<AnchorSection componentClass="mt-2" emoji="✨" id="gsap-is-joining-webflow" text="GSAP is joining Webflow" url="https://gsap.com/blog/webflow-GSAP/" />
 
-✨ [GSAP is joining Webflow](https://gsap.com/blog/webflow-GSAP/)
+<p class="mt-2">
 GSAP has been acquired by Webflow !! The Webflow team want to invest in the biggest animation library of the web.
 It's a good news ? We will see.
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="🍦" id="the-web-in-vanilla-mode" text="The web in vanilla mode" url="https://plainvanillaweb.com/" />
 
-🍦 [The web in vanilla mode](https://plainvanillaweb.com/)
+<p class="mt-2">
 Plain Vanilla, created by Joeri Sebrechts, is a website which have multiples guides to create a website without a modern framework or complex tooling.
 The little burden at the start will be worth it when you have zero to little maintenance over your site.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🩲 [Slip js](https://github.com/adrienZ/slip)
-A plug and play authentication module for Nuxt made by my good friend [Adrien Zaganelli](https://adrienzaganelli.com/).
+<WebLinkSection emoji="🩲" url="https://github.com/adrienZ/slip" text="Slip js" templateClass="mt-4">
+A plug and play authentication module for Nuxt made by my good friend [Adrien Zaganelli](https://adrienzaganelli.com/?utm_source=cocoweb.fr).
+</ WebLinkSection>
 
-✨ [Insipira UI](https://inspira-ui.com/)
+<WebLinkSection emoji="✨" url="https://inspira-ui.com/" text="Insipira UI" templateClass="mt-4">
 Build beautiful websites using Vue & Nuxt, Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.
+</ WebLinkSection>
 
-📊 [Waka box](https://github.com/matchai/waka-box)
+<WebLinkSection emoji="📊" url="https://github.com/matchai/waka-box" text="Waka box" templateClass="mt-4">
 Update a pinned gist to contain your weekly WakaTime stats
+</ WebLinkSection>

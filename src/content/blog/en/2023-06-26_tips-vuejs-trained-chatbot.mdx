@@ -10,22 +10,52 @@ tags:
   - design
 ---
 
-## AI
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-[AI Chatbot trained on the Vue v3.3.4 docs](https://chatthing.ai/bots/a2625c1a-8012-42dc-b87d-10e3f0196306)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-## Veille
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="AI Chatbot trained on the Vue v3.3.4 docs" />
+</AnchorWrapper>
 
-Alternative to google analytics [Simple analytics](https://www.simpleanalytics.com/fr)
+<TextSeparator />
 
-## Design
+<AnchorSection emoji="📗" id="ai-chatbot-trained-on-the-vue-v334-docs" text="AI Chatbot trained on the Vue v3.3.4 docs" url="https://chatthing.ai/bots/a2625c1a-8012-42dc-b87d-10e3f0196306" />
 
-A legible monospace font [Comic Mono | comic-mono-font](https://dtinth.github.io/comic-mono-font/).
+<p class="mt-2">
+</p>
 
-[CallToInspiration](https://calltoinspiration.com/) is a website which reference a lot of design example for UX designers & developers.
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## CSS
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
 
-[Fit-to-Width Text](https://kizu.dev/fit-to-width-text/) is an article about using scroll-driven animations to fit the correct height of the text when you resize a window.
+<WebLinkSection emoji="📌" url="https://www.simpleanalytics.com/fr" text="Simple analytics" templateClass="mt-4">
+Alternative to google analytics [Simple analytics](https://www.simpleanalytics.com/fr?utm_source=cocoweb.fr)
+</ WebLinkSection>
 
-Darek Kay write an article about [styling your RSS feed](https://darekkay.com/blog/rss-styling/).
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
+
+<WebLinkSection emoji="📌" url="https://dtinth.github.io/comic-mono-font/" text="Comic Mono | comic-mono-font" templateClass="mt-4">
+A legible monospace font [Comic Mono | comic-mono-font](https://dtinth.github.io/comic-mono-font/?utm_source=cocoweb.fr).
+</ WebLinkSection>
+
+<WebLinkSection emoji="📌" url="https://calltoinspiration.com/" text="CallToInspiration" templateClass="mt-4">
+[CallToInspiration](https://calltoinspiration.com/?utm_source=cocoweb.fr) is a website which reference a lot of design example for UX designers & developers.
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">CSS</h2>
+
+<WebLinkSection emoji="📌" url="https://kizu.dev/fit-to-width-text/" text="Fit-to-Width Text" templateClass="mt-4">
+[Fit-to-Width Text](https://kizu.dev/fit-to-width-text/?utm_source=cocoweb.fr) is an article about using scroll-driven animations to fit the correct height of the text when you resize a window.
+</ WebLinkSection>
+
+<WebLinkSection emoji="📌" url="https://darekkay.com/blog/rss-styling/" text="styling your RSS feed" templateClass="mt-4">
+Darek Kay write an article about [styling your RSS feed](https://darekkay.com/blog/rss-styling/?utm_source=cocoweb.fr).
+</ WebLinkSection>

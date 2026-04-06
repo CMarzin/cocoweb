@@ -8,24 +8,58 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Tech gems \#3: Node.js redesign, Memory-safe languages and Tailwind V4](https://adrienzaganelli.com/blog/tech-gems-3)
-Tech gems is a series of articles focused on the front-end ecosystem, made by friend [Adrien Zaganelli.](https://adrienzaganelli.com/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-📗 [Package dependency hell](https://www.ramijames.com/thoughts/package-dependency-hell)
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Tech gems \#3: Node.js redesign, Memory-safe languages and Tailwind V4" />
+  <AnchorLink emoji="📗" text="Package dependency hell" />
+  <AnchorLink emoji="📗" text="Engineering is more about people than tech" />
+  <AnchorLink emoji="📗" text="Vue.js and Nuxt Tips &amp; Tricks" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="tech-gems-3-nodejs-redesign-memory-safe-languages-and-tailwind-v4" text="Tech gems \#3: Node.js redesign, Memory-safe languages and Tailwind V4" url="https://adrienzaganelli.com/blog/tech-gems-3" />
+
+<p class="mt-2">
+Tech gems is a series of articles focused on the front-end ecosystem, made by friend [Adrien Zaganelli.](https://adrienzaganelli.com/?utm_source=cocoweb.fr)
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📗" id="package-dependency-hell" text="Package dependency hell" url="https://www.ramijames.com/thoughts/package-dependency-hell" />
+
+<p class="mt-2">
 Sometimes you need to think about the trade-off before adding another dependency, you can always say no. Stay positive and do it little step by little step.
+</p>
 
-📗 [Engineering is more about people than tech](https://newsletter.eng-leadership.com/p/engineering-is-more-about-people)
+<AnchorSection componentClass="mt-2" emoji="📗" id="engineering-is-more-about-people-than-tech" text="Engineering is more about people than tech" url="https://newsletter.eng-leadership.com/p/engineering-is-more-about-people" />
+
+<p class="mt-2">
 In a daily basis, 20% of an engineer time is about writing code and the rest is allocated to team communication, alignment and collaboration with coworker. If you want to stand against other engineers, you need to invest in your communication skills.
+</p>
 
-📗 [Vue.js and Nuxt Tips & Tricks](https://vuejstips.com/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="vuejs-and-nuxt-tips-tricks" text="Vue.js and Nuxt Tips &amp; Tricks" url="https://vuejstips.com/" />
+
+<p class="mt-2">
 A collection of Vue, Nuxt and Vite tips, tricks and good practices.
+</p>
 
-## Repository Git
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🚀 [Rolldown](https://github.com/rolldown-rs/rolldown)
-Rolldown is a JavaScript bundler written in Rust intended to serve as the future bundler used in ~[Vite](https://vitejs.dev/)~. It provides Rollup-compatible APIs and plugin interface, but will be more similar to esbuild in scope.
+<h2 class="font-display text-2xl text-foreground">Repository Git</h2>
 
-📊 [Vue-Ganttastic](https://zunnzunn.github.io/vue-ganttastic/)
+<WebLinkSection emoji="🚀" url="https://github.com/rolldown-rs/rolldown" text="Rolldown" templateClass="mt-4">
+Rolldown is a JavaScript bundler written in Rust intended to serve as the future bundler used in ~[Vite](https://vitejs.dev/?utm_source=cocoweb.fr)~. It provides Rollup-compatible APIs and plugin interface, but will be more similar to esbuild in scope.
+</ WebLinkSection>
+
+<WebLinkSection emoji="📊" url="https://zunnzunn.github.io/vue-ganttastic/" text="Vue-Ganttastic" templateClass="mt-4">
 **Vue Ganttastic** is a simple, interactive and highly customizable Gantt chart component for Vue 3.
+</ WebLinkSection>

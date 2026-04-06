@@ -11,25 +11,35 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🫡  So Long, Figma. Thanks for Everything.
- 🤖 Top AI Tools for Developers
-📡  AI Homelab - A guide into hardware to software considerations
-📗  I cannot live without these VueUse utils
+<AnchorWrapper>
+  <AnchorLink emoji="🫡" text="So Long, Figma. Thanks for Everything." />
+  <AnchorLink emoji="🤖" text="Top AI Tools for Developers" />
+  <AnchorLink emoji="📡" text="AI Homelab - A guide into hardware to software considerations" />
+  <AnchorLink emoji="📗" text="I cannot live without these VueUse utils" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="👀" id="so-long-figma-thanks-for-everything" text="So Long, Figma. Thanks for Everything." url="https://jondaiello.medium.com/so-long-figma-thanks-for-everything-f606e5f75b7c" />
 
-👀 [So Long, Figma. Thanks for Everything.](https://jondaiello.medium.com/so-long-figma-thanks-for-everything-f606e5f75b7c)
+<p class="mt-2">
 With the help of a mature design system, you now can sketch aon a napkin and feed it into an AI and it will generate the front-end for you.
+</p>
 
-With a mature DS and AI, AI will free us time to invest in design exploration, develop stories etc… Instead of doing the work twice, design in Figma and the developer implement the design. Now with a mature system, you can tell the AI to build things for you.
+<AnchorSection componentClass="mt-2" emoji="🤖" id="top-ai-tools-for-developers" text="Top AI Tools for Developers" url="https://medium.com/vue-mastery/top-ai-tools-for-developers-b598235f1f18" />
 
-🤖 [Top AI Tools for Developers](https://medium.com/vue-mastery/top-ai-tools-for-developers-b598235f1f18)
+<p class="mt-2">
 TDLDR :
 - Cursor
 - GitHub Copilot
@@ -37,8 +47,11 @@ TDLDR :
 - v0.dev
 - bolt.new
 - ChatGpt
+</p>
 
-📡 [AI Homelab - A guide into hardware to software considerations](https://erdaltoprak.com/articles/ai-homelab-a-guide-into-hardware-to-software-considerations/)
+<AnchorSection componentClass="mt-2" emoji="📡" id="ai-homelab-a-guide-into-hardware-to-software-considerations" text="AI Homelab - A guide into hardware to software considerations" url="https://erdaltoprak.com/articles/ai-homelab-a-guide-into-hardware-to-software-considerations/" />
+
+<p class="mt-2">
 Very cool hardware advices if you want to start an AI Homelab.
 He went with :
 - Define R5 from Fractal for the case
@@ -46,17 +59,22 @@ He went with :
 - ASRock X570 Taichi for the motherboard
 - RTX 4090 from Nvidia for the GPU
 - M.2 NVME for exploitation system, Hard drive for the rest.
+</p>
 
-He explain the software used to run all this with a NAS.
+<AnchorSection componentClass="mt-2" emoji="📗" id="i-cannot-live-without-these-vueuse-utils" text="I cannot live without these VueUse utils" url="https://supersaas.dev/blog/i-cannot-live-without-these-vueuse-utils" />
 
-📗 [I cannot live without these VueUse utils](https://supersaas.dev/blog/i-cannot-live-without-these-vueuse-utils)
+<p class="mt-2">
 16 utils from Vueuse.
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🤖 [opencode-ai/opencode](https://github.com/opencode-ai/opencode)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🤖" url="https://github.com/opencode-ai/opencode" text="opencode-ai/opencode" templateClass="mt-4">
 A powerful AI coding agent. Built for the terminal.
+</ WebLinkSection>
 
-🏎️ [Neodrag v3 Alpha](https://www.puruvj.dev/blog/neodrag-v3-alpha)
+<WebLinkSection emoji="🏎️" url="https://www.puruvj.dev/blog/neodrag-v3-alpha" text="Neodrag v3 Alpha" templateClass="mt-4">
 Neodrag, it’s a drag-and-drop library that works across all major JavaScript frameworks.
+</ WebLinkSection>

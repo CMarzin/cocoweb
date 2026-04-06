@@ -9,43 +9,64 @@ tags:
   - design
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-- The Importance of Design
-- Why investing in UI ?
-- Is investing in UI worth it ?
-- Are you a +10% engineer ?
+<AnchorWrapper>
+  <AnchorLink emoji="📌" text="The Importance of Design" />
+  <AnchorLink emoji="📌" text="Why investing in UI ?" />
+  <AnchorLink emoji="📌" text="Is investing in UI worth it ?" />
+  <AnchorLink emoji="📌" text="Are you a +10% engineer ?" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="the-importance-of-design" text="The Importance of Design" url="https://medium.com/@jchatelain/the-importance-of-design-b79621f520d8" />
 
-
-✨ [The Importance of Design](https://medium.com/@jchatelain/the-importance-of-design-b79621f520d8)
+<p class="mt-2">
 Everything in our life is designed, here is a list of principle for creating simple and good design for your product.
+</p>
 
-📈 [Why Investing in UI Design Saves Costs, Increases Revenue and Retains Customers](https://uxplanet.org/why-investing-in-ui-design-saves-costs-increases-revenue-and-retains-customers-c762b78c0526)
+<AnchorSection componentClass="mt-2" emoji="📈" id="why-investing-in-ui-design-saves-costs-increases-revenue-and-retains-customers" text="Why Investing in UI Design Saves Costs, Increases Revenue and Retains Customers" url="https://uxplanet.org/why-investing-in-ui-design-saves-costs-increases-revenue-and-retains-customers-c762b78c0526" />
+
+<p class="mt-2">
 **Fixing a problem with code cost 10 times more than fixing it in the design process, and 100 times more if you’re trying to fix the problem in a product that’s already been released.**
 Spend a little more time thinking about your design will save you a lot of money down the line.
+</p>
 
-💵 [Dollars And Sense: The Business Case For Investing In UI Design](https://www.fastcompany.com/1669283/dollars-and-sense-the-business-case-for-investing-in-ui-design)
+<AnchorSection componentClass="mt-2" emoji="💵" id="dollars-and-sense-the-business-case-for-investing-in-ui-design" text="Dollars And Sense: The Business Case For Investing In UI Design" url="https://www.fastcompany.com/1669283/dollars-and-sense-the-business-case-for-investing-in-ui-design" />
+
+<p class="mt-2">
 **Every dollar spent on UX brings in between $2 and $100 dollars in return.**
 Investing in UX is 99% of the time worth it, in the long run. Like Apple or Logitech have proved, people can pay premium for a simple and UX friendly product instead of a feature rich and poor UX product.
+</p>
 
-📗 [Become a +10% engineer](https://dev.to/tlakomy/become-a-10-engineer-g78)
+<AnchorSection componentClass="mt-2" emoji="📗" id="become-a-10-engineer" text="Become a +10% engineer" url="https://dev.to/tlakomy/become-a-10-engineer-g78" />
+
+<p class="mt-2">
 +10% engineer are engineer who make their peers 10% better. Instead of focusing only on making you a better engineer, you can share your knowledge to make the team grow and everyone profit from it.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🚢 [Windows in a Docker container.](https://github.com/dockur/windows)
+<WebLinkSection emoji="🚢" url="https://github.com/dockur/windows" text="Windows in a Docker container." templateClass="mt-4">
 Run every Windows version in a docker container.
+</ WebLinkSection>
 
-💅 [NEAT](https://neat.firecms.co/)
- Beautiful 3D gradients for your website.
+<WebLinkSection emoji="💅" url="https://neat.firecms.co/" text="NEAT" templateClass="mt-4">
+Beautiful 3D gradients for your website.
+</ WebLinkSection>
 
-⚙️ [Favycon App](https://favycon.vercel.app/)
+<WebLinkSection emoji="⚙️" url="https://favycon.vercel.app/" text="Favycon App" templateClass="mt-4">
 A favicon generator app.
+</ WebLinkSection>

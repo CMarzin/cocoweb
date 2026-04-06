@@ -2,7 +2,7 @@
 /**
  * ThemeToggle component
  * Allows users to switch between dark and light color schemes.
- * Uses CSS-only approach with radio buttons for accessibility.
+ * Uses radio buttons for accessibility, drives color-scheme on :root.
  * Persists preference to localStorage.
  */
 ---
@@ -21,7 +21,7 @@
     <span class="visually-hidden">Mode sombre</span>
     🌙
   </label>
-  
+
   <input
     class="radio light-checkbox"
     name="color-scheme"
@@ -37,34 +37,28 @@
 </div>
 
 <script is:inline>
-  // Theme toggle functionality - runs immediately to avoid flash
   (function() {
-    const darkCheckbox = document.querySelector('.dark-checkbox');
-    const lightCheckbox = document.querySelector('.light-checkbox');
-
+    var darkCheckbox = document.querySelector('.dark-checkbox');
+    var lightCheckbox = document.querySelector('.light-checkbox');
     if (!darkCheckbox || !lightCheckbox) return;
 
-    // Apply saved preference on load
-    const savedTheme = localStorage.getItem('color-scheme');
-    if (savedTheme === 'light') {
+    var saved = localStorage.getItem('theme');
+    if (saved === 'light') {
       lightCheckbox.checked = true;
       darkCheckbox.checked = false;
-    } else {
-      darkCheckbox.checked = true;
-      lightCheckbox.checked = false;
     }
 
-    // Handle theme changes
-    darkCheckbox.addEventListener('change', () => {
-      if (darkCheckbox.checked) {
-        localStorage.setItem('color-scheme', 'dark');
-      }
+    function apply(scheme) {
+      document.documentElement.style.colorScheme = scheme;
+      localStorage.setItem('theme', scheme);
+    }
+
+    darkCheckbox.addEventListener('change', function() {
+      if (darkCheckbox.checked) apply('dark');
     });
 
-    lightCheckbox.addEventListener('change', () => {
-      if (lightCheckbox.checked) {
-        localStorage.setItem('color-scheme', 'light');
-      }
+    lightCheckbox.addEventListener('change', function() {
+      if (lightCheckbox.checked) apply('light');
     });
   })();
 </script>

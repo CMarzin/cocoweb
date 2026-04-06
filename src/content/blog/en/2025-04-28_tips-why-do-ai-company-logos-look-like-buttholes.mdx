@@ -11,37 +11,58 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🙃 Why do AI company logos look like buttholes?
-🙌 How to write error messages that actually help users rather than frustrate them
-📊 Data Binding: a better way to design with data
-🦺 Optimize heavy operations with Web workers in Vuejs 3
+<AnchorWrapper>
+  <AnchorLink emoji="🙃" text="Why do AI company logos look like buttholes?" />
+  <AnchorLink emoji="🙌" text="How to write error messages that actually help users rather than frustrate them" />
+  <AnchorLink emoji="📊" text="Data Binding: a better way to design with data" />
+  <AnchorLink emoji="🦺" text="Optimize heavy operations with Web workers in Vuejs 3" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🙃" id="why-do-ai-company-logos-look-like-buttholes" text="Why do AI company logos look like buttholes?" url="https://velvetshark.com/ai-company-logos-that-look-like-buttholes" />
 
-🙃 [Why do AI company logos look like buttholes?](https://velvetshark.com/ai-company-logos-that-look-like-buttholes)
+<p class="mt-2">
 Radek Sienkiewicz roasts the AI industry’s logo with their circular design, particulary the one of Claude. Maybe, in the next generation of AI we will have some other design which don’t represent « butthole » haha.
+</p>
 
-🙌 [How to write error messages that actually help users rather than frustrate them](https://piccalil.li/blog/how-to-write-error-messages-that-actually-help-users-rather-than-frustrate-them/)
+<AnchorSection componentClass="mt-2" emoji="🙌" id="how-to-write-error-messages-that-actually-help-users-rather-than-frustrate-them" text="How to write error messages that actually help users rather than frustrate them" url="https://piccalil.li/blog/how-to-write-error-messages-that-actually-help-users-rather-than-frustrate-them/" />
+
+<p class="mt-2">
 Write error message to tell the user what happened clearly, give the user a solution about what to do next. An error is frustrating so try to be emphatic in your error message, it will ease the situation for the user.
+</p>
 
-📊 [Data Binding: a better way to design with data](https://rive.app/blog/data-binding-in-rive-a-shared-language-for-designers-and-developers)
+<AnchorSection componentClass="mt-2" emoji="📊" id="data-binding-a-better-way-to-design-with-data" text="Data Binding: a better way to design with data" url="https://rive.app/blog/data-binding-in-rive-a-shared-language-for-designers-and-developers" />
+
+<p class="mt-2">
 A new functionnality in the Rive app, you can now connect the data used by your engineers for use to your designer. With real data, they are a lot less guess about the UI.
+</p>
 
-🦺 [Optimize heavy operations with Web workers in Vuejs 3](https://dev.to/jacobandrewsky/optimizing-heavy-operations-in-vue-with-web-workers-3j1b)
+<AnchorSection componentClass="mt-2" emoji="🦺" id="optimize-heavy-operations-with-web-workers-in-vuejs-3" text="Optimize heavy operations with Web workers in Vuejs 3" url="https://dev.to/jacobandrewsky/optimizing-heavy-operations-in-vue-with-web-workers-3j1b" />
+
+<p class="mt-2">
 Little tutorial about the usage of web workers inside a Vuejs application.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🌸 [Japanese Gradient](https://www.figma.com/@nuevotokyo)
+<WebLinkSection emoji="🌸" url="https://www.figma.com/@nuevotokyo" text="Japanese Gradient" templateClass="mt-4">
 Nuevo Tokoy offers free color gradient on figma files.
+</ WebLinkSection>
 
-🦺 [GoogleChromeLabs/comlink: Comlink makes WebWorkers enjoyable.](https://github.com/GoogleChromeLabs/comlink)
-Comlink makes ~[WebWorkers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)~ enjoyable. Comlink is a **tiny library (1.1kB)**, that removes the mental barrier of thinking about postMessage and hides the fact that you are working with workers.
+<WebLinkSection emoji="🦺" url="https://github.com/GoogleChromeLabs/comlink" text="GoogleChromeLabs/comlink: Comlink makes WebWorkers enjoyable." templateClass="mt-4">
+Comlink makes ~[WebWorkers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API?utm_source=cocoweb.fr)~ enjoyable. Comlink is a **tiny library (1.1kB)**, that removes the mental barrier of thinking about postMessage and hides the fact that you are working with workers.
+</ WebLinkSection>

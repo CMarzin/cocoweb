@@ -11,49 +11,68 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🐦‍🔥" text="Announcing the Swift SDK for Android" />
-<AnchorLink emoji="🔨" text="Build Your Own Database" />
-<AnchorLink emoji="📹" text="Backend from first principles" />
-<AnchorLink emoji="🧙‍♂️" text="6 TypeScript tips to turn you into a WIZARD" />
+<AnchorWrapper>
+  <AnchorLink emoji="🐦‍🔥" text="Announcing the Swift SDK for Android" />
+  <AnchorLink emoji="🔨" text="Build Your Own Database" />
+  <AnchorLink emoji="📹" text="Backend from first principles" />
+  <AnchorLink emoji="🧙‍♂️" text="6 TypeScript tips to turn you into a WIZARD" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🐦‍🔥" id="announcing-the-swift-sdk-for-android" text="Announcing the Swift SDK for Android" url="https://www.swift.org/blog/nightly-swift-sdk-for-android/" />
 
-<AnchorSection emoji="🐦‍🔥" id="announcing-the-swift-sdk-for-android">[Announcing the Swift SDK for Android](https://www.swift.org/blog/nightly-swift-sdk-for-android/)</AnchorSection>
+<p class="mt-2">
 I did some swift when I was in school, it's a cool language and nice to see Android open to other language.
+</p>
 
-<AnchorSection emoji="🔨" id="build-your-own-database">[Build Your Own Database](https://www.nan.fyi/database)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🔨" id="build-your-own-database" text="Build Your Own Database" url="https://www.nan.fyi/database" />
+
+<p class="mt-2">
 A step-by-step guide to building a key-value database from scratch.
 It's a visual guide to how database works, absolutly stunning website and really clear explanation.
+</p>
 
-<AnchorSection emoji="📹" id="backend-from-first-principles">[Backend from first principles](https://www.youtube.com/playlist?list=PLui3EUkuMTPgZcV0QhQrOcwMPcBCcd_Q1)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📹" id="backend-from-first-principles" text="Backend from first principles" url="https://www.youtube.com/playlist?list=PLui3EUkuMTPgZcV0QhQrOcwMPcBCcd_Q1" />
+
+<p class="mt-2">
 19 videos which explain really well the basics of backend if you want to be backend dev or just to have a vision of how this part work.
+</p>
 
-<AnchorSection emoji="🧙‍♂️" id="6-typescript-tips-to-turn-you-into-a-wizard">[6 TypeScript tips to turn you into a WIZARD](https://www.youtube.com/watch?v=lraHlXpuhKs)</AnchorSection>
-~[00:29](https://www.youtube.com/watch?v=lraHlXpuhKs&t=29s)~ Key vs Value Optional
-~[03:13](https://www.youtube.com/watch?v=lraHlXpuhKs&t=193s)~ Pick/Omit vs Extract/Exclude
-~[07:00](https://www.youtube.com/watch?v=lraHlXpuhKs&t=420s)~ Prettify
-~[08:01](https://www.youtube.com/watch?v=lraHlXpuhKs&t=481s)~ Loose Autocomplete
-~[09:49](https://www.youtube.com/watch?v=lraHlXpuhKs&t=589s)~ Mapped Types
-~[12:03](https://www.youtube.com/watch?v=lraHlXpuhKs&t=723s)~ The IIMT
+<AnchorSection componentClass="mt-2" emoji="🧙‍♂️" id="6-typescript-tips-to-turn-you-into-a-wizard" text="6 TypeScript tips to turn you into a WIZARD" url="https://www.youtube.com/watch?v=lraHlXpuhKs" />
 
-___
+<p class="mt-2">
+~[00:29](https://www.youtube.com/watch?v=lraHlXpuhKs&t=29s&utm_source=cocoweb.fr)~ Key vs Value Optional
+~[03:13](https://www.youtube.com/watch?v=lraHlXpuhKs&t=193s&utm_source=cocoweb.fr)~ Pick/Omit vs Extract/Exclude
+~[07:00](https://www.youtube.com/watch?v=lraHlXpuhKs&t=420s&utm_source=cocoweb.fr)~ Prettify
+~[08:01](https://www.youtube.com/watch?v=lraHlXpuhKs&t=481s&utm_source=cocoweb.fr)~ Loose Autocomplete
+~[09:49](https://www.youtube.com/watch?v=lraHlXpuhKs&t=589s&utm_source=cocoweb.fr)~ Mapped Types
+~[12:03](https://www.youtube.com/watch?v=lraHlXpuhKs&t=723s&utm_source=cocoweb.fr)~ The IIMT
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🔐 [productdevbook/nuxt-keycloak](https://github.com/productdevbook/nuxt-keycloak)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🔐" url="https://github.com/productdevbook/nuxt-keycloak" text="productdevbook/nuxt-keycloak" templateClass="mt-4">
 Comprehensive Keycloak authentication module for Nuxt 4 with SSR support, auto token refresh, role-based guards, and TypeScript.
+</ WebLinkSection>
 
-📈 [mayfer/dbpill](https://github.com/mayfer/dbpill)
+<WebLinkSection emoji="📈" url="https://github.com/mayfer/dbpill" text="mayfer/dbpill" templateClass="mt-4">
 This is a PostgreSQL proxy that intercepts all queries & provides a web interface to profile them, sort them, auto-suggest indexes to improve performance, and immediately apply changes & measure improvements, with instant rollback when performance isn't improved.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-👴 [MitchIvin XP](https://mitchivin.com/)
+<WebLinkSection emoji="👴" url="https://mitchivin.com/" text="MitchIvin XP" templateClass="mt-4">
 A portfolio which mimic the window XP style.
+</ WebLinkSection>

@@ -13,46 +13,66 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🕵️‍♂️" text="Disrupting AI espionage" />
-<AnchorLink emoji="⚙️" text="How to Build with GitHub Actions or GitLab CI and Deploy to Coolify" />
-<AnchorLink emoji="🧑‍⚖️" text="Unexpected Things that are People" />
-<AnchorLink emoji="📚" text="Building a UI framework" />
+<AnchorWrapper>
+  <AnchorLink emoji="🕵️‍♂️" text="Disrupting AI espionage" />
+  <AnchorLink emoji="⚙️" text="How to Build with GitHub Actions or GitLab CI and Deploy to Coolify" />
+  <AnchorLink emoji="🧑‍⚖️" text="Unexpected Things that are People" />
+  <AnchorLink emoji="📚" text="Building a UI framework" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🕵️‍♂️" id="disrupting-the-first-reported-ai-orchestrated-cyber-espionage-campaign" text="Disrupting the first reported AI-orchestrated cyber espionage campaign" url="https://www.anthropic.com/news/disrupting-AI-espionage" />
 
-<AnchorSection emoji="🕵️‍♂️" id="disrupting-ai-espionage">[Disrupting the first reported AI-orchestrated cyber espionage campaign](https://www.anthropic.com/news/disrupting-AI-espionage)</AnchorSection>
+<p class="mt-2">
 Beware when using AI and you give them too much permissions.
+</p>
 
-<AnchorSection emoji="⚙️" id="how-to-build-with-github-actions-or-gitlab-ci-and-deploy-to-coolify">[How to Build with GitHub Actions or GitLab CI and Deploy to Coolify](https://hugo.writizzy.com/how-to-build-with-github-actions-or-gitlab-ci-and-deploy-to-coolify/494c20b5-ce4d-469a-b2c6-17d2e812baa3)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="⚙️" id="how-to-build-with-github-actions-or-gitlab-ci-and-deploy-to-coolify" text="How to Build with GitHub Actions or GitLab CI and Deploy to Coolify" url="https://hugo.writizzy.com/how-to-build-with-github-actions-or-gitlab-ci-and-deploy-to-coolify/494c20b5-ce4d-469a-b2c6-17d2e812baa3" />
+
+<p class="mt-2">
 TIL, you can have a build server with Coolify.
+</p>
 
-<AnchorSection emoji="🧑‍⚖️" id="unexpected-things-that-are-people">[Unexpected Things that are People](https://bengoldhaber.substack.com/p/unexpected-things-that-are-people)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🧑‍⚖️" id="unexpected-things-that-are-people" text="Unexpected Things that are People" url="https://bengoldhaber.substack.com/p/unexpected-things-that-are-people" />
+
+<p class="mt-2">
 Did you know a ship is legally a people, so if a ship did something wrong it can be seized and the capitain jailed.
+</p>
 
-<AnchorSection emoji="📚" id="building-a-ui-framework">[Building a UI framework](https://docs.google.com/document/d/1qFrNa3wmeTn_HDj0C4nhGWy5T1DlF5J8zTrlhA0vEAc/edit?tab=t.0#heading=h.k11xahmqzzyx)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📚" id="building-a-ui-framework" text="Building a UI framework" url="https://docs.google.com/document/d/1qFrNa3wmeTn_HDj0C4nhGWy5T1DlF5J8zTrlhA0vEAc/edit?tab=t.0#heading=h.k11xahmqzzyx" />
+
+<p class="mt-2">
 Google doc from *Ian Hickson* .
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🖨️ [Grid Paper](https://grid-paper.daverupert.com/)
+<WebLinkSection emoji="🖨️" url="https://grid-paper.daverupert.com/" text="Grid Paper" templateClass="mt-4">
 If you want to print some grid on a paper here is a website for that.
+</ WebLinkSection>
 
-🏄 [Wave Surfer.js](https://github.com/katspaugh/wavesurfer.js)
+<WebLinkSection emoji="🏄" url="https://github.com/katspaugh/wavesurfer.js" text="Wave Surfer.js" templateClass="mt-4">
 Audio waveform player
+</ WebLinkSection>
 
-📊 [graphieros/vue-data-ui](https://github.com/graphieros/vue-data-ui)
+<WebLinkSection emoji="📊" url="https://github.com/graphieros/vue-data-ui" text="graphieros/vue-data-ui" templateClass="mt-4">
 An open source user-empowering data visualization Vue 3 components library for eloquent data storytelling
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-💡 [All Lighting](https://www.incommonwith.com/collections/all-lighting)
+<WebLinkSection emoji="💡" url="https://www.incommonwith.com/collections/all-lighting" text="All Lighting" templateClass="mt-4">
 Toggle the light switch.
+</ WebLinkSection>

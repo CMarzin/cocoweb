@@ -10,43 +10,62 @@ tags:
   - repo git
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-- XZ backdoor in Linux
-- NanoGL from the makemepulse team
-- A rant about vue-router
-- Migration from Laravel to Next.js
+<AnchorWrapper>
+  <AnchorLink emoji="📌" text="XZ backdoor in Linux" />
+  <AnchorLink emoji="📌" text="NanoGL from the makemepulse team" />
+  <AnchorLink emoji="📌" text="A rant about vue-router" />
+  <AnchorLink emoji="📌" text="Migration from Laravel to Next.js" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📗" id="xz-backdoor-explained" text="XZ backdoor explained" url="https://twitter.com/Or_Tinrante/status/1774075515575345238" />
 
-📗 [XZ backdoor explained](https://twitter.com/Or_Tinrante/status/1774075515575345238)
+<p class="mt-2">
 XZ backdoor is a backdoor which had the ability to login into every Fedora, Debian and Ubuntu server. The discovery of this backdoor by Andres Freund is pure luck and the story behind it is very interesting.
+</p>
 
-📗 [NanoGL](https://www.nanogl.com/guide/getting-started/introduction)
+<AnchorSection componentClass="mt-2" emoji="📗" id="nanogl" text="NanoGL" url="https://www.nanogl.com/guide/getting-started/introduction" />
+
+<p class="mt-2">
 A custom WebGL framework made by the makemepulse team, with detailed instructions and explanations.
+</p>
 
-📗 [Kind of Annoyed at Vue-Router Lately](https://fadamakis.com/kind-of-annoyed-at-vue-router-lately-c74de773c72a)
+<AnchorSection componentClass="mt-2" emoji="📗" id="kind-of-annoyed-at-vue-router-lately" text="Kind of Annoyed at Vue-Router Lately" url="https://fadamakis.com/kind-of-annoyed-at-vue-router-lately-c74de773c72a" />
+
+<p class="mt-2">
 A rant about how Vue-router documentation is not up to date with the Composition API.
+</p>
 
-🚀 [Laravel to Nextjs](https://x.com/JackEllis/status/1774807750528442462?s=20)
+<AnchorSection componentClass="mt-2" emoji="🚀" id="laravel-to-nextjs" text="Laravel to Nextjs" url="https://x.com/JackEllis/status/1774807750528442462?s=20" />
+
+<p class="mt-2">
 Jack Ellis wrote about easy it is to migrate from Laravel to Next.js
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-
-## Web tools and Library
-
-🔎  [Open alternative](https://openalternative.co/)
+<WebLinkSection emoji="🔎" url="https://openalternative.co/" text="Open alternative" templateClass="mt-4">
 A curated list of open source alternative to closed source software, a te time of writing they are 144 open alternatives.
+</ WebLinkSection>
 
-🐙 [Github Link Shortener](https://dub.co/tools/github-link-shortener)
-A new link shortener aimed to have a « clean »  link for your repository git and analytics to track the link like [git.new/dub](https://git.new/dub).
+<WebLinkSection emoji="🐙" url="https://dub.co/tools/github-link-shortener" text="Github Link Shortener" templateClass="mt-4">
+A new link shortener aimed to have a « clean »  link for your repository git and analytics to track the link like [git.new/dub](https://git.new/dub?utm_source=cocoweb.fr).
+</ WebLinkSection>
 
-🐙 [Open Panel](https://github.com/Openpanel-dev/openpanel)
+<WebLinkSection emoji="🐙" url="https://github.com/Openpanel-dev/openpanel" text="Open Panel" templateClass="mt-4">
 Openpanel is a simple analytics tool for logging events on web, apps and backend. We have tried to combine Mixpanel and Plausible in the same product.
-
+</ WebLinkSection>

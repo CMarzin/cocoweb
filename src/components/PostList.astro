@@ -1,34 +1,45 @@
 ---
-import type { CollectionEntry } from 'astro:content';
+import type { CollectionEntry } from "astro:content";
+import TagsWrapper from "./TagsWrapper.astro";
 
 interface Props {
-  posts: CollectionEntry<'blog'>[];
+  posts: CollectionEntry<"blog" | "articles">[];
   limit?: number;
   showTags?: boolean;
   filterTag?: string;
   basePath?: string;
-  lang?: 'fr' | 'en';
+  lang?: "fr" | "en";
   totalCount?: number;
 }
 
-const { posts, limit, showTags = true, filterTag, basePath = '/blog', lang = 'fr', totalCount } = Astro.props;
+const {
+  posts,
+  limit,
+  showTags = true,
+  filterTag,
+  basePath = "/blog",
+  lang = "fr",
+  totalCount,
+} = Astro.props;
 
 // Determine tags base path based on language
-const tagsBasePath = lang === 'en' ? '/tags' : '/fr/tags';
+const tagsBasePath = lang === "en" ? "/tags" : "/fr/tags";
 
 // Filter by tag if specified
 let filteredPosts = filterTag
   ? posts.filter((post) =>
-      post.data.tags.some((tag) => tag.toLowerCase() === filterTag.toLowerCase())
+      post.data.tags.some(
+        (tag) => tag.toLowerCase() === filterTag.toLowerCase(),
+      ),
     )
   : posts;
 
 // Sort by date (newest first)
 filteredPosts = filteredPosts.sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 
-const counterStart = (totalCount || posts.length) + 1;
+const counterStart = (totalCount || posts.length);
 
 // Apply limit if specified
 if (limit) {
@@ -37,45 +48,69 @@ if (limit) {
 
 // Format date for display
 function formatDate(date: Date): string {
-  const locale = lang === 'en' ? 'en-GB' : 'fr-FR';
+  const locale = lang === "en" ? "en-GB" : "fr-FR";
   return date.toLocaleDateString(locale, {
-    year: 'numeric',
-    month: 'short',
-    day: 'numeric',
+    year: "numeric",
+    month: "short",
+    day: "numeric",
   });
 }
 ---
 
-<ol class="postlist" reversed style={`counter-reset: start-from ${counterStart}`}>
-  {filteredPosts.map((post) => {
-    // Remove language prefix from slug for URL
-    const urlSlug = post.slug.replace(/^(en|fr)\//, '');
-    return (
-    <li class="postlist-item">
-      <a href={`${basePath}/${urlSlug}/`} class="postlist-link">
-        {post.data.title}
-      </a>
-      <time class="postlist-date" datetime={post.data.date.toISOString()}>
-        {formatDate(post.data.date)}
-      </time>
-      {showTags && post.data.tags.length > 0 && (
-        <div class="post-tag__container">
-          {post.data.tags.map((tag) => (
-            <a
-              href={`${tagsBasePath}/${tag.toLowerCase().replace(/\s+/g, '-')}/`}
-              class="post-tag"
-            >
-              #{tag}
-            </a>
-          ))}
-        </div>
-      )}
-    </li>
-    );
-  })}
+<ol
+  class="list-none flex flex-col gap-4 stagger-children"
+  reversed
+  style={`counter-reset: start-from ${counterStart}`}
+>
+  {
+    filteredPosts.map((post, index) => {
+      const urlSlug = post.id.replace(/^(en|fr)\//, "");
+      return (
+        <li class="flex flex-col gap-5 items-baseline p-5 group border-ascii hover-glow animate-fade-up relative">
+          <a
+            href={`${basePath}/${urlSlug}/`}
+            class="post-url w-full tablet:w-auto"
+          >
+            <div class="flex gap-2">
+              <span class="font-mono text-xs text-muted-foreground tabular-nums shrink-0 w-min pt-2.5">
+                {counterStart - index}.
+              </span>
+              <span class="font-display text-xl sm:text-2xl text-foreground leading-snug group-hover:text-primary transition-colors duration-200 text-pretty w-full">
+                {post.data.title}
+              </span>
+              <time
+                class="font-mono text-xs text-muted-foreground tabular-nums whitespace-nowrap shrink-0 w-min pt-2.5"
+                datetime={post.data.date.toISOString()}
+              >
+                {formatDate(post.data.date)}
+              </time>
+            </div>
+          </a>
+          {showTags && post.data.tags.length > 0 && (
+            <div class="flex gap-2 flex-wrap tablet:w-full">
+              <TagsWrapper tags={post.data.tags} lang="en" />
+            </div>
+          )}
+        </li>
+      );
+    })
+  }
 </ol>
 
-{filteredPosts.length === 0 && (
-  <p class="no-posts">{lang === 'en' ? 'No posts found.' : 'Aucun article trouve.'}</p>
-)}
+{
+  filteredPosts.length === 0 && (
+    <p>{lang === "en" ? "No posts found." : "Aucun article trouve."}</p>
+  )
+}
 
+<style scoped>
+  .post-url:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+</style>

@@ -12,42 +12,59 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
-
-<AnchorLink emoji="🤔" text="Design is more than code" />
-<AnchorLink emoji="🤑" text="You don’t need to spend 100$ by month for Claude" />
-<AnchorLink emoji="🤖" text="2025 LLM Year in Review" />
-<AnchorLink emoji="🧑‍💻" text="How to hack discord, vercel and more with one easy trick" />
-
 Happy new year in advance and I will see you in 2026.
+</StarterText>
 
-**Have a great last 2025 days with your friends and family.**
+<AnchorWrapper>
+  <AnchorLink emoji="🤔" text="Design is more than code" />
+  <AnchorLink emoji="🤑" text="You don’t need to spend 100$ by month for Claude" />
+  <AnchorLink emoji="🤖" text="2025 LLM Year in Review" />
+  <AnchorLink emoji="🧑‍💻" text="How to hack discord, vercel and more with one easy trick" />
+  <AnchorLink emoji="**Have" text="a great last 2025 days with your friends and family.**" />
+</AnchorWrapper>
 
-___
+<TextSeparator />
 
-<AnchorSection emoji="🤔" id="design-is-more-than-code">[Design is more than code](https://linear.app/now/design-is-more-than-code)</AnchorSection>
-Karri Saarinen from Linear talk about his vision of design. Design is about finding the right problem the feature you build needs to answer that problem. 
+<AnchorSection emoji="🤔" id="design-is-more-than-code" text="Design is more than code" url="https://linear.app/now/design-is-more-than-code" />
 
-I think with all the new AI tool we will have an enormous amount of slop and this is where a product with the right design will shine even more.
+<p class="mt-2">
+Karri Saarinen from Linear talk about his vision of design. Design is about finding the right problem the feature you build needs to answer that problem.
+</p>
 
-<AnchorSection emoji="🤑" id="you-don’t-need-to-spend-100$-by-month-for-claude">[You don’t need to spend 100$ by month for Claude](https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🤑" id="you-dont-need-to-spend-100-by-month-for-claude" text="You don’t need to spend 100$ by month for Claude" url="https://www.aiforswes.com/p/you-dont-need-to-spend-100mo-on-claude" />
+
+<p class="mt-2">
 Local model are very capable now for side projects. I just don’t know how these people can spend so much on Claude or Cursor, I got the cursor 20$ /month and since the start of the year I never hit the limits !
+</p>
 
-<AnchorSection emoji="🤖" id="2025-llm-year-in-review">[2025 LLM Year in Review](https://karpathy.bearblog.dev/year-in-review-2025/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🤖" id="2025-llm-year-in-review" text="2025 LLM Year in Review" url="https://karpathy.bearblog.dev/year-in-review-2025/" />
+
+<p class="mt-2">
 I agree with everything in this article, we are only at the premise of what we can do with LLM, 2026 will be interesting.
+</p>
 
-<AnchorSection emoji="🧑‍💻" id="how-to-hack-discord,-vercel-and-more-with-one-easy-trick">[How to hack discord, vercel and more with one easy trick](https://kibty.town/blog/mintlify/)</AnchorSection>
-Always purify your input from the front end :) 
-___
+<AnchorSection componentClass="mt-2" emoji="🧑‍💻" id="how-to-hack-discord-vercel-and-more-with-one-easy-trick" text="How to hack discord, vercel and more with one easy trick" url="https://kibty.town/blog/mintlify/" />
 
-## Web tools and Library
+<p class="mt-2">
+Always purify your input from the front end :)
+</p>
 
-💚 [Vert](https://vert.sh/)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="💚" url="https://vert.sh/" text="Vert" templateClass="mt-4">
 Free, fast, and awesome file format converter
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-🚀 [Navbar gallery](https://www.navbar.gallery/browse)
+<WebLinkSection emoji="🚀" url="https://www.navbar.gallery/browse" text="Navbar gallery" templateClass="mt-4">
+</ WebLinkSection>

@@ -9,36 +9,58 @@ tags:
   - laravel
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✨ Centering in CSS, finally solved ?
-💅 Smooth dragging (and other mouse movements)
-🏛️ Intro to Vue.js Layered Architecture
-📗 7 Beautiful Next-Level Button Components with Vue, VueUse, and TailwindCSS
+<AnchorWrapper>
+  <AnchorLink emoji="✨" text="Centering in CSS, finally solved ?" />
+  <AnchorLink emoji="💅" text="Smooth dragging (and other mouse movements)" />
+  <AnchorLink emoji="🏛️" text="Intro to Vue.js Layered Architecture" />
+  <AnchorLink emoji="📗" text="7 Beautiful Next-Level Button Components with Vue, VueUse, and TailwindCSS" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="centering-in-css-finally-solved" text="Centering in CSS, finally solved ?" url="https://fullystacked.net/centering-things/" />
 
-✨ [Centering in CSS, finally solved ?](https://fullystacked.net/centering-things/)
+<p class="mt-2">
 An article which state the latest CSS technique to center things.
+</p>
 
-💅 [Smooth dragging (and other mouse movements)](https://codesandbox.io/s/crimson-sky-7zozs?file=/src/App.vue&ck_subscriber_id=1791477591#191%29%20Nested%20ref%20properties,%20mock%20API%20routes,%20and%20more%20-%2015628767)
+<AnchorSection componentClass="mt-2" emoji="💅" id="smooth-dragging-and-other-mouse-movements" text="Smooth dragging (and other mouse movements)" url="https://codesandbox.io/s/crimson-sky-7zozs?file=%2Fsrc%2FApp.vue&amp;ck_subscriber_id=1791477591#191%29%20Nested%20ref%20properties,%20mock%20API%20routes,%20and%20more%20-%2015628767" />
+
+<p class="mt-2">
 Smooth dragging in 50 lines of Vue.js.
+</p>
 
-🏛️ [Intro to Vue.js Layered Architecture](https://www.youtube.com/watch?v=Zq6lefGyUSM)
+<AnchorSection componentClass="mt-2" emoji="🏛️" id="intro-to-vuejs-layered-architecture" text="Intro to Vue.js Layered Architecture" url="https://www.youtube.com/watch?v=Zq6lefGyUSM" />
+
+<p class="mt-2">
 A video about 5 layers architecture for Vue.js application.
+</p>
 
-📗 [7 Beautiful Next-Level Button Components with Vue, VueUse, and TailwindCSS](https://vueschool.io/articles/vuejs-tutorials/7-beautiful-next-level-button-components-with-vue-vueuse-and-tailwindcss/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="7-beautiful-next-level-button-components-with-vue-vueuse-and-tailwindcss" text="7 Beautiful Next-Level Button Components with Vue, VueUse, and TailwindCSS" url="https://vueschool.io/articles/vuejs-tutorials/7-beautiful-next-level-button-components-with-vue-vueuse-and-tailwindcss/" />
+
+<p class="mt-2">
 A cool guide and example of 7 buttons.
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🎤 [Solo](https://github.com/aarondfrancis/solo)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🎤" url="https://github.com/aarondfrancis/solo" text="Solo" templateClass="mt-4">
 A Laravel package to run multiple commands at once, to aid in local development.
+</ WebLinkSection>
 
-🔧 [Keep it simple](https://kis.tools/)
+<WebLinkSection emoji="🔧" url="https://kis.tools/" text="Keep it simple" templateClass="mt-4">
 A curated collection of tools that keep it simple. With useful info on why they are great and what's worth noting.
+</ WebLinkSection>

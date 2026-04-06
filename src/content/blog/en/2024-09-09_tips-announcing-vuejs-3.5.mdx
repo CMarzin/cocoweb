@@ -9,42 +9,64 @@ tags:
   - Typography
   - design
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
-
-🚀 Announcing Vue 3.5
-📗 DefineModel : A Comprehensive Guide to Two-Way Binding in Vue.js 3
 𝙼  Departure Mono
-🎨 Accessible colour pastel palettes
+</StarterText>
 
-**Have a great week.**
+<AnchorWrapper>
+  <AnchorLink emoji="🚀" text="Announcing Vue 3.5" />
+  <AnchorLink emoji="📗" text="DefineModel : A Comprehensive Guide to Two-Way Binding in Vue.js 3" />
+  <AnchorLink emoji="🎨" text="Accessible colour pastel palettes" />
+</AnchorWrapper>
 
-___
+<TextSeparator />
 
-🚀 [Announcing Vue 3.5](https://blog.vuejs.org/posts/vue-3-5)
+<AnchorSection emoji="🚀" id="announcing-vue-35" text="Announcing Vue 3.5" url="https://blog.vuejs.org/posts/vue-3-5" />
+
+<p class="mt-2">
 A lot of improvement’s, new features and no breaking change.
 - Reactivity System Optimizations
 - Reactive Props Destructure
 - Lazy Hydration
 - Custom Elements Improvements
 - useId(), useTemplateRef(), Deferred Teleport
+</p>
 
-📗 [DefineModel : A Comprehensive Guide to Two-Way Binding in Vue.js 3](https://vueschool.io/articles/vuejs-tutorials/v-model-and-definemodel-a-comprehensive-guide-to-two-way-binding-in-vue-js-3/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="definemodel-a-comprehensive-guide-to-two-way-binding-in-vuejs-3" text="DefineModel : A Comprehensive Guide to Two-Way Binding in Vue.js 3" url="https://vueschool.io/articles/vuejs-tutorials/v-model-and-definemodel-a-comprehensive-guide-to-two-way-binding-in-vue-js-3/" />
+
+<p class="mt-2">
 A guide to better understand the new way to write two-way binding in Vue.js.
+</p>
 
-𝙼 [Departure Mono](https://departuremono.com/)
+<AnchorSection componentClass="mt-2" emoji="📌" id="departure-mono" text="Departure Mono" url="https://departuremono.com/" />
+
+<p class="mt-2">
 A beautiful Mono typography.
+</p>
 
-🎨 [Accessible colour pastel palettes](https://www.figma.com/community/file/909176640411029401)
+<AnchorSection componentClass="mt-2" emoji="🎨" id="accessible-colour-pastel-palettes" text="Accessible colour pastel palettes" url="https://www.figma.com/community/file/909176640411029401" />
+
+<p class="mt-2">
 Accessible Palettes has over 50+ AAA funky colour palettes for you to use in your next project !.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [Convert JSON to Swift, C\#, TypeScript, Objective-C, Go, Java, C++ and more\<!-- --> • quicktype](https://quicktype.io/)
+<WebLinkSection emoji="🔧" url="https://quicktype.io/" text="Convert JSON to Swift, C\#, TypeScript, Objective-C, Go, Java, C++ and more\<!-- --> • quicktype" templateClass="mt-4">
 Convert JSON into gorgeous, typesafe code in any language.
+</ WebLinkSection>
 
-😳 [Placewaifu](https://placewaifu.com/)
+<WebLinkSection emoji="😳" url="https://placewaifu.com/" text="Placewaifu" templateClass="mt-4">
 An anime girl placeholder service. Not the one you need, but the one you deserve.
+</ WebLinkSection>

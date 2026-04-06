@@ -10,25 +10,58 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
- 📗 [Good code is your legacy to the next developper](https://addyosmani.com/blog/good-code/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Good code is your legacy to the next developper" />
+  <AnchorLink emoji="🎮" text="Wind waker by Robin Payot" />
+  <AnchorLink emoji="💚" text="Vue 3 Vapor Mode News" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="good-code-is-your-legacy-to-the-next-developper" text="Good code is your legacy to the next developper" url="https://addyosmani.com/blog/good-code/" />
+
+<p class="mt-2">
 An article which describe what good code is.
 Like a good poem, you can judge if it was carefully written or someone just throw words at it.
+</p>
 
-🎮 [Wind waker by Robin Payot](https://wind-waker-js.vercel.app/)
+<AnchorSection componentClass="mt-2" emoji="🎮" id="wind-waker-by-robin-payot" text="Wind waker by Robin Payot" url="https://wind-waker-js.vercel.app/" />
+
+<p class="mt-2">
 Zelda wind-waker made with Tresjs and Nuxt.
+</p>
 
-💚 [Vue 3 Vapor Mode News](https://icarusgk.hashnode.dev/vue-3-vapor-mode)
+<AnchorSection componentClass="mt-2" emoji="💚" id="vue-3-vapor-mode-news" text="Vue 3 Vapor Mode News" url="https://icarusgk.hashnode.dev/vue-3-vapor-mode" />
+
+<p class="mt-2">
 Vapor mode is a new compilation strategy for Vuejs inspired by Solid.js
+</p>
 
-## Repository Github
-🐙 [Shadcn for Vue](https://www.shadcn-vue.com/)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://www.shadcn-vue.com/" text="Shadcn for Vue" templateClass="mt-4">
 Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+</ WebLinkSection>
 
-## Design
-🎨 [Flexoki](https://stephango.com/flexoki)
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
+
+<WebLinkSection emoji="🎨" url="https://stephango.com/flexoki" text="Flexoki" templateClass="mt-4">
 Flexoki is an inky color scheme for prose and code. Flexoki is designed for reading and writing on digital screens.
+</ WebLinkSection>
 
-🎨 [Auto animate](https://auto-animate.formkit.com/)
-AutoAnimate is a zero-config, drop-in animation utility that adds smooth transitions to your web app. 
+<WebLinkSection emoji="🎨" url="https://auto-animate.formkit.com/" text="Auto animate" templateClass="mt-4">
+AutoAnimate is a zero-config, drop-in animation utility that adds smooth transitions to your web app.
+</ WebLinkSection>

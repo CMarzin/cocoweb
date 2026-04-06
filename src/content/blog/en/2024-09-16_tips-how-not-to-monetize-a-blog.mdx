@@ -10,37 +10,58 @@ tags:
   - design
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🎫 How not to monetize a blog ?
-💰 Polar is the new Lemon Squeezy
-🤯 Write markdown, generate web pages
-🤖 Make your data talk
+<AnchorWrapper>
+  <AnchorLink emoji="🎫" text="How not to monetize a blog ?" />
+  <AnchorLink emoji="💰" text="Polar is the new Lemon Squeezy" />
+  <AnchorLink emoji="🤯" text="Write markdown, generate web pages" />
+  <AnchorLink emoji="🤖" text="Make your data talk" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="💳" id="how-not-to-monetize-a-blog" text="How not to Monetize a Blog" url="https://modem.io/blog/blog-monetization/" />
 
-💳 [How not to Monetize a Blog](https://modem.io/blog/blog-monetization/)
+<p class="mt-2">
 Tyler mock the endless search of blog monetization. Very humorous piece of content, try to click on the banners for some easter eggs :)
+</p>
 
-💰 [Polar](https://polar.sh/)
+<AnchorSection componentClass="mt-2" emoji="💰" id="polar" text="Polar" url="https://polar.sh/" />
+
+<p class="mt-2">
 Polar is an open-source alternative to Lemon Squeezy. You can monetise access to everything, like Github repository, Discord channel, binary etc…
+</p>
 
-🤯 [Write markdown, generate web pages](https://blocks.md/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="write-markdown-generate-web-pages" text="Write markdown, generate web pages" url="https://blocks.md/" />
+
+<p class="mt-2">
 **blocks.md** is a tool that takes your Markdown files and turns them into forms and web pages that are beautiful, customizable, accessible, and fully localizable.
+</p>
 
-🤖 [Data line](https://dataline.app/)
+<AnchorSection componentClass="mt-2" emoji="🤖" id="data-line" text="Data line" url="https://dataline.app/" />
+
+<p class="mt-2">
 DataLine is an AI-driven open source and privacy-first platform for data exploration. Your data is accessed using your device and stored on your device. No clouds, only sunshine.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔗 [Link preview](https://linkpreview.xyz/)
+<WebLinkSection emoji="🔗" url="https://linkpreview.xyz/" text="Link preview" templateClass="mt-4">
 Previews of URLs for numerous social media platforms. Made by Fayaz Ahmed.
+</ WebLinkSection>
 
-🤪 [Moquerie](https://github.com/Akryum/moquerie)
+<WebLinkSection emoji="🤪" url="https://github.com/Akryum/moquerie" text="Moquerie" templateClass="mt-4">
 Effortlessly mock your entire API with simple configuration and a beautiful UI.
+</ WebLinkSection>

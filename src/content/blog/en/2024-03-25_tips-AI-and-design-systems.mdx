@@ -9,24 +9,55 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-🔮 [AI and Design Systems](https://bradfrost.com/blog/post/ai-and-design-systems/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🔮" text="AI and Design Systems" />
+  <AnchorLink emoji="📗" text="Announcing VitePress 1.0 | The Vue Point" />
+  <AnchorLink emoji="📁" text="A proposal for the .config/ directory." />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🔮" id="ai-and-design-systems" text="AI and Design Systems" url="https://bradfrost.com/blog/post/ai-and-design-systems/" />
+
+<p class="mt-2">
 **Brad Frost** write about tailored an AI to fit your compony custom needs. With the rise of open-source AI model like llama2 and mistral, we now can trained an AI on our data and control the input and the output of the AI. Maybe in 2 years, all developers will have a junior AI developer for help ?
+</p>
 
-📗 [Announcing VitePress 1.0 | The Vue Point](https://blog.vuejs.org/posts/vitepress-1.0)
+<AnchorSection componentClass="mt-2" emoji="📗" id="announcing-vitepress-10-the-vue-point" text="Announcing VitePress 1.0 | The Vue Point" url="https://blog.vuejs.org/posts/vitepress-1.0" />
+
+<p class="mt-2">
 The long overdue release of VitePress, a static site generator with SPA feel.
+</p>
 
-📁 [A proposal for the .config/ directory.](https://github.com/pi0/config-dir)
+<AnchorSection componentClass="mt-2" emoji="📁" id="a-proposal-for-the-config-directory" text="A proposal for the .config/ directory." url="https://github.com/pi0/config-dir" />
+
+<p class="mt-2">
 **pi0** Pooya Parsa write about a proposal in order to clean the huge amount of config files between the increasing demand of different tooling’s in the front end world.
+</p>
 
-## Repository
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [plankanban/planka](https://github.com/plankanban/planka)
+<h2 class="font-display text-2xl text-foreground">Repository</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/plankanban/planka" text="plankanban/planka" templateClass="mt-4">
 The realtime kanban board for workgroups built with React and Redux.
+</ WebLinkSection>
 
-🐙 [Pages CMS](https://pagescms.org/)
+<WebLinkSection emoji="🐙" url="https://pagescms.org/" text="Pages CMS" templateClass="mt-4">
 The No-Hassle CMS for GitHub
+</ WebLinkSection>
 
-🔔 [xiaoluoboding/vue-sonner](https://github.com/xiaoluoboding/vue-sonner)
+<WebLinkSection emoji="🔔" url="https://github.com/xiaoluoboding/vue-sonner" text="xiaoluoboding/vue-sonner" templateClass="mt-4">
 An opinionated toast component for Vue.
+</ WebLinkSection>

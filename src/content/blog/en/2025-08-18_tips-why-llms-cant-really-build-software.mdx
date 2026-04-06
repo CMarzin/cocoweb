@@ -12,43 +12,66 @@ tags:
   - laravel
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤔 Why LLMs Can't Really Build Software
-🐧 2025: The Year of the Linux (Omarchy) Desktop
-✔ Frontend Performance Checklist For 2025
-💡 CSS-Questions
+<AnchorWrapper>
+  <AnchorLink emoji="🤔" text="Why LLMs Can't Really Build Software" />
+  <AnchorLink emoji="🐧" text="2025: The Year of the Linux (Omarchy) Desktop" />
+  <AnchorLink emoji="✔" text="Frontend Performance Checklist For 2025" />
+  <AnchorLink emoji="💡" text="CSS-Questions" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤔" id="why-llms-cant-really-build-software" text="Why LLMs Can't Really Build Software" url="https://zed.dev/blog/why-llms-cant-build-software" />
 
-🤔 [Why LLMs Can't Really Build Software](https://zed.dev/blog/why-llms-cant-build-software)
+<p class="mt-2">
 Because LLMs doesn’t have a clear mental model of the task they build. They don’t have a global overview of what we want to build and more importantly to maintain.
+</p>
 
-🐧 [2025: The Year of the Linux \(Omarchy\) Desktop](https://missioncontrol.uk.com/2025-the-year-of-the-linux-omarchy-desktop/)
+<AnchorSection componentClass="mt-2" emoji="🐧" id="2025-the-year-of-the-linux-omarchy-desktop" text="2025: The Year of the Linux \(Omarchy\) Desktop" url="https://missioncontrol.uk.com/2025-the-year-of-the-linux-omarchy-desktop/" />
+
+<p class="mt-2">
 Maybe all Linux needed was a big voice in the developper community ( DHH ) and a distro which is very easy to install and very easy to customize.
+</p>
 
-✔️ [Frontend Performance Checklist For 2025](https://crystallize.com/blog/frontend-performance-checklist)
+<AnchorSection componentClass="mt-2" emoji="✔️" id="frontend-performance-checklist-for-2025" text="Frontend Performance Checklist For 2025" url="https://crystallize.com/blog/frontend-performance-checklist" />
+
+<p class="mt-2">
 Agnostics checklist from the Crystallize team, very cool for everyone which want to learn about performance.
+</p>
 
-💡 [CSS-Questions](https://css-questions.com/)
+<AnchorSection componentClass="mt-2" emoji="💡" id="css-questions" text="CSS-Questions" url="https://css-questions.com/" />
+
+<p class="mt-2">
 Test your CSS knowledge with 100+ questions on CSS from basic selectors to advanced topics like pseudo-classes, cascade layers, and container queries.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-👀 [laravel/boost](https://github.com/laravel/boost)
+<WebLinkSection emoji="👀" url="https://github.com/laravel/boost" text="laravel/boost" templateClass="mt-4">
 Laravel-focused MCP server for augmenting your AI powered local development experience.
+</ WebLinkSection>
 
-🔔 [productdevbook/nitroping](https://github.com/productdevbook/nitroping)
+<WebLinkSection emoji="🔔" url="https://github.com/productdevbook/nitroping" text="productdevbook/nitroping" templateClass="mt-4">
 Open-source, self-hosted push notification service built with Nuxt 4 & Nitro.
+</ WebLinkSection>
 
-🖊️ [cnrad/keyboard-signature](https://github.com/cnrad/keyboard-signature)
+<WebLinkSection emoji="🖊️" url="https://github.com/cnrad/keyboard-signature" text="cnrad/keyboard-signature" templateClass="mt-4">
 Digitiised signature, What if signatures were determined by keyboard ?
+</ WebLinkSection>
 
-📊 [Unovis Release 1.6](https://unovis.dev/releases/1.6/)
+<WebLinkSection emoji="📊" url="https://unovis.dev/releases/1.6/" text="Unovis Release 1.6" templateClass="mt-4">
 Modular data visualization framework for React, Angular, Svelte, Vue, and vanilla TypeScript or JavaScript
+</ WebLinkSection>

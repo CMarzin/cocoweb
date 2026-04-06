@@ -11,46 +11,71 @@ tags:
   - CLI
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📈 Keeping track of achievements
-💅 Tailwind CSS V4
-✨ Dropbox Brand Guidelines
-😎 Creation of an open-source laptop
+<AnchorWrapper>
+  <AnchorLink emoji="📈" text="Keeping track of achievements" />
+  <AnchorLink emoji="💅" text="Tailwind CSS V4" />
+  <AnchorLink emoji="✨" text="Dropbox Brand Guidelines" />
+  <AnchorLink emoji="😎" text="Creation of an open-source laptop" />
+</AnchorWrapper>
 
-**Have a great week.**
-___
+<TextSeparator />
 
-📈 [Keeping track of achievements](https://yannglt.com/writing/keeping-track-of-achievements)
+<AnchorSection emoji="📈" id="keeping-track-of-achievements" text="Keeping track of achievements" url="https://yannglt.com/writing/keeping-track-of-achievements" />
+
+<p class="mt-2">
 Yann write about keeping tabs of your achievements, his method is to write a changelog of his work and sharing it to the world on this blog.
+</p>
 
-💅 [Tailwind CSS v4.0](https://tailwindcss.com/blog/tailwindcss-v4)
+<AnchorSection componentClass="mt-2" emoji="💅" id="tailwind-css-v40" text="Tailwind CSS v4.0" url="https://tailwindcss.com/blog/tailwindcss-v4" />
+
+<p class="mt-2">
 New CSS features implemented, build 5x faster, usage of CSS variables, no more JS configuration file etc…
+</p>
 
-😎 [Creation of an open-source laptop](https://www.byran.ee/posts/creation/)
+<AnchorSection componentClass="mt-2" emoji="😎" id="creation-of-an-open-source-laptop" text="Creation of an open-source laptop" url="https://www.byran.ee/posts/creation/" />
+
+<p class="mt-2">
 A post about the creation of a laptop from scratch from Byran. Everything about the project is open source, all the hardware and the software.
 TLDR : **It’s got a 4K AMOLED display, a Cherry MX mechanical keyboard, plays Minecraft at 4K, runs +7B LLMs, surfs the web, and has ~7h battery life. All open-source.**
+</p>
 
-✨ [Dropbox Brand Guidelines](https://brand.dropbox.com/)
+<AnchorSection componentClass="mt-2" emoji="✨" id="dropbox-brand-guidelines" text="Dropbox Brand Guidelines" url="https://brand.dropbox.com/" />
+
+<p class="mt-2">
 A superb and innovative website to showcase how Dropobox use his design principles to install the Dropbox touch to his products, marketing and web interfaces.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🦆 [Textualize/toolong](https://github.com/textualize/toolong)
+<WebLinkSection emoji="🦆" url="https://github.com/textualize/toolong" text="Textualize/toolong" templateClass="mt-4">
 A terminal application to view, tail, merge, and search log files (plus JSONL).
+</ WebLinkSection>
 
-🥯 [Bagels -TUI Expense Tracker](https://github.com/EnhancedJax/Bagels)
+<WebLinkSection emoji="🥯" url="https://github.com/EnhancedJax/Bagels" text="Bagels -TUI Expense Tracker" templateClass="mt-4">
 Powerful expense tracker that lives in your terminal.
+</ WebLinkSection>
 
-😎 [Posting](https://posting.sh/)
+<WebLinkSection emoji="😎" url="https://posting.sh/" text="Posting" templateClass="mt-4">
 The API client that lives in your terminal.
+</ WebLinkSection>
 
-💬 [Textual](https://textual.textualize.io/)
+<WebLinkSection emoji="💬" url="https://textual.textualize.io/" text="Textual" templateClass="mt-4">
 The lean application framework for Python. Build sophisticated user interfaces with a simple Python API. Run your apps in the terminal and a web browser.
+</ WebLinkSection>
 
-🎮 [cs16.css](https://cs16.samke.me/)
+<WebLinkSection emoji="🎮" url="https://cs16.samke.me/" text="cs16.css" templateClass="mt-4">
 CSS library based on Counter Strike 1.6 UI.
+</ WebLinkSection>

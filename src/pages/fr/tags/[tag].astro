@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../../layouts/BaseLayout.astro';
-import PostList from '../../../components/PostList.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PostList from "../../../components/PostList.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
-  
+  const posts = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
+
   const tags = new Set<string>();
   posts.forEach((post) => {
     post.data.tags.forEach((tag) => {
@@ -14,11 +14,11 @@ export async function getStaticPaths() {
   });
 
   return Array.from(tags).map((tag) => ({
-    params: { tag: tag.replace(/\s+/g, '-') },
-    props: { 
+    params: { tag: tag.replace(/\s+/g, "-") },
+    props: {
       tag,
       posts: posts.filter((post) =>
-        post.data.tags.some((t) => t.toLowerCase() === tag)
+        post.data.tags.some((t) => t.toLowerCase() === tag),
       ),
     },
   }));
@@ -26,24 +26,28 @@ export async function getStaticPaths() {
 
 interface Props {
   tag: string;
-  posts: Awaited<ReturnType<typeof getCollection<'blog'>>>;
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
 }
 
 const { tag, posts } = Astro.props;
 const postCount = posts.length;
 ---
 
-<BaseLayout 
-  title={`#${tag} - Cocoweb`} 
+<BaseLayout
+  title={`#${tag} - Cocoweb`}
   description={`Articles avec le tag #${tag} sur Cocoweb.`}
   lang="fr"
 >
   <div class="tag-page">
     <header class="tag-header">
       <a href="/fr/tags/" class="back-link">Tous les tags</a>
-      <h1>#{tag}</h1>
+      <h1
+        class="font-display text-4xl  tracking-tight text-primary text-glow mb-2"
+      >
+        #{tag}
+      </h1>
       <p class="post-count">
-        {postCount} article{postCount > 1 ? 's' : ''}
+        {postCount} article{postCount > 1 ? "s" : ""}
       </p>
     </header>
 

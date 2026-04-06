@@ -11,46 +11,66 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="📢" text="Signing the Open Source Pledge" />
-<AnchorLink emoji="🚀" text="Explore the independent Web" />
-<AnchorLink emoji="💡" text="Internet Handle" />
-<AnchorLink emoji="📸" text="New photos on Unsplash" />
+<AnchorWrapper>
+  <AnchorLink emoji="📢" text="Signing the Open Source Pledge" />
+  <AnchorLink emoji="🚀" text="Explore the independent Web" />
+  <AnchorLink emoji="💡" text="Internet Handle" />
+  <AnchorLink emoji="📸" text="New photos on Unsplash" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📢" id="signing-the-open-source-pledge" text="Signing the Open Source Pledge" url="https://nuqs.dev/blog/open-source-pledge" />
 
-<AnchorSection emoji="📢" id="signing-the-open-source-pledge">[Signing the Open Source Pledge](https://nuqs.dev/blog/open-source-pledge)</AnchorSection>
-A way to pay the maintainers of the open source software, More information here [Open Source Pledge](https://opensourcepledge.com/).
+<p class="mt-2">
+A way to pay the maintainers of the open source software, More information here [Open Source Pledge](https://opensourcepledge.com/?utm_source=cocoweb.fr).
+</p>
 
-<AnchorSection emoji="🚀" id="explore-the-independent-web">[Explore the independent Web](https://ghost.org/changelog/ghost-explore/)</AnchorSection>
-Explore the independent web with Ghost new features. I don’t use Ghost as a CMS, my site is in makdown and bundled by [11ty](https://www.11ty.dev/docs/).
+<AnchorSection componentClass="mt-2" emoji="🚀" id="explore-the-independent-web" text="Explore the independent Web" url="https://ghost.org/changelog/ghost-explore/" />
 
-<AnchorSection emoji="💡" id="internet-handle">[Internet Handle](https://internethandle.org/)</AnchorSection>
-Image if you can log into apps or website with you domain name, I didn’t know I can use my domain cocoweb to create an handle on [bluesky](https://bsky.app/). I could have corentin@cocoweb.fr :D
+<p class="mt-2">
+Explore the independent web with Ghost new features. I don’t use Ghost as a CMS, my site is in makdown and bundled by [11ty](https://www.11ty.dev/docs/?utm_source=cocoweb.fr).
+</p>
 
-<AnchorSection emoji="📸" id="new-photos-on-unsplash">[New photos on Unsplash](https://unsplash.com/fr/@marzin_corentin)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="💡" id="internet-handle" text="Internet Handle" url="https://internethandle.org/" />
+
+<p class="mt-2">
+Image if you can log into apps or website with you domain name, I didn’t know I can use my domain cocoweb to create an handle on [bluesky](https://bsky.app/?utm_source=cocoweb.fr). I could have corentin@cocoweb.fr :D
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📸" id="new-photos-on-unsplash" text="New photos on Unsplash" url="https://unsplash.com/fr/@marzin_corentin" />
+
+<p class="mt-2">
 Shamelessly putting my own photo blog, I added recently some cool photo on my Unsplash, I am very proud of the ferrari one, the trains and the church.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🍬 [Harlequin](https://github.com/tconbeer/harlequin)
+<WebLinkSection emoji="🍬" url="https://github.com/tconbeer/harlequin" text="Harlequin" templateClass="mt-4">
 The SQL IDE for Your Terminal.
+</ WebLinkSection>
 
-🤥 [The 1-Click Localhost Cloud](https://pinokio.co/)
+<WebLinkSection emoji="🤥" url="https://pinokio.co/" text="The 1-Click Localhost Cloud" templateClass="mt-4">
 Run your own personal Internet on Mac, Windows, and Linux with one click.
+</ WebLinkSection>
 
-😻 [Susty Icons](https://sustyicons.com/)
+<WebLinkSection emoji="😻" url="https://sustyicons.com/" text="Susty Icons" templateClass="mt-4">
 Fast, sustainable, and open source SVG icon set
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-🖍️ [Happy hues](https://www.happyhues.co/)
+<WebLinkSection emoji="🖍️" url="https://www.happyhues.co/" text="Happy hues" templateClass="mt-4">
 Curated colors in context.
+</ WebLinkSection>

@@ -11,45 +11,67 @@ tags:
   - TS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤖 Figma will use your content to train its AI
-🚀 How to drive change beyond your role ?
-✨ Theme toggle with 15 lines of code
-🇫🇷 French article about SlideDev
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="Figma will use your content to train its AI" />
+  <AnchorLink emoji="🚀" text="How to drive change beyond your role ?" />
+  <AnchorLink emoji="✨" text="Theme toggle with 15 lines of code" />
+  <AnchorLink emoji="🇫🇷" text="French article about SlideDev" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="figma-will-use-your-content-to-train-its-ai" text="Figma will use your content to train its AI" url="https://stackdiary.com/figma-will-use-your-content-to-train-its-ai/" />
 
-🤖 [Figma will use your content to train its AI](https://stackdiary.com/figma-will-use-your-content-to-train-its-ai/)
+<p class="mt-2">
 By default free and pro user will have the option of sharing data for their IA opt-in and the opt-out for entreprise user. You can still deactivate the sharing of data in your settings.
+</p>
 
-🚀 [How to Drive Change Beyond Your Role](https://peterszasz.com/how-to-drive-change-beyond-your-role/?ref=techmanagerweekly.com)
+<AnchorSection componentClass="mt-2" emoji="🚀" id="how-to-drive-change-beyond-your-role" text="How to Drive Change Beyond Your Role" url="https://peterszasz.com/how-to-drive-change-beyond-your-role/?ref=techmanagerweekly.com" />
+
+<p class="mt-2">
 Main takeway from this article are :
 - Have a plan and communicate clearly what you want to do
 - Find some metrics in order to know if this work or not
 - Don’t ever go all in alone in something without talk about it a least a little
+</p>
 
-✨ [Theme toggle - view transition api](https://theme-toggle.rdsx.dev/)
+<AnchorSection componentClass="mt-2" emoji="✨" id="theme-toggle-view-transition-api" text="Theme toggle - view transition api" url="https://theme-toggle.rdsx.dev/" />
+
+<p class="mt-2">
 Creating transition between pages is now really easy, with only 2 lines of javascript and a dozen line of css you can have a really cool theme toggle.
+</p>
 
-🇫🇷 [Slidev](https://blog.stephane-robert.info/docs/documenter/slidev/)
-Article which explain the purpose of [SlideDev](https://github.com/slidevjs/slidev) a presentation slide for developers.
+<AnchorSection componentClass="mt-2" emoji="🇫🇷" id="slidev" text="Slidev" url="https://blog.stephane-robert.info/docs/documenter/slidev/" />
 
-___
+<p class="mt-2">
+Article which explain the purpose of [SlideDev](https://github.com/slidevjs/slidev?utm_source=cocoweb.fr) a presentation slide for developers.
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-📚 [Eidos](https://github.com/mayneyao/eidos?tab=readme-ov-file)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="📚" url="https://github.com/mayneyao/eidos?tab=readme-ov-file" text="Eidos" templateClass="mt-4">
 Offline alternative to Notion. Eidos is an extensible framework for managing your personal data throughout your lifetime in one place.
+</ WebLinkSection>
 
-🐙 [Shiki JS](https://github.com/shikijs/shiki)
+<WebLinkSection emoji="🐙" url="https://github.com/shikijs/shiki" text="Shiki JS" templateClass="mt-4">
 A beautiful syntax highlighter based on TextMate grammar, accurate and powerful.
+</ WebLinkSection>
 
-## Fun
+<h2 class="font-display text-2xl text-foreground mt-8">Fun</h2>
 
-🐍 [Let’s Snake: Ancient Greek Punishment](https://pippinbarr.com/lets-snake-ancient-greek-punishment/info/)
+<WebLinkSection emoji="🐍" url="https://pippinbarr.com/lets-snake-ancient-greek-punishment/info/" text="Let’s Snake: Ancient Greek Punishment" templateClass="mt-4">
 A snake game in the browser inspired by sisyphus.
+</ WebLinkSection>

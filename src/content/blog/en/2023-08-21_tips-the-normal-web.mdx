@@ -10,35 +10,61 @@ tags:
   - design
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Just normal web things.](https://heather-buchel.com/blog/2023/07/just-normal-web-things/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Just normal web things." />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="just-normal-web-things" text="Just normal web things." url="https://heather-buchel.com/blog/2023/07/just-normal-web-things/" />
+
+<p class="mt-2">
 Heather Buchel write about the decline of the use of « basic web functionality » like use an anchor link instead of an onclick with js. Use the platform instead of reinventing the wheel with javascript.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [milanvarady/Applite](https://github.com/milanvarady/Applite)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/milanvarady/Applite" text="milanvarady/Applite" templateClass="mt-4">
 Visualize and handle every app available from Homebrew in a macOS app instead of your terminal.
+</ WebLinkSection>
 
-🐙 [PromtEngineer/localGPT:](https://github.com/PromtEngineer/localGPT)
+<WebLinkSection emoji="🐙" url="https://github.com/PromtEngineer/localGPT" text="PromtEngineer/localGPT:" templateClass="mt-4">
 Chat with your documents on your local device using GPT models. No data leaves your device and 100% private.
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-🖌️ [New Slack redesign](https://slack.com/intl/fr-fr/blog/productivity/a-redesigned-slack-built-for-focus)
+<WebLinkSection emoji="🖌️" url="https://slack.com/intl/fr-fr/blog/productivity/a-redesigned-slack-built-for-focus" text="New Slack redesign" templateClass="mt-4">
 New UI, more focus, soo available.
+</ WebLinkSection>
 
-## CSS
+<h2 class="font-display text-2xl text-foreground mt-8">CSS</h2>
 
-🎨 [CSS Selectors: A Visual Guide & Reference](https://fffuel.co/css-selectors/)
+<WebLinkSection emoji="🎨" url="https://fffuel.co/css-selectors/" text="CSS Selectors: A Visual Guide &amp; Reference" templateClass="mt-4">
 Every css selectors explained visually, very cool reference. This website have a lot of svg tools too at the end of the article. 10/10 recommended.
+</ WebLinkSection>
 
-🎨 [CSS Galaxy Button 🚀](https://codepen.io/jh3y/pen/eYPYKep)
+<WebLinkSection emoji="🎨" url="https://codepen.io/jh3y/pen/eYPYKep" text="CSS Galaxy Button 🚀" templateClass="mt-4">
 Codepen of a really beautiful button.
+</ WebLinkSection>
 
-🎨 [Four new CSS features for smooth entry and exit animations](https://developer.chrome.com/blog/entry-exit-animations/)
+<WebLinkSection emoji="🎨" url="https://developer.chrome.com/blog/entry-exit-animations/" text="Four new CSS features for smooth entry and exit animations" templateClass="mt-4">
 New css features for Chrome 116 and 117
 - The ability to animate display and content-visibility on a keyframe timeline (From Chrome 116).
 * The transition-behavior property with the allow-discrete keyword to enable transitions of discrete properties like display (From Chrome 117).
 * The @starting-style rule to animate entry effects from display: none and into the top-layer (From Chrome 117).
 * The overlay property to control top-layer behavior during an animation (From Chrome 117).
+</ WebLinkSection>

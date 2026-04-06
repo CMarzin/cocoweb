@@ -10,53 +10,76 @@ tags:
   - CSS
 ---
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Veille
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-### [The Joy of React](https://www.joyofreact.com/)
+<AnchorWrapper>
+  <AnchorLink emoji="###" text="The Joy of React" />
+  <AnchorLink emoji="###" text="About roles in the front-end development department" />
+  <AnchorLink emoji="###" text="In search of a CSS developer job" />
+</AnchorWrapper>
 
-The all-new interactive learning experience that teaches you how to build rich, dynamic web apps with React. Taught by  [Josh W Comeau](https://twitter.com/JoshWComeau)
+<TextSeparator />
 
-### [About roles in the front-end development department](https://www.silvestar.codes/articles/about-roles-in-the-front-end-development-department/)
+<AnchorSection emoji="###" id="the-joy-of-react" text="The Joy of React" url="https://www.joyofreact.com/" />
 
-[Silvestar Bistrović](https://www.silvestar.codes/about/) wrote this article about his roles in the front-end development department.
+<p class="mt-2">
+The all-new interactive learning experience that teaches you how to build rich, dynamic web apps with React. Taught by  [Josh W Comeau](https://twitter.com/JoshWComeau?utm_source=cocoweb.fr)
+</p>
 
-### [In search of a CSS developer job](https://www.silvestar.codes/articles/in-search-of-a-css-developer-job/)
+<AnchorSection componentClass="mt-2" emoji="###" id="about-roles-in-the-front-end-development-department" text="About roles in the front-end development department" url="https://www.silvestar.codes/articles/about-roles-in-the-front-end-development-department/" />
 
-[Silvestar Bistrović](https://www.silvestar.codes/about/) wrote this article about his search of a CSS focused job which is really really hard to find.
+<p class="mt-2">
+[Silvestar Bistrović](https://www.silvestar.codes/about/?utm_source=cocoweb.fr) wrote this article about his roles in the front-end development department.
+</p>
 
-## CSS
+<AnchorSection componentClass="mt-2" emoji="###" id="in-search-of-a-css-developer-job" text="In search of a CSS developer job" url="https://www.silvestar.codes/articles/in-search-of-a-css-developer-job/" />
 
-### [Disentangling Frameworks | CSS In Real Life ](https://css-irl.info/disentangling-frameworks/)
+<p class="mt-2">
+[Silvestar Bistrović](https://www.silvestar.codes/about/?utm_source=cocoweb.fr) wrote this article about his search of a CSS focused job which is really really hard to find.
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">CSS</h2>
+
+<WebLinkSection emoji="###" url="https://css-irl.info/disentangling-frameworks/" text="Disentangling Frameworks | CSS In Real Life" templateClass="mt-4">
 Why sometimes its better not to use a CSS framework like tailwind to get things done.
+</ WebLinkSection>
 
-### [100 Days Of More Or Less Modern CSS](https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/)
-
+<WebLinkSection emoji="###" url="https://www.matuzo.at/blog/2022/100-days-of-more-or-less-modern-css/" text="100 Days Of More Or Less Modern CSS" templateClass="mt-4">
 It’s time to get me up to speed with modern CSS. There’s so much new in CSS that I know too little about. To change that I’ve started #100DaysOfMoreOrLessModernCSS. Why more or less modern CSS? Because some topics will be about cutting-edge features, while other stuff has been around for quite a while already, but I just have little to no experience with it.
+</ WebLinkSection>
 
-### [Thread twitter about some neat tricks in CSS only](https://twitter.com/shuding_/status/1617174768465084416?s=20)
-
+<WebLinkSection emoji="###" url="https://twitter.com/shuding_/status/1617174768465084416?s=20" text="Thread twitter about some neat tricks in CSS only" templateClass="mt-4">
 - CSS-only interactive blur filter
 - CSS-only interactive magnifier
 - CSS-only dino game
+</ WebLinkSection>
 
-## Repository Github
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Github</h2>
 
-### [Agnostic-axe](https://github.com/dequelabs/agnostic-axe)
-
+<WebLinkSection emoji="###" url="https://github.com/dequelabs/agnostic-axe" text="Agnostic-axe" templateClass="mt-4">
 Framework agnostic accessibility reporter, developer tool that continously observes the DOM to detect accessibility issues. Its audits are powered by axe-core.
+</ WebLinkSection>
 
-## Web tools
+<h2 class="font-display text-2xl text-foreground mt-8">Web tools</h2>
 
-### [Health icons](https://healthicons.org/)
+<WebLinkSection emoji="###" url="https://healthicons.org/" text="Health icons" templateClass="mt-4">
 Free, open source health icons
 Free for use in your next commercial or personal project.
+</ WebLinkSection>
 
-Editing is ok. Republishing is ok. No need to give credit.
-
-### [Smart Interface Design Patterns](https://smart-interface-design-patterns.com/)
-
+<WebLinkSection emoji="###" url="https://smart-interface-design-patterns.com/" text="Smart Interface Design Patterns" templateClass="mt-4">
 100 Smart Interface Design Patterns & Live Examples. 9h Video + UX Training.
 30 video lessons + 4-weeks UX training.
 For UI/UX designers and front-end developers.
+</ WebLinkSection>

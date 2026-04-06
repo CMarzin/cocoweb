@@ -11,48 +11,76 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-👏 Stop Using and Recommending React
-🛣️ Why We Moved off Next.js
-🤖 Browse No More
-🗺️ The AI Engineer Roadmap
-🇫🇷 Kyber, the new project of **Jean-Baptiste Kempf**
-📗 I was wrong about defineModel
+<AnchorWrapper>
+  <AnchorLink emoji="👏" text="Stop Using and Recommending React" />
+  <AnchorLink emoji="🛣️" text="Why We Moved off Next.js" />
+  <AnchorLink emoji="🤖" text="Browse No More" />
+  <AnchorLink emoji="🗺️" text="The AI Engineer Roadmap" />
+  <AnchorLink emoji="🇫🇷" text="Kyber, the new project of **Jean-Baptiste Kempf**" />
+  <AnchorLink emoji="📗" text="I was wrong about defineModel" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="👏" id="stop-using-and-recommending-react" text="Stop Using and Recommending React" url="https://blog.lusito.info/stop-using-and-recommending-react.html" />
 
-👏 [Stop Using and Recommending React](https://blog.lusito.info/stop-using-and-recommending-react.html)
+<p class="mt-2">
 The creator of react-nano, list a number of things which he dislikes about the state of React right now and share some popular alternatives.
+</p>
 
-🛣️ [Why We Moved off Next.js](https://documenso.com/fr/blog/why-we-moved-off-next-js)
+<AnchorSection componentClass="mt-2" emoji="🛣️" id="why-we-moved-off-nextjs" text="Why We Moved off Next.js" url="https://documenso.com/fr/blog/why-we-moved-off-next-js" />
+
+<p class="mt-2">
 The team behind Documenso, share why they moved on from Next.js to React Router. They highlighted the fact that Next.js is developed behind closed doors, overengineered, overcomplicated and slow.
+</p>
 
-🤖 [Browse No More](https://paulstamatiou.com/browse-no-more)
+<AnchorSection componentClass="mt-2" emoji="🤖" id="browse-no-more" text="Browse No More" url="https://paulstamatiou.com/browse-no-more" />
+
+<p class="mt-2">
 With AI, you no longer browse the web, at bet, « you are just browsing AI interpretations of a limiter slice of the web ». This phrase stuck with me, with social media and AI now you are giving more and more control over which information you stumble on. Maybe, we need to keep a RSS feed or something to be a little « free » over AI and social media.
+</p>
 
-🗺️ [The AI Engineer Roadmap](https://www.aihero.dev/ai-engineer-roadmap)
+<AnchorSection componentClass="mt-2" emoji="🗺️" id="the-ai-engineer-roadmap" text="The AI Engineer Roadmap" url="https://www.aihero.dev/ai-engineer-roadmap" />
+
+<p class="mt-2">
 Matt Pocok the creator of total typescript, share a free courses to become an AI engineer.
+</p>
 
-🇫🇷 [Kyber, the of project of **Jean-Baptiste Kempf**](https://www.youtube.com/watch?v=0Vtg245ZDbU)
+<AnchorSection componentClass="mt-2" emoji="🇫🇷" id="kyber-the-of-project-of-jean-baptiste-kempf" text="Kyber, the of project of **Jean-Baptiste Kempf**" url="https://www.youtube.com/watch?v=0Vtg245ZDbU" />
+
+<p class="mt-2">
 Video in French, Jean-baptiste talks about his new project Cyber. Kyber aims to bring ultra low latency to streaming video 8ms instead of 200ms.
+</p>
 
-📗 [I was wrong about defineModel...](https://www.youtube.com/watch?v=NAONtybQktw)
+<AnchorSection componentClass="mt-2" emoji="📗" id="i-was-wrong-about-definemodel" text="I was wrong about defineModel..." url="https://www.youtube.com/watch?v=NAONtybQktw" />
+
+<p class="mt-2">
 This video delves into the useModel helper function from the Vue, demonstrating its purpose and functionality.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [Rivet](https://github.com/Ironclad/rivet)
+<WebLinkSection emoji="🔧" url="https://github.com/Ironclad/rivet" text="Rivet" templateClass="mt-4">
 The open-source visual AI programming environment and TypeScript library
+</ WebLinkSection>
 
-🔭 [laravel/wayfinder](https://github.com/laravel/wayfinder)
+<WebLinkSection emoji="🔭" url="https://github.com/laravel/wayfinder" text="laravel/wayfinder" templateClass="mt-4">
 Laravel Wayfinder bridges your Laravel backend and TypeScript frontend with zero friction. It automatically generates fully-typed, importable TypeScript functions for your controllers and routes — so you can call your Laravel endpoints directly in your client code just like any other function. No more hardcoding URLs, guessing route parameters, or syncing backend changes manually.
+</ WebLinkSection>
 
-🧪 [Barbapapazes/vue-dialog-stacking](https://github.com/Barbapapazes/vue-dialog-stacking)
+<WebLinkSection emoji="🧪" url="https://github.com/Barbapapazes/vue-dialog-stacking" text="Barbapapazes/vue-dialog-stacking" templateClass="mt-4">
 An experiment to stack multiple dialogs on top of each other in Vue 3.
+</ WebLinkSection>

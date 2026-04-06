@@ -10,20 +10,44 @@ tags:
   - CSS
   - design
 ---
-## Veille
 
-📗 [The most valuable skill as a software developper](https://engineercodex.substack.com/p/the-1-trait-of-the-most-valuable)
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="The most valuable skill as a software developper" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="the-most-valuable-skill-as-a-software-developper" text="The most valuable skill as a software developper" url="https://engineercodex.substack.com/p/the-1-trait-of-the-most-valuable" />
+
+<p class="mt-2">
 Being a product minded developper is the skill which make you more valuable than a regular software developper. But you have to market this skill and it’s not an easy things to do.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [Tippy.js - Tooltip, Popover, Dropdown, and Menu Library](https://github.com/atomiks/tippyjs)
-Tippy.js is the complete tooltip, popover, dropdown, and menu solution for the web, powered by **[Popper](https://popper.js.org/)**.
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
 
-🐙 [vueform/vueform](https://github.com/vueform/vueform)
+<WebLinkSection emoji="🐙" url="https://github.com/atomiks/tippyjs" text="Tippy.js - Tooltip, Popover, Dropdown, and Menu Library" templateClass="mt-4">
+Tippy.js is the complete tooltip, popover, dropdown, and menu solution for the web, powered by **[Popper](https://popper.js.org/?utm_source=cocoweb.fr)**.
+</ WebLinkSection>
+
+<WebLinkSection emoji="🐙" url="https://github.com/vueform/vueform" text="vueform/vueform" templateClass="mt-4">
 Open-Source Form Framework for Vue 💚
+</ WebLinkSection>
 
-## Design & CSS
+<h2 class="font-display text-2xl text-foreground mt-8">Design & CSS</h2>
 
-🎨 [300+ High-quality TailwindCSS Components & Templates](https://tailspark.co/)
+<WebLinkSection emoji="🎨" url="https://tailspark.co/" text="300+ High-quality TailwindCSS Components &amp; Templates" templateClass="mt-4">
 A collections of free and premium components for your project build with TailwindCSS.
+</ WebLinkSection>

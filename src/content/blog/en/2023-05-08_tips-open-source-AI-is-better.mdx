@@ -9,25 +9,56 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-"We Have No Moat, And Neither Does OpenAI" in a [Leaked Google document](https://simonwillison.net/2023/May/4/no-moat/) about LLM model like bard versus open source model.
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-[Simpler cookie notices](https://www.thomasvantuycom.com/writing/simpler-cookie-notices/) with the [Cookie Store API](https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API) and the new [native dialog element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Leaked Google document" />
+  <AnchorLink emoji="📗" text="Simpler cookie notices" />
+  <AnchorLink emoji="📗" text="Linen" />
+</AnchorWrapper>
 
-[Linen](https://www.linen.dev/) is a real-time chat platform built for communities. An alternative to slack.
+<TextSeparator />
 
-## Repository Github
+<AnchorSection emoji="📗" id="leaked-google-document" text="Leaked Google document" url="https://simonwillison.net/2023/May/4/no-moat/" />
 
-[Libsql](https://github.com/libsql/libsql)
+<p class="mt-2">
+"We Have No Moat, And Neither Does OpenAI" in a [Leaked Google document](https://simonwillison.net/2023/May/4/no-moat/?utm_source=cocoweb.fr) about LLM model like bard versus open source model.
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="simpler-cookie-notices" text="Simpler cookie notices" url="https://www.thomasvantuycom.com/writing/simpler-cookie-notices/" />
+
+<p class="mt-2">
+[Simpler cookie notices](https://www.thomasvantuycom.com/writing/simpler-cookie-notices/?utm_source=cocoweb.fr) with the [Cookie Store API](https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API?utm_source=cocoweb.fr) and the new [native dialog element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog?utm_source=cocoweb.fr)
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📗" id="linen" text="Linen" url="https://www.linen.dev/" />
+
+<p class="mt-2">
+[Linen](https://www.linen.dev/?utm_source=cocoweb.fr) is a real-time chat platform built for communities. An alternative to slack.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="📌" url="https://github.com/libsql/libsql" text="Libsql" templateClass="mt-4">
 LibSQL is a fork of SQLite that is both Open Source, and Open Contributions.
+</ WebLinkSection>
 
-[Ink UI](https://github.com/vadimdemedes/ink-ui)
-
+<WebLinkSection emoji="📌" url="https://github.com/vadimdemedes/ink-ui" text="Ink UI" templateClass="mt-4">
 💄 Ink-redible command-line interfaces made easy
+</ WebLinkSection>
 
-## Data
+<h2 class="font-display text-2xl text-foreground mt-8">Data</h2>
 
-Acryl Data takes the industry’s number one open source data catalog, DataHub, to the next level with advanced features.
-[Acryl Data](https://www.acryldata.io/)
+<WebLinkSection emoji="📌" url="https://www.acryldata.io/" text="Acryl Data" templateClass="mt-4">
+</ WebLinkSection>

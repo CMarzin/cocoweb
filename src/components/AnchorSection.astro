@@ -1,29 +1,36 @@
 ---
 /**
  * AnchorSection component
- * Creates a section with an id anchor and emoji prefix.
- * Replaces the Eleventy paired shortcode: {% anchorSection "emoji", "id" %}...{% endanchorSection %}
- * 
+ * Creates a section with an id anchor and emoji prefix and a link.
+ *
  * @example
- * <AnchorSection emoji="📖" id="introduction">
- *   Contenu de la section...
- * </AnchorSection>
- * Renders: <span id="introduction">📖</span> [slot content]
+ * <AnchorSection emoji="📖" id="introduction" text="Contenu de la section" url="https://google.fr/" />
+ * Renders:
+ * <div>
+ *  <span id="introduction">📖</span>
+ *  <a href="https://google.fr/?utm_source=cocoweb.fr">Contenu de la section</a>
+ * </div>
  */
 
 interface Props {
   emoji: string;
   id: string;
+  text: string;
+  url: string;
+  componentClass?: string;
 }
 
-const { emoji, id } = Astro.props;
+const { emoji, id, text, url, componentClass = "" } = Astro.props;
 ---
 
-<span id={id} class="anchor-section-emoji">{emoji}</span>
-<slot />
-
-<style>
-  .anchor-section-emoji {
-    scroll-margin-top: 2rem;
-  }
-</style>
+<div
+  class:list={componentClass}
+  class="flex gap-2 hover:text-primary transition-colors duration-200 w-fit"
+>
+  <span id={id}>{emoji}</span>
+  <a
+    href={`${url}?utm_source=cocoweb.fr`}
+    class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
+    >{text}</a
+  >
+</div>

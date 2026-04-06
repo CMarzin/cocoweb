@@ -12,86 +12,117 @@ tags:
   - AI
 ---
 
-## CSS
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-### [Try out CSS Nesting today | WebKit](https://webkit.org/blog/13813/try-css-nesting-today-in-safari-technology-preview/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
+<AnchorWrapper>
+  <AnchorLink emoji="###" text="Try out CSS Nesting today | WebKit" />
+  <AnchorLink emoji="###" text="Container queries land in stable browsers" />
+  <AnchorLink emoji="###" text="The modern web’s underrated powerhouse · GitHub" />
+  <AnchorLink emoji="###" text="Refactoring UI" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="###" id="try-out-css-nesting-today-webkit" text="Try out CSS Nesting today | WebKit" url="https://webkit.org/blog/13813/try-css-nesting-today-in-safari-technology-preview/" />
+
+<p class="mt-2">
 If you have a Mac, simply download and open Safari Technology Preview, write some nested CSS, and experience how it works !
+</p>
 
-### [Container queries land in stable browsers](https://web.dev/cq-stable/)
+<AnchorSection componentClass="mt-2" emoji="###" id="container-queries-land-in-stable-browsers" text="Container queries land in stable browsers" url="https://web.dev/cq-stable/" />
 
+<p class="mt-2">
 This Valentine's day, we're celebrating size container queries and container query units landing in all stable browsers.
+</p>
 
-### [The modern web’s underrated powerhouse · GitHub](https://github.com/readme/featured/css-future)
+<AnchorSection componentClass="mt-2" emoji="###" id="the-modern-webs-underrated-powerhouse-github" text="The modern web’s underrated powerhouse · GitHub" url="https://github.com/readme/featured/css-future" />
 
+<p class="mt-2">
 IT’S ONE OF THE MOST IMPORTANT YET UNDER-APPRECIATED BUILDING BLOCKS OF THE INTERNET.
+</p>
 
-### [Refactoring UI](https://www.refactoringui.com/)
+<AnchorSection componentClass="mt-2" emoji="###" id="refactoring-ui" text="Refactoring UI" url="https://www.refactoringui.com/" />
+
+<p class="mt-2">
 Make your ideas look awesome, without relying on a designer.
 Learn how to design beautiful user interfaces by yourself using specific tactics explained from a developer's point-of-view.
+</p>
 
-## Veille
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-### [How Levels.fyi scaled to millions of users with Google Sheets as a backend](https://www.levels.fyi/blog/scaling-to-millions-with-google-sheets.html)
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
 
-### [V-Model in Vue3 | Evan’s Blog](https://vanoneang.github.io/article/v-model-in-vue3.html#turn-it-into-a-composable)
+<WebLinkSection emoji="###" url="https://www.levels.fyi/blog/scaling-to-millions-with-google-sheets.html" text="How Levels.fyi scaled to millions of users with Google Sheets as a backend" templateClass="mt-4">
+</ WebLinkSection>
 
+<WebLinkSection emoji="###" url="https://vanoneang.github.io/article/v-model-in-vue3.html#turn-it-into-a-composable" text="V-Model in Vue3 | Evan’s Blog" templateClass="mt-4">
 Create a composable with a v-model in Vue3.
+</ WebLinkSection>
 
-### [Coglode Cookbook](https://www.coglode.com/cookbook)
-
+<WebLinkSection emoji="###" url="https://www.coglode.com/cookbook" text="Coglode Cookbook" templateClass="mt-4">
 A websites which regroup a lot of research around UX knowledge with a really cool UI.
+</ WebLinkSection>
 
-### [Web Push for Web Apps on iOS and iPadOS | WebKit](https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/)
-
+<WebLinkSection emoji="###" url="https://webkit.org/blog/13878/web-push-for-web-apps-on-ios-and-ipados/" text="Web Push for Web Apps on iOS and iPadOS | WebKit" templateClass="mt-4">
 Today marks the release of iOS and iPadOS 16.4 beta 1, and with it comes support for Web Push and other features for Home Screen web apps.
+</ WebLinkSection>
 
-## Library
+<h2 class="font-display text-2xl text-foreground mt-8">Library</h2>
 
-### [Tangle](https://tanglesync.com/#BigPlumpSparrow)
-
+<WebLinkSection emoji="###" url="https://tanglesync.com/#BigPlumpSparrow" text="Tangle" templateClass="mt-4">
 Tangle is an open-source JavaScript library that radically simplifies building multiplayer and networked programs. Tangle works by wrapping a regular WebAssembly program to automatically network it.
+</ WebLinkSection>
 
-### [GitHub - egoist/tailwindcss-icons: Use any icon (100,000+) from Iconify, for TailwindCSS](https://github.com/egoist/tailwindcss-icons)
-
+<WebLinkSection emoji="###" url="https://github.com/egoist/tailwindcss-icons" text="GitHub - egoist/tailwindcss-icons: Use any icon (100,000+) from Iconify, for TailwindCSS" templateClass="mt-4">
 Use any icon (100,000+) from Iconify, for TailwindCSS
+</ WebLinkSection>
 
-## AI
+<h2 class="font-display text-2xl text-foreground mt-8">AI</h2>
 
-### [GitHub - transitive-bullshit/bing-chat: Node.js client for Bing’s new AI-powered search. It’s like ChatGPT on steroids 🔥](https://github.com/transitive-bullshit/bing-chat)
-
+<WebLinkSection emoji="###" url="https://github.com/transitive-bullshit/bing-chat" text="GitHub - transitive-bullshit/bing-chat: Node.js client for Bing’s new AI-powered search. It’s like ChatGPT on steroids 🔥" templateClass="mt-4">
 Node.js client for Bing's new AI-powered search. It's like ChatGPT on steroids 🔥
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-### [Locomotive](https://locomotive.ca/en)
-
+<WebLinkSection emoji="###" url="https://locomotive.ca/en" text="Locomotive" templateClass="mt-4">
 Very cool, well designed sites.
+</ WebLinkSection>
 
-### [Swiss Typefaces](https://www.swisstypefaces.com/)
-
+<WebLinkSection emoji="###" url="https://www.swisstypefaces.com/" text="Swiss Typefaces" templateClass="mt-4">
 Designers typefaces.
+</ WebLinkSection>
 
-### [Building Your Color Palette - Refactoring UI](https://www.refactoringui.com/previews/building-your-color-palette)
+<WebLinkSection emoji="###" url="https://www.refactoringui.com/previews/building-your-color-palette" text="Building Your Color Palette - Refactoring UI" templateClass="mt-4">
+</ WebLinkSection>
 
-## Web tools
+<h2 class="font-display text-2xl text-foreground mt-8">Web tools</h2>
 
-### [grep.app | code search](https://grep.app/)
-
+<WebLinkSection emoji="###" url="https://grep.app/" text="grep.app | code search" templateClass="mt-4">
 Search across a half million git repos. Its google but for github repository.
+</ WebLinkSection>
 
-### [A Web Developer’s Browser | Responsively App](https://responsively.app/)
-
+<WebLinkSection emoji="###" url="https://responsively.app/" text="A Web Developer’s Browser | Responsively App" templateClass="mt-4">
 See your app in multiple sizes in the same time.
+</ WebLinkSection>
 
-### [WebContainers - Dev environments. In your web app. | WebContainers](https://webcontainers.io/)
-
+<WebLinkSection emoji="###" url="https://webcontainers.io/" text="WebContainers - Dev environments. In your web app. | WebContainers" templateClass="mt-4">
 Dev environments, in your web app.
+</ WebLinkSection>
 
-### [Announcing Sandpack 2.0 and a Node.js runtime for any browser](https://codesandbox.io/blog/announcing-sandpack-2)
-
+<WebLinkSection emoji="###" url="https://codesandbox.io/blog/announcing-sandpack-2" text="Announcing Sandpack 2.0 and a Node.js runtime for any browser" templateClass="mt-4">
 We are beyond excited to introduce Sandpack 2.0, which brings a Node.js runtime that runs in every browser.
+</ WebLinkSection>
 
-### [Yal](https://github.com/srsholmes/yal)
-
-Yal (Yet Another Launcher) is a launcher app similar to Alfred, Raycast, ScriptKit, Spotlight, and many others. 
+<WebLinkSection emoji="###" url="https://github.com/srsholmes/yal" text="Yal" templateClass="mt-4">
+Yal (Yet Another Launcher) is a launcher app similar to Alfred, Raycast, ScriptKit, Spotlight, and many others.
+</ WebLinkSection>

@@ -10,34 +10,75 @@ tags:
   - vuejs
   - TS
 ---
-## Veille
 
-📗 [No dogs were harmed in the making of this app](https://shmck.substack.com/p/no-dogs-were-harmed-in-the-making)
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="No dogs were harmed in the making of this app" />
+  <AnchorLink emoji="📗" text="Nuxt DevTools v1.0 · Nuxt Blog" />
+  <AnchorLink emoji="📗" text="Node v20.10.0" />
+  <AnchorLink emoji="📗" text="esm-dev/esm.sh version 135" />
+  <AnchorLink emoji="📗" text="Build a Lightweight Code Generator with TypeScript and JSON Imports" />
+  <AnchorLink emoji="📗" text="TypeHero" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="no-dogs-were-harmed-in-the-making-of-this-app" text="No dogs were harmed in the making of this app" url="https://shmck.substack.com/p/no-dogs-were-harmed-in-the-making" />
+
+<p class="mt-2">
 A reminder of how good we have it as software developers, or perhaps how hard it is for everyone else.
+</p>
 
-📗 [Nuxt DevTools v1.0 · Nuxt Blog](https://nuxt.com/blog/nuxt-devtools-v1-0)
+<AnchorSection componentClass="mt-2" emoji="📗" id="nuxt-devtools-v10-nuxt-blog" text="Nuxt DevTools v1.0 · Nuxt Blog" url="https://nuxt.com/blog/nuxt-devtools-v1-0" />
+
+<p class="mt-2">
 Nuxt DevTools v1.0, this version build the road to a global Devtools for every Vuejs projects not just Nuxt project.
+</p>
 
-📗 [Node v20.10.0](https://nodejs.org/en/blog/release/v20.10.0)
+<AnchorSection componentClass="mt-2" emoji="📗" id="node-v20100" text="Node v20.10.0" url="https://nodejs.org/en/blog/release/v20.10.0" />
+
+<p class="mt-2">
 Node 20 is in long time support, time to upgrade your projects.
+</p>
 
-📗 [esm-dev/esm.sh version 135](https://github.com/esm-dev/esm.sh/releases/tag/v135)
+<AnchorSection componentClass="mt-2" emoji="📗" id="esm-devesmsh-version-135" text="esm-dev/esm.sh version 135" url="https://github.com/esm-dev/esm.sh/releases/tag/v135" />
+
+<p class="mt-2">
 A **1KB** script allows you to write **jsx/tsx** in HTML *without build*!
+</p>
 
-### Typescript
+<AnchorSection componentClass="mt-2" emoji="📗" id="build-a-lightweight-code-generator-with-typescript-and-json-imports" text="Build a Lightweight Code Generator with TypeScript and JSON Imports" url="https://spin.atomicobject.com/2023/11/08/code-generator-typescript-json/" />
 
-📗 [Build a Lightweight Code Generator with TypeScript and JSON Imports](https://spin.atomicobject.com/2023/11/08/code-generator-typescript-json/)
+<p class="mt-2">
 Use the power of TS to derive types from a JSON file with very little code.
+</p>
 
-📗 [TypeHero](https://typehero.dev/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="typehero" text="TypeHero" url="https://typehero.dev/" />
+
+<p class="mt-2">
 Advent of TypeScript, everyday Typescript challenge starting December first.
+</p>
 
-## Vuejs
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-💚 [Make Vue's template refs clean & simple](https://dev.to/iamsonnn/make-vues-template-refs-clean-simple-1ll7)
+<h2 class="font-display text-2xl text-foreground">Vuejs</h2>
+
+<WebLinkSection emoji="💚" url="https://dev.to/iamsonnn/make-vues-template-refs-clean-simple-1ll7" text="Make Vue's template refs clean &amp; simple" templateClass="mt-4">
 A little TS technique, for using the types from the DOM api.
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-🎨 [Growth design](https://growth.design/psychology)
+<WebLinkSection emoji="🎨" url="https://growth.design/psychology" text="Growth design" templateClass="mt-4">
 106 Cognitive Biases & Principles That Affect Your UX
+</ WebLinkSection>

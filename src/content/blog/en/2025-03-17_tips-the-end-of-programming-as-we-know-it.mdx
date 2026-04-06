@@ -10,47 +10,71 @@ tags:
   - self-host
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤖 The end of programming as we know it
-🚀 AI enchanced development
-🤯 AX, DX, UX
-🧐 Can You Get Better Doing a Bad Job ?
-✨ Aspect Ratio Changes With CSS View Transitions
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="The end of programming as we know it" />
+  <AnchorLink emoji="🚀" text="AI enchanced development" />
+  <AnchorLink emoji="🤯" text="AX, DX, UX" />
+  <AnchorLink emoji="🧐" text="Can You Get Better Doing a Bad Job ?" />
+  <AnchorLink emoji="✨" text="Aspect Ratio Changes With CSS View Transitions" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="the-end-of-programming-as-we-know-it" text="The end of programming as we know it" url="https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/" />
 
-🤖 [The end of programming as we know it](https://www.oreilly.com/radar/the-end-of-programming-as-we-know-it/)
+<p class="mt-2">
 AI will not replace programmer, it just starting to reinvent the way we program. This is the start of a new digital revolution, so AI enhanced development will led a lot of programmer to be a lot more ambitious with their projects.
+</p>
 
-🚀 [AI-enhanced development](https://simonwillison.net/2023/Mar/27/ai-enhanced-development/)
+<AnchorSection componentClass="mt-2" emoji="🚀" id="ai-enhanced-development" text="AI-enhanced development" url="https://simonwillison.net/2023/Mar/27/ai-enhanced-development/" />
+
+<p class="mt-2">
 Simon Willison’s describe a practical project which he made with the help of ChatGPT in the matter of hours/days instead of week. He build a custom system to archive his ChatGPT messages into his own server.
+</p>
 
-🤯 [AX, DX, UX](https://blog.jim-nielsen.com/2025/thoughts-on-ax/)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="ax-dx-ux" text="AX, DX, UX" url="https://blog.jim-nielsen.com/2025/thoughts-on-ax/" />
+
+<p class="mt-2">
 In the future, will it be software made specifically for « Agent experience », software specifically made for the use of AI ? To me I think we need to still concentrate in « User experience » first, « Developer experience » and maybe « Agent experience » last.
+</p>
 
-🧐 [Can You Get Better Doing a Bad Job?](https://blog.jim-nielsen.com/2025/get-better-doing-a-bad-job/)
+<AnchorSection componentClass="mt-2" emoji="🧐" id="can-you-get-better-doing-a-bad-job" text="Can You Get Better Doing a Bad Job?" url="https://blog.jim-nielsen.com/2025/get-better-doing-a-bad-job/" />
+
+<p class="mt-2">
 A great point is if you know you are doing a bad job, you just forget what you did and don’t want to thinks about it in a technical point of view.
+</p>
 
-✨ [Aspect Ratio Changes With CSS View Transitions](https://blog.jim-nielsen.com/2025/aspect-ratio-in-css-view-transitions)
+<AnchorSection componentClass="mt-2" emoji="✨" id="aspect-ratio-changes-with-css-view-transitions" text="Aspect Ratio Changes With CSS View Transitions" url="https://blog.jim-nielsen.com/2025/aspect-ratio-in-css-view-transitions" />
+
+<p class="mt-2">
 Great article to fix outline width of the text when there is a page transition.
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
-
-😎 [glanceapp/glance](https://github.com/glanceapp/glance)
+<WebLinkSection emoji="😎" url="https://github.com/glanceapp/glance" text="glanceapp/glance" templateClass="mt-4">
 A self-hosted dashboard that puts all your feeds in one place
+</ WebLinkSection>
 
-🌟 [encode/starlette](https://github.com/encode/starlette)
-Starlette is a lightweight ~[ASGI](https://asgi.readthedocs.io/en/latest/)~ framework/toolkit, which is ideal for building async web services in Python.
+<WebLinkSection emoji="🌟" url="https://github.com/encode/starlette" text="encode/starlette" templateClass="mt-4">
+Starlette is a lightweight ~[ASGI](https://asgi.readthedocs.io/en/latest/?utm_source=cocoweb.fr)~ framework/toolkit, which is ideal for building async web services in Python.
+</ WebLinkSection>
 
-## Fun
+<h2 class="font-display text-2xl text-foreground mt-8">Fun</h2>
 
-📜 [Scroll buddy](https://scrollbuddy.com/)
+<WebLinkSection emoji="📜" url="https://scrollbuddy.com/" text="Scroll buddy" templateClass="mt-4">
 Instead of a boring scroll bar, thought it would be fun to have an animated stick figure that walks down the page when you scroll.
+</ WebLinkSection>

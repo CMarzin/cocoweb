@@ -12,41 +12,59 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="📹" text="STOP. Using AI Right now" />
-<AnchorLink emoji="👀" text="Snapchat open source their UI Framework" />
-<AnchorLink emoji="📸" text="Moment Pro Camera Version 2" />
-<AnchorLink emoji="🪼" text="Jelly slider" />
+<AnchorWrapper>
+  <AnchorLink emoji="📹" text="STOP. Using AI Right now" />
+  <AnchorLink emoji="👀" text="Snapchat open source their UI Framework" />
+  <AnchorLink emoji="📸" text="Moment Pro Camera Version 2" />
+  <AnchorLink emoji="🪼" text="Jelly slider" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📹" id="stop-using-ai-right-now" text="STOP. Using AI Right now" url="https://www.youtube.com/watch?v=qw4fDU18RcU" />
 
-<AnchorSection emoji="📹" id="stop.-using-ai-right-now">[STOP. Using AI Right now](https://www.youtube.com/watch?v=qw4fDU18RcU)</AnchorSection>
+<p class="mt-2">
 PewDiePie show his use of AI, local first on his own machine and text only. Its use also the power of his machine to help researcher make a lot of calculation on protein for example.
+</p>
 
-<AnchorSection emoji="👀" id="snapchat-open-source-their-ui-framework">[Snapchat/Valdi](https://github.com/Snapchat/Valdi)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="👀" id="snapchatvaldi" text="Snapchat/Valdi" url="https://github.com/Snapchat/Valdi" />
+
+<p class="mt-2">
 Snapchat uses Valdi for the last 8 years to build theirs app. It is build with Typescript and compile directly to native views on iOS, Android, and macOS—no web views, no JavaScript bridges.
+</p>
 
-<AnchorSection emoji="📸" id="moment-pro-camera-version-2">[Moment Pro Camera Version 2](https://x.com/AlecPloof/status/1986477738975502398?s=20)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="📸" id="moment-pro-camera-version-2" text="Moment Pro Camera Version 2" url="https://x.com/AlecPloof/status/1986477738975502398?s=20" />
+
+<p class="mt-2">
 A comparaison of the basic shot on iphone vs with Moment Pro Camera. I really love the photo it feels like an argentic photo. ( I love photography in my spare time sorry it’s not tech ).
+</p>
 
-<AnchorSection emoji="🪼" id="jelly-slider">[Jelly slider with TypeGPU](https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider)</AnchorSection>
-An experiment of a Jelly Slider made with [TypeGPU](https://docs.swmansion.com/TypeGPU/)
+<AnchorSection componentClass="mt-2" emoji="🪼" id="jelly-slider-with-typegpu" text="Jelly slider with TypeGPU" url="https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-slider" />
 
-___
+<p class="mt-2">
+An experiment of a Jelly Slider made with [TypeGPU](https://docs.swmansion.com/TypeGPU/?utm_source=cocoweb.fr)
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🚀 [H3ravel](https://h3ravel.toneflix.net/)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🚀" url="https://h3ravel.toneflix.net/" text="H3ravel" templateClass="mt-4">
 H3ravel - Laravel's Elegance, TypeScript's Power
 A modern TypeScript runtime-agnostic web framework built on top of H3.
+</ WebLinkSection>
 
-## Design inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
 
-✨ [Interactive SVG animations courses](https://www.svg-animations.how/)
+<WebLinkSection emoji="✨" url="https://www.svg-animations.how/" text="Interactive SVG animations courses" templateClass="mt-4">
 I am not paid to talk about this courses, but I find the website beautiful.
+</ WebLinkSection>

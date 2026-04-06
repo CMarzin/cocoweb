@@ -9,20 +9,42 @@ tags:
   - CSS
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [The Ultimate Guide to Raycast Productivity for Developers](https://michalkuncio.com/the-ultimate-guide-to-raycast-productivity-for-developers/)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-## Repository Github
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="The Ultimate Guide to Raycast Productivity for Developers" />
+</AnchorWrapper>
 
-🐙 [movie-web/movie-web](https://github.com/movie-web/movie-web)
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="the-ultimate-guide-to-raycast-productivity-for-developers" text="The Ultimate Guide to Raycast Productivity for Developers" url="https://michalkuncio.com/the-ultimate-guide-to-raycast-productivity-for-developers/" />
+
+<p class="mt-2">
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/movie-web/movie-web" text="movie-web/movie-web" templateClass="mt-4">
 A small web app for watching movies and shows easily.
+</ WebLinkSection>
 
-## CSS
+<h2 class="font-display text-2xl text-foreground mt-8">CSS</h2>
 
-🎨 [Project Wallace](https://www.projectwallace.com/)
+<WebLinkSection emoji="🎨" url="https://www.projectwallace.com/" text="Project Wallace" templateClass="mt-4">
 Project Wallace is a set of CSS analyzers that check your complexity, specificity, performance, Design Tokens and much more. And all of that in a single web app.
+</ WebLinkSection>
 
-🎨 [Fully clickable element with link inside](https://gist.github.com/bartveneman/c2b828dcd63340177e12a5100041ac7b)
+<WebLinkSection emoji="🎨" url="https://gist.github.com/bartveneman/c2b828dcd63340177e12a5100041ac7b" text="Fully clickable element with link inside" templateClass="mt-4">
 Little gist for creating a fully clickable element with pseudo element after.
-
+</ WebLinkSection>

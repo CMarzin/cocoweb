@@ -10,25 +10,54 @@ tags:
   - design
   - data
 ---
-## CSS & Design
 
-Container queries is stable in every major browser.
-What's new in [CSS and UI: I/O 2023 Edition](https://developer.chrome.com/en/blog/whats-new-css-ui-2023/) by the chrome developer team.
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-[Specify](https://specifyapp.com/), design system infrastructure for modern teams.
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-## Veille
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="CSS and UI: I/O 2023 Edition" />
+  <AnchorLink emoji="📗" text="Specify" />
+</AnchorWrapper>
 
-[The ongoing defence of frontend as a full-time job | Christian Heilmann](https://christianheilmann.com/2023/05/09/the-ongoing-defence-of-frontend-as-a-full-time-job/)
+<TextSeparator />
 
-## Repository Github
+<AnchorSection emoji="📗" id="css-and-ui-io-2023-edition" text="CSS and UI: I/O 2023 Edition" url="https://developer.chrome.com/en/blog/whats-new-css-ui-2023/" />
 
-Zero-Dependency, Build-Free JavaScript Framework [Strawberry](https://18alan.space/strawberry/).
+<p class="mt-2">
+What's new in [CSS and UI: I/O 2023 Edition](https://developer.chrome.com/en/blog/whats-new-css-ui-2023/?utm_source=cocoweb.fr) by the chrome developer team.
+</p>
 
-ESLint rules for consistent filename and folder. Allows you to enforce a consistent naming pattern for the filename and folder.
-[eslint-plugin-check-file](https://github.com/DukeLuo/eslint-plugin-check-file)
+<AnchorSection componentClass="mt-2" emoji="📗" id="specify" text="Specify" url="https://specifyapp.com/" />
 
-## Data
+<p class="mt-2">
+[Specify](https://specifyapp.com/?utm_source=cocoweb.fr), design system infrastructure for modern teams.
+</p>
 
-Open Source Integration and Data Platform.
-[CPTN.IO](https://cptn.io/)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
+
+<WebLinkSection emoji="📌" url="https://christianheilmann.com/2023/05/09/the-ongoing-defence-of-frontend-as-a-full-time-job/" text="The ongoing defence of frontend as a full-time job | Christian Heilmann" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Github</h2>
+
+<WebLinkSection emoji="📌" url="https://18alan.space/strawberry/" text="Strawberry" templateClass="mt-4">
+Zero-Dependency, Build-Free JavaScript Framework [Strawberry](https://18alan.space/strawberry/?utm_source=cocoweb.fr).
+</ WebLinkSection>
+
+<WebLinkSection emoji="📌" url="https://github.com/DukeLuo/eslint-plugin-check-file" text="eslint-plugin-check-file" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Data</h2>
+
+<WebLinkSection emoji="📌" url="https://cptn.io/" text="CPTN.IO" templateClass="mt-4">
+</ WebLinkSection>

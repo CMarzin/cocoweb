@@ -13,47 +13,56 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🫠" text="The Tailwind AI problem" />
-<AnchorLink emoji="😅" text="Open source to closed source ?" />
-<AnchorLink emoji="🧘" text="A tech career in 2026" />
-<AnchorLink emoji="💡" text="50 ways of using Claude Code" />
+<AnchorWrapper>
+  <AnchorLink emoji="🫠" text="The Tailwind AI problem" />
+  <AnchorLink emoji="😅" text="Open source to closed source ?" />
+  <AnchorLink emoji="🧘" text="A tech career in 2026" />
+  <AnchorLink emoji="💡" text="50 ways of using Claude Code" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🫠" id="the-tailwind-ai-problem" text="The Tailwind AI problem" url="https://github.com/tailwindlabs/tailwindcss.com/pull/2388#issuecomment-3717222957?utm_source=cocoweb.fr" />
 
-<AnchorSection emoji="🫠" id="the-tailwind-ai-problem">[The Tailwind AI problem](https://github.com/tailwindlabs/tailwindcss.com/pull/2388#issuecomment-3717222957?utm_source=cocoweb.fr)</AnchorSection>
+<p class="mt-2">
 The creator of tailwind refused to add a LLM.txt to its documentation because, the commercial revenue of tailwind is down by 80% and it just laid off 75% of its engineering team.
+</p>
 
-It’s notorious the difficulty for open source devs to make money, but with AI now we don’t have a to go to check the doc ( you should still ), and the business of Tailwind was ads from their prenium UI kit in their doc.
+<AnchorSection componentClass="mt-2" emoji="😅" id="open-source-to-closed-source" text="Open source to closed source ?" url="https://x.com/MarcJSchmidt/status/2009688028931875156" />
 
-After this got a lot of traction, a lot of big company and tech influencer has donated to Tailwind, which will gave the time to Adam and it team to find a another way to monetize. 
+<p class="mt-2">
+[Marc j. schmidt](https://github.com/marcj?utm_source=cocoweb.fr) a proeminent open-source developer, author of [Deepkit](https://github.com/marcj/deepkit?utm_source=cocoweb.fr) or [php-fm](https://github.com/php-pm/php-pm?utm_source=cocoweb.fr) to cite only them. He write about the damage of AI, where they juste steal the work of everyone without asking or give anything in return.
+</p>
 
-<AnchorSection emoji="😅" id="open-source-to-closed-source-?">[Open source to closed source ?](https://x.com/MarcJSchmidt/status/2009688028931875156?utm_source=cocoweb.fr)</AnchorSection>
-[Marc j. schmidt](https://github.com/marcj) a proeminent open-source developer, author of [Deepkit](https://github.com/marcj/deepkit) or [php-fm](https://github.com/php-pm/php-pm) to cite only them. He write about the damage of AI, where they juste steal the work of everyone without asking or give anything in return. 
+<AnchorSection componentClass="mt-2" emoji="🧘" id="a-tech-career-in-2026" text="A tech career in 2026" url="https://www.anildash.com/2026/01/05/a-tech-career-in-2026/" />
 
-He decided to let his current project open-source but his newer project will be closed source for now on.
-
-<AnchorSection emoji="🧘" id="a-tech-career-in-2026">[A tech career in 2026](https://www.anildash.com/2026/01/05/a-tech-career-in-2026/?utm_source=cocoweb.fr)</AnchorSection>
+<p class="mt-2">
 With the rise of AI and the layoffs everywhere the avenir is very grim for tech worker in 2026, but I like the ending of the article.
+</p>
 
-«  I do hope, though, that people can see that, by sticking together, and focusing on the things that are within our reach, things can begin to change. All it takes is remembering that the power in tech truly rests with all the people who actually *make* things, not with the loudmouths at the top who try to tear things down. »
+<AnchorSection componentClass="mt-2" emoji="💡" id="50-ways-of-using-claude-code" text="50 ways of using Claude Code" url="https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code" />
 
-<AnchorSection emoji="💡" id="50-ways-of-using-claude-code">[50 ways of using Claude Code](https://www.lennysnewsletter.com/p/everyone-should-be-using-claude-code?utm_source=cocoweb.fr)</AnchorSection>
+<p class="mt-2">
 50 ways of using Claude Code from the perpective of non tech person. I love the guy who used Claude to help him from a sketch of a slide to a real life slide.
+</p>
 
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
-
-🍞 [mixedbread-ai/mgrep](https://github.com/mixedbread-ai/mgrep)
+<WebLinkSection emoji="🍞" url="https://github.com/mixedbread-ai/mgrep" text="mixedbread-ai/mgrep" templateClass="mt-4">
 A calm, CLI-native way to semantically grep everything, like code, images, pdfs and more
+</ WebLinkSection>
 
-🦀 [ClawdBot](https://github.com/clawdbot/clawdbot?tab=readme-ov-file)
+<WebLinkSection emoji="🦀" url="https://github.com/clawdbot/clawdbot?tab=readme-ov-file" text="ClawdBot" templateClass="mt-4">
 Your own personal AI assistant. Any OS. Any Platform.
+</ WebLinkSection>

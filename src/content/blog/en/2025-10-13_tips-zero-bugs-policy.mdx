@@ -12,44 +12,65 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="🐞" text="Why we committed to a zero-bugs policy" />
-<AnchorLink emoji="⚡️" text="Vite: The Documentary" />
-<AnchorLink emoji="🧰" text="The UnifiedToolchain for the Web" />
-<AnchorLink emoji="🤖" text="Effective context engineering for AI agents" />
+<AnchorWrapper>
+  <AnchorLink emoji="🐞" text="Why we committed to a zero-bugs policy" />
+  <AnchorLink emoji="⚡️" text="Vite: The Documentary" />
+  <AnchorLink emoji="🧰" text="The UnifiedToolchain for the Web" />
+  <AnchorLink emoji="🤖" text="Effective context engineering for AI agents" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🐞" id="why-we-committed-to-a-zero-bugs-policy" text="Why we committed to a zero-bugs policy" url="https://linear.app/now/zero-bugs-policy" />
 
-<AnchorSection emoji="🐞" id="why-we-committed-to-a-zero-bugs-policy">[Why we committed to a zero-bugs policy](https://linear.app/now/zero-bugs-policy)</AnchorSection>
+<p class="mt-2">
 I am really impressed by the culture at Linear of the zero-bugs policy. They put the quality of the sofware first, it benefits everyone to have a software without bugs. Maybe one day, I will work in a company who put quality above all else or maybe my own ^^.
+</p>
 
-<AnchorSection emoji="⚡️" id="vite:-the-documentary">[Vite: The Documentary](https://www.youtube.com/watch?v=bmWQqAKLgT4)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="⚡️" id="vite-the-documentary" text="Vite: The Documentary" url="https://www.youtube.com/watch?v=bmWQqAKLgT4" />
+
+<p class="mt-2">
 Finally, the documentary of Vite, the bundler created by Evan You the creator of Vuejs.
+</p>
 
-<AnchorSection emoji="🧰" id="the-unifiedtoolchain-for-the-web">[The UnifiedToolchain for the Web](https://viteplus.dev/)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🧰" id="the-unifiedtoolchain-for-the-web" text="The UnifiedToolchain for the Web" url="https://viteplus.dev/" />
+
+<p class="mt-2">
 Vite+ by Void zero the company of Evan You.
 With Vite+ you can dev, build, test, lint, format, monorepo caching & more in a single dependency, built for scale, speed, and sanity.
 It's the next step of Void zero, make a success of an unified toolchain for javascript where tools like Rome from facebook had failed.
+</p>
 
-<AnchorSection emoji="🤖" id="effective-context-engineering-for-ai-agents">[Effective context engineering for AI agents](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🤖" id="effective-context-engineering-for-ai-agents" text="Effective context engineering for AI agents" url="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" />
+
+<p class="mt-2">
 After prompt engineering, now it's time to context engineering to take place, the major difference between the two is before the LLM'S only had our input written with a systemp prompt and the LLM'S  had to try on his own to respond to the user input.
 Now, you pass specific files, documents and the LLM'S is much more accurate because it will know were to look first.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🧡 [Cloudflare Workers Platform](https://workers.cloudflare.com/)
- [With the marketing motion.](https://x.com/floguo/status/1976671640324030528)
+<WebLinkSection emoji="🧡" url="https://workers.cloudflare.com/" text="Cloudflare Workers Platform" templateClass="mt-4">
+</ WebLinkSection>
 
-✈️ [Website Examples For Inspiration on Websitevice](https://websitevice.com/)
+<WebLinkSection emoji="📌" url="https://x.com/floguo/status/1976671640324030528" text="With the marketing motion." templateClass="mt-4">
+</ WebLinkSection>
+
+<WebLinkSection emoji="✈️" url="https://websitevice.com/" text="Website Examples For Inspiration on Websitevice" templateClass="mt-4">
 3500+ website examples for inspiration.
+</ WebLinkSection>
 
-✨ [A cross-browser library of CSS animations.](https://animate.style/)
+<WebLinkSection emoji="✨" url="https://animate.style/" text="A cross-browser library of CSS animations." templateClass="mt-4">
 **Animate.css** is a library of ready-to-use, cross-browser animations for use in your web projects. Great for emphasis, home pages, sliders, and attention-guiding hints.
+</ WebLinkSection>

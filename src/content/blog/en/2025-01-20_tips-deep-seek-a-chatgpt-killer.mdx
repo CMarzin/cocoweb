@@ -9,42 +9,66 @@ tags:
   - AI
   - CSS
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🐋 DeepSeek, a ChatGPT killer ?
-☁️ Cloudflare documentation migration
-🖼️ A simple masonry-like composable layout
-🤞 CSS wishlist for 2025
+<AnchorWrapper>
+  <AnchorLink emoji="🐋" text="DeepSeek, a ChatGPT killer ?" />
+  <AnchorLink emoji="☁️" text="Cloudflare documentation migration" />
+  <AnchorLink emoji="🖼️" text="A simple masonry-like composable layout" />
+  <AnchorLink emoji="🤞" text="CSS wishlist for 2025" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🐋" id="deepseek-a-chatgpt-killer" text="DeepSeek, a ChatGpt killer ?" url="https://github.com/deepseek-ai/DeepSeek-V3?tab=readme-ov-file" />
 
-🐋  [DeepSeek, a ChatGpt killer ?](https://github.com/deepseek-ai/DeepSeek-V3?tab=readme-ov-file)
+<p class="mt-2">
 A new Open source LLM which is better than ChatGPTo in every domain, It’s not American this time but Chinese 🇨🇳.
+</p>
 
-☁️ [Cloudflare documentation migration](https://blog.cloudflare.com/open-source-all-the-way-down-upgrading-our-developer-documentation/)
+<AnchorSection componentClass="mt-2" emoji="☁️" id="cloudflare-documentation-migration" text="Cloudflare documentation migration" url="https://blog.cloudflare.com/open-source-all-the-way-down-upgrading-our-developer-documentation/" />
+
+<p class="mt-2">
 Cloudflare content team share their thought about migrating their documentation from Hugo to Astro.
+</p>
 
-🖼️ [A simple masonry-like composable layout](https://piccalil.li/blog/a-simple-masonry-like-composable-layout/)
+<AnchorSection componentClass="mt-2" emoji="🖼️" id="a-simple-masonry-like-composable-layout" text="A simple masonry-like composable layout" url="https://piccalil.li/blog/a-simple-masonry-like-composable-layout/" />
+
+<p class="mt-2">
 Andy Bell come up with a masonry layout in CSS before it’s implemented natively in the browsers.
+</p>
 
-🤞[CSS wish list for 2025](https://meyerweb.com/eric/thoughts/2025/01/08/css-wish-list-2025/)
+<AnchorSection componentClass="mt-2" emoji="🤞" id="css-wish-list-for-2025" text="CSS wish list for 2025" url="https://meyerweb.com/eric/thoughts/2025/01/08/css-wish-list-2025/" />
+
+<p class="mt-2">
 Eric Meyer wishlist for 2025, margin and line box trimming, stroked text and exclusions.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🎫 [code-pushup/cli](https://github.com/code-pushup/cli?tab=readme-ov-file)
- A CLI to run all kinds of code quality measurements to align your team with company goals
+<WebLinkSection emoji="🎫" url="https://github.com/code-pushup/cli?tab=readme-ov-file" text="code-pushup/cli" templateClass="mt-4">
+A CLI to run all kinds of code quality measurements to align your team with company goals
+</ WebLinkSection>
 
-✨ [poppinss/youch](https://github.com/poppinss/youch)
+<WebLinkSection emoji="✨" url="https://github.com/poppinss/youch" text="poppinss/youch" templateClass="mt-4">
 Pretty print JavaScript errors on the Web and the Terminal
+</ WebLinkSection>
 
-📗 ["Contemplative reasoning" response style for LLMs like Claude and GPT-4o](https://gist.github.com/Maharshi-Pandya/4aeccbe1dbaa7f89c182bd65d2764203)
+<WebLinkSection emoji="📗" url="https://gist.github.com/Maharshi-Pandya/4aeccbe1dbaa7f89c182bd65d2764203" text="&quot;Contemplative reasoning&quot; response style for LLMs like Claude and GPT-4o" templateClass="mt-4">
+</ WebLinkSection>
 
-✨ [sub-atomic styles](https://open-props.style/)
+<WebLinkSection emoji="✨" url="https://open-props.style/" text="sub-atomic styles" templateClass="mt-4">
 Supercharged CSS variables.
+</ WebLinkSection>

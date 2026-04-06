@@ -1,16 +1,28 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
-import BaseLayout from './BaseLayout.astro';
-import { getLangFromUrl, useTranslations, getLocalizedUrl, type Lang } from '../i18n/utils';
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  getLocalizedUrl,
+  type Lang,
+} from "../i18n/utils";
+
+import TagsWrapper from "@/components/TagsWrapper.astro";
 
 interface Props {
-  frontmatter: CollectionEntry<'articles'>['data'];
+  frontmatter: CollectionEntry<"articles">["data"];
   slug: string;
   lang?: Lang;
   showTranslationNotice?: boolean;
 }
 
-const { frontmatter, slug, lang: propLang, showTranslationNotice = false } = Astro.props;
+const {
+  frontmatter,
+  slug,
+  lang: propLang,
+  showTranslationNotice = false,
+} = Astro.props;
 const { title, description, date, tags, ogImage } = frontmatter;
 
 // Determine language from prop or URL
@@ -18,93 +30,124 @@ const lang = propLang || getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 // Get articles for the current language for prev/next navigation
-const langPrefix = lang === 'en' ? 'en/' : 'fr/';
-let articlesForNav = await getCollection('articles', ({ id }) => id.startsWith(langPrefix));
+const langPrefix = lang === "en" ? "en/" : "fr/";
+let articlesForNav = await getCollection("articles", ({ id }) =>
+  id.startsWith(langPrefix),
+);
 
 // Fallback to French if no English articles
-if (articlesForNav.length === 0 && lang === 'en') {
-  articlesForNav = await getCollection('articles', ({ id }) => id.startsWith('fr/'));
+if (articlesForNav.length === 0 && lang === "en") {
+  articlesForNav = await getCollection("articles", ({ id }) =>
+    id.startsWith("fr/"),
+  );
 }
 
-const sortedArticles = articlesForNav.sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
+const sortedArticles = articlesForNav.sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf(),
+);
 
 // Find current article index (comparing without language prefix)
-const slugWithoutLang = slug.replace(/^(en|fr)\//, '');
-const currentIndex = sortedArticles.findIndex((article) => 
-  article.slug.replace(/^(en|fr)\//, '') === slugWithoutLang
+const slugWithoutLang = slug.replace(/^(en|fr)\//, "");
+const currentIndex = sortedArticles.findIndex(
+  (article) => article.id.replace(/^(en|fr)\//, "") === slugWithoutLang,
 );
-const previousArticle = currentIndex > 0 ? sortedArticles[currentIndex - 1] : null;
-const nextArticle = currentIndex < sortedArticles.length - 1 ? sortedArticles[currentIndex + 1] : null;
+const previousArticle =
+  currentIndex > 0 ? sortedArticles[currentIndex - 1] : null;
+const nextArticle =
+  currentIndex < sortedArticles.length - 1
+    ? sortedArticles[currentIndex + 1]
+    : null;
 
 // Format date for display
 function formatDate(date: Date): string {
-  return date.toLocaleDateString(lang === 'fr' ? 'fr-FR' : 'en-GB', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  return date.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 }
 
 // Format date for datetime attribute
 function formatDateISO(date: Date): string {
-  return date.toISOString().split('T')[0];
+  return date.toISOString().split("T")[0];
 }
 
 // Get localized paths
-const articlesBasePath = getLocalizedUrl('/articles/', lang);
-const tagsBasePath = getLocalizedUrl('/tags/', lang);
+const articlesBasePath = getLocalizedUrl("/articles/", lang);
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  ogImage={ogImage || '/img/og-tips.webp'}
+  ogImage={ogImage || "/img/og-tips.webp"}
   date={date}
   type="article"
   tags={tags}
   templateClass="tmpl-articles"
   lang={lang}
 >
-  {showTranslationNotice && (
-    <div class="translation-notice">
-      {t('post.translation-notice')}
-    </div>
-  )}
+  {
+    showTranslationNotice && (
+      <div class="italic text-sm mb-4 p-2 border border-dashed border-accent rounded">
+        {t("post.translation-notice")}
+      </div>
+    )
+  }
 
-  <h1>{title}</h1>
+  <h1
+    class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
+  >
+    {title}
+  </h1>
 
-  <time class="postlist-date" datetime={formatDateISO(date)}>
+  <time
+    class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
+    datetime={formatDateISO(date)}
+  >
     {formatDate(date)}
   </time>
 
-  <div class="post-tag__container">
-    {tags.map((tag) => (
-      <a href={`${tagsBasePath}${tag.toLowerCase().replace(/\s+/g, '-')}/`} class="post-tag">
-        #{tag}
-      </a>
-    ))}
+  <div class="flex gap-2 flex-wrap tablet:w-full mt-2">
+    <TagsWrapper tags={tags} lang="en" />
   </div>
 
-  <section class="content-section">
+  <section class="content-section mt-8">
     <slot />
   </section>
 
-  {(nextArticle || previousArticle) && (
-    <>
-      <hr class="content-rule-footer" />
+  {
+    (nextArticle || previousArticle) && (
+      <>
+        <hr class="my-6 border-t border-dashed border-accent" />
 
-      <ul>
-        {nextArticle && (
-          <li class="previous-next-page-link">
-            {t('post.next')}: <a href={`${articlesBasePath}${nextArticle.slug.replace(/^(en|fr)\//, '')}/`}>{nextArticle.data.title}</a>
-          </li>
-        )}
-        {previousArticle && (
-          <li class="previous-next-page-link">
-            {t('post.previous')}: <a href={`${articlesBasePath}${previousArticle.slug.replace(/^(en|fr)\//, '')}/`}>{previousArticle.data.title}</a>
-          </li>
-        )}
-      </ul>
-    </>
-  )}
+        <ul class="list-none p-0">
+          {nextArticle && (
+            <li class="previous-next-page-link">
+              {t("post.next")}:{" "}
+              <a
+                href={`${articlesBasePath}${nextArticle.id.replace(/^(en|fr)\//, "")}/`}
+              >
+                {nextArticle.data.title}
+              </a>
+            </li>
+          )}
+          {previousArticle && (
+            <li class="previous-next-page-link">
+              {t("post.previous")}:{" "}
+              <a
+                href={`${articlesBasePath}${previousArticle.id.replace(/^(en|fr)\//, "")}/`}
+              >
+                {previousArticle.data.title}
+              </a>
+            </li>
+          )}
+        </ul>
+      </>
+    )
+  }
+  <style>
+    .content-section :global(p) {
+      margin-top: calc(var(--spacing) * 2);
+    }
+  </style>
 </BaseLayout>

@@ -12,38 +12,76 @@ tags:
   - design
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Type vs Interface: Which Should You Use In 2023?](https://www.totaltypescript.com/type-vs-interface-which-should-you-use?source=weeklyVueNews&campaign=105)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Type vs Interface: Which Should You Use In 2023?" />
+  <AnchorLink emoji="📗" text="Name Checker" />
+  <AnchorLink emoji="📗" text="Best practice emits with vue 3" />
+  <AnchorLink emoji="📗" text="Wes Bos sur Twitter" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="type-vs-interface-which-should-you-use-in-2023" text="Type vs Interface: Which Should You Use In 2023?" url="https://www.totaltypescript.com/type-vs-interface-which-should-you-use?source=weeklyVueNews&amp;campaign=105" />
+
+<p class="mt-2">
 Personally, I prefer using interface but this article make a lot of good points for type.
+</p>
 
-📗 [Name Checker](https://namechecker.vercel.app/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="name-checker" text="Name Checker" url="https://namechecker.vercel.app/" />
+
+<p class="mt-2">
 Check the name of your future package to see if it is taken.
+</p>
 
-📗  [Best practice emits with vue 3](https://lachlan-miller.me/articles/emitting-events-best-practices-vue-3)
+<AnchorSection componentClass="mt-2" emoji="📗" id="best-practice-emits-with-vue-3" text="Best practice emits with vue 3" url="https://lachlan-miller.me/articles/emitting-events-best-practices-vue-3" />
+
+<p class="mt-2">
 Great breakdown of how emits works in vue 3.
+</p>
 
-📗 [Wes Bos sur Twitter](https://twitter.com/wesbos/status/1686073978639564803?s=20)
+<AnchorSection componentClass="mt-2" emoji="📗" id="wes-bos-sur-twitter" text="Wes Bos sur Twitter" url="https://twitter.com/wesbos/status/1686073978639564803?s=20" />
+
+<p class="mt-2">
 Wes Bos talk about the proposal of groupBy in the future version of JS.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [TIDY JS](https://pbeshai.github.io/tidy/)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://pbeshai.github.io/tidy/" text="TIDY JS" templateClass="mt-4">
 Write human readable function which transform your data in a numerous way.
+</ WebLinkSection>
 
-## Design & Fonts
+<h2 class="font-display text-2xl text-foreground mt-8">Design & Fonts</h2>
 
-🎨 [Free Faces](https://www.freefaces.gallery/)
+<WebLinkSection emoji="🎨" url="https://www.freefaces.gallery/" text="Free Faces" templateClass="mt-4">
 FF is curated collection of typefaces that are available under a variety of free licences somewhere on the interwebs.
+</ WebLinkSection>
 
-## CSS
-🎨 [Your lucky CSS pattern made with CSS gradients](https://random.css-pattern.com/)
+<h2 class="font-display text-2xl text-foreground mt-8">CSS</h2>
+
+<WebLinkSection emoji="🎨" url="https://random.css-pattern.com/" text="Your lucky CSS pattern made with CSS gradients" templateClass="mt-4">
 Generated CSS pattern by an AI which read your mind.
+</ WebLinkSection>
 
-🎨 [UI Colors](https://uicolors.app/create)
+<WebLinkSection emoji="🎨" url="https://uicolors.app/create" text="UI Colors" templateClass="mt-4">
 Generate your custom colour palette for Tailwind.
+</ WebLinkSection>
 
-## Vue
+<h2 class="font-display text-2xl text-foreground mt-8">Vue</h2>
 
-💚 [Notivue](https://notivue.netlify.app/)
+<WebLinkSection emoji="💚" url="https://notivue.netlify.app/" text="Notivue" templateClass="mt-4">
 Fully featured notification system for Vue 3.
+</ WebLinkSection>

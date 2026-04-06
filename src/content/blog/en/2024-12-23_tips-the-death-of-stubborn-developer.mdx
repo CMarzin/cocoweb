@@ -10,45 +10,64 @@ tags:
   - UI
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 Ho ho ho.
 I wish all of you a very happy holidays 🎅.
 I hope everyone spend some quality times with their loved ones in this last part of 2024.
-
 This this not yet the last news of 2024 but they are nice nonetheless.
-
 Here they are :
+</StarterText>
 
-🤖 The death of the stubborn developer
-✨ Background image remover
-🐙 Github Wrapper 2024
-🌆 GitHub Skyline CLI extension now available
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="The death of the stubborn developer" />
+  <AnchorLink emoji="✨" text="Background image remover" />
+  <AnchorLink emoji="🐙" text="Github Wrapper 2024" />
+  <AnchorLink emoji="🌆" text="GitHub Skyline CLI extension now available" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="the-death-of-the-stubborn-developer" text="The death of the stubborn developer" url="https://sourcegraph.com/blog/the-death-of-the-stubborn-developer" />
 
-🤖 [The death of the stubborn developer](https://sourcegraph.com/blog/the-death-of-the-stubborn-developer)
+<p class="mt-2">
 A new paradigm is there for programming, CHOP ( Chat Oriented Programming ) is a new way for writing code. You bring the context and the task, and the LLM give you the code.
 Its nowhere near perfect now with the hallucinations but the models keeps getting better and better so Its better to start learning chop now or else…
+</p>
 
-✨ [Background Image Remover](https://bg.addy.ie/)
+<AnchorSection componentClass="mt-2" emoji="✨" id="background-image-remover" text="Background Image Remover" url="https://bg.addy.ie/" />
+
+<p class="mt-2">
 A tool which remove any background image you want using AI, all processing are happening locally so no worries for your data.
+</p>
 
-🐙 [GitHub Wrapped 2024](https://git-wrapped.com/)
+<AnchorSection componentClass="mt-2" emoji="🐙" id="github-wrapped-2024" text="GitHub Wrapped 2024" url="https://git-wrapped.com/" />
+
+<p class="mt-2">
 Generate your coding year review with this tool.
+</p>
 
-🌆 [GitHub Skyline CLI extension now available](https://github.blog/changelog/2024-12-09-github-skyline-cli-extension/)
+<AnchorSection componentClass="mt-2" emoji="🌆" id="github-skyline-cli-extension-now-available" text="GitHub Skyline CLI extension now available" url="https://github.blog/changelog/2024-12-09-github-skyline-cli-extension/" />
+
+<p class="mt-2">
 This CLI extension generate from your contribution a 3D file which can be 3D printed and bring your Github contribution to life.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🌊 [Wave terminal](https://github.com/wavetermdev/waveterm)
+<WebLinkSection emoji="🌊" url="https://github.com/wavetermdev/waveterm" text="Wave terminal" templateClass="mt-4">
 Wave is an open-source terminal that combines traditional terminal features with graphical capabilities like file previews, web browsing, and AI assistance. It runs on MacOS, Linux, and Windows.
+</ WebLinkSection>
 
-✨ [Base UI](https://base-ui.com/)
+<WebLinkSection emoji="✨" url="https://base-ui.com/" text="Base UI" templateClass="mt-4">
 Unstyled UI components for building accessible web apps and design systems.
 From the creators of Radix, Floating UI, and Material UI.
+</ WebLinkSection>

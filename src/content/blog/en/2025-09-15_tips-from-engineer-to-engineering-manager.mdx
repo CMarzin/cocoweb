@@ -9,46 +9,68 @@ tags:
   - laravel
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📈 From Engineer to Engineering Manager
-☝️ You don’t need animations
-⚓️ The basics of Anchor positioning
-🏎️ Nitro: My Favourite Abstraction
+<AnchorWrapper>
+  <AnchorLink emoji="📈" text="From Engineer to Engineering Manager" />
+  <AnchorLink emoji="☝️" text="You don’t need animations" />
+  <AnchorLink emoji="⚓️" text="The basics of Anchor positioning" />
+  <AnchorLink emoji="🏎️" text="Nitro: My Favourite Abstraction" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📈" id="from-engineer-to-engineering-manager" text="From Engineer to Engineering Manager" url="https://committolead.tech/2025/09/08/from-engineer-to-engineering-manager/" />
 
-📈 [From Engineer to Engineering Manager](https://committolead.tech/2025/09/08/from-engineer-to-engineering-manager/)
-Emma Bostian is back ! She made a pause from social network and she is back with a new article and revive her podcast too [Ladybug Podcast](https://www.ladybug.dev/episodes/transition-from-ic-to-em?rq=from%20engineer)
+<p class="mt-2">
+Emma Bostian is back ! She made a pause from social network and she is back with a new article and revive her podcast too [Ladybug Podcast](https://www.ladybug.dev/episodes/transition-from-ic-to-em?rq=from+engineer&utm_source=cocoweb.fr)
 I really liked following her on twitter at the time and I am glad she is back.
+</p>
 
-☝️ [You don’t need animations](https://emilkowal.ski/ui/you-dont-need-animations)
+<AnchorSection componentClass="mt-2" emoji="☝️" id="you-dont-need-animations" text="You don’t need animations" url="https://emilkowal.ski/ui/you-dont-need-animations" />
+
+<p class="mt-2">
 A blog post from Emil Kowalski about when and when not using animations for your interface.
 Very very nice post.
+</p>
 
-⚓️ [The basics of Anchor positioning](https://ishadeed.com/article/anchor-positioning/)
+<AnchorSection componentClass="mt-2" emoji="⚓️" id="the-basics-of-anchor-positioning" text="The basics of Anchor positioning" url="https://ishadeed.com/article/anchor-positioning/" />
+
+<p class="mt-2">
 Ahmad Shadeed a virtuose in CSS explain the new css properties to position an element inside a parent without `position: absolute`.
+</p>
 
-🏎️ [Nitro: My Favourite Abstraction](https://andrevantonder.com/blog/nitro-my-favourite-abstraction)
+<AnchorSection componentClass="mt-2" emoji="🏎️" id="nitro-my-favourite-abstraction" text="Nitro: My Favourite Abstraction" url="https://andrevantonder.com/blog/nitro-my-favourite-abstraction" />
+
+<p class="mt-2">
 Nitro is the web server behind Nuxt and is a marvel to work with.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-⚡️ [ludoguenet/zap-for-laravel](https://github.com/ludoguenet/zap-for-laravel)
+<WebLinkSection emoji="⚡️" url="https://github.com/ludoguenet/zap-for-laravel" text="ludoguenet/zap-for-laravel" templateClass="mt-4">
 The missing calendar management for Laravel.
+</ WebLinkSection>
 
-## Joke of the week
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
 
-🪦 [SaltyAom/elden-github](https://github.com/SaltyAom/elden-github)
+<WebLinkSection emoji="🪦" url="https://github.com/SaltyAom/elden-github" text="SaltyAom/elden-github" templateClass="mt-4">
 Elden Ring experience for GitHub.
+</ WebLinkSection>
 
-## Inspirations
+<h2 class="font-display text-2xl text-foreground mt-8">Inspirations</h2>
 
-👾 [Nic Chan Website](https://www.nicchan.me/)
+<WebLinkSection emoji="👾" url="https://www.nicchan.me/" text="Nic Chan Website" templateClass="mt-4">
 An window 98 inspired website.
+</ WebLinkSection>

@@ -17,49 +17,64 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-<AnchorLink emoji="♦️" text="Programming with ai has a gambling problem" />
-<AnchorLink emoji="💭" text="Introducing Void Cloud" />
-<AnchorLink emoji="🤖" text="The Complete Guide to Building Skills for Claude" />
-<AnchorLink emoji="🎯" text="Expand your hit area" />
+<AnchorWrapper>
+  <AnchorLink emoji="♦️" text="Programming with ai has a gambling problem" />
+  <AnchorLink emoji="💭" text="Introducing Void Cloud" />
+  <AnchorLink emoji="🤖" text="The Complete Guide to Building Skills for Claude" />
+  <AnchorLink emoji="🎯" text="Expand your hit area" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="♦️" id="programming-with-ai-has-a-gambling-problem" text="Programming with ai has a gambling problem" url="https://www.youtube.com/watch?v=ZJEnQOsMtsU" />
 
-<AnchorSection emoji="♦️" id="programming-with-ai-has-a-gambling-problem">[Programming with ai has a gambling problem](https://www.youtube.com/watch?v=ZJEnQOsMtsU&utm_source=cocoweb.fr)</AnchorSection>
-
+<p class="mt-2">
 Push the button after asking AI something, even with skills and a lot of guardrails it’s never the exact same answer each time. But I think the guy’s in the Bay area are over the top lol.
+</p>
 
-<AnchorSection emoji="💭" id="introducing-void-cloud">[Void.cloud](https://void.cloud/?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="💭" id="voidcloud" text="Void.cloud" url="https://void.cloud/" />
 
+<p class="mt-2">
 By the creator of Vite and Vuejs Evan You.
 A deployment platform designed for Vite. A powerful backend SDK to make your Vite apps truly full-stack.
+</p>
 
-<AnchorSection emoji="🤖" id="the-complete-guide-to-building-skills-for-claude">[The complete guide to building skills for Claude](https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🤖" id="the-complete-guide-to-building-skills-for-claude" text="The complete guide to building skills for Claude" url="https://resources.anthropic.com/hubfs/The-Complete-Guide-to-Building-Skill-for-Claude.pdf" />
 
+<p class="mt-2">
 A PDF of 33 pages from Anthropic to guides us to create « Skills » for Claude. It allow Claude to be better at things instead of redoing the same things each time.
+</p>
 
-<AnchorSection emoji="🎯" id="expand-your-hit-area">[Expand your hit area](https://bazza.dev/craft/2026/hit-area?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection componentClass="mt-2" emoji="🎯" id="expand-your-hit-area" text="Expand your hit area" url="https://bazza.dev/craft/2026/hit-area" />
 
+<p class="mt-2">
 A tailwind css plugin to fix the problem of hit area, very handy.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-📚 [vercel-labs/knowledge-agent-template](https://github.com/vercel-labs/knowledge-agent-template?utm_source=cocoweb.fr)
+<WebLinkSection emoji="📚" url="https://github.com/vercel-labs/knowledge-agent-template" text="vercel-labs/knowledge-agent-template" templateClass="mt-4">
 Open source file-system and knowledge based agent template. Build AI agents that stay up to date with your knowledge base
+</ WebLinkSection>
 
-👍 [Slim sh](https://slim.sh/?utm_source=cocoweb.fr)
+<WebLinkSection emoji="👍" url="https://slim.sh/" text="Slim sh" templateClass="mt-4">
 Give your localhost a local or public URL
 Turn `localhost:3000` into `http://app.test` with path routing, HTTPS, HMR support, or get a public url without deployment.
+</ WebLinkSection>
 
-## Cool Websites
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
 
-🔗 [Link supply](https://links.supply/?utm_source=cocoweb.fr)
+<WebLinkSection emoji="🔗" url="https://links.supply/" text="Link supply" templateClass="mt-4">
 Links auto-scraped from curated accounts, powered by Bluesky.
+</ WebLinkSection>

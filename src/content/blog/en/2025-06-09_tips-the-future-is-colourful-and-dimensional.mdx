@@ -10,47 +10,72 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✨ The Future is Colourful and Dimensional
-🍸 Introducing Liquid Glass design
-🏰 A Brief History of JavaScript
-🎡 Reinvent the Wheel
+<AnchorWrapper>
+  <AnchorLink emoji="✨" text="The Future is Colourful and Dimensional" />
+  <AnchorLink emoji="🍸" text="Introducing Liquid Glass design" />
+  <AnchorLink emoji="🏰" text="A Brief History of JavaScript" />
+  <AnchorLink emoji="🎡" text="Reinvent the Wheel" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="the-future-is-colourful-and-dimensional" text="The Future is Colourful and Dimensional" url="https://www.flarup.email/p/the-future-is-colourful-and-dimensional" />
 
-✨ [The Future is Colourful and Dimensional](https://www.flarup.email/p/the-future-is-colourful-and-dimensional)
+<p class="mt-2">
 Flat design is over, welcome to **Diamorphism**. The new Airbnb design add colourful and dimensional icon to their UI. I personally love this new type of design.
+</p>
 
-🍸[Introducing Liquid Glass | Apple](https://www.youtube.com/watch?v=jGztGfRujSE)
+<AnchorSection componentClass="mt-2" emoji="🍸" id="introducing-liquid-glass-apple" text="Introducing Liquid Glass | Apple" url="https://www.youtube.com/watch?v=jGztGfRujSE" />
+
+<p class="mt-2">
 The new design by Apple, not a fan firsthand but we will see.
+</p>
 
-🏰 [A Brief History of JavaScript](https://deno.com/blog/history-of-javascript)
+<AnchorSection componentClass="mt-2" emoji="🏰" id="a-brief-history-of-javascript" text="A Brief History of JavaScript" url="https://deno.com/blog/history-of-javascript" />
+
+<p class="mt-2">
 Near 30 years of Javascript, a language created in 10 days by Brendan Eich to powers the UI of the SpaceX Dragon capsule. JS has come a long way. Now I write a lot of Typescript but still compiled to JS ;D.
+</p>
 
-🎡 [Reinvent the Wheel | Matthias Endler](https://endler.dev/2025/reinvent-the-wheel/)
+<AnchorSection componentClass="mt-2" emoji="🎡" id="reinvent-the-wheel-matthias-endler" text="Reinvent the Wheel | Matthias Endler" url="https://endler.dev/2025/reinvent-the-wheel/" />
+
+<p class="mt-2">
 Reinventing the wheel to better understand how it works is very cool sometimes.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
-👁️ [ForesightJS](https://foresightjs.com/)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="👁️" url="https://foresightjs.com/" text="ForesightJS" templateClass="mt-4">
 ForesightJS is a free and open-source fully typesafe JavaScript library that helps predict what users are likely to do next by analyzing their mouse movements and keyboard navigation. It lets developers prefetch data ahead of time based on these predictions, instead of waiting for actions like clicks or hovers.
+</ WebLinkSection>
 
-😍 [Eleventy LibDoc](https://eleventy-libdoc.netlify.app/)
+<WebLinkSection emoji="😍" url="https://eleventy-libdoc.netlify.app/" text="Eleventy LibDoc" templateClass="mt-4">
 An Eleventy starter project to craft slick and responsive documentation.
+</ WebLinkSection>
 
-✉️  [humanwhocodes/crosspost](https://github.com/humanwhocodes/crosspost/)
+<WebLinkSection emoji="✉️" url="https://github.com/humanwhocodes/crosspost/" text="humanwhocodes/crosspost" templateClass="mt-4">
 A JavaScript utility for posting across multiple social networks at once.
+</ WebLinkSection>
 
-💅 [AntoineW/AW-2025-Portfolio](https://github.com/AntoineW/AW-2025-Portfolio?tab=readme-ov-file)
+<WebLinkSection emoji="💅" url="https://github.com/AntoineW/AW-2025-Portfolio?tab=readme-ov-file" text="AntoineW/AW-2025-Portfolio" templateClass="mt-4">
 Take a peek behind the scenes of a senior dev’s awarded portfolio. Clone it, learn from it, build your own.
+</ WebLinkSection>
 
-## Joke of the week
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
 
-🎮 [Password Basket](https://passwordbasket.com/)
+<WebLinkSection emoji="🎮" url="https://passwordbasket.com/" text="Password Basket" templateClass="mt-4">
 Catch your own password
+</ WebLinkSection>

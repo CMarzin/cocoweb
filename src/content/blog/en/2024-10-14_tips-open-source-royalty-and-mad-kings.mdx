@@ -10,41 +10,63 @@ tags:
   - tailwindcss
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤴 Open source royalty and mad kings
-🤬 Automattic is doing open source dirty
-📉 ACF plugin no longer available on Wordpress.org
-🚀 Announcing VoidZero
+<AnchorWrapper>
+  <AnchorLink emoji="🤴" text="Open source royalty and mad kings" />
+  <AnchorLink emoji="🤬" text="Automattic is doing open source dirty" />
+  <AnchorLink emoji="📉" text="ACF plugin no longer available on Wordpress.org" />
+  <AnchorLink emoji="🚀" text="Announcing VoidZero" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤴" id="open-source-royalty-and-mad-kings" text="Open source royalty and mad kings" url="https://world.hey.com/dhh/open-source-royalty-and-mad-kings-a8f79d16" />
 
-🤴 [Open source royalty and mad kings](https://world.hey.com/dhh/open-source-royalty-and-mad-kings-a8f79d16)
-In open source there are a few example of [Benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life), Matt Mullenweg is one them. DHH implore Matt to calm down and to find a way to end this madness which is the expropriation of ACF plugin and he [login loyalty oath](https://wptavern.com/wordpress-org-login-gets-mandatory-affiliation-checkbox-following-wp-engine-dispute).
+<p class="mt-2">
+In open source there are a few example of [Benevolent dictator for life](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life?utm_source=cocoweb.fr), Matt Mullenweg is one them. DHH implore Matt to calm down and to find a way to end this madness which is the expropriation of ACF plugin and he [login loyalty oath](https://wptavern.com/wordpress-org-login-gets-mandatory-affiliation-checkbox-following-wp-engine-dispute?utm_source=cocoweb.fr).
+</p>
 
-🤬 [Automattic is doing open source dirty](https://world.hey.com/dhh/automattic-is-doing-open-source-dirty-b95cf128)
+<AnchorSection componentClass="mt-2" emoji="🤬" id="automattic-is-doing-open-source-dirty" text="Automattic is doing open source dirty" url="https://world.hey.com/dhh/automattic-is-doing-open-source-dirty-b95cf128" />
+
+<p class="mt-2">
 The battle for Wordpress has begun, the creator of wordpress  ( Matt Mullenweg ) wants money and he is ready to destroy his reputation for that.
+</p>
 
-📉 [ACF plugin no longer available on Wordpress.org](https://www.advancedcustomfields.com/blog/acf-plugin-no-longer-available-on-wordpress-org/)
+<AnchorSection componentClass="mt-2" emoji="📉" id="acf-plugin-no-longer-available-on-wordpressorg" text="ACF plugin no longer available on Wordpress.org" url="https://www.advancedcustomfields.com/blog/acf-plugin-no-longer-available-on-wordpress-org/" />
+
+<p class="mt-2">
 In the battle between Wordpress.org and WP Engine, Matt Mullenweg decided to take the ACF plugin in the hand of Wordpress.org because of his tie with WP Engine.
+</p>
 
-🚀 [Announcing VoidZero](https://voidzero.dev/posts/announcing-voidzero-inc)
+<AnchorSection componentClass="mt-2" emoji="🚀" id="announcing-voidzero" text="Announcing VoidZero" url="https://voidzero.dev/posts/announcing-voidzero-inc" />
+
+<p class="mt-2">
 Evan you funded VoidZero Inc, a new company in order to build the next generation toolchain for Javascript. His work with Vuejs, Vite are already huge, he want to push it further.
 Good luck to you !
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🎨 [zhengkyl/qrframe: code-based qr code generator](https://github.com/zhengkyl/qrframe?tab=readme-ov-file)
+<WebLinkSection emoji="🎨" url="https://github.com/zhengkyl/qrframe?tab=readme-ov-file" text="zhengkyl/qrframe: code-based qr code generator" templateClass="mt-4">
 Create a cool QR code not only the one in black and white.
+</ WebLinkSection>
 
-✨ [romboHQ/tailwindcss-motion](https://github.com/romboHQ/tailwindcss-motion)
+<WebLinkSection emoji="✨" url="https://github.com/romboHQ/tailwindcss-motion" text="romboHQ/tailwindcss-motion" templateClass="mt-4">
 Tailwindcss-motion is a Tailwind CSS Plugin made at RomboHQ. It’s a simple, yet powerful, animation library with a simple syntax.
+</ WebLinkSection>
 
-✨ [selemondev/spark-ui](https://github.com/selemondev/spark-ui)
+<WebLinkSection emoji="✨" url="https://github.com/selemondev/spark-ui" text="selemondev/spark-ui" templateClass="mt-4">
 Experience The Magic Of Animated Components. Crafted With Vue, TypeScript, TailwindCss And Vueuse Motion ✨
+</ WebLinkSection>

@@ -9,51 +9,76 @@ tags:
   - AI
   - CSS
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-- The internet is murdered by AI
-- An alternative to a profile in social media
-- Theming with modern CSS
-- How to kill the cascade
-- Git yoloing
+<AnchorWrapper>
+  <AnchorLink emoji="📌" text="The internet is murdered by AI" />
+  <AnchorLink emoji="📌" text="An alternative to a profile in social media" />
+  <AnchorLink emoji="📌" text="Theming with modern CSS" />
+  <AnchorLink emoji="📌" text="How to kill the cascade" />
+  <AnchorLink emoji="📌" text="Git yoloing" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📗" id="here-lies-the-internet-murdered-by-generative-ai" text="Here lies the internet, murdered by generative AI" url="https://www.theintrinsicperspective.com/p/here-lies-the-internet-murdered-by" />
 
-📗 [Here lies the internet, murdered by generative AI](https://www.theintrinsicperspective.com/p/here-lies-the-internet-murdered-by)
+<p class="mt-2">
 Now that generative AI is nearly mainstream, the internet is filling up quickly with fake and low quality content. The cost to produce bullshit article or spamming SEO is near zero so now the human internet is getting buried over by generative AI. Even YouTube for kids is filled now by poor quality video for toddlers.
+</p>
 
-This blog is not AI generated, nor will ever be 😤.
+<AnchorSection componentClass="mt-2" emoji="🔮" id="vcard-rss-as-an-alternative-to-social-media" text="vCard + RSS as an alternative to social media" url="https://nfraprado.net/post/vcard-rss-as-an-alternative-to-social-media.html" />
 
-🔮 [vCard + RSS as an alternative to social media](https://nfraprado.net/post/vcard-rss-as-an-alternative-to-social-media.html)
+<p class="mt-2">
 **vCard** ( Virtual contact File )  is a standard for electronic business cards, it’s in use in every smartphone. And with a **RSS** feed you can have your own feed of information.
 With the two you can share a QR code which links the two and replace a LinkedIn profile.
+</p>
 
-✨ [How we’re approaching theming with modern CSS](https://piccalil.li/blog/how-were-approaching-theming-with-modern-css/)
-How [Andy Bell](https://piccalil.li/about) write 3 themes for a landing page and configuration of the page is only 43 lines of CSS.
+<AnchorSection componentClass="mt-2" emoji="✨" id="how-were-approaching-theming-with-modern-css" text="How we’re approaching theming with modern CSS" url="https://piccalil.li/blog/how-were-approaching-theming-with-modern-css/" />
 
-☠️ [How to Kill the Cascade](https://robinrendle.com/the-cascade/017-how-to-kill-the-cascade/)
+<p class="mt-2">
+How [Andy Bell](https://piccalil.li/about?utm_source=cocoweb.fr) write 3 themes for a landing page and configuration of the page is only 43 lines of CSS.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="☠️" id="how-to-kill-the-cascade" text="How to Kill the Cascade" url="https://robinrendle.com/the-cascade/017-how-to-kill-the-cascade/" />
+
+<p class="mt-2">
 With some new addition to the css language by the Safari team, Robin Rendle show us a new technique « the local reset ». Instead of having a global reset for your website, you can now have a localised reset for your component.
+</p>
 
-😎 [Git yolo](https://www.stefanjudis.com/snippets/timestamped-git-yolo-commits/)
+<AnchorSection componentClass="mt-2" emoji="😎" id="git-yolo" text="Git yolo" url="https://www.stefanjudis.com/snippets/timestamped-git-yolo-commits/" />
+
+<p class="mt-2">
 If you don’t want a clean git history and just want something done, this script is the perfect for you.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-⛺️ [Runtipi](https://github.com/runtipi/runtipi)
+<WebLinkSection emoji="⛺️" url="https://github.com/runtipi/runtipi" text="Runtipi" templateClass="mt-4">
 Runtipi is a homeserver for everyone! One command setup, one click installs for your favorites self-hosted apps.
+</ WebLinkSection>
 
-🤯 [MistCSS](https://typicode.github.io/mistcss/)
+<WebLinkSection emoji="🤯" url="https://typicode.github.io/mistcss/" text="MistCSS" templateClass="mt-4">
 **Write React components using CSS only**
 A new, better and faster way to write visual components. ~~CSS-in-JS~~ ? Nope! JS-from-CSS is the way to go.
+</ WebLinkSection>
 
-🤖 [Ollama](https://ollama.com/)
-Run [Llama 2](https://ollama.com/library/llama2), [Code Llama](https://ollama.com/library/codellama), and other models. Customize and create your own.
+<WebLinkSection emoji="🤖" url="https://ollama.com/" text="Ollama" templateClass="mt-4">
+Run [Llama 2](https://ollama.com/library/llama2?utm_source=cocoweb.fr), [Code Llama](https://ollama.com/library/codellama?utm_source=cocoweb.fr), and other models. Customize and create your own.
+</ WebLinkSection>
 
-🦙 [LlamaIndex](https://www.llamaindex.ai/)
+<WebLinkSection emoji="🦙" url="https://www.llamaindex.ai/" text="LlamaIndex" templateClass="mt-4">
 Data Framework for LLM Applications, generate a LLM fine tuned with your local data easily.
+</ WebLinkSection>

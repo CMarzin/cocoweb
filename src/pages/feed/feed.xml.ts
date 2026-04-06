@@ -6,7 +6,6 @@ export async function GET(context: APIContext) {
   const posts = await getCollection('blog');
   const articles = await getCollection('articles');
 
-  // Combine and sort all content by date
   const allContent = [...posts, ...articles].sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
   );
@@ -16,15 +15,14 @@ export async function GET(context: APIContext) {
     description: 'Voici mon blog où je poste ma veille technologique.',
     site: context.site ?? 'https://cocoweb.fr',
     items: allContent.map((item) => {
-      // Determine the correct URL based on collection
-      const isArticle = articles.some((a) => a.slug === item.slug);
+      const isArticle = articles.some((a) => a.id === item.id);
       const basePath = isArticle ? '/articles/' : '/blog/';
 
       return {
         title: item.data.title,
         pubDate: item.data.date,
         description: item.data.description,
-        link: `${basePath}${item.slug}/`,
+        link: `${basePath}${item.id}/`,
         categories: item.data.tags,
       };
     }),

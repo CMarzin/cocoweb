@@ -12,49 +12,75 @@ tags:
   - WebGL
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧞 Why the creator of Ruby on Rails retired from tech crusade ?
-👩‍💻 No web without women
-✨ A solution to match the icon with the font size in css
-📚 General purpose interfaces G.P.I, one interface to rule them al
-📗 New pseudo element, :user-valid and :user-invalid
+<AnchorWrapper>
+  <AnchorLink emoji="🧞" text="Why the creator of Ruby on Rails retired from tech crusade ?" />
+  <AnchorLink emoji="👩‍💻" text="No web without women" />
+  <AnchorLink emoji="✨" text="A solution to match the icon with the font size in css" />
+  <AnchorLink emoji="📚" text="General purpose interfaces G.P.I, one interface to rule them al" />
+  <AnchorLink emoji="📗" text="New pseudo element, :user-valid and :user-invalid" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧞" id="why-dhh-retired-from-tech-crusade" text="Why DHH retired from tech crusade" url="https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea" />
 
- 🧞 [Why DHH retired from tech crusade](https://world.hey.com/dhh/why-i-retired-from-the-tech-crusades-107a51ea)
-[David Heinemeier Hansson](https://world.hey.com/dhh) write about how a crusade to convince anyone your tech stack is superior is futile. His best argument for Ruby on Rails was a video of him showing how his stack worked and just that, no comparison with others language or stacks, just a demo of the stacks.
+<p class="mt-2">
+[David Heinemeier Hansson](https://world.hey.com/dhh?utm_source=cocoweb.fr) write about how a crusade to convince anyone your tech stack is superior is futile. His best argument for Ruby on Rails was a video of him showing how his stack worked and just that, no comparison with others language or stacks, just a demo of the stacks.
 They will always be debate about how do you do X,Y,Z, the beauty  of the web is we have so many things to choose from, so lets just choose whatever is best for you and don’t convince people you have the best answer for everything.
+</p>
 
-👩‍💻 [No Web without women](https://nowebwithoutwomen.com/)
+<AnchorSection componentClass="mt-2" emoji="👩‍💻" id="no-web-without-women" text="No Web without women" url="https://nowebwithoutwomen.com/" />
+
+<p class="mt-2">
 A collection of innovations by women in the fields of computer science and technology.
+</p>
 
-✨[CSS Cap Unit](https://ishadeed.com/article/css-cap-unit/)
-[Ahmad Shadeed](https://ishadeed.com/) write about the css Cap unit, this unit match the uppercase height of the text. Very useful when you have to add an icon which match the height of the text.
+<AnchorSection componentClass="mt-2" emoji="✨" id="css-cap-unit" text="CSS Cap Unit" url="https://ishadeed.com/article/css-cap-unit/" />
 
-📚 [General pupose interfaces](https://modemworks.com/research/general-purpose-interfaces/)
+<p class="mt-2">
+[Ahmad Shadeed](https://ishadeed.com/?utm_source=cocoweb.fr) write about the css Cap unit, this unit match the uppercase height of the text. Very useful when you have to add an icon which match the height of the text.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📚" id="general-pupose-interfaces" text="General pupose interfaces" url="https://modemworks.com/research/general-purpose-interfaces/" />
+
+<p class="mt-2">
 What if an AI agent was the one using our devices instead of us ? In this article, the researchers demonstrate some possibility of using AI as a single interface between us and our digital tools.
 We would talk, show everything to the AI agent and it will respond by consulting our calendar, respond to our mail etc. GTP-o is a glimpse of what G.P.I will look like in 5-10 years from now.
+</p>
 
-📗 [The :user-valid and :user-invalid pseudo-classes](https://web.dev/articles/user-valid-and-user-invalid-pseudo-classes?hl=en)
-One example sometimes is better than a 1000 words essay -> [Validation Constraint Pseudo-Classes Demo - :user-valid, :user-invalid](https://codepen.io/web-dot-dev/pen/wvNJGrO)
+<AnchorSection componentClass="mt-2" emoji="📗" id="the-user-valid-and-user-invalid-pseudo-classes" text="The :user-valid and :user-invalid pseudo-classes" url="https://web.dev/articles/user-valid-and-user-invalid-pseudo-classes?hl=en" />
 
-___
+<p class="mt-2">
+One example sometimes is better than a 1000 words essay -> [Validation Constraint Pseudo-Classes Demo - :user-valid, :user-invalid](https://codepen.io/web-dot-dev/pen/wvNJGrO?utm_source=cocoweb.fr)
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🔧 [SQL Database Playground](https://www.db-fiddle.com/)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🔧" url="https://www.db-fiddle.com/" text="SQL Database Playground" templateClass="mt-4">
 You can create a database, test your query on it and visually see everything.
+</ WebLinkSection>
 
-🎨 [Free Design Stuff](https://freedesignstuff.com/)
+<WebLinkSection emoji="🎨" url="https://freedesignstuff.com/" text="Free Design Stuff" templateClass="mt-4">
 Find curated free design resources for personal and commercial use. Accessible to everyone.
+</ WebLinkSection>
 
-🧑‍💻 [Wiggle Bones for Three.js](https://wiggle.three.tools/)
+<WebLinkSection emoji="🧑‍💻" url="https://wiggle.three.tools/" text="Wiggle Bones for Three.js" templateClass="mt-4">
 Wiggle is a Three.js library that makes rigged objects move softly and feel alive.
+</ WebLinkSection>
 
-🎨 [Magic UI](https://magicui.design/)
+<WebLinkSection emoji="🎨" url="https://magicui.design/" text="Magic UI" templateClass="mt-4">
 UI library for Design Engineers.
+</ WebLinkSection>

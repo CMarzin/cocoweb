@@ -8,48 +8,70 @@ tags:
   - TS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-👏 Announcing TypeScript Native Previews
-📊 The state of devs 2025
-🏎️ Multithreading in JavaScript with Web Workers
-🍦 Plain Vanilla
-🚀 Announcing Vite 7
+<AnchorWrapper>
+  <AnchorLink emoji="👏" text="Announcing TypeScript Native Previews" />
+  <AnchorLink emoji="📊" text="The state of devs 2025" />
+  <AnchorLink emoji="🏎️" text="Multithreading in JavaScript with Web Workers" />
+  <AnchorLink emoji="🍦" text="Plain Vanilla" />
+  <AnchorLink emoji="🚀" text="Announcing Vite 7" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="👏" id="announcing-typescript-native-previews-typescript" text="Announcing TypeScript Native Previews - TypeScript" url="https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/" />
 
-👏 [Announcing TypeScript Native Previews - TypeScript](https://devblogs.microsoft.com/typescript/announcing-typescript-native-previews/)
+<p class="mt-2">
 TS native previews to test more easily the rewrite in GO of the Typescript codebase.
+</p>
 
-📊 [The state of devs 2025](https://2025.stateofdevs.com/en-US/)
+<AnchorSection componentClass="mt-2" emoji="📊" id="the-state-of-devs-2025" text="The state of devs 2025" url="https://2025.stateofdevs.com/en-US/" />
+
+<p class="mt-2">
 The result of a survey from 8,717 devs.
+</p>
 
-🏎️ [Multithreading in JavaScript with Web Workers](https://www.honeybadger.io/blog/javascript-web-workers-multithreading/)
+<AnchorSection componentClass="mt-2" emoji="🏎️" id="multithreading-in-javascript-with-web-workers" text="Multithreading in JavaScript with Web Workers" url="https://www.honeybadger.io/blog/javascript-web-workers-multithreading/" />
+
+<p class="mt-2">
 This article describes the problems with single-threaded operations and how to implement, for example, parallelism/concurrency, to alleviate these problems by using the Web Workers API.
+</p>
 
-🍦[Plain Vanilla](https://plainvanillaweb.com/index.html)
+<AnchorSection componentClass="mt-2" emoji="🍦" id="plain-vanilla" text="Plain Vanilla" url="https://plainvanillaweb.com/index.html" />
+
+<p class="mt-2">
 This is an overview of the major techniques used to make web sites and web applications without making use of build tools or frameworks, with just an editor, a browser, and web standards.
+</p>
 
-🚀 [Announcing Vite 7](https://vite.dev/blog/announcing-vite7.html)
+<AnchorSection componentClass="mt-2" emoji="🚀" id="announcing-vite-7" text="Announcing Vite 7" url="https://vite.dev/blog/announcing-vite7.html" />
+
+<p class="mt-2">
 Dropped Node.js 18, now require Node.js 20.19+.
 Change default browser target :
 * Chrome 87 → 107
 * Edge 88 → 107
 * Firefox 78 → 104
 * Safari 14.0 → 16.0
+</p>
 
-No breaking change from v6.
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-___
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
-
-👏 [KamiC6238/ayanami](https://github.com/KamiC6238/ayanami)
+<WebLinkSection emoji="👏" url="https://github.com/KamiC6238/ayanami" text="KamiC6238/ayanami" templateClass="mt-4">
 A sprite animation pixel art editor.
+</ WebLinkSection>
 
-📊 [gitbrent/PptxGenJS](https://github.com/gitbrent/PptxGenJS)
+<WebLinkSection emoji="📊" url="https://github.com/gitbrent/PptxGenJS" text="gitbrent/PptxGenJS" templateClass="mt-4">
 Build PowerPoint presentations with JavaScript. Works with Node, React, web browsers, and more.
+</ WebLinkSection>

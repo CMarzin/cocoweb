@@ -9,39 +9,58 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📈 How to Write Blog Posts that Developers Read
-🌊 Item Flow, Part 1:  A new unified concept for layout
-☎️ Meet Declarative Web Push
+<AnchorWrapper>
+  <AnchorLink emoji="📈" text="How to Write Blog Posts that Developers Read" />
+  <AnchorLink emoji="🌊" text="Item Flow, Part 1:  A new unified concept for layout" />
+  <AnchorLink emoji="☎️" text="Meet Declarative Web Push" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📈" id="how-to-write-blog-posts-that-developers-read" text="How to Write Blog Posts that Developers Read" url="https://refactoringenglish.com/chapters/write-blog-posts-developers-read/" />
 
-📈 [How to Write Blog Posts that Developers Read](https://refactoringenglish.com/chapters/write-blog-posts-developers-read/)
+<p class="mt-2">
 The article has some really good advice, but for me the two main advices for the writer is asking theses questions :
 - Did the author write this article for someone like me?
 - How will I benefit from reading it?
+</p>
 
-🌊 [Item Flow, Part 1:  A new unified concept for layout](https://webkit.org/blog/16587/item-flow-part-1-a-new-unified-concept-for-layout/)
+<AnchorSection componentClass="mt-2" emoji="🌊" id="item-flow-part-1-a-new-unified-concept-for-layout" text="Item Flow, Part 1:  A new unified concept for layout" url="https://webkit.org/blog/16587/item-flow-part-1-a-new-unified-concept-for-layout/" />
+
+<p class="mt-2">
 New layout concept layout developed by the Webkit team, they attend to bring the « masonry » layout to Webkit.
+</p>
 
-☎️ [Meet Declarative Web Push](https://webkit.org/blog/16535/meet-declarative-web-push/)
+<AnchorSection componentClass="mt-2" emoji="☎️" id="meet-declarative-web-push" text="Meet Declarative Web Push" url="https://webkit.org/blog/16535/meet-declarative-web-push/" />
+
+<p class="mt-2">
 Private and secure web notification from the safari Webkit team.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-✏️ [Rough.js](https://roughjs.com/)
+<WebLinkSection emoji="✏️" url="https://roughjs.com/" text="Rough.js" templateClass="mt-4">
 Create graphics with a hand-drawn, sketchy, appearance
+</ WebLinkSection>
 
-✨[Circle: UI](https://github.com/ln-dev7/circle)
+<WebLinkSection emoji="✨" url="https://github.com/ln-dev7/circle" text="Circle: UI" templateClass="mt-4">
 Project management interface inspired by Linear. Built with Next.js and shadcn/ui, this application allows tracking of issues, projects and teams.
+</ WebLinkSection>
 
-🚀 [Vue Final Modal](https://v4.vue-final-modal.org/)
+<WebLinkSection emoji="🚀" url="https://v4.vue-final-modal.org/" text="Vue Final Modal" templateClass="mt-4">
 Modals made easy for Vue Developers.
 The most powerful yet most light-weight modal library for Vue 3.
+</ WebLinkSection>

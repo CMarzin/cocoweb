@@ -11,39 +11,58 @@ tags:
   - CSS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-💎 The One-Person Framework in practice
-☹️ I hate my portfolio
-😉 You Can Be a Great Designer and Be Completely Unknown
-🥳 GSAP is now 100% FREE!
+<AnchorWrapper>
+  <AnchorLink emoji="💎" text="The One-Person Framework in practice" />
+  <AnchorLink emoji="☹️" text="I hate my portfolio" />
+  <AnchorLink emoji="😉" text="You Can Be a Great Designer and Be Completely Unknown" />
+  <AnchorLink emoji="🥳" text="GSAP is now 100% FREE!" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="💎" id="the-one-person-framework-in-practice" text="The One-Person Framework in practice" url="https://bramjetten.dev/articles/the-one-person-framework-in-practice" />
 
-💎 [The One-Person Framework in practice](https://bramjetten.dev/articles/the-one-person-framework-in-practice)
+<p class="mt-2">
 This is the story of the technical founder of PlanGo, which build a **seven-figure business with Rails** alone on the technical side. Rails used the right way, with convention over configuration in mind is capable to scale and support a business without a big technical team. Hats off Bram Jetten for this.
+</p>
 
-☹️ [I hate my portefolio](https://medium.com/design-bootcamp/i-hate-my-portfolio-d9f6f1d18574)
+<AnchorSection componentClass="mt-2" emoji="☹️" id="i-hate-my-portefolio" text="I hate my portefolio" url="https://medium.com/design-bootcamp/i-hate-my-portfolio-d9f6f1d18574" />
+
+<p class="mt-2">
 Valeria Yakovchik talk about the struggle to build, maintain and update a portfolio to show your skills and projects. She talks about the pression we put on ourselves to build a portoflio, because we are our own client we are harscher and more demanding, it put us in a massive stress just for a portefolio.
+</p>
 
-The conclusion is to be kinder with yourself, you can’t please everybody and even you can’t make everything perfect for you. ♥️
+<AnchorSection componentClass="mt-2" emoji="😉" id="you-can-be-a-great-designer-and-be-completely-unknown" text="You Can Be a Great Designer and Be Completely Unknown" url="https://www.chrbutler.com/you-can-be-a-great-designer-and-be-completely-unknown" />
 
-😉 [You Can Be a Great Designer and Be Completely Unknown](https://www.chrbutler.com/you-can-be-a-great-designer-and-be-completely-unknown)
+<p class="mt-2">
 Fame is not equal to skills, you can be famous and not the best in the world at what you do. A lot of great people build things and are not famous for it, keep building stuff, fame is not always the end goal.
+</p>
 
-🥳 [GSAP is now 100% FREE!](https://gsap.com/blog/3-13/)
+<AnchorSection componentClass="mt-2" emoji="🥳" id="gsap-is-now-100-free" text="GSAP is now 100% FREE!" url="https://gsap.com/blog/3-13/" />
+
+<p class="mt-2">
 Webflow acquired GSAP and now it is free to use for anyone even for commercial use. This best in class animation library is finally accessible for everyone.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🕵️ [Breeze PDF](https://breezepdf.com/)
+<WebLinkSection emoji="🕵️" url="https://breezepdf.com/" text="Breeze PDF" templateClass="mt-4">
 Breeze PDF is a powerful, free PDF editor that works entirely offline in your browser. No uploads, 100% privacy guaranteed.
+</ WebLinkSection>
 
-⚓️ [Anchors for Tailwind CSS]( https://github.com/toolwind/anchors?tab=readme-ov-file)
-Anchors for Tailwind CSS provides a simple API for working with CSS anchor positioning, enabling flexible, declarative positioning relative to custom anchors. 
+<WebLinkSection emoji="⚓️" url="https://github.com/toolwind/anchors?tab=readme-ov-file" text="Anchors for Tailwind CSS" templateClass="mt-4">
+Anchors for Tailwind CSS provides a simple API for working with CSS anchor positioning, enabling flexible, declarative positioning relative to custom anchors.
+</ WebLinkSection>

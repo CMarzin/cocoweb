@@ -10,45 +10,69 @@ tags:
   - design
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🥰 A gentle guide to self hosting
-✨ Webzibition
-🎓 Advanced Frontend Testing
-📊 Introducing @bramus/caniuse-cli, a CLI tool for “Can I Use
-🚀 Astro 5.0 Beta release
+<AnchorWrapper>
+  <AnchorLink emoji="🥰" text="A gentle guide to self hosting" />
+  <AnchorLink emoji="✨" text="Webzibition" />
+  <AnchorLink emoji="🎓" text="Advanced Frontend Testing" />
+  <AnchorLink emoji="📊" text="Introducing @bramus/caniuse-cli, a CLI tool for “Can I Use" />
+  <AnchorLink emoji="🚀" text="Astro 5.0 Beta release" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🥰" id="a-gentle-guide-to-self-hosting-your-software" text="A gentle guide to self-hosting your software" url="https://knhash.in/gentle-guide-to-self-hosting/" />
 
-🥰 [A gentle guide to self-hosting your software](https://knhash.in/gentle-guide-to-self-hosting/)
+<p class="mt-2">
 A really well put and written article which guide you to self host your software. In the age of the cloud and subscriptions, self hosting is an act to reclaim control on your usage of the web.
+</p>
 
-✨ [Webzibition](https://tympanus.net/codrops/webzibition/)
-A new section of [Codrops](https://tympanus.net/codrops/), it’s an archive and a showcase of magnificent website. If you have some website or showcase to share, I highly recommend you to submit your site.
+<AnchorSection componentClass="mt-2" emoji="✨" id="webzibition" text="Webzibition" url="https://tympanus.net/codrops/webzibition/" />
 
-🎓 [Advanced Frontend Testing](https://michaelnthiessen.com/advanced-frontend-testing)
+<p class="mt-2">
+A new section of [Codrops](https://tympanus.net/codrops/?utm_source=cocoweb.fr), it’s an archive and a showcase of magnificent website. If you have some website or showcase to share, I highly recommend you to submit your site.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🎓" id="advanced-frontend-testing" text="Advanced Frontend Testing" url="https://michaelnthiessen.com/advanced-frontend-testing" />
+
+<p class="mt-2">
 Michael Thiessen is the author of lots of high quality content on Vuejs. With this workshop format, he aims to teach you to be great at writing frontend test.
+</p>
 
-📊 [Introducing @bramus/caniuse-cli, a CLI tool for “Can I Use …”](https://www.bram.us/2024/09/14/introducing-bramus-caniuse-cli-a-cli-tool-for-can-i-use/)
-With this CLI you can see « Can I Use » stats of property for browser, locally on your machine. 
+<AnchorSection componentClass="mt-2" emoji="📊" id="introducing-bramuscaniuse-cli-a-cli-tool-for-can-i-use" text="Introducing @bramus/caniuse-cli, a CLI tool for “Can I Use …”" url="https://www.bram.us/2024/09/14/introducing-bramus-caniuse-cli-a-cli-tool-for-can-i-use/" />
 
-🚀 [Astro 5.0 Beta Release](https://astro.build/blog/astro-5-beta/)
+<p class="mt-2">
+With this CLI you can see « Can I Use » stats of property for browser, locally on your machine.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🚀" id="astro-50-beta-release" text="Astro 5.0 Beta Release" url="https://astro.build/blog/astro-5-beta/" />
+
+<p class="mt-2">
 The Astro 5.0 Beta introduces :
 - Stable: Content layer
 - Stable: Server Island
 - Merged static and hybrid output mode
 - Stable: astro:env
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-📈 [Npm Chart](https://npm.chart.dev/)
-A tool made by the creator of Nuxt, to showcase your npm stats ! You can try with my package [Cli-mr-creator](https://npm.chart.dev/cli-mr-creator?primary=amber&gray=cool&theme=dark).
+<WebLinkSection emoji="📈" url="https://npm.chart.dev/" text="Npm Chart" templateClass="mt-4">
+A tool made by the creator of Nuxt, to showcase your npm stats ! You can try with my package [Cli-mr-creator](https://npm.chart.dev/cli-mr-creator?primary=amber&gray=cool&theme=dark&utm_source=cocoweb.fr).
+</ WebLinkSection>
 
-📈 [Redline](https://vanka.me/redline/)
+<WebLinkSection emoji="📈" url="https://vanka.me/redline/" text="Redline" templateClass="mt-4">
 Redline is a Mac application to keep a to-do list at the menu bar.
+</ WebLinkSection>

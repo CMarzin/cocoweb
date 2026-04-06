@@ -1,4 +1,17 @@
 {
+	"tailwindCSS.experimental.configFile": "src/styles/main.css",
+	"tailwindCSS.includeLanguages": {
+		"astro": "html",
+		"mdx": "html"
+	},
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"other": true,
+		"comments": false,
+		"strings": true
+	},
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#62d55e",
 		"activityBar.background": "#62d55e",

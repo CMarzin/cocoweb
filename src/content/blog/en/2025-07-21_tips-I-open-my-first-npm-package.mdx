@@ -8,41 +8,61 @@ tags:
   - laravel
   - nuxt
 ---
-## Salut, web dev friends! 🧑‍💻
 
-I am excited to share my first npm package [🚀 Release 3.0.0 : Typescript all the way · CMarzin/cli-mr-creator](https://github.com/CMarzin/cli-mr-creator/releases/tag/3.0.0), I started this package when I was a student 5 years ago to learn scripting with node because bash didn’t love me :(
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
+I am excited to share my first npm package [🚀 Release 3.0.0 : Typescript all the way · CMarzin/cli-mr-creator](https://github.com/CMarzin/cli-mr-creator/releases/tag/3.0.0?utm_source=cocoweb.fr), I started this package when I was a student 5 years ago to learn scripting with node because bash didn’t love me :(
 Now, the package is fully open source with an MIT license, Typescript support, I wrote some tests with vitest, It use Github actions for the CI and changeset for publishing to npm.
-
 Anyway here are the news :
+</StarterText>
 
-🫠 Programming sucks
-✨ Nuxt 4.0
-📗 How to create an NPM Package
-👀 Open source Laravel Changelog
+<AnchorWrapper>
+  <AnchorLink emoji="🫠" text="Programming sucks" />
+  <AnchorLink emoji="✨" text="Nuxt 4.0" />
+  <AnchorLink emoji="📗" text="How to create an NPM Package" />
+  <AnchorLink emoji="👀" text="Open source Laravel Changelog" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🫠" id="programming-sucks" text="Programming Sucks" url="https://www.stilldrinking.org/programming-sucks" />
 
-🫠 [Programming Sucks](https://www.stilldrinking.org/programming-sucks)
-A great analogy on programming, we don’t lift or pick heavy objects but we are required to destroy our mental health for the job instead. I love programming but sometimes I think you need to be crazy to do this job. 
+<p class="mt-2">
+A great analogy on programming, we don’t lift or pick heavy objects but we are required to destroy our mental health for the job instead. I love programming but sometimes I think you need to be crazy to do this job.
+</p>
 
-✨ [Announcing Nuxt 4.0 · Nuxt Blog](https://nuxt.com/blog/v4)
+<AnchorSection componentClass="mt-2" emoji="✨" id="announcing-nuxt-40-nuxt-blog" text="Announcing Nuxt 4.0 · Nuxt Blog" url="https://nuxt.com/blog/v4" />
+
+<p class="mt-2">
 The main features for me is the new project structure and the better typescript support.
+</p>
 
-📗 [How to create a NPM Package](https://www.totaltypescript.com/how-to-create-an-npm-package)
-I didn’t use a first this tutorial for creating a NPM package but I used it to make my package [CMarzin/cli-mr-creator](https://github.com/CMarzin/cli-mr-creator/releases/tag/3.0.0) more modern with CI, tests, TypeScript and changeset.
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-to-create-a-npm-package" text="How to create a NPM Package" url="https://www.totaltypescript.com/how-to-create-an-npm-package" />
 
-👀 [Changelog - Laravel 12.x - The PHP Framework For Web Artisans](https://laravel.com/docs/changelog)
+<p class="mt-2">
+I didn’t use a first this tutorial for creating a NPM package but I used it to make my package [CMarzin/cli-mr-creator](https://github.com/CMarzin/cli-mr-creator/releases/tag/3.0.0?utm_source=cocoweb.fr) more modern with CI, tests, TypeScript and changeset.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="👀" id="changelog-laravel-12x-the-php-framework-for-web-artisans" text="Changelog - Laravel 12.x - The PHP Framework For Web Artisans" url="https://laravel.com/docs/changelog" />
+
+<p class="mt-2">
 Now Laravel has an open source changelog !
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-❤️ [productdevbook/nitro-graphql](https://github.com/productdevbook/nitro-graphql)
+<WebLinkSection emoji="❤️" url="https://github.com/productdevbook/nitro-graphql" text="productdevbook/nitro-graphql" templateClass="mt-4">
 A standalone Nitro module that integrates GraphQL servers into any Nitro application with automatic type   generation, file watching, and seamless framework integration.
+</ WebLinkSection>
 
-🐒 [zshy](github.com/colinhacks/zshy)
+<WebLinkSection emoji="🐒" url="github.com/colinhacks/zshy" text="zshy" templateClass="mt-4">
 Bundler-free build tool for TypeScript libraries. Powered by tsc.
+</ WebLinkSection>

@@ -9,44 +9,60 @@ tags:
   - CSS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 Happy new year 🎆
-
 First tips of the year !
-
 I have big plans for this blog for 2025, new redesign incoming, more technical articles and maybe some experiments. I hope 2025 will be a very good year for everyone reading this blog.
-
 Anyway, here’s is the news.
+</StarterText>
 
-**Have a great week.**
+<AnchorWrapper>
+  <AnchorLink emoji="🐱" text="One year of freelance" />
+  <AnchorLink emoji="✨" text="New year, new collective" />
+  <AnchorLink emoji="🤖" text="Orbit by Mozilla" />
+  <AnchorLink emoji="🧪" text="Trigger a View Transition when a JS property change" />
+</AnchorWrapper>
 
-___
+<TextSeparator />
 
-🐱 [One year of freelance](https://seb.cat/blog/one-year-of-freelance)
+<AnchorSection emoji="🐱" id="one-year-of-freelance" text="One year of freelance" url="https://seb.cat/blog/one-year-of-freelance" />
+
+<p class="mt-2">
 Last post of 2024 from my friend Sébastien about his freelancing. He is available right now if you need an excellent Front-End developer :)
 Cheers Séb, hope 2025 will be good.
+</p>
 
-✨ [New year, new collective](https://tympanus.net/codrops/news/)
+<AnchorSection componentClass="mt-2" emoji="✨" id="new-year-new-collective" text="New year, new collective" url="https://tympanus.net/codrops/news/" />
+
+<p class="mt-2">
 Codrops has recreated a dedicated web version for their collective hand picked news.
 Now, you have the choice between news daily on the site and newsletters every weeks like mine :)
+</p>
 
-🤖 [Orbit by Mozilla](https://orbitbymozilla.com/)
+<AnchorSection componentClass="mt-2" emoji="🤖" id="orbit-by-mozilla" text="Orbit by Mozilla" url="https://orbitbymozilla.com/" />
+
+<p class="mt-2">
 Orbit is an extension by Mozilla, which use AI to summarize emails, docs, articles and videos across the web without giving your data to a third party.
+</p>
 
-🧪 [Trigger a View Transition when a JS property change](https://www.bram.us/2024/12/25/experiment-automatically-trigger-a-view-transition-when-a-javascript-property-of-an-element-changes/)
+<AnchorSection componentClass="mt-2" emoji="🧪" id="trigger-a-view-transition-when-a-js-property-change" text="Trigger a View Transition when a JS property change" url="https://www.bram.us/2024/12/25/experiment-automatically-trigger-a-view-transition-when-a-javascript-property-of-an-element-changes/" />
+
+<p class="mt-2">
 Bramus write a post about a CSS/JS experiment of his. I didn’t know there are other attributes than content attributes, feel free to check the article if you want to know about IDL attributes.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🌎 [Browser use](https://github.com/browser-use/browser-use)
+<WebLinkSection emoji="🌎" url="https://github.com/browser-use/browser-use" text="Browser use" templateClass="mt-4">
 Make websites accessible for AI agents 🤖.
 Browser use is the easiest way to connect your AI agents with the browser
-
-## Joke of the week
-
-Gen Z infrastructure of the week !
-
-![Gen Z infrastructure of the week](/img/2025-01-06/joke-of-the-week.png)
+</ WebLinkSection>

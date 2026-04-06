@@ -8,45 +8,67 @@ tags:
   - CSS
   - AI
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-👏 You Don't Need to Be Chosen, You Can Just Do Things
-☝️ What if you tried hard ?
-💡 Finish your projects
-📢 Publishing your work increases your luck
-🤩 What are OKLCH colors ?
+<AnchorWrapper>
+  <AnchorLink emoji="👏" text="You Don't Need to Be Chosen, You Can Just Do Things" />
+  <AnchorLink emoji="☝️" text="What if you tried hard ?" />
+  <AnchorLink emoji="💡" text="Finish your projects" />
+  <AnchorLink emoji="📢" text="Publishing your work increases your luck" />
+  <AnchorLink emoji="🤩" text="What are OKLCH colors ?" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="👏" id="you-dont-need-to-be-chosen-you-can-just-do-things" text="You Don't Need to Be Chosen, You Can Just Do Things" url="https://soubiran.dev/posts/you-dont-need-to-be-chosen-you-can-just-do-things" />
 
-👏 [You Don't Need to Be Chosen, You Can Just Do Things](https://soubiran.dev/posts/you-dont-need-to-be-chosen-you-can-just-do-things)
+<p class="mt-2">
 A great blog post about « DOING IT », I had a project with some friends at my school I had never shipped it. I worked on it nearly 2 years but finally they decided to stop the project because it took tool long to ship… I was and still am a perfectionist so I wanted to make the perfect website to show my skills. But at some point you need to ship in order to show you work.
-You can see the website here [You’re so french](https://ysf.cocommit.fr/), frozen in the year 2018 where I left it 😀.
+You can see the website here [You’re so french](https://ysf.cocommit.fr/?utm_source=cocoweb.fr), frozen in the year 2018 where I left it 😀.
+</p>
 
-But this failed project lead to finally creating this blog and now this blog is over 4 years ! I started small but now I really like my corner of the web 🌐.
+<AnchorSection componentClass="mt-2" emoji="💡" id="finish-your-projects" text="Finish your projects" url="https://github.com/readme/guides/finish-your-projects/" />
 
-💡 [Finish your projects](https://github.com/readme/guides/finish-your-projects/)
+<p class="mt-2">
 Finishing your project is at least the same amount of effort than the 90% of the project. Finishing is hard but it’s a thrill to see you project live / finished. Maybe I will have a tatoo written « finish it » on me to remind me « TO FUCKING FINISH MY PROJECTS AHBHABNZJHANZAJNZAJNZAJNZAKJNZANKJ ». ( No I didn’t had a stroke but I need to finish this blog post so here we go ).
+</p>
 
-☝️ [What if you tried hard ?](https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5)
+<AnchorSection componentClass="mt-2" emoji="☝️" id="what-if-you-tried-hard" text="What if you tried hard ?" url="https://aaronfrancis.com/2024/what-if-you-tried-hard-dac139a5" />
+
+<p class="mt-2">
 Every time I tried hard to do something, I completed my goal or at least I learned a lot from the experience. I think, when you really want to do something you need to go all in or at least started incrementally.
+</p>
 
-📢 [Publishing your work increases your luck](https://github.com/readme/guides/publishing-your-work)
+<AnchorSection componentClass="mt-2" emoji="📢" id="publishing-your-work-increases-your-luck" text="Publishing your work increases your luck" url="https://github.com/readme/guides/publishing-your-work" />
+
+<p class="mt-2">
 « For every snarky comment, there are 10x as many people admiring your work. » I think this phrase is all you need to resume this blog post. It’s REALLY easy to criticise someone work than doing the work. Sharing you passion can really increases your luck because on day a follower can propose you a life changing thing.
+</p>
 
-🤩 [What are OKLCH colors ?](https://jakub.kr/components/oklch-colors)
+<AnchorSection componentClass="mt-2" emoji="🤩" id="what-are-oklch-colors" text="What are OKLCH colors ?" url="https://jakub.kr/components/oklch-colors" />
+
+<p class="mt-2">
 OKLCH is a newer color model that is designed to be perceptually uniform. You can use it today with modern CSS.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-## Web tools and Library
+<WebLinkSection emoji="👀" url="https://github.com/mikemai2awesome/mcss/" text="mikemai2awesome/mcss" templateClass="mt-4">
+A modern classless CSS framework inspired by the typefaces of Matthew Carter.
+</ WebLinkSection>
 
-👀 [mikemai2awesome/mcss](https://github.com/mikemai2awesome/mcss/)
- A modern classless CSS framework inspired by the typefaces of Matthew Carter.
-
-🤖 [kortix-ai/suna](https://github.com/kortix-ai/suna)
+<WebLinkSection emoji="🤖" url="https://github.com/kortix-ai/suna" text="kortix-ai/suna" templateClass="mt-4">
 Kortix – build, manage and train AI Agents. Fully Open Source.
+</ WebLinkSection>

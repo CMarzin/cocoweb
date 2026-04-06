@@ -5,7 +5,6 @@ export async function GET(context: APIContext) {
   const posts = await getCollection('blog');
   const articles = await getCollection('articles');
 
-  // Combine and sort all content by date
   const allContent = [...posts, ...articles].sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
   );
@@ -26,9 +25,9 @@ export async function GET(context: APIContext) {
       },
     ],
     items: allContent.map((item) => {
-      const isArticle = articles.some((a) => a.slug === item.slug);
+      const isArticle = articles.some((a) => a.id === item.id);
       const basePath = isArticle ? '/articles/' : '/blog/';
-      const url = `${siteUrl}${basePath}${item.slug}/`;
+      const url = `${siteUrl}${basePath}${item.id}/`;
 
       return {
         id: url,

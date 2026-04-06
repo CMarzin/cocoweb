@@ -8,26 +8,65 @@ tags:
   - repo git
   - web tools
 ---
-## Veille
-📘 [Why Vuejs is a great fit for modular software architecture](https://www.netlify.com/blog/why-vue-is-a-great-fit-for-modular-software-architecture/)
-  Ben Hong list some good points why you need to use Vue for your next project.
 
-📘 [Running Nuxt 3 in a Docker Container](https://markus.oberlehner.net/blog/running-nuxt-3-in-a-docker-container/)
-  Step by step tutorial about using docker locally with your Nuxt app.
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📘 [Keep linux open and free](https://www.oracle.com/news/announcement/blog/keep-linux-open-and-free-2023-07-10/)
-  Spicy article about IBM and Linux Red hat.
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-📘  [JavaScript Gom Jabbar](https://frantic.im/javascript-gom-jabbar/)
-  If you open an old package.json, will you be able to understand its content ?
+<AnchorWrapper>
+  <AnchorLink emoji="📘" text="Why Vuejs is a great fit for modular software architecture" />
+  <AnchorLink emoji="📘" text="Running Nuxt 3 in a Docker Container" />
+  <AnchorLink emoji="📘" text="Keep linux open and free" />
+  <AnchorLink emoji="📘" text="JavaScript Gom Jabbar" />
+</AnchorWrapper>
 
-## Repository Github
-🐙 [Boring stack](https://github.com/sailscastshq/boring-stack)
+<TextSeparator />
+
+<AnchorSection emoji="📘" id="why-vuejs-is-a-great-fit-for-modular-software-architecture" text="Why Vuejs is a great fit for modular software architecture" url="https://www.netlify.com/blog/why-vue-is-a-great-fit-for-modular-software-architecture/" />
+
+<p class="mt-2">
+Ben Hong list some good points why you need to use Vue for your next project.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📘" id="running-nuxt-3-in-a-docker-container" text="Running Nuxt 3 in a Docker Container" url="https://markus.oberlehner.net/blog/running-nuxt-3-in-a-docker-container/" />
+
+<p class="mt-2">
+Step by step tutorial about using docker locally with your Nuxt app.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📘" id="keep-linux-open-and-free" text="Keep linux open and free" url="https://www.oracle.com/news/announcement/blog/keep-linux-open-and-free-2023-07-10/" />
+
+<p class="mt-2">
+Spicy article about IBM and Linux Red hat.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📘" id="javascript-gom-jabbar" text="JavaScript Gom Jabbar" url="https://frantic.im/javascript-gom-jabbar/" />
+
+<p class="mt-2">
+If you open an old package.json, will you be able to understand its content ?
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/sailscastshq/boring-stack" text="Boring stack" templateClass="mt-4">
 The Boring JavaScript Stack 🥱: Ship products with full-stack JavaScript reliably with battle-tested technologies.
+</ WebLinkSection>
 
-🐙 [Detect scroll](https://github.com/egstad-construct/detect-scroll)
+<WebLinkSection emoji="🐙" url="https://github.com/egstad-construct/detect-scroll" text="Detect scroll" templateClass="mt-4">
 A performant and lightweight (~1.6kb) ES6 module for detecting scroll activity (direction + location) for X and/or Y axis.
+</ WebLinkSection>
 
-## Web tool
-🧰 [BrandBird](https://www.brandbird.app/)
+<h2 class="font-display text-2xl text-foreground mt-8">Web tool</h2>
+
+<WebLinkSection emoji="🧰" url="https://www.brandbird.app/" text="BrandBird" templateClass="mt-4">
 An image editor for busy SaaS founders, who build in public !
+</ WebLinkSection>

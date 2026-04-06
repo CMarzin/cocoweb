@@ -8,38 +8,60 @@ tags:
   - design
   - product-design
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-✨ A conversation about the meaning of quality
-📺 One Million ScreenShots
-🐙 Github but for designer
-💯 SetBigTimeout
+<AnchorWrapper>
+  <AnchorLink emoji="✨" text="A conversation about the meaning of quality" />
+  <AnchorLink emoji="📺" text="One Million ScreenShots" />
+  <AnchorLink emoji="🐙" text="Github but for designer" />
+  <AnchorLink emoji="💯" text="SetBigTimeout" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="✨" id="a-conversation-about-the-meaning-of-quality" text="A conversation about the meaning of quality" url="https://linear.app/quality" />
 
-✨ [A conversation about the meaning of quality](https://linear.app/quality)
+<p class="mt-2">
 A series of interviews with some of the best product designer about the quality of their product, Linear, Stripe, Perplexity etc…
+</p>
 
-📺 [One Million Screenshots](https://onemillionscreenshots.com/)
+<AnchorSection componentClass="mt-2" emoji="📺" id="one-million-screenshots" text="One Million Screenshots" url="https://onemillionscreenshots.com/" />
+
+<p class="mt-2">
 A website which render over 1 million screenshot of the web's top homepages. It’s like google maps but for the web.
+</p>
 
-🐙 [Sixelf](https://sixelf.com/)
+<AnchorSection componentClass="mt-2" emoji="🐙" id="sixelf" text="Sixelf" url="https://sixelf.com/" />
+
+<p class="mt-2">
 A community for designer to share and track their work, like Github but for designer.
+</p>
 
-💯 [setBigTimeout](https://evanhahn.com/set-big-timeout/)
+<AnchorSection componentClass="mt-2" emoji="💯" id="setbigtimeout" text="setBigTimeout" url="https://evanhahn.com/set-big-timeout/" />
+
+<p class="mt-2">
 Did you know the limit for a setTimeOut in javascript is ~25 days, so how do you set a time out bigger than ~25 days ?
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-👾 [DMNO](https://dmno.dev/)
+<WebLinkSection emoji="👾" url="https://dmno.dev/" text="DMNO" templateClass="mt-4">
 **Environment Variables. Evolved.**
 DMNO makes your configuration safer and smarter.It integrates with the tools you already use and it's powered by TypeScript and Vite.
+</ WebLinkSection>
 
-🌲 [EZ-tree](https://github.com/dgreenheck/ez-tree)
+<WebLinkSection emoji="🌲" url="https://github.com/dgreenheck/ez-tree" text="EZ-tree" templateClass="mt-4">
 Procedural tree generator written with JavaScript and Three.js
+</ WebLinkSection>

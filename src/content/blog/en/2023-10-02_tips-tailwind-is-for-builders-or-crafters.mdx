@@ -11,21 +11,46 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Classic rock, Mario Kart, and why we can't agree on Tailwind](https://joshcollinsworth.com/blog/tailwind-is-smart-steering)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Classic rock, Mario Kart, and why we can't agree on Tailwind" />
+  <AnchorLink emoji="🧰" text="UI Lib Picker" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="classic-rock-mario-kart-and-why-we-cant-agree-on-tailwind" text="Classic rock, Mario Kart, and why we can't agree on Tailwind" url="https://joshcollinsworth.com/blog/tailwind-is-smart-steering" />
+
+<p class="mt-2">
 Personally I am a crafters, I really like all the points made in this article. But in the end, you can use whatever tool you want to ship your product.
+</p>
 
-🧰 [UI Lib Picker](https://ui-libs.vercel.app/)
+<AnchorSection componentClass="mt-2" emoji="🧰" id="ui-lib-picker" text="UI Lib Picker" url="https://ui-libs.vercel.app/" />
+
+<p class="mt-2">
 This website list the UI library available for vuejs 3 and Nuxt.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [Affordable full-stack production debugging & monitoring.](https://www.hyperdx.io/)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://www.hyperdx.io/" text="Affordable full-stack production debugging &amp; monitoring." templateClass="mt-4">
 An Open Source Observability Platform: Unify Session Replays, Logs, Traces, and Errors – All Without the Datadog Price Tag.
+</ WebLinkSection>
 
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-## Design
-
-🎨 [The Design System Ecosystem](https://bradfrost.com/blog/post/the-design-system-ecosystem/)
+<WebLinkSection emoji="🎨" url="https://bradfrost.com/blog/post/the-design-system-ecosystem/" text="The Design System Ecosystem" templateClass="mt-4">
 Brad frost explain how a good design system organization can help the product and all the people in between ( developers, designers etc… ) level up your product.
+</ WebLinkSection>

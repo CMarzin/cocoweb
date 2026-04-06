@@ -9,40 +9,62 @@ tags:
   - AI
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🐘 PHP 8.4 is good !
-🦙 Return JSON output from Ollama
-🧐 Though on not using a coding assistant
-📗 Dependencies vs. devDependencies
+<AnchorWrapper>
+  <AnchorLink emoji="🐘" text="PHP 8.4 is good !" />
+  <AnchorLink emoji="🦙" text="Return JSON output from Ollama" />
+  <AnchorLink emoji="🧐" text="Though on not using a coding assistant" />
+  <AnchorLink emoji="📗" text="Dependencies vs. devDependencies" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🐘" id="php-84-is-good" text="PHP 8.4 Is Good" url="https://www.youtube.com/watch?v=f5nGmE92zNA" />
 
-🐘 [PHP 8.4 Is Good](https://www.youtube.com/watch?v=f5nGmE92zNA)
+<p class="mt-2">
 Property hooks, asymmetric visibility, updated DOM API and more.
+</p>
 
-🦙 [Return JSON output from Ollama](https://ollama.com/blog/structured-outputs)
+<AnchorSection componentClass="mt-2" emoji="🦙" id="return-json-output-from-ollama" text="Return JSON output from Ollama" url="https://ollama.com/blog/structured-outputs" />
+
+<p class="mt-2">
 In the last version of Ollama, you can send a JSON schema and it will return the output formatted like you would.
+</p>
 
-🧐 [Though on not using a coding assistant](https://macwright.com/2024/11/20/not-using-copilot)
+<AnchorSection componentClass="mt-2" emoji="🧐" id="though-on-not-using-a-coding-assistant" text="Though on not using a coding assistant" url="https://macwright.com/2024/11/20/not-using-copilot" />
+
+<p class="mt-2">
 A coding assistant make a developer more like a project manager, you tell an llm what to do and it will do it. Writing code is a skill, if want to forget about it, ask an LLm to do it for you.
+</p>
 
-📗 [Dependencies vs. devDependencies for JavaScript apps](https://angelika.me/2024/11/11/dependencies-vs-dev-dependencies-javascript-apps/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="dependencies-vs-devdependencies-for-javascript-apps" text="Dependencies vs. devDependencies for JavaScript apps" url="https://angelika.me/2024/11/11/dependencies-vs-dev-dependencies-javascript-apps/" />
+
+<p class="mt-2">
 With `NODE_ENV` you can choose to install or not install some dependency, this article defines 3 different approach to where install the dependencies.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-📊 [Json.pub](https://json.pub/)
+<WebLinkSection emoji="📊" url="https://json.pub/" text="Json.pub" templateClass="mt-4">
 A lightweight, privacy-focused tool for visualizing JSON and other data formats (XML, base64, binary) entirely client-side. No tracking, no servers—just a clean, secure solution for raw data on any device.
+</ WebLinkSection>
 
-📹 [Cap](https://cap.so/)
+<WebLinkSection emoji="📹" url="https://cap.so/" text="Cap" templateClass="mt-4">
 Cap is the open source alternative to Loom. Lightweight, powerful, and stunning.
+</ WebLinkSection>
 
-📈 [VINCE Analytics](https://www.vinceanalytics.com/)
+<WebLinkSection emoji="📈" url="https://www.vinceanalytics.com/" text="VINCE Analytics" templateClass="mt-4">
 Vince is is a cost effective , self hosted , privacy friendly alternative to Google Analytics.
+</ WebLinkSection>

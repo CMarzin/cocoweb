@@ -11,29 +11,55 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📺 [TypeScript Origins: The Documentary](https://www.youtube.com/watch?v=U6s2pdxebSo)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📺" text="TypeScript Origins: The Documentary" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📺" id="typescript-origins-the-documentary" text="TypeScript Origins: The Documentary" url="https://www.youtube.com/watch?v=U6s2pdxebSo" />
+
+<p class="mt-2">
 A great documentary on Typescript recommended by Evan You the creator of Vuejs.
+</p>
 
-## Repository Github
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🐙 [ESLint Stylistic](https://github.com/eslint-stylistic/eslint-stylistic)
+<h2 class="font-display text-2xl text-foreground">Repository Github</h2>
+
+<WebLinkSection emoji="🐙" url="https://github.com/eslint-stylistic/eslint-stylistic" text="ESLint Stylistic" templateClass="mt-4">
 This package give you full control to over the code formatted inside your IDE to see more human readable code.
+</ WebLinkSection>
 
-🐙 [Typesense](https://github.com/typesense/typesense)
+<WebLinkSection emoji="🐙" url="https://github.com/typesense/typesense" text="Typesense" templateClass="mt-4">
 This package is the Open Source alternative to Algolia + Pinecone, it has a paid cloud and the possibility to self-host.
+</ WebLinkSection>
 
-🐙 [Mbnuqw/sidebery](https://github.com/mbnuqw/sidebery)
+<WebLinkSection emoji="🐙" url="https://github.com/mbnuqw/sidebery" text="Mbnuqw/sidebery" templateClass="mt-4">
 Firefox extension for managing tabs and bookmarks in sidebar.
+</ WebLinkSection>
 
-🐙 [Egoist/tailwindcss-icons](https://github.com/egoist/tailwindcss-icons)
+<WebLinkSection emoji="🐙" url="https://github.com/egoist/tailwindcss-icons" text="Egoist/tailwindcss-icons" templateClass="mt-4">
 Use any icon from Iconify for Tailwind CSS.
+</ WebLinkSection>
 
-## Design
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
 
-📗 [Laws of UX](https://lawsofux.com/)
+<WebLinkSection emoji="📗" url="https://lawsofux.com/" text="Laws of UX" templateClass="mt-4">
 Laws of UX is a collection of best practices that designers can consider when building user interfaces.
+</ WebLinkSection>
 
-🎨 [Lunar UI](https://lunarui.dev/)
+<WebLinkSection emoji="🎨" url="https://lunarui.dev/" text="Lunar UI" templateClass="mt-4">
 Another cool library UI build on top of Vuejs/Nuxt and Tailwind CSS.
+</ WebLinkSection>

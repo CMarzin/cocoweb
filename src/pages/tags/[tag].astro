@@ -1,15 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PostList from '../../components/PostList.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostList from "../../components/PostList.astro";
 
 export async function getStaticPaths() {
   // Try English content first, fallback to French
-  let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+  let posts = await getCollection("blog", ({ id }) => id.startsWith("en/"));
   if (posts.length === 0) {
-    posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+    posts = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
   }
-  
+
   // Get all unique tags
   const tags = new Set<string>();
   posts.forEach((post) => {
@@ -20,11 +20,11 @@ export async function getStaticPaths() {
 
   // Create a path for each tag
   return Array.from(tags).map((tag) => ({
-    params: { tag: tag.replace(/\s+/g, '-') },
-    props: { 
+    params: { tag: tag.replace(/\s+/g, "-") },
+    props: {
       tag,
       posts: posts.filter((post) =>
-        post.data.tags.some((t) => t.toLowerCase() === tag)
+        post.data.tags.some((t) => t.toLowerCase() === tag),
       ),
     },
   }));
@@ -32,20 +32,24 @@ export async function getStaticPaths() {
 
 interface Props {
   tag: string;
-  posts: Awaited<ReturnType<typeof getCollection<'blog'>>>;
+  posts: Awaited<ReturnType<typeof getCollection<"blog">>>;
 }
 
 const { tag, posts } = Astro.props;
 ---
 
-<BaseLayout 
-  title={`#${tag} - Cocoweb`} 
+<BaseLayout
+  title={`#${tag} - Cocoweb`}
   description={`Articles tagged with #${tag} on Cocoweb.`}
   lang="en"
 >
-  <div class="tag-page">
+  <div class="flex flex-col gap-5 stagger-children">
     <header class="tag-header">
-      <h1>Tagged "{tag}"</h1>
+      <h1
+        class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
+      >
+        Tagged <span class="text-primary text-glow">"{tag}"</span>
+      </h1>
     </header>
 
     <PostList posts={posts} showTags={true} basePath="/blog" lang="en" />

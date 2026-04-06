@@ -11,25 +11,53 @@ tags:
   - design
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [Mastering Vue 3 Composables](https://dev.to/alexanderop/mastering-vue-3-composables-a-comprehensive-style-guide-46p9)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Mastering Vue 3 Composables" />
+  <AnchorLink emoji="📗" text="Mastering self-management: Skills, strategies, and benefits" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="mastering-vue-3-composables" text="Mastering Vue 3 Composables" url="https://dev.to/alexanderop/mastering-vue-3-composables-a-comprehensive-style-guide-46p9" />
+
+<p class="mt-2">
 A Comprehensive Style Guide of how you can use vue 3 composables.
+</p>
 
-📗 [Mastering self-management: Skills, strategies, and benefits](https://blog.logrocket.com/product-management/self-management-skills-strategies/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="mastering-self-management-skills-strategies-and-benefits" text="Mastering self-management: Skills, strategies, and benefits" url="https://blog.logrocket.com/product-management/self-management-skills-strategies/" />
 
-## CSS & Design
+<p class="mt-2">
+</p>
 
-🎨 [Tab bar Animation on Codepen](https://codepen.io/aaroniker/full/KKbOaEb)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">CSS & Design</h2>
+
+<WebLinkSection emoji="🎨" url="https://codepen.io/aaroniker/full/KKbOaEb" text="Tab bar Animation on Codepen" templateClass="mt-4">
 Very spacey changing tab animation.
+</ WebLinkSection>
 
-🎨 [Transition, animation, a practical guide](https://uxdesign.cc/transition-animations-a-practical-guide-5dba4d42f659)
+<WebLinkSection emoji="🎨" url="https://uxdesign.cc/transition-animations-a-practical-guide-5dba4d42f659" text="Transition, animation, a practical guide" templateClass="mt-4">
 How animation can make the difference between a good product and a very good product.
+</ WebLinkSection>
 
-## Repository Github
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Github</h2>
 
-🐙 [FilePond](https://pqina.nl/filepond/)
+<WebLinkSection emoji="🐙" url="https://pqina.nl/filepond/" text="FilePond" templateClass="mt-4">
 Easy File Uploading With JavaScript
+</ WebLinkSection>
 
-🐙 [ByteByteGoHq/system-design-101](https://github.com/ByteByteGoHq/system-design-101)
+<WebLinkSection emoji="🐙" url="https://github.com/ByteByteGoHq/system-design-101" text="ByteByteGoHq/system-design-101" templateClass="mt-4">
 Explain complex systems using visuals and simple terms. Help you prepare for system design interviews.
+</ WebLinkSection>

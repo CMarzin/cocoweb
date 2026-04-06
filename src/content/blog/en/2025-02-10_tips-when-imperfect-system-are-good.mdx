@@ -8,39 +8,67 @@ tags:
   - vuejs
   - CSS
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📈 When Imperfect Systems are Good, Actually: Bluesky's Lossy Timelines
-📗 Learning HTML is the best investment I ever did
-📝 Avoiding ￼`any`￼s with Linting and TypeScript
-🤯 CSS @functions + CSS if()
-🧪 Vuejs testing with vue test utils and vitest
-🍍 Sentry's Pinia Integration for Vue and Nuxt Error Tracking
+<AnchorWrapper>
+  <AnchorLink emoji="📈" text="When Imperfect Systems are Good, Actually: Bluesky's Lossy Timelines" />
+  <AnchorLink emoji="📗" text="Learning HTML is the best investment I ever did" />
+  <AnchorLink emoji="📝" text="Avoiding ￼`any`￼s with Linting and TypeScript" />
+  <AnchorLink emoji="🤯" text="CSS @functions + CSS if()" />
+  <AnchorLink emoji="🧪" text="Vuejs testing with vue test utils and vitest" />
+  <AnchorLink emoji="🍍" text="Sentry's Pinia Integration for Vue and Nuxt Error Tracking" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
-📈 [When Imperfect Systems are Good, Actually: Bluesky’s Lossy Timelines](https://jazco.dev/2025/02/19/imperfection/)
+<AnchorSection emoji="📈" id="when-imperfect-systems-are-good-actually-blueskys-lossy-timelines" text="When Imperfect Systems are Good, Actually: Bluesky’s Lossy Timelines" url="https://jazco.dev/2025/02/19/imperfection/" />
+
+<p class="mt-2">
 Jay write about the system in place at bluesky in order to scale the service and make the users happy.
+</p>
 
-📗 [Learning HTML is the best investment I ever did](https://christianheilmann.com/2025/01/15/learning-html-is-the-best-investment-i-ever-did/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="learning-html-is-the-best-investment-i-ever-did" text="Learning HTML is the best investment I ever did" url="https://christianheilmann.com/2025/01/15/learning-html-is-the-best-investment-i-ever-did/" />
+
+<p class="mt-2">
 HTML is the basic of the web, when you have the basic, it’s pretty straightforward to debug and build things on the web.
+</p>
 
-📝 [Avoiding `any`s with Linting and TypeScript](https://typescript-eslint.io/blog/avoiding-anys/)
+<AnchorSection componentClass="mt-2" emoji="📝" id="avoiding-anys-with-linting-and-typescript" text="Avoiding `any`s with Linting and TypeScript" url="https://typescript-eslint.io/blog/avoiding-anys/" />
+
+<p class="mt-2">
 An articles which goes to explain multiples ways of banning unsafe types and the usage of unsafe types.
+</p>
 
-🤯 [CSS @function + CSS if\(\)](https://www.bram.us/2025/02/18/css-at-function-and-css-if/?ck_subscriber_id=1747048099)
+<AnchorSection componentClass="mt-2" emoji="🤯" id="css-function-css-if" text="CSS @function + CSS if\(\)" url="https://www.bram.us/2025/02/18/css-at-function-and-css-if/?ck_subscriber_id=1747048099" />
+
+<p class="mt-2">
 Upcomming css features only available in chrome canary for now.
+</p>
 
-🍍[Sentry's Pinia Integration for Vue and Nuxt Error Tracking](https://blog.sentry.io/sentrys-pinia-integration-for-vue-and-nuxt-error-tracking/)
+<AnchorSection componentClass="mt-2" emoji="🍍" id="sentrys-pinia-integration-for-vue-and-nuxt-error-tracking" text="Sentry's Pinia Integration for Vue and Nuxt Error Tracking" url="https://blog.sentry.io/sentrys-pinia-integration-for-vue-and-nuxt-error-tracking/" />
 
-🧪 [Vue.js Testing with Vue Test Utils and Vitest](https://vueschool.io/articles/vuejs-tutorials/vue-js-testing-with-vue-test-utils-and-vitest/)
+<p class="mt-2">
+</p>
 
-___
+<AnchorSection componentClass="mt-2" emoji="🧪" id="vuejs-testing-with-vue-test-utils-and-vitest" text="Vue.js Testing with Vue Test Utils and Vitest" url="https://vueschool.io/articles/vuejs-tutorials/vue-js-testing-with-vue-test-utils-and-vitest/" />
 
-## Web tools and Library
+<p class="mt-2">
+</p>
 
-🧾 [Jscanify](https://github.com/puffinsoft/jscanify)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🧾" url="https://github.com/puffinsoft/jscanify" text="Jscanify" templateClass="mt-4">
 The Javascript document scanning library.
+</ WebLinkSection>

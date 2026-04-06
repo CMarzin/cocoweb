@@ -9,36 +9,59 @@ tags:
   - UI
   - Linux
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-💿 Vinyl Records
-🎺 Honkish
-📉 Letter to Arc members 2025
-🤓 Typescript Style Guide
+<AnchorWrapper>
+  <AnchorLink emoji="💿" text="Vinyl Records" />
+  <AnchorLink emoji="🎺" text="Honkish" />
+  <AnchorLink emoji="📉" text="Letter to Arc members 2025" />
+  <AnchorLink emoji="🤓" text="Typescript Style Guide" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="💿" id="seb-dancer-michel-records" text="Seb Dancer-Michel – Records" url="https://seb.cat/records" />
 
-💿 [Seb Dancer-Michel – Records](https://seb.cat/records)
+<p class="mt-2">
 The vinyl collection of my friend Sébastien displayed in a very cool way.
+</p>
 
-🎺 [Honkish](https://benji.org/honkish)
+<AnchorSection componentClass="mt-2" emoji="🎺" id="honkish" text="Honkish" url="https://benji.org/honkish" />
+
+<p class="mt-2">
 The last post about the now dead Honk app. They were trying to reinvent the messaging app with some clever and fun features. Try to click a lot on the button next to the definition of Honkish.
+</p>
 
-📉 [Letter to Arc members 2025](https://browsercompany.substack.com/p/letter-to-arc-members-2025)
+<AnchorSection componentClass="mt-2" emoji="📉" id="letter-to-arc-members-2025" text="Letter to Arc members 2025" url="https://browsercompany.substack.com/p/letter-to-arc-members-2025" />
+
+<p class="mt-2">
 The browser company explains why they shifted to building an AI browser instead of Arc. They will continue to support Arc with patches but no new features.
+</p>
 
-🤓 [Typescript Style Guide](https://github.com/mkosir/typescript-style-guide)
+<AnchorSection componentClass="mt-2" emoji="🤓" id="typescript-style-guide" text="Typescript Style Guide" url="https://github.com/mkosir/typescript-style-guide" />
+
+<p class="mt-2">
 TypeScript Style Guide provides a concise set of conventions and best practices for creating consistent, maintainable code.
-___
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-✨ [Basecoat UI](https://basecoatui.com/)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="✨" url="https://basecoatui.com/" text="Basecoat UI" templateClass="mt-4">
 A components library built with Tailwind CSS that works with any web stack.
+</ WebLinkSection>
 
-🎮 [Bazzite](https://bazzite.gg/)
+<WebLinkSection emoji="🎮" url="https://bazzite.gg/" text="Bazzite" templateClass="mt-4">
 Bazzite makes gaming and everyday use smoother and simpler across desktop PCs, handhelds, tablets, and home theater PCs.
+</ WebLinkSection>

@@ -13,59 +13,57 @@ tags:
 
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-## Salut, web dev friends! 🧑‍💻
-
-This week, I started reading a lot of things about accessiblity , I started using more [storybook](https://storybook.js.org/) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y). I discover some accessiblity bugs into this very blog and fixed them ! I now have 100 score in lighthouse, its a start :).
-
-<AnchorLink emoji="📢" text="Code Isn't Slowing Your Project Down, Communication Is" />
-<AnchorLink emoji="🌈" text="Finding an accessibility-first culture in npmx" />
-<AnchorLink emoji="👀" text="Accessibility in Vue" />
-<AnchorLink emoji="⚒️" text="Oxfmt Beta" />
-
-**Have a great week.**
-
-___
-
-<AnchorSection emoji="📢" id="code-isn't-slowing-your-project-down,-communication-is">[Code Isn't Slowing Your Project Down, Communication Is](https://shiftmag.dev/code-isnt-slowing-your-project-down-communication-is-7889/)</AnchorSection>
-
-I like the conlusion, « Sit down and listen to other teams ». Listening the problem of others, shape the architecture of the company. Because if you understand why team A and team B exist, it's easier for everyone to do their jobs more rapidly.
-
-<AnchorSection emoji="🌈" id="finding-an-accessibility-first-culture-in-npmx">[Finding an accessibility-first culture in npmx](https://piccalil.li/blog/finding-an-accessibility-first-culture-in-npmx/?utm_source=cocoweb.fr)</AnchorSection>
-
-I aggree it's easier to thinks about accessibility from the start, I will know try to be more alert about theses issues. I am already trying to use html semantic element, good contrast, «  the basics », but I have a lot of things to learn about keyboard navigation , voice over etc…
-
-<AnchorSection emoji="👀" id="accessibility-in-vue">[Accessibility in Vue: Quick Tips for Building Inclusive Apps](https://dev.to/jacobandrewsky/accessibility-in-vue-quick-tips-for-building-inclusive-apps-2ne0)</AnchorSection>
-
-I started to use [storybook](https://storybook.js.org/) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y).  They are some nice tips, I need to make sure my website are accessible too.
-
-<AnchorSection emoji="⚒️" id="oxfmt-beta">[Oxfmt Beta](https://oxc.rs/blog/2026-02-24-oxfmt-beta)</AnchorSection>
-
+<StarterText>
+This week, I started reading a lot of things about accessibility, I started using more [storybook](https://storybook.js.org/?utm_source=cocoweb.fr) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y?utm_source=cocoweb.fr). I discover some accessibility bugs into this very blog and fixed them ! I now have 100 score in lighthouse, its a start :).
+I like the conclusion, « Sit down and listen to other teams ». Listening the problem of others, shape the architecture of the company. Because if you understand why team A and team B exist, it's easier for everyone to do their jobs more rapidly.
+I agree it's easier to thinks about accessibility from the start, I will know try to be more alert about theses issues. I am already trying to use html semantic element, good contrast, «  the basics », but I have a lot of things to learn about keyboard navigation , voice over etc…
+I started to use [storybook](https://storybook.js.org/?utm_source=cocoweb.fr) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y?utm_source=cocoweb.fr).  They are some nice tips, I need to make sure my website are accessible too.
 Announcing the Beta of Oxfmt, the stable release is near ! In a near future, I will migrate all my project on it, really excited for the performance improvment.
-
-___
-
-## Web tools and Library
-
-📜 [vue-scrollama](https://vue-scrollama.pages.dev/)
 Scroll down to explore component primitives and real-world scrollytelling patterns.
-
-📹 [Frame Zero](https://www.framezero.app/)
 The Whiteboard Video Editor
 Built for explainers, tutorials, and video essays. Turn a blank canvas into a polished animated video without complex tools or steep learning curves.
-
-🔦 [Torph](https://torph.lochie.me/)
 Dependency-free animated text component.
-
-🌈 [WebHaptics](https://haptics.lochie.me/)
 Haptic feedback for the mobile web.
-
-## Cool Websites
-
-🤩 [PersonalSit.es](https://personalsit.es/?utm_source=cocoweb.fr)
-An index of ~912 personnal websites of REAL people.
-
-## Design inspirations
-
-🔣 [DJR Glyph Navigator](https://glyphs.djr.com/)
+An index of ~912 personal websites of REAL people.
 An infinite collection of glyph, very nice for inspirations.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📢" text="Code Isn't Slowing Your Project Down, Communication Is" />
+  <AnchorLink emoji="🌈" text="Finding an accessibility-first culture in npmx" />
+  <AnchorLink emoji="👀" text="Accessibility in Vue" />
+  <AnchorLink emoji="⚒️" text="Oxfmt Beta" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📢" id="code-isnt-slowing-your-project-down-communication-is" text="Code Isn't Slowing Your Project Down, Communication Is" url="https://shiftmag.dev/code-isnt-slowing-your-project-down-communication-is-7889/" />
+
+<p class="mt-2">
+I like the conclusion, « Sit down and listen to other teams ». Listening the problem of others, shape the architecture of the company. Because if you understand why team A and team B exist, it's easier for everyone to do their jobs more rapidly.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🌈" id="finding-an-accessibility-first-culture-in-npmx" text="Finding an accessibility-first culture in npmx" url="https://piccalil.li/blog/finding-an-accessibility-first-culture-in-npmx/" />
+
+<p class="mt-2">
+I agree it's easier to thinks about accessibility from the start, I will know try to be more alert about theses issues. I am already trying to use html semantic element, good contrast, «  the basics », but I have a lot of things to learn about keyboard navigation , voice over etc…
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="👀" id="accessibility-in-vue-quick-tips-for-building-inclusive-apps" text="Accessibility in Vue: Quick Tips for Building Inclusive Apps" url="https://dev.to/jacobandrewsky/accessibility-in-vue-quick-tips-for-building-inclusive-apps-2ne0" />
+
+<p class="mt-2">
+I started to use [storybook](https://storybook.js.org/?utm_source=cocoweb.fr) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y?utm_source=cocoweb.fr).  They are some nice tips, I need to make sure my website are accessible too.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="⚒️" id="oxfmt-beta" text="Oxfmt Beta" url="https://oxc.rs/blog/2026-02-24-oxfmt-beta/" />
+
+<p class="mt-2">
+Announcing the Beta of Oxfmt, the stable release is near ! In a near future, I will migrate all my project on it, really excited for the performance improvment.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>

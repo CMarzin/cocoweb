@@ -12,57 +12,105 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-+10x engineers may be mythical, but [-10x engineers](https://taylor.town/-10x) exist.
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-Visual way to explain how load balancing work.
-[Load Balancing](https://samwho.dev/load-balancing/)
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="-10x engineers" />
+  <AnchorLink emoji="📗" text="Load Balancing" />
+  <AnchorLink emoji="📗" text="An On-Ramp to Flow" />
+  <AnchorLink emoji="📗" text="No more email table" />
+  <AnchorLink emoji="📗" text="fav.farm" />
+  <AnchorLink emoji="📗" text="Shields.io - badges for readme" />
+</AnchorWrapper>
 
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="10x-engineers" text="-10x engineers" url="https://taylor.town/-10x" />
+
+<p class="mt-2">
++10x engineers may be mythical, but [-10x engineers](https://taylor.town/-10x?utm_source=cocoweb.fr) exist.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📗" id="load-balancing" text="Load Balancing" url="https://samwho.dev/load-balancing/" />
+
+<p class="mt-2">
 One Weird Trick: Leave Your Work Broken
-[An On-Ramp to Flow](https://census.dev/blog/an-on-ramp-to-flow)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="an-on-ramp-to-flow" text="An On-Ramp to Flow" url="https://census.dev/blog/an-on-ramp-to-flow" />
+
+<p class="mt-2">
 The new Outlook switches rendering engines from Microsoft Word to Edge.
-[No more email table](https://twitter.com/Mokkapps/status/1650062039199391746)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="no-more-email-table" text="No more email table" url="https://twitter.com/Mokkapps/status/1650062039199391746" />
+
+<p class="mt-2">
 I bet you need a quick favicon.
-[fav.farm](https://fav.farm/)
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="favfarm" text="fav.farm" url="https://fav.farm/" />
+
+<p class="mt-2">
 Need to pimp your readme with colorful badges ?
-[Shields.io - badges for readme](https://shields.io/)
+</p>
 
-## AI
+<AnchorSection componentClass="mt-2" emoji="📗" id="shieldsio-badges-for-readme" text="Shields.io - badges for readme" url="https://shields.io/" />
 
-GPT-4 Week 5. Open Source is coming + Music industry in shambles - Nofil's Weekly Breakdown
-[A list of AI news from u/lostlifon](https://www.reddit.com/r/ChatGPT/comments/12v8oly/gpt4_week_5_open_source_is_coming_music_industry/)
+<p class="mt-2">
+</p>
 
-## Nuxt & DX
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-[The Frontend Studio for Nuxt Developers and Teams · Nuxt Studio](https://nuxt.studio/)
+<h2 class="font-display text-2xl text-foreground">AI</h2>
 
-## TS
-🎨 The exhaustive Pattern Matching library for TypeScript, with smart type inference.
-[GitHub - gvergnaud/ts-pattern](https://github.com/gvergnaud/ts-pattern)
+<WebLinkSection emoji="📌" url="https://www.reddit.com/r/ChatGPT/comments/12v8oly/gpt4_week_5_open_source_is_coming_music_industry/" text="A list of AI news from u/lostlifon" templateClass="mt-4">
+</ WebLinkSection>
 
-## Repository Github
-Powerful asynchronous state management for TS/JS, React, Solid, Vue and Svelte.
-[TanStack Query | React Query, Solid Query, Svelte Query, Vue Query](https://tanstack.com/query/latest)
+<h2 class="font-display text-2xl text-foreground mt-8">Nuxt & DX</h2>
 
-## Design
+<WebLinkSection emoji="📌" url="https://nuxt.studio/" text="The Frontend Studio for Nuxt Developers and Teams · Nuxt Studio" templateClass="mt-4">
+</ WebLinkSection>
 
-System font stack CSS organized by typeface classification for every modern OS.
-[Modern Font Stacks](https://modernfontstacks.com/)
+<h2 class="font-display text-2xl text-foreground mt-8">TS</h2>
 
+<WebLinkSection emoji="📌" url="https://github.com/gvergnaud/ts-pattern" text="GitHub - gvergnaud/ts-pattern" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Github</h2>
+
+<WebLinkSection emoji="📌" url="https://tanstack.com/query/latest" text="TanStack Query | React Query, Solid Query, Svelte Query, Vue Query" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
+
+<WebLinkSection emoji="📌" url="https://modernfontstacks.com/" text="Modern Font Stacks" templateClass="mt-4">
 Toggle checkbox css only night and day.
-[Toggle check](https://jsfiddle.net/refreshfr/gno6ems3/)
+</ WebLinkSection>
 
+<WebLinkSection emoji="📌" url="https://jsfiddle.net/refreshfr/gno6ems3/" text="Toggle check" templateClass="mt-4">
 Gradient website generator.
-[CSS HD Gradients](https://gradient.style/#type=linear&space=oklab&linear_named_angle=to+right&linear_angle=90&stops=%7B%22kind%22%3A%22stop%22%2C%22color%22%3A%22oklch%2870%25+0.5+340%29%22%2C%22auto%22%3A%220%22%2C%22position1%22%3A34%2C%22position2%22%3A34%7D&stops=%7B%22kind%22%3A%22hint%22%2C%22auto%22%3A%2250%22%2C%22percentage%22%3A%2250%22%7D&stops=%7B%22kind%22%3A%22stop%22%2C%22color%22%3A%22oklch%2890%25+0.5+200%29%22%2C%22auto%22%3A%22100%22%2C%22position1%22%3A%22100%22%2C%22position2%22%3A%22100%22%7D)
+</ WebLinkSection>
 
-## Inspirational website of the week
+<WebLinkSection emoji="📌" url="https://gradient.style/#type=linear&amp;space=oklab&amp;linear_named_angle=to+right&amp;linear_angle=90&amp;stops=%7B%22kind%22%3A%22stop%22%2C%22color%22%3A%22oklch%2870%25+0.5+340%29%22%2C%22auto%22%3A%220%22%2C%22position1%22%3A34%2C%22position2%22%3A34%7D&amp;stops=%7B%22kind%22%3A%22hint%22%2C%22auto%22%3A%2250%22%2C%22percentage%22%3A%2250%22%7D&amp;stops=%7B%22kind%22%3A%22stop%22%2C%22color%22%3A%22oklch%2890%25+0.5+200%29%22%2C%22auto%22%3A%22100%22%2C%22position1%22%3A%22100%22%2C%22position2%22%3A%22100%22%7D" text="CSS HD Gradients" templateClass="mt-4">
+</ WebLinkSection>
 
-[Stripe Sessions 2023 | Stripe Sessions Conference San Francisco](https://stripe.com/sessions)
+<h2 class="font-display text-2xl text-foreground mt-8">Inspirational website of the week</h2>
 
-[Minh Pham - Multidisciplinary Designer](https://minhpham.design/)
+<WebLinkSection emoji="📌" url="https://stripe.com/sessions" text="Stripe Sessions 2023 | Stripe Sessions Conference San Francisco" templateClass="mt-4">
+</ WebLinkSection>
 
-[Studio Gusto](https://www.studiogusto.com/)
+<WebLinkSection emoji="📌" url="https://minhpham.design/" text="Minh Pham - Multidisciplinary Designer" templateClass="mt-4">
+</ WebLinkSection>
+
+<WebLinkSection emoji="📌" url="https://www.studiogusto.com/" text="Studio Gusto" templateClass="mt-4">
+</ WebLinkSection>

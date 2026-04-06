@@ -9,41 +9,64 @@ tags:
   - docker
   - TS
 ---
-## Salut, web dev friends! 🧑‍💻
 
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🥇 Container Queries Unleashed
-🥈 A Friendly Introduction to Container Queries
-😎 A guide to tsconfig.json
-📝 From Local to Production: Deploy the Latest Nuxt Stack with Docker
-📗 How I Started Writing Unit Tests for Vue Components
+<AnchorWrapper>
+  <AnchorLink emoji="🥇" text="Container Queries Unleashed" />
+  <AnchorLink emoji="🥈" text="A Friendly Introduction to Container Queries" />
+  <AnchorLink emoji="😎" text="A guide to tsconfig.json" />
+  <AnchorLink emoji="📝" text="From Local to Production: Deploy the Latest Nuxt Stack with Docker" />
+  <AnchorLink emoji="📗" text="How I Started Writing Unit Tests for Vue Components" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🥇" id="container-queries-unleashed" text="Container Queries Unleashed" url="https://www.joshwcomeau.com/css/container-queries-unleashed/" />
 
+<p class="mt-2">
+</p>
 
-A Friendly Introduction to Container Queries and Container Queries Unleashed are two incredibly written article about the CSS features Container Queries. They define a mental model in order to use it correctly and show multiple example and use case, I will definitely use it in my next project.
+<AnchorSection componentClass="mt-2" emoji="🥈" id="a-friendly-introduction-to-container-queries" text="A Friendly Introduction to Container Queries" url="https://www.joshwcomeau.com/css/container-queries-introduction/" />
 
-🥇 [Container Queries Unleashed](https://www.joshwcomeau.com/css/container-queries-unleashed/)
-🥈 [A Friendly Introduction to Container Queries](https://www.joshwcomeau.com/css/container-queries-introduction/)
+<p class="mt-2">
+</p>
 
-😎 [A guide to tsconfig.json](https://2ality.com/2025/01/tsconfig-json.html)
+<AnchorSection componentClass="mt-2" emoji="😎" id="a-guide-to-tsconfigjson" text="A guide to tsconfig.json" url="https://2ality.com/2025/01/tsconfig-json.html" />
+
+<p class="mt-2">
 Quote from the article :  *In order to feel more confident about my tsconfig.json, I decided to go through the tsconfig.json documentation, collect all commonly used options and describe them*
+</p>
 
-📗 [How I Started Writing Unit Tests for Vue Components](https://dev.to/byteminds/how-i-started-writing-unit-tests-for-vue-components-1771?bb=206787)
-This article show why and how to create unit tests with vitest, jsdom and pinia/testing. 
+<AnchorSection componentClass="mt-2" emoji="📗" id="how-i-started-writing-unit-tests-for-vue-components" text="How I Started Writing Unit Tests for Vue Components" url="https://dev.to/byteminds/how-i-started-writing-unit-tests-for-vue-components-1771?bb=206787" />
 
-📝 [From Local to Production: Deploy the Latest Nuxt Stack with Docker](https://www.hrcd.fr/writing/from-local-to-production-containerizing-your-nuxt-app)
+<p class="mt-2">
+This article show why and how to create unit tests with vitest, jsdom and pinia/testing.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📝" id="from-local-to-production-deploy-the-latest-nuxt-stack-with-docker" text="From Local to Production: Deploy the Latest Nuxt Stack with Docker" url="https://www.hrcd.fr/writing/from-local-to-production-containerizing-your-nuxt-app" />
+
+<p class="mt-2">
 Deploy a production ready Nuxt app with Nuxt content, Nuxt UI and Nuxt image with GitHub Action in minutes.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [requestly/requestly](https://github.com/requestly/requestly)
+<WebLinkSection emoji="🔧" url="https://github.com/requestly/requestly" text="requestly/requestly" templateClass="mt-4">
 Local-first Developer Tool to Build, Test, Intercept & Mock API Requests. Requestly is a combination of REST API Client and HTTP Interceptor. It is simple, beautiful and powerful alternative to Postman, Insomnia, Bruno and Charles Proxy.
+</ WebLinkSection>
 
-📈 [exelban/stats: macOS system monitor in your menu bar](https://github.com/exelban/stats)
+<WebLinkSection emoji="📈" url="https://github.com/exelban/stats" text="exelban/stats: macOS system monitor in your menu bar" templateClass="mt-4">
 macOS system monitor in your menu bar
+</ WebLinkSection>

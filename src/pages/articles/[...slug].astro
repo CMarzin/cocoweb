@@ -1,9 +1,8 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 
 export async function getStaticPaths() {
-  // Try English content first, fallback to French
   let articles = await getCollection('articles', ({ id }) => id.startsWith('en/'));
   let isFallback = false;
   
@@ -13,15 +12,15 @@ export async function getStaticPaths() {
   }
   
   return articles.map((article) => ({
-    params: { slug: article.slug.replace(/^(en|fr)\//, '') },
+    params: { slug: article.id.replace(/^(en|fr)\//, '') },
     props: { article, isFallback },
   }));
 }
 
 const { article, isFallback } = Astro.props;
-const { Content } = await article.render();
+const { Content } = await render(article);
 ---
 
-<ArticleLayout frontmatter={article.data} slug={article.slug} lang="en" showTranslationNotice={isFallback}>
+<ArticleLayout frontmatter={article.data} slug={article.id} lang="en" showTranslationNotice={isFallback}>
   <Content />
 </ArticleLayout>

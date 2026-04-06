@@ -10,26 +10,57 @@ tags:
   - CSS
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-📗 [How to burnout a software engineer](https://engineercodex.substack.com/p/how-to-burnout-a-software-engineer)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="How to burnout a software engineer" />
+  <AnchorLink emoji="📗" text="feat\(reactivity\): more efficient reactivity system by johnsoncodehk · Pull Request \#5912 · vuejs/core" />
+  <AnchorLink emoji="📗" text="Coolify" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="how-to-burnout-a-software-engineer" text="How to burnout a software engineer" url="https://engineercodex.substack.com/p/how-to-burnout-a-software-engineer" />
+
+<p class="mt-2">
 How to burnout a software engineer in 3 easy steps
+</p>
 
-📗 [feat\(reactivity\): more efficient reactivity system by johnsoncodehk · Pull Request \#5912 · vuejs/core](https://github.com/vuejs/core/pull/5912#issuecomment-1748985641)
-250% to 350% faster reactivity in VUEJS 3 by **[johnsoncodehk](https://github.com/johnsoncodehk)** 
+<AnchorSection componentClass="mt-2" emoji="📗" id="featreactivity-more-efficient-reactivity-system-by-johnsoncodehk-pull-request-5912-vuejscore" text="feat\(reactivity\): more efficient reactivity system by johnsoncodehk · Pull Request \#5912 · vuejs/core" url="https://github.com/vuejs/core/pull/5912#issuecomment-1748985641" />
 
-📗 [Coolify](https://coolify.io/docs/)
+<p class="mt-2">
+250% to 350% faster reactivity in VUEJS 3 by **[johnsoncodehk](https://github.com/johnsoncodehk?utm_source=cocoweb.fr)**
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📗" id="coolify" text="Coolify" url="https://coolify.io/docs/" />
+
+<p class="mt-2">
 Open-source & self-hostable Heroku / Netlify alternative.
+</p>
 
-## CSS
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-🎨 [Better Context Menus With Safe Triangles](https://www.smashingmagazine.com/2023/08/better-context-menus-safe-triangles/)
+<h2 class="font-display text-2xl text-foreground">CSS</h2>
+
+<WebLinkSection emoji="🎨" url="https://www.smashingmagazine.com/2023/08/better-context-menus-safe-triangles/" text="Better Context Menus With Safe Triangles" templateClass="mt-4">
 Safe triangle is a technique to handle safely the hover in nested menu.
+</ WebLinkSection>
 
-🎨 [When to nest css ?](https://cloudfour.com/thinks/when-to-nest-css/)
-[Scott Vandehey](https://cloudfour.com/is/scott/), Senior Front-end Developer at Cloud Four, wrote some thoughts about when you can use the nesting in css.
+<WebLinkSection emoji="🎨" url="https://cloudfour.com/thinks/when-to-nest-css/" text="When to nest css ?" templateClass="mt-4">
+[Scott Vandehey](https://cloudfour.com/is/scott/?utm_source=cocoweb.fr), Senior Front-end Developer at Cloud Four, wrote some thoughts about when you can use the nesting in css.
+</ WebLinkSection>
 
-## Repository Github
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Github</h2>
 
-🐙 [spacedriveapp/spacedrive](https://github.com/spacedriveapp/spacedrive)
+<WebLinkSection emoji="🐙" url="https://github.com/spacedriveapp/spacedrive" text="spacedriveapp/spacedrive" templateClass="mt-4">
 Spacedrive is an open source cross-platform file explorer, powered by a virtual distributed filesystem written in Rust.
+</ WebLinkSection>

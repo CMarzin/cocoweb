@@ -9,41 +9,63 @@ tags:
   - vuejs
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-📚 How to document your JS package ?
-💽 JSR registry, a superset of npm.
-🧡 Amber, a programming language compiled to bash.
-📗 How to structure your Vuejs  project
+<AnchorWrapper>
+  <AnchorLink emoji="📚" text="How to document your JS package ?" />
+  <AnchorLink emoji="💽" text="JSR registry, a superset of npm." />
+  <AnchorLink emoji="🧡" text="Amber, a programming language compiled to bash." />
+  <AnchorLink emoji="📗" text="How to structure your Vuejs  project" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="📚" id="how-to-document-your-javascript-package" text="How to document your JavaScript package ?" url="https://deno.com/blog/document-javascript-package" />
 
-📚 [How to document your JavaScript package ?](https://deno.com/blog/document-javascript-package)
+<p class="mt-2">
 Great article which explain how you can leverage, JSDoc, Typescript and JSR to document, test and publish your javascript package.
+</p>
 
-💽 [The JavaScript Registry](https://jsr.io/)
+<AnchorSection componentClass="mt-2" emoji="💽" id="the-javascript-registry" text="The JavaScript Registry" url="https://jsr.io/" />
+
+<p class="mt-2">
 JSR is a registry designed to publish Typescript package as a source, it handles generating API docs, .d.ts files, and transpiling your code for cross-runtime compatibility.
 It will distribute your package as web-standard ECMAScript modules.
+</p>
 
-🧡 [Amber](https://amber-lang.com/)
+<AnchorSection componentClass="mt-2" emoji="🧡" id="amber" text="Amber" url="https://amber-lang.com/" />
+
+<p class="mt-2">
 The new way to write bash script. It's like Typescript but for bash.
+</p>
 
-📗 [Vue Project Directory Structure](https://markus.oberlehner.net/blog/vue-project-directory-structure-keep-it-flat-or-group-by-domain/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="vue-project-directory-structure" text="Vue Project Directory Structure" url="https://markus.oberlehner.net/blog/vue-project-directory-structure-keep-it-flat-or-group-by-domain/" />
+
+<p class="mt-2">
 Keep the hierarchy as flat as possible, and if you have a project which start to really grow, you can create an micro-service architecture with each modules which represents parts of your application.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-🔧 [Web Platform Status](https://webstatus.dev/)
+<WebLinkSection emoji="🔧" url="https://webstatus.dev/" text="Web Platform Status" templateClass="mt-4">
 The Web Platform Dashboard from the Google team, a way to check when some features will be available.
+</ WebLinkSection>
 
-🐙 [Moonbow 🌚+🌈](https://www.npmjs.com/package/moonbow)
-Vue img component for adding **[GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language)** to images 🔥🔥🔥
+<WebLinkSection emoji="🐙" url="https://www.npmjs.com/package/moonbow" text="Moonbow 🌚+🌈" templateClass="mt-4">
+Vue img component for adding **[GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language?utm_source=cocoweb.fr)** to images 🔥🔥🔥
+</ WebLinkSection>
 
-📗 [Vue Fluid DnD](https://vue-fluid-dnd.netlify.app/)
+<WebLinkSection emoji="📗" url="https://vue-fluid-dnd.netlify.app/" text="Vue Fluid DnD" templateClass="mt-4">
 **Vue Fluid DnD** is a fluid and smooth drag and drop solution for lists on Vue3 full animated.
+</ WebLinkSection>

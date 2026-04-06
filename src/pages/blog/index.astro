@@ -1,33 +1,37 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import PostList from '../../components/PostList.astro';
-import { useTranslations } from '../../i18n/utils';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostList from "../../components/PostList.astro";
+import { useTranslations } from "../../i18n/utils";
 
-const t = useTranslations('en');
+const t = useTranslations("en");
 
 // Try to get English content, fallback to French
-let posts = await getCollection('blog', ({ id }) => id.startsWith('en/'));
+let posts = await getCollection("blog", ({ id }) => id.startsWith("en/"));
 const showTranslationNotice = posts.length === 0;
 
 if (showTranslationNotice) {
-  posts = await getCollection('blog', ({ id }) => id.startsWith('fr/'));
+  posts = await getCollection("blog", ({ id }) => id.startsWith("fr/"));
 }
 ---
 
-<BaseLayout 
-  title="Tips - Cocoweb" 
+<BaseLayout
+  title="Tips - Cocoweb"
   description="All tips and web discoveries on Cocoweb."
   lang="en"
 >
-  <div class="blog-page">
-    <h1>All Tips</h1>
-    
-    {showTranslationNotice && (
-      <div class="translation-notice">
-        {t('post.translation-notice')}
-      </div>
-    )}
+  <div class="flex flex-col gap-5">
+    <h1
+      class="font-display text-3xl sm:text-4xl  text-foreground animate-fade-up mt-1"
+    >
+      All Tips
+    </h1>
+
+    {
+      showTranslationNotice && (
+        <div class="translation-notice">{t("post.translation-notice")}</div>
+      )
+    }
 
     <PostList posts={posts} showTags={true} basePath="/blog" lang="en" />
   </div>

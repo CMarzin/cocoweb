@@ -8,32 +8,59 @@ tags:
   - web tools
   - vuejs
 ---
-## Veille
 
-📗 [The quiet, pervasive devaluation of frontend](https://joshcollinsworth.com/blog/devaluing-frontend)
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="The quiet, pervasive devaluation of frontend" />
+  <AnchorLink emoji="🦽" text="Accessibility Myths" />
+  <AnchorLink emoji="📗" text="What is a SPA ?" />
+  <AnchorLink emoji="📗" text="Tech gems 👁️ \#4: Astro DB, Rolldown and free authentication guide" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="📗" id="the-quiet-pervasive-devaluation-of-frontend" text="The quiet, pervasive devaluation of frontend" url="https://joshcollinsworth.com/blog/devaluing-frontend" />
+
+<p class="mt-2">
 Josh Collinsworth write about the constant devaluation of the frontend work.
+</p>
 
-**Our output is artistic, to some degree, and artistic things have a long, storied history of being tragically devalued merely because they seem simple and enjoyable.**
+<AnchorSection componentClass="mt-2" emoji="🦽" id="accessibility-myths" text="Accessibility Myths" url="https://a11ymyths.com/" />
 
-Like all artist, it’s very difficult to measure the success of your art. But without us, the world would be dull, colourless, and joyless. So I will continue to try adding some colour in the web.
-
-🦽 [Accessibility Myths](https://a11ymyths.com/)
-
+<p class="mt-2">
 22 accessibility myths about the use of the web from people with disability.
+</p>
 
+<AnchorSection componentClass="mt-2" emoji="📗" id="what-is-a-spa" text="What is a SPA ?" url="https://heydonworks.com/article/what-is-a-single-page-application/" />
 
-📗 [What is a SPA ?](https://heydonworks.com/article/what-is-a-single-page-application/)
-
+<p class="mt-2">
 A SPA is a dynamic web page which reinvent the wheel, but this times you’ve got a shiny loader with it.
+</p>
 
-📗 [Tech gems 👁️ \#4: Astro DB, Rolldown and free authentication guide](https://adrienzaganelli.com/blog/tech-gems-4)
+<AnchorSection componentClass="mt-2" emoji="📗" id="tech-gems-4-astro-db-rolldown-and-free-authentication-guide" text="Tech gems 👁️ \#4: Astro DB, Rolldown and free authentication guide" url="https://adrienzaganelli.com/blog/tech-gems-4" />
 
-## Vuejs
+<p class="mt-2">
+</p>
 
-📗 [Vue 3 Controlled Props Component Pattern](https://www.youtube.com/watch?v=zBhAtGt8FDk&t=1s)
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Tools
+<h2 class="font-display text-2xl text-foreground">Vuejs</h2>
 
-👨‍💻 [Undesign](https://undesign.learn.uno/)
+<WebLinkSection emoji="📗" url="https://www.youtube.com/watch?v=zBhAtGt8FDk&amp;t=1s" text="Vue 3 Controlled Props Component Pattern" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Tools</h2>
+
+<WebLinkSection emoji="👨‍💻" url="https://undesign.learn.uno/" text="Undesign" templateClass="mt-4">
 Collection of free design tools and resources for makers, developers and designers
+</ WebLinkSection>

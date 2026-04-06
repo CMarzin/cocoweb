@@ -9,29 +9,57 @@ tags:
   - repo git
 ---
 
-## Veille
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-👨‍💻 [Elon's bombshell lawsuit against OpenAI](https://www.youtube.com/watch?v=KbzGy3whpy0)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="👨‍💻" text="Elon's bombshell lawsuit against OpenAI" />
+  <AnchorLink emoji="📗" text="Quote from “Why my code isn't in TypeScript”" />
+  <AnchorLink emoji="🎨" text="Navbar Gallery" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="👨‍💻" id="elons-bombshell-lawsuit-against-openai" text="Elon's bombshell lawsuit against OpenAI" url="https://www.youtube.com/watch?v=KbzGy3whpy0" />
+
+<p class="mt-2">
 Code report of 2024/03/03 from Fireship.
+</p>
 
-📗 [Quote from “Why my code isn't in TypeScript”](https://arc.net/l/quote/ehdgpakq)
+<AnchorSection componentClass="mt-2" emoji="📗" id="quote-from-why-my-code-isnt-in-typescript" text="Quote from “Why my code isn't in TypeScript”" url="https://arc.net/l/quote/ehdgpakq" />
+
+<p class="mt-2">
 Some thoughts about why sometimes its frustrating to use Typescript
+</p>
 
-🎨 [Navbar Gallery](https://www.navbar.gallery/)
+<AnchorSection componentClass="mt-2" emoji="🎨" id="navbar-gallery" text="Navbar Gallery" url="https://www.navbar.gallery/" />
+
+<p class="mt-2">
 A collection of website with some really cool Navbar.
+</p>
 
-## CSS
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-✨ [The Fifty-Fifty Split and Overflow](https://ryanmulligan.dev/blog/50-50-overflow/)
+<h2 class="font-display text-2xl text-foreground">CSS</h2>
+
+<WebLinkSection emoji="✨" url="https://ryanmulligan.dev/blog/50-50-overflow/" text="The Fifty-Fifty Split and Overflow" templateClass="mt-4">
 Really cool explanation of how you can build a layout like this :
+</ WebLinkSection>
 
-![The Fifty-Fifty layout](/img/2024-03-04/fifty-fifty-layout.png)
+<h2 class="font-display text-2xl text-foreground mt-8">Repository Git</h2>
 
-
-## Repository Git
-
-🐙 [Slidev](https://sli.dev/)
+<WebLinkSection emoji="🐙" url="https://sli.dev/" text="Slidev" templateClass="mt-4">
 Write your presentation slide directly in markdown instead of Keynote or others.
+</ WebLinkSection>
 
-🐙 [Stats](https://github.com/UdaraJay/Stats)
+<WebLinkSection emoji="🐙" url="https://github.com/UdaraJay/Stats" text="Stats" templateClass="mt-4">
 Standalone analytics provider and realtime dashboard designed for self-hosting.
+</ WebLinkSection>

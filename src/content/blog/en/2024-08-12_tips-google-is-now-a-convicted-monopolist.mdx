@@ -10,36 +10,57 @@ tags:
   - repo git
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🧑‍⚖️ Google is now a convicted monopolist
-🤖 AI Notes
-💰 Price adapter
-✅ A list of console log methods
+<AnchorWrapper>
+  <AnchorLink emoji="🧑‍⚖️" text="Google is now a convicted monopolist" />
+  <AnchorLink emoji="🤖" text="AI Notes" />
+  <AnchorLink emoji="💰" text="Price adapter" />
+  <AnchorLink emoji="✅" text="A list of console log methods" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🧑‍⚖️" id="google-takes-its-biggest-l-ever-now-a-convicted-monopolist" text="Google takes its biggest L ever... now a convicted monopolist" url="https://www.youtube.com/watch?v=jx2dDV2eWBM" />
 
-🧑‍⚖️ [Google takes its biggest L ever... now a convicted monopolist](https://www.youtube.com/watch?v=jx2dDV2eWBM)
+<p class="mt-2">
 Humorous Fireship video about google and other tech monopoly.
+</p>
 
-🤖 [AI Notes](https://github.com/swyxio/ai-notes)
-This is a repository which contain AI articles for the newsletter  [https://lspace.swyx.io/](https://lspace.swyx.io/).
+<AnchorSection componentClass="mt-2" emoji="🤖" id="ai-notes" text="AI Notes" url="https://github.com/swyxio/ai-notes" />
 
-💰 [Price adapter](https://www.priceadapter.com/)
+<p class="mt-2">
+This is a repository which contain AI articles for the newsletter  [https://lspace.swyx.io/](https://lspace.swyx.io/?utm_source=cocoweb.fr).
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="💰" id="price-adapter" text="Price adapter" url="https://www.priceadapter.com/" />
+
+<p class="mt-2">
 A website by Brandon Chang for Stripe. In a really good looking retro style.
+</p>
 
-✅ [A list of console log methods](https:%5C/%5C/x.com%5C/csaba_kissi%5C/status%5C/1822291301624061976?s=46)
+<AnchorSection componentClass="mt-2" emoji="✅" id="a-list-of-console-log-methods" text="A list of console log methods" url="https:%5C/%5C/x.com%5C/csaba_kissi%5C/status%5C/1822291301624061976?s=46" />
 
-___
+<p class="mt-2">
+</p>
 
-## Web tools and Library
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-⚡️ [Fast HTML](https://github.com/AnswerDotAI/fasthtml)
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="⚡️" url="https://github.com/AnswerDotAI/fasthtml" text="Fast HTML" templateClass="mt-4">
 FastHTML is a new next-generation web framework for fast, scalable web applications with minimal, compact code
+</ WebLinkSection>
 
-🎫 [Changelog Github](https://github.com/antfu/changelogithub?tab=readme-ov-file)
-Generate changelog for GitHub releases from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), powered by [changelogen](https://github.com/unjs/changelogen).
+<WebLinkSection emoji="🎫" url="https://github.com/antfu/changelogithub?tab=readme-ov-file" text="Changelog Github" templateClass="mt-4">
+Generate changelog for GitHub releases from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/?utm_source=cocoweb.fr), powered by [changelogen](https://github.com/unjs/changelogen?utm_source=cocoweb.fr).
+</ WebLinkSection>

@@ -12,43 +12,66 @@ tags:
   - CSS
 ---
 
-## Salut, web dev friends! 🧑‍💻
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
+<StarterText>
 I have selected some news  from the web dev world to share.
+</StarterText>
 
-🤖 Open source AI is the path forward
-🔮 How I hire a programmer
-🤩 Daily Delights
-😎 Get The Screen Width & Height Without JavaScript
+<AnchorWrapper>
+  <AnchorLink emoji="🤖" text="Open source AI is the path forward" />
+  <AnchorLink emoji="🔮" text="How I hire a programmer" />
+  <AnchorLink emoji="🤩" text="Daily Delights" />
+  <AnchorLink emoji="😎" text="Get The Screen Width &amp; Height Without JavaScript" />
+</AnchorWrapper>
 
-**Have a great week.**
+<TextSeparator />
 
-___
+<AnchorSection emoji="🤖" id="open-source-ai-is-the-path-forward" text="Open source AI is the path forward" url="https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/" />
 
-🤖 [Open source AI is the path forward](https://about.fb.com/news/2024/07/open-source-ai-is-the-path-forward/)
+<p class="mt-2">
 Marck Zukerberg shares his views about open sourcing AI with the Llama 3.1 release.
+</p>
 
-🔮 [How to hire a programmer](http://www.aaronsw.com/weblog/hiring.en)
+<AnchorSection componentClass="mt-2" emoji="🔮" id="how-to-hire-a-programmer" text="How to hire a programmer" url="http://www.aaronsw.com/weblog/hiring.en" />
+
+<p class="mt-2">
 Three questions to help you hire the programmer who will match you perfectly.
+</p>
 
-🤩 [Daily Delights – Curated links by Flayks](https://delights.flayks.com/)
+<AnchorSection componentClass="mt-2" emoji="🤩" id="daily-delights-curated-links-by-flayks" text="Daily Delights – Curated links by Flayks" url="https://delights.flayks.com/" />
+
+<p class="mt-2">
 A curation of links about art, design and development picked by Félix Péault, Art Director and Digital Designer.
+</p>
 
-😎 [Get the screen width & height without JavaScript](https://css-tip.com/screen-dimension/)
+<AnchorSection componentClass="mt-2" emoji="😎" id="get-the-screen-width-height-without-javascript" text="Get the screen width &amp; height without JavaScript" url="https://css-tip.com/screen-dimension/" />
+
+<p class="mt-2">
 A css demo using @property and trigonometric function, the value updates even when the screen size change.
+</p>
 
-___
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
 
-## Web tools and Library
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
 
-😱 [ofetch](https://github.com/unjs/ofetch)
+<WebLinkSection emoji="😱" url="https://github.com/unjs/ofetch" text="ofetch" templateClass="mt-4">
 A better fetch API. Works on node, browser and workers.
+</ WebLinkSection>
 
-✨ [Mesh gradient](https://www.mshr.app/)
+<WebLinkSection emoji="✨" url="https://www.mshr.app/" text="Mesh gradient" templateClass="mt-4">
 A collection of 259 vanilla CSS mesh gradients free for you to use in any of your projects.
+</ WebLinkSection>
 
-⚠️ [Open source incident management](https://www.incidental.dev/)
+<WebLinkSection emoji="⚠️" url="https://www.incidental.dev/" text="Open source incident management" templateClass="mt-4">
 Incidental is an open source incident management platform
+</ WebLinkSection>
 
-📗 [CSS Grid Generator](https://cssgridgenerator.io/)
+<WebLinkSection emoji="📗" url="https://cssgridgenerator.io/" text="CSS Grid Generator" templateClass="mt-4">
 CSS grid generator is a tool that helps developers create custom CSS grid layouts more easily. The generator allows users to specify the number of columns, rows, the gutter size.
+</ WebLinkSection>

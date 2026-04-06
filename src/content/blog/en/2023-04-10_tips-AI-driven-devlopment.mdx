@@ -11,24 +11,59 @@ tags:
   - web performance
 ---
 
-##  Humour and AI
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
 
-Code reports by Fireship
-[Vector databases are so hot right now. WTF are they ?](https://youtu.be/klTvEwg3oJ4)
-[Masterclass: AI-driven Development for Programmers](https://www.youtube.com/watch?v=iO1mwxPNP5A)
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
 
-## Veille
-[New HTML Element: search](https://alvaromontoro.com/blog/68033/new-html-element-search)
+<AnchorWrapper>
+  <AnchorLink emoji="📗" text="Vector databases are so hot right now. WTF are they ?" />
+  <AnchorLink emoji="📗" text="Masterclass: AI-driven Development for Programmers" />
+</AnchorWrapper>
 
-## Vuejs
-[Ref vs. Reactive: What to Choose Using Vue 3 Composition API?](https://642c2971e838a80008ee0d3b--mokkapps.netlify.app/blog/ref-vs-reactive-what-to-choose-using-vue-3-composition-api/)
+<TextSeparator />
 
-## Courses
-[ui.dev | JavaScript, but fun.](https://ui.dev/)
+<AnchorSection emoji="📗" id="vector-databases-are-so-hot-right-now-wtf-are-they" text="Vector databases are so hot right now. WTF are they ?" url="https://youtu.be/klTvEwg3oJ4" />
 
-## Design
-Beautiful portfolio by [Lynn Fisher](https://lynnandtonic.com/)
+<p class="mt-2">
+</p>
 
-## Performance
-[SpeedCurve | NEW! Lighthouse 10, Core Web Vitals updates, and Interaction to Next Paint](https://www.speedcurve.com/blog/lighthouse-core-web-vitals-updates/)
+<AnchorSection componentClass="mt-2" emoji="📗" id="masterclass-ai-driven-development-for-programmers" text="Masterclass: AI-driven Development for Programmers" url="https://www.youtube.com/watch?v=iO1mwxPNP5A" />
+
+<p class="mt-2">
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Veille</h2>
+
+<WebLinkSection emoji="📌" url="https://alvaromontoro.com/blog/68033/new-html-element-search" text="New HTML Element: search" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Vuejs</h2>
+
+<WebLinkSection emoji="📌" url="https://642c2971e838a80008ee0d3b--mokkapps.netlify.app/blog/ref-vs-reactive-what-to-choose-using-vue-3-composition-api/" text="Ref vs. Reactive: What to Choose Using Vue 3 Composition API?" templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Courses</h2>
+
+<WebLinkSection emoji="📌" url="https://ui.dev/" text="ui.dev | JavaScript, but fun." templateClass="mt-4">
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design</h2>
+
+<WebLinkSection emoji="📌" url="https://lynnandtonic.com/" text="Lynn Fisher" templateClass="mt-4">
+Beautiful portfolio by [Lynn Fisher](https://lynnandtonic.com/?utm_source=cocoweb.fr)
+</ WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Performance</h2>
+
+<WebLinkSection emoji="📌" url="https://www.speedcurve.com/blog/lighthouse-core-web-vitals-updates/" text="SpeedCurve | NEW! Lighthouse 10, Core Web Vitals updates, and Interaction to Next Paint" templateClass="mt-4">
 #dev/tips
+</ WebLinkSection>
