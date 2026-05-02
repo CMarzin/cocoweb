@@ -1,6 +1,6 @@
 ---
 name: tips-draft-to-mdx
-description: Converts a duplicated tips draft (raw markdown with emoji titles and links) into the rich MDX format used by the 2026-03-09 tips post. Use when the user pastes a weekly tips draft into a "copy" MDX file and needs the final formatted version with AnchorWrapper, StarterText, TextSeparator, and WebLinkSection.
+description: Converts a duplicated tips draft (raw markdown with emoji titles and links) into the rich MDX format used by the 2026-03-09 tips post. Aligns frontmatter title, description, and tags with the draft body (not leftover metadata). Use when the user pastes a weekly tips draft into a "copy" MDX file and needs the final formatted version with AnchorWrapper, StarterText, TextSeparator, and WebLinkSection.
 ---
 
 # Tips Draft to MDX (Rich Format)
@@ -21,8 +21,26 @@ Transforms a raw weekly tips draft (like the "copy" file) into the rich MDX form
 
 ### 1. Frontmatter
 
-- Keep the title and tags from the draft.
-- **Enrich the description**: append a concise topic summary after `Tips and discovery of the week. - `.
+The draft is often created by duplicating last week’s file: **`title`, `tags`, and sometimes `description` in the YAML can be wrong.** Always derive them from the **actual body** of the draft (main emoji sections + bottom tool/design blocks), not from the existing frontmatter alone.
+
+- **`date`**: Keep the date from the draft unless the user specified a different publish date.
+
+- **`title`**: Set from content, not from stale YAML.
+  - Prefer the **first main linked article title** (the first `emoji [Title](url)` block after the TOC), shortened slightly if needed for readability—this matches how weekly tips posts are usually titled.
+  - If that title is a poor fit for the whole week, use a **short editorial headline** that honestly reflects the main themes (still title case, English if the post is EN).
+  - Never leave a title that refers to topics **absent** from the transformed body (e.g. previous week’s Apple CEO piece).
+
+- **`description`**: Always rewrite so it matches the week’s content.
+  - Start with: `Tips and discovery of the week. - `
+  - Then one concise sentence: comma-separated **themes and proper nouns** covering main sections and notable tools (like the existing tips style).
+  - Do not recycle last week’s description if the links changed.
+
+- **`tags`**: Rebuild the list from the draft’s topics.
+  - Almost always include `tips`.
+  - Add tags that are **grounded in this issue** (e.g. `AI`, `agents`, `css`, `design`, `laravel`, `tooling`, `open-source`, `leadership`, `apple`—only when those topics appear).
+  - **Remove** tags with no support in the body (e.g. `apple` when there is no Apple-related link or discussion).
+  - Prefer **tags already used** in other posts in `src/content/blog/` for consistency (spellings/casing as in those files, e.g. `AI`, `open-source`).
+  - Order: lead with `tips`, then broad themes, then tooling/stack-specific tags as fits the week—keep the list short and accurate (roughly **6–10** tags).
 
 ### 2. Imports
 
