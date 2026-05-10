@@ -1,0 +1,82 @@
+---
+title: Piloting Agentic Engineering
+description: Tips and discovery of the week. - Piloting agentic engineering, Claude Code with HTML artifacts, how LLMs work visually, treating agent output like compiler output, the story of Mel, plus open-source tools (zero-native, minimal-twitter, ds4, Tuimorphic).
+date: 2026-05-11
+tags:
+  - tips
+  - AI
+  - agents
+  - tooling
+  - open-source
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="✈️" text="Piloting Agentic Engineering" />
+  <AnchorLink emoji="👀" text="Using Claude Code: The Unreasonable Effectiveness of HTML" />
+  <AnchorLink emoji="🤖" text="How LLMs Work — A Visual Deep Dive" />
+  <AnchorLink emoji="🧐" text="Treat Agent Output Like Compiler Output" />
+  <AnchorLink emoji="🐐" text="The Story of Mel, a Real Programmer" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="✈️" id="piloting-agentic-engineering" text="Piloting Agentic Engineering" url="https://mwalterskirchen.dev/blog/piloting-agentic-engineering/" />
+
+<p class="mt-2">
+Interesting, I experienced the same atrophy of skills because I use a lot of agents with Cursor. I love the parallel with the auto-pilot and the pilot, even with an auto pilot the pilot needs to be able to fly in manual. In software engineering, we need to use theses new tools but not every day and all the time because we can loose our skills if we offload it entirely to the AI.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="👀" id="using-claude-code:-the-unreasonable-effectiveness-of-html" text="Using Claude Code: The Unreasonable Effectiveness of HTML" url="https://x.com/trq212/status/2052809885763747935" />
+
+<p class="mt-2">
+Instead of keeping every plan, documentation etc… in markdown file, Thariq transform them into HTML files to have a better readbility and make them interactive. [See the example](https://thariqs.github.io/html-effectiveness/?utm_source=cocoweb.fr).
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="how-llms-work-—-a-visual-deep-dive" text="How LLMs Work — A Visual Deep Dive" url="https://ynarwal.github.io/how-llms-work/" />
+
+<p class="mt-2">
+Very cool guide which explain the 7 steps to build an LLM like ChatGPT / Claude / Gemini.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🧐" id="treat-agent-output-like-compiler-output" text="Treat Agent Output Like Compiler Output" url="https://skiplabs.io/blog/codegen_as_compiler" />
+
+<p class="mt-2">
+I am conflicted because, it's true in a sense, we can't review the enormous output of the AI but thinking we just need to build better tooling in order to let the AI writing code freely is too soon for me. I still love writing good and performant code by hand but yeah I agree on the tooling part.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🐐" id="the-story-of-mel,-a-real-programmer" text="The Story of Mel, a Real Programmer" url="https://users.cs.utah.edu/~elb/folklore/mel.html" />
+
+<p class="mt-2">
+It's ridiculous to know that this article is written in 1983 ( 53 years ago !!! ), in this time, Fortran is all the rage and engineer still programm in hexadecimal code !!! I really love this story because if someone know the in and out of a machine, they can do some incredible things. In comparaison with the precedent article, I find it sad now we just want to generate a lot of code, not looking ate the output and a lot of people don't care about performance anymore. But there always be people like Mel to optimize and caring about their craft :).
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="⚙️" url="https://github.com/vercel-labs/zero-native" text="vercel-labs/zero-native" templateClass="mt-4">
+Build desktop + mobile apps with Zig and web UI.
+</WebLinkSection>
+
+<WebLinkSection emoji="🐦" url="https://github.com/typefully/minimal-twitter" text="typefully/minimal-twitter" templateClass="mt-4">
+Minimal Theme for Twitter - Refine and Declutter Your Twitter Web Experience.
+</WebLinkSection>
+
+<WebLinkSection emoji="🤘" url="https://github.com/antirez/ds4" text="antirez/ds4" templateClass="mt-4">
+DeepSeek 4 Flash local inference engine for Metal.
+</WebLinkSection>
+
+<WebLinkSection emoji="💻" url="https://tuimorphic.com/" text="Tuimorphic" templateClass="mt-4">
+Terminal-aesthetic React components built on Base UI.
+</WebLinkSection>

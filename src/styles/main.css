@@ -219,7 +219,9 @@
   }
   .hover-glow:hover {
     border-color: color-mix(in srgb, var(--primary) 40%, transparent);
-    box-shadow: 0 0 12px color-mix(in srgb, var(--glow-green) 10%, transparent), inset 0 0 12px color-mix(in srgb, var(--glow-green) 3%, transparent);
+    @supports (color-mix(in srgb, var(--primary) 10%, transparent)) {
+      box-shadow: 0 0 12px color-mix(in srgb, var(--primary) 10%, transparent), inset 0 0 12px color-mix(in srgb, var(--primary) 3%, transparent);
+    }
   }
 
   @keyframes blink {
@@ -244,6 +246,7 @@
   }
   .animate-fade-up {
     animation: fade-up 600ms cubic-bezier(0.36, 0, 0.66, -0.56) both;
+    will-change: transform;
   }
 
   .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
