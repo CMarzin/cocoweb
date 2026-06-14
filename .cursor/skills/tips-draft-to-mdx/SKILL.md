@@ -53,6 +53,7 @@ import AnchorWrapper from "@/components/AnchorWrapper.astro";
 import TextSeparator from "@/components/TextSeparator.astro";
 import StarterText from "@/components/StarterText.astro";
 import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
 ```
 
 ### 3. Intro block
@@ -145,12 +146,19 @@ Rules:
 - `url` should **NOT** include `utm_source`.
 - The component appends `?utm_source=cocoweb.fr` automatically.
 
-### 9. UTM rules for inline links
+### 9. Inline links → BaseLink
 
-Any markdown link inside `StarterText` or inside `<p class="mt-2">` **must** include `utm_source=cocoweb.fr`.
+Any external link that is **not** a section title (`AnchorSection` / `WebLinkSection` `url` prop) must use **BaseLink**, never markdown `[label](url)`.
 
-- If URL has no query string → append `?utm_source=cocoweb.fr`.
-- If URL already has `?` → append `&utm_source=cocoweb.fr`.
+Applies inside `StarterText`, `<p class="mt-2">`, and `WebLinkSection` children.
+
+```mdx
+<BaseLink text="storybook" url="https://storybook.js.org" />
+```
+
+- Props: `text`, `url`
+- `url` must **NOT** include `utm_source` (the component appends it automatically)
+- See `.cursor/skills/blog-anchor-pattern/SKILL.md` for the full section vs inline link rules
 
 ## Example (short)
 
@@ -181,9 +189,10 @@ import AnchorWrapper from "@/components/AnchorWrapper.astro";
 import TextSeparator from "@/components/TextSeparator.astro";
 import StarterText from "@/components/StarterText.astro";
 import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
 
 <StarterText>
-This week, I started reading a lot of things about accessiblity , I started using more [storybook](https://storybook.js.org/?utm_source=cocoweb.fr) and their [A11y addon](https://storybook.js.org/addons/@storybook/addon-a11y?utm_source=cocoweb.fr).
+This week, I started reading a lot of things about accessiblity , I started using more <BaseLink text="storybook" url="https://storybook.js.org" /> and their <BaseLink text="A11y addon" url="https://storybook.js.org/addons/@storybook/addon-a11y" />.
 </StarterText>
 
 <AnchorWrapper>
@@ -210,3 +219,5 @@ I like the conclusion, « Sit down and listen to other teams ».
 - `src/components/StarterText.astro`
 - `src/components/TextSeparator.astro`
 - `src/components/WebLinkSection.astro`
+- `src/components/BaseLink.astro`
+- `.cursor/skills/blog-anchor-pattern/SKILL.md`

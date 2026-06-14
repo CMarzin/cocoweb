@@ -1,6 +1,6 @@
 ---
 name: blog-anchor-pattern
-description: Adds AnchorLink and AnchorSection components to blog posts for a clickable table of contents and section anchors; external links must use utm_source=cocoweb.fr. Use when creating or editing "tips" blog posts in src/content/blog/ (MDX files) or when the user asks to add anchor links or a table of contents to a blog post.
+description: Adds AnchorLink and AnchorSection components to blog posts for a clickable table of contents and section anchors; inline external links use BaseLink (section titles use AnchorSection/WebLinkSection url props). Use when creating or editing "tips" blog posts in src/content/blog/ (MDX files) or when the user asks to add anchor links or a table of contents to a blog post.
 ---
 
 # Blog Anchor Pattern (AnchorLink + AnchorSection)
@@ -17,7 +17,10 @@ Adds a table-of-contents style intro and anchored sections to tips-style blog po
 ```mdx
 import AnchorLink from "@/components/AnchorLink.astro";
 import AnchorSection from "@/components/AnchorSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
 ```
+
+Add `AnchorWrapper`, `StarterText`, `TextSeparator`, `WebLinkSection` when the post uses the full tips format.
 
 ## Pattern
 
@@ -26,21 +29,36 @@ import AnchorSection from "@/components/AnchorSection.astro";
    - Renders as a link to `#<id>` where `id` is `text.toLowerCase().replace(/\s+/g, '-')`.
 
 2. **AnchorSection** (each main section): wrap the section title link (or first line) with the component.
-   - Props: `emoji`, `id`.
+   - Props: `emoji`, `id`, `text`, `url`.
    - `id` must match the AnchorLink target: same as `text` from AnchorLink lowercased with spaces → hyphens.
+   - First section: no `componentClass`. Next sections: `componentClass="mt-2"`.
 
 **Rule:** Order of AnchorLinks in the intro must match the order of AnchorSections in the content.
 
-## Outbound links (UTM)
+## Links: section vs inline
 
-Every **external** markdown link in the post (`[label](https://...)` or `http://...`) must include the site attribution parameter:
+### Section links (do NOT use BaseLink)
 
-- If the URL has **no** query string yet: append `?utm_source=cocoweb.fr`.
-- If the URL **already** has a query string (`?` in the path): append `&utm_source=cocoweb.fr` instead of a second `?`.
+These components own the external URL and append `utm_source=cocoweb.fr` automatically. Pass `url` **without** `utm_source`:
 
-**Skip** in-page anchors only: `[text](#section-id)` — no UTM.
+- **AnchorSection** — main article title in the body (`url` prop)
+- **WebLinkSection** — tools, cool websites, design picks (`url` prop)
+- **AnchorLink** — in-page TOC only (`#anchor-id`), never external
 
-Apply the same rule to links inside `AnchorSection` titles and anywhere else in the MDX body.
+### Inline links (always BaseLink)
+
+Any other external link inside prose — `StarterText`, `<p class="mt-2">`, or `WebLinkSection` children — must use **BaseLink**, never markdown `[label](url)`.
+
+```mdx
+<BaseLink text="Daman" url="https://x.com/daman76752" />
+```
+
+- Props: `text`, `url`
+- `url` must **NOT** include `utm_source` (the component appends `?utm_source=cocoweb.fr`)
+- Self-closing tag: `<BaseLink text="..." url="..." />`
+- Multiple inline links in one sentence: repeat `<BaseLink />` for each one
+
+**Skip BaseLink** only for in-page anchors: `[text](#section-id)` — no UTM, rare in tips posts.
 
 ## ID generation
 
@@ -49,7 +67,7 @@ From `AnchorLink` text to `AnchorSection` id:
 - `text.toLowerCase().replace(/\s+/g, '-')`
 - Example: "Performance Is Not a Technical Problem" → `performance-is-not-a-technical-problem`
 
-## Example (intro + first section)
+## Example (intro + first section + inline link)
 
 **Intro (table of contents):**
 
@@ -61,16 +79,29 @@ From `AnchorLink` text to `AnchorSection` id:
 **Body (sections):**
 
 ```mdx
-<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem">[Performance Is Not a Technical Problem](https://example.com/article?utm_source=cocoweb.fr)</AnchorSection>
+<AnchorSection emoji="📝" id="performance-is-not-a-technical-problem" text="Performance Is Not a Technical Problem" url="https://example.com/article" />
 
+<p class="mt-2">
+Paragraph content here. See also <BaseLink text="the follow-up post" url="https://example.com/follow-up" /> for more context.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🏢" id="isometric-nyc" text="Isometric NYC" url="https://example.com/other" />
+
+<p class="mt-2">
 Paragraph content here...
+</p>
+```
 
-<AnchorSection emoji="🏢" id="isometric-nyc">[Isometric NYC](https://example.com/other?utm_source=cocoweb.fr)</AnchorSection>
+**WebLinkSection with inline link in description:**
 
-Paragraph content here...
+```mdx
+<WebLinkSection emoji="🤩" url="https://x.com/daman76752/status/123" text="Footer design" templateClass="mt-4">
+Some cool design footer from <BaseLink text="Daman" url="https://x.com/daman76752" />.
+</WebLinkSection>
 ```
 
 ## Reference posts
 
 - [src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx](../../../src/content/blog/en/2026-01-26_tips-performance-is-not-a-technical-problem.mdx)
 - [src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx](../../../src/content/blog/en/2026-02-02_tips-how-to-recreate-vuejs-from-scratch.mdx)
+- [src/content/blog/en/2026-06-01_tips-encyclical-letter-of-the-pope.mdx](../../../src/content/blog/en/2026-06-01_tips-encyclical-letter-of-the-pope.mdx) — BaseLink in prose
