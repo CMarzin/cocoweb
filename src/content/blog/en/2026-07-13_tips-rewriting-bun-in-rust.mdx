@@ -1,0 +1,94 @@
+---
+title: Rewriting Bun in Rust
+description: Tips and discovery of the week. - Bun rewritten in Rust, AI-assisted coding tradeoffs, declarative frontend runtimes, lean web stacks, and standout tools like Blume, mimic, Marqy, SketchyBar, and AeroSpace.
+date: 2026-07-13
+tags:
+  - tips
+  - AI
+  - Rust
+  - javascript
+  - tooling
+  - open-source
+  - design
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🐰" text="Rewriting Bun in Rust" />
+  <AnchorLink emoji="💡" text="Control the ideas, not the code" />
+  <AnchorLink emoji="📝" text="I Got Tired of Maintaining Frontend Code" />
+  <AnchorLink emoji="⚡️" text="Bare Metal Modern Web" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🐰" id="rewriting-bun-in-rust" text="Rewriting Bun in Rust" url="https://bun.com/blog/bun-in-rust" />
+
+<p class="mt-2">
+From Zig to Rust: this is a detailed breakdown by Jarred Sumner on why Bun is moving key parts to Rust, with help from Claude.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="💡" id="control-the-ideas,-not-the-code" text="Control the ideas, not the code" url="https://antirez.com/news/169" />
+
+<p class="mt-2">
+Interesting take on coding with AI. Taste still matters, and someone on the team still needs to understand and read the code if the model quality drops or the assistant is unavailable.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📝" id="i-got-tired-of-maintaining-frontend-code" text="I Got Tired of Maintaining Frontend Code" url="https://dev.to/thuangf45/i-got-tired-of-maintaining-frontend-code-so-i-built-a-declarative-ui-runtime-5dbl" />
+
+<p class="mt-2">
+LucciaCore explores a declarative UI runtime where everything is described with JSON files. The idea is bold, even if it is still an early prototype.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="⚡️" id="bare-metal-modern-web" text="Bare Metal Modern Web" url="https://pocketjs.dev/" />
+
+<p class="mt-2">
+A compact modern web stack: Tailwind, Flexbox, Vue Vapor, and Solid JS in less than 8 MB of RAM, able to run on very constrained devices.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🤖" url="https://useblume.dev/" text="Blume" templateClass="mt-4">
+World-class docs for everything you ship. Fast, AI-ready, and zero-config.
+</WebLinkSection>
+
+<WebLinkSection emoji="👹" url="https://github.com/littledivy/mimic" text="littledivy/mimic" templateClass="mt-4">
+Intercept any app, then call it from Python like a library.
+</WebLinkSection>
+
+<WebLinkSection emoji="🚀" url="https://www.marqy.party/" text="Marqy" templateClass="mt-4">
+High-fidelity loops for modern interfaces.
+</WebLinkSection>
+
+<WebLinkSection emoji="📊" url="https://github.com/felixkratz/sketchybar" text="SketchyBar" templateClass="mt-4">
+A highly flexible, customizable, and fast status bar replacement for people who like scripting on macOS.
+</WebLinkSection>
+
+<WebLinkSection emoji="✈️" url="https://github.com/nikitabobko/AeroSpace" text="nikitabobko/AeroSpace" templateClass="mt-4">
+An i3-like tiling window manager for macOS.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
+
+<WebLinkSection emoji="💎" url="https://www.mek.gallery/" text="MEK.txt" templateClass="mt-4">
+Michael Alexander portfolio, also known as MEK.txt: visual artist, typographer, designer, and web developer.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="✍️" url="https://simplebits.shop/products/kyroh" text="Kyroh" templateClass="mt-4">
+An all-caps sans-serif display font inspired by a vintage luggage label from the National Hotel in Cairo.
+</WebLinkSection>
