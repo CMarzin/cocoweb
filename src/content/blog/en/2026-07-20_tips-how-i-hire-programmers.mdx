@@ -1,0 +1,86 @@
+---
+title: How I Hire Programmers
+description: Tips and discovery of the week. - Hiring programmers and team fit, opinionated CSS and accessibility, best practices as opinions, Claude sandbox memory heist, knwldgbox OSINT, Open knowledge editor, Unlimited-OCR, NameThatUI, and AI slop joke.
+date: 2026-07-20
+tags:
+  - tips
+  - career
+  - CSS
+  - accessibility
+  - AI
+  - tooling
+  - open-source
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🧑‍💻" text="How I Hire Programmers" />
+  <AnchorLink emoji="📚" text="Our CSS isn't opinionated enough" />
+  <AnchorLink emoji="🤔" text={'"Best practice" is just your opinion'} />
+  <AnchorLink emoji="🧠" text="The Memory Heist" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🧑‍💻" id="how-i-hire-programmers" text="How I Hire Programmers" url="http://www.aaronsw.com/weblog/hiring" />
+
+<p class="mt-2">
+I aggree with the part where the fit is the more important part for hiring someone, yeah they still need to have hard skills. But it's better to have a good fit with a person than having someone horrible with social skills and over the op hard skills.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📚" id="our-css-isn't-opinionated-enough" text="Our CSS isn't opinionated enough" url="https://www.craigabbott.co.uk/blog/2026/our-css-isnt-opinionated-enough/" />
+
+<p class="mt-2">
+I wanted to be better at accessibility on the web and this article make so much sense. With the good practice of CSS class styling everything HTML element can look the same but they don't havethe same meaning and the same fonction. Styling with aria attribute is very nice, I will try it instead of Tailwind class only.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤔" id={'"best-practice"-is-just-your-opinion'} text={'"Best practice" is just your opinion'} url="https://www.craigabbott.co.uk/blog/2025/best-practice-is-just-your-opinion/" />
+
+<p class="mt-2">
+I didn't though about it this way but yeah, it is just an opinion :)
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🧠" id="the-memory-heist" text="The Memory Heist" url="https://www.ayush.digital/blog/the-memory-heist" />
+
+<p class="mt-2">
+How to extract any data from the sandbox of Claude ?  We have a long way to go before LLM can be truly secure !
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🔧" url="https://github.com/KNWLDGMEDIA/knwldgbox" text="KNWLDGMEDIA/knwldgbox" templateClass="mt-4">
+KNWLDGBox is a platform for Open Source Intelligence (OSINT) and Media Tools. It provides a modular web interface to manage data leaks, social forensics, network graphs, media downloading, image forensics, and more.
+</WebLinkSection>
+
+<WebLinkSection emoji="📝" url="https://openknowledge.ai/" text="Beautiful, AI-native markdown editor" templateClass="mt-4">
+A rich text editor and knowledge base for you and your agents.
+</WebLinkSection>
+
+<WebLinkSection emoji="🤖" url="https://huggingface.co/baidu/Unlimited-OCR" text="baidu/Unlimited-OCR" templateClass="mt-4">
+3B params OCR model open source by Baidu.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
+
+<WebLinkSection emoji="🧐" url="https://namethatui.com/" text="What's this UI element called ?" templateClass="mt-4">
+The visual dictionary of UI. Describe the thing in your own sloppy words; you get the real name, the API symbol, and a paste-ready prompt for your coding agent.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<WebLinkSection emoji="💩" url="https://enshittifier.wells.ee/" text="The web is drowning in AI slop." templateClass="mt-4">
+Replace every "AI" on the web with 💩 — in your browser, and in your fonts.
+</WebLinkSection>
