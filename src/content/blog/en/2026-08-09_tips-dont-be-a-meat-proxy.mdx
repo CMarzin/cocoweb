@@ -1,0 +1,79 @@
+---
+title: Don't be a meat proxy
+description: Tips and discovery of the week. - Meat proxy anti-pattern, AI and programming craft, Mistral sovereign AI in Europe, cognitive commons and expertise, Evlog, Beautiful UI, system design notes, and oil-motion.
+date: 2026-08-09
+tags:
+  - tips
+  - AI
+  - career
+  - tooling
+  - open-source
+  - design
+  - TS
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🥩" text="Don't be a meat proxy" />
+  <AnchorLink emoji="📢" text={'"Code was never the hard part" is an insult to all programmers'} />
+  <AnchorLink emoji="🇪🇺" text="In-region inference, open models, and new European infrastructure for sovereign AI." />
+  <AnchorLink emoji="🤔" text="The Tragedy of the Cognitive Commons" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🥩" id="don't-be-a-meat-proxy" text="Don't be a meat proxy" url="https://gruhn.me/blog/2026-08-03/" />
+
+<p class="mt-2">
+If everytime you get a question you copy this response in any AI chatbot and paste the answer to the people asking something you are a meat proxy lol. If i ask something to someone it's for their input I am perfectly capable to ask something to some AI alone.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📢" id={'"code-was-never-the-hard-part"-is-an-insult-to-all-programmers'} text={'"Code was never the hard part" is an insult to all programmers'} url="https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers" />
+
+<p class="mt-2">
+I really like this article, it describe perfectly my understanding of using AI now. Accept the change BUT be CRITICAL about it. Always stay critical don't be a simple sheep.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🇪🇺" id="in-region-inference,-open-models,-and-new-european-infrastructure-for-sovereign-ai." text="In-region inference, open models, and new European infrastructure for sovereign AI." url="https://mistral.ai/news/regional-inference-open-models-new-compute/" />
+
+<p class="mt-2">
+Now you can choose exactly where to run your model, there is a plan to build up to 1GW of capacity by 2030 in Europe. I really hope Europe can stay in the course of AI !
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤔" id="the-tragedy-of-the-cognitive-commons" text="The Tragedy of the Cognitive Commons: How AI Could Disrupt the Regeneration of Professional Expertise" url="https://arxiv.org/abs/2607.29380" />
+
+<p class="mt-2">
+AI output need experts, with the low count of junior being formed today, WHO will create the new knowledge for AI or everyone in 5-10 years ?
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🪵" url="https://www.evlog.dev/" text="Evlog" templateClass="mt-4">
+Digging through logs is not observability. It's hope.
+A modern TypeScript logger built for everything you ship. Simple logs, wide events, and structured errors — one API, every context.
+</WebLinkSection>
+
+<WebLinkSection emoji="✨" url="https://www.beautifului.dev/" text="Beautiful UI for AI-native interfaces." templateClass="mt-4">
+19 components for building chatbot for AI.
+</WebLinkSection>
+
+<WebLinkSection emoji="📚" url="https://github.com/liquidslr/system-design-notes" text="liquidslr/system-design-notes" templateClass="mt-4">
+Notes of the book System Desgin Interview - An Insider's Guide
+</WebLinkSection>
+
+<WebLinkSection emoji="🎨" url="https://github.com/oil-oil/oil-motion" text="oil-oil/oil-motion" templateClass="mt-4">
+Create smooth, responsive interactive web animations.
+</WebLinkSection>
