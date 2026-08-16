@@ -51,7 +51,7 @@ const sortedTags = Array.from(tagCounts.entries()).sort((a, b) => {
           <li class="animate-fade-up">
             <a
               href={`/tags/${tag.replace(/\s+/g, "-")}/`}
-              class="text-xs uppercase tracking-[0.15em] px-4 py-1 border border-border text-muted-foreground transition-colors duration-200 hover:border-primary/40 hover:text-primary cursor-pointer active:scale-[0.96] z-10"
+              class="flex gap-2 text-xs uppercase tracking-[0.15em] px-4 py-1 border border-border text-muted-foreground transition-colors duration-200 hover:border-primary/40 hover:text-primary cursor-pointer active:scale-[0.96] z-10"
             >
               <span>{count}</span>
               <span>#{tag}</span>
