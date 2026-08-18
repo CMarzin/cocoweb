@@ -113,7 +113,7 @@ const jsonLd = generateJsonLd();
     <meta property="og:type" content={type} />
     <meta property="og:url" content={`${siteUrl}${currentPath}`} />
 
-    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.webp" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon/favicon.svg" />
     <meta name="color-scheme" content="dark light" />
 
     <!-- IndieWeb -->
@@ -153,8 +153,9 @@ const jsonLd = generateJsonLd();
       class="header-font-metrics flex flex-wrap tablet:flex-row pb-4 gap-2 tablet:gap-4 justify-between items-baseline"
     >
       <a
-        class="font-display text-4xl tracking-tight text-primary text-glow transition-opacity hover:opacity-80 active:scale-[0.98] order-1"
-        href={getLocalizedUrl("/", lang)}>{t("nav.home")}</a
+        class="font-display text-4xl tracking-tight text-primary text-glow transition-opacity hover:opacity-80 active:scale-[0.98] order-1 flex gap-2"
+        href={getLocalizedUrl("/", lang)}
+        >{t("nav.home")} <img class="h-5 w-5 sm:h-8 sm:w-8" src="/img/favicon/favicon.svg" /></a
       >
       <ul
         class="flex p-0 list-none flex-wrap items-baseline m-0 gap-4 pb-4 w-fit order-3 tablet:order-2 border-b tablet:border-none"
