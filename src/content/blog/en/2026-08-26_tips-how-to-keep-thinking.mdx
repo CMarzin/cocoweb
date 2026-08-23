@@ -1,0 +1,95 @@
+---
+title: How to keep thinking
+description: Tips and discovery of the week. - Keeping critical thinking alive, Mistral OCR 4, local AI on Apple Silicon, AI-native students, Turbo fieldflare, Bunqueue, QR data transfer, and design picks.
+date: 2026-08-26
+tags:
+  - tips
+  - AI
+  - career
+  - agents
+  - tooling
+  - open-source
+  - design
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🤔" text="How to keep thinking ?" />
+  <AnchorLink emoji="🤖" text="Mistral OCR 4 : SOTA OCR for Document Intelligence" />
+  <AnchorLink emoji="💾" text="Local AI on Apple silicon uses 7x less ram" />
+  <AnchorLink emoji="🧠" text="The problem with AI natives student" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🤔" id="how-to-keep-thinking-?" text="How to keep thinking ?" url="https://www.seangoedecke.com/how-to-keep-thinking/" />
+
+<p class="mt-2">
+TLDR, read actual book, continue to write without help. ( reminder this blog is redacted by a human ME ).
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="mistral-ocr-4-:-sota-ocr-for-document-intelligence" text="Mistral OCR 4 : SOTA OCR for Document Intelligence" url="https://mistral.ai/news/ocr-4/" />
+
+<p class="mt-2">
+New version of their flagship OCR model. As of now, the best and cheapest model to so OCR and one a the few you can self-host.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="💾" id="local-ai-on-apple-silicon-uses-7x-less-ram" text="Local AI on Apple silicon uses 7x less ram" url="https://www.youtube.com/watch?v=vHhephsP6vU" />
+
+<p class="mt-2">
+Video of Turbo fieldflare, you can run a 26B model in about 2GB of ram. I tested it and it worked very well on a macbook m2 pro with 24GB.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🧠" id="the-problem-with-ai-natives-student" text="The problem with AI natives student" url="https://futurism.com/future-society/college-critical-thinking-ai" />
+
+<p class="mt-2">
+In short some student offload their entire work to AI and in doing so they are incapable of thinking themselves. I think a lot of company will discover that critical thinking is required to work a lot of jobs. If you are a <BaseLink text="meat proxy" url="https://cocoweb.fr/blog/2026-08-09_tips-dont-be-a-meat-proxy/" /> what is your added value in front of AI or some automation software ??!
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🦜" url="https://github.com/drumih/turbo-fieldfare" text="Turbo fieldflare" templateClass="mt-4">
+**Gemma 4 26B-A4B inference in about 2 GB of RAM**
+A custom Swift + Metal runtime for any Apple Silicon Mac, even the 8 GB ones.
+</WebLinkSection>
+
+<WebLinkSection emoji="😯" url="https://bunqueue.dev/" text="Bunqueue" templateClass="mt-4">
+Bunqueue is **zero-infrastructure background work**: a job queue with priorities, retries, cron and a dead letter queue, a <BaseLink text="durable workflow engine" url="https://bunqueue.dev/guide/workflow/" /> with saga rollback and human approval gates, and a native <BaseLink text="MCP server" url="https://bunqueue.dev/guide/mcp/" /> for AI agents. One process, one SQLite file. No Redis, no broker, nothing to operate. The queue speaks to <BaseLink text="six languages" url="https://bunqueue.dev/guide/sdks/" />; the workflow engine runs in-process on Bun.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Cool stuff</h2>
+
+<WebLinkSection emoji="👽" url="https://x.com/mrdoob/status/2082913353853534515" text="New way of transferring data" templateClass="mt-4">
+Transferring data with a rapidly flashing QR code. Very cool but slow.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<WebLinkSection emoji="😂" url="https://x.com/tobi/status/2087704273438052632" text="Grok freaked out" templateClass="mt-4">
+The grok model from XAI had a nervous breakdown because the id of the GitHub user is very very old.
+</WebLinkSection>
+
+<WebLinkSection emoji="💩" url="https://github.com/anus-dev/ANUS" text="anus-dev/ANUS" templateClass="mt-4">
+**ANUS (Autonomous Networked Utility System) CLI** is a Grok-powered AI agent for the terminal. The initial framework was generated not by a human, but by another AI agent named Manus.
+
+If you want to laugh a little more checkout the <BaseLink text="issues" url="https://github.com/anus-dev/ANUS/issues" />.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="📒" url="https://freesourc.es/" text="Design Inspirations" templateClass="mt-4">
+A list of multiple design sources, like you can subscribe to a newsletter which curate every newsletters from a lots of brand for inspirations.
+</WebLinkSection>
