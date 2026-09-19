@@ -1,0 +1,99 @@
+---
+title: Introducing System One Models & Jev
+description: Tips and discovery of the week. - System One Models and Jev, Ternary Bonsai 2, refactoring Hermes with agents, an agent-first linter, Director 4K, px0, Knap, AI for UI, Craft, and Rune icons.
+date: 2026-09-21
+tags:
+  - tips
+  - AI
+  - agents
+  - tooling
+  - open-source
+  - design
+  - css
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🤯" text="Introducing System One Models & Jev" />
+  <AnchorLink emoji="🤖" text="Introducing Ternary Bonsai 2 27B" />
+  <AnchorLink emoji="🤖" text="Refactoring Hermes with 1,393 agents" />
+  <AnchorLink emoji="🤖" text="An agent-first linter" />
+  <AnchorLink emoji="🇫🇷" text="Director 4K" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🤯" id="introducing-system-one-models-&-jev" text="Introducing System One Models & Jev" url="https://typesafe.ai/blog/introducing-system-one-models-and-jev" />
+
+<p class="mt-2">
+Its a dream come true, a system which can think and respond at insane speed. It can’t respond text, only boolean, one choice between multiple choice or rate on a scale. With this you can have a type safe LLm which can call tools or function accuretly.
+A very good explanation in video by Syntax about it <BaseLink text="wtf is jev?" url="https://www.youtube.com/watch?v=QbYBRjOaGOo" />.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="introducing-ternary-bonsai-2-27b" text="Introducing Ternary Bonsai 2 27B" url="https://x.com/PrismML/status/2100692248480596348" />
+
+<p class="mt-2">
+An LLm of with similar capacity of Opus 4.6 running locally on your machine with 5,9Gb or Vram, a macbook with 16-24Gb of unified ram can run this model.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="refactoring-hermes-with-1,393-agents" text="Refactoring Hermes with 1,393 agents" url="https://nousresearch.com/refactoring-hermes-with-1393-agents" />
+
+<p class="mt-2">
+I love the DA of the site, anyway interesting read about the use of a lot of agents simultaneously  in order to refactor a big codebase with a lot of code missing tests.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="an-agent-first-linter" text="An agent first linter" url="https://github.com/shadcn-ui/lint" />
+
+<p class="mt-2">
+Finally a linter for the agent where you can tell it to no put margin inside component or write clear UI rules and the agent can self correct.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🇫🇷" id="director-4k" text="Director 4K" url="https://miroir.co/fr/director/" />
+
+<p class="mt-2">
+From <BaseLink text="Micode" url="https://x.com/Micode/status/2099162721862213632" /> a french youtuber, which launch its first switcher video which can control a video studio from the start to the end. Very proud of having a french guy launch some hardware and software stuff 🇫🇷.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="👨‍💻" url="https://px0.ai/" text="a fast, ultra-light, remote-first IDE." templateClass="mt-4">
+px0 is a fast, ultra-light, remote-first IDE designed for instant code navigation and review in your browser. It starts in **under 1 ms**, idles at **~20 MB**, and fuzzy-finds across the Linux kernel's **95,710 files in 6 ms**.
+</WebLinkSection>
+
+<WebLinkSection emoji="✂️" url="https://knap.md/" text="Knap" templateClass="mt-4">
+Knap is a simple template language that turns data into Markdown using <s><BaseLink text="logic" url="https://knap.md/logic" /></s>, <s><BaseLink text="variables" url="https://knap.md/variables" /></s>, and <s><BaseLink text="filters" url="https://knap.md/filters" /></s>.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
+
+<WebLinkSection emoji="🎨" url="https://aiforui.dev/" text="AI for Designers and Engineers" templateClass="mt-4">
+A course that teaches you how to use AI to help you build interfaces that people want to use.
+I rarely put courses in my blog, but like a few I genuily recommand you to put your email for the waitlist.
+</WebLinkSection>
+
+<WebLinkSection emoji="👀" url="https://craft.gustavofior.com/" text="Craft" templateClass="mt-4">
+A collection of design engineering concepts. These essays are short and simple, meant as a collection of useful ideas and tricks rather than an exhaustive resource.
+</WebLinkSection>
+
+<WebLinkSection emoji="🚀" url="https://www.runeicons.com/" text="Rune icons" templateClass="mt-4">
+Modern icon system for products.
+One glyph, five moods: outline, duotone, fill, pixel, and glass. Tune it in your browser, paste it as SVG or JSX.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Thinking of the week</h2>
+
+<WebLinkSection emoji="🤔" url="https://x.com/dkayofficial_/status/2098422482109685846" text="Dkay on wasting time" templateClass="mt-4">
+</WebLinkSection>
