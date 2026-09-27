@@ -1,0 +1,89 @@
+---
+title: Umbrel Self-hosting of Thomas Sanlis
+description: Tips and discovery of the week. - Umbrel self-hosting, one month without AI, semantic emoji search, JSX on a GBA, OpenPanel, UmbrelOS, SQL to ER diagram, LibreWeddingPlanner, and design picks.
+date: 2026-09-28
+tags:
+  - tips
+  - AI
+  - tooling
+  - open-source
+  - design
+  - self-hosting
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="👀" text="Umbrel Self-hosting of Thomas Sanlis" />
+  <AnchorLink emoji="🤔" text="One month without AI" />
+  <AnchorLink emoji="🔬" text="Semantic emoji search with embeddings" />
+  <AnchorLink emoji="🤯" text="JSX at 30fps on a GBA with 288kb of RAM" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="👀" id="umbrel-self-hosting-of-thomas-sanlis" text="Umbrel Self-hosting of Thomas Sanlis" url="https://thomas-sanlis.com/p/my-self-hosting-setup" />
+
+<p class="mt-2">
+I have a NAS, and I self-host this website on a VPS with a coolify instance, I really like the look and the feel of Umbrel. I will try to install it on my old macbook to test it.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤔" id="one-month-without-ai" text="One month without AI" url="https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html" />
+
+<p class="mt-2">
+I agree with a lot of points the author makes. It’s difficult to have balance with letting AI do all the work and you writing code by hand. For me I choose to believe in harness or system which constrained the AI so much it can’t generate slop because the result is guided and stired.
+We will see..
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🔬" id="semantic-emoji-search-with-embeddings" text="Semantic emoji search with embedding" url="https://maxleiter.com/blog/embedding-emoji-search" />
+
+<p class="mt-2">
+Local in your device ( browser ) search vs Embeddings API vs Jev. Fun little demo about embedding. Even if Jev is really cheap and fast, a specific embedding tools can be better, faster and cheaper too. I think before using the latest hype things, try to check what is better for your use case first.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤯" id="jsx-at-30fps-on-a-gba-with-288kb-of-ram" text="JSX at 30fps on a GBA with 288kb of RAM" url="https://x.com/pocket_js/status/2103855481723007140" />
+
+<p class="mt-2">
+The title is mindblowing, I love seeing the update of <BaseLink text="PocketJS" url="https://github.com/pocket-nexus/pocketjs" />, its insane.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🚀" url="https://openpanel.com/" text="Next Generation Web Hosting Panel" templateClass="mt-4">
+OpenPanel is a multi-user web hosting panel designed around lightweight containers. Each user gets their own fully isolated environment, complete with a separate MySQL server, PHP version, Redis instance, and full root access.
+</WebLinkSection>
+
+<WebLinkSection emoji="🚀" url="https://umbrel.com/" text="Personal home cloud and OS for self-hosting" templateClass="mt-4">
+UmbrelOS turns a little computer at home into your personal cloud, with files, photos, media, local AI, and 300+ apps. Set it up in your browser. Reach it from anywhere. Own every byte.
+</WebLinkSection>
+
+<WebLinkSection emoji="🤩" url="https://sqltoerdiagram.com/" text="Free Online SQL Diagram & ERD Generator" templateClass="mt-4">
+</WebLinkSection>
+
+<WebLinkSection emoji="💒" url="https://libreweddingplanner.org/" text="LibreWeddingPlanner" templateClass="mt-4">
+LibreWeddingPlanner is free, open source software designed to help individuals organize their wedding.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<WebLinkSection emoji="👴" url="https://x.com/tlakomy/status/2103203636017041896" text="If you remember this, your back probably hurts." templateClass="mt-4">
+Fuck I am old AF.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="🎨" url="https://lauriparonen.com/" text="Lauri Paronen" templateClass="mt-4">
+Even if this an image, I love the aesthetic of the website.
+</WebLinkSection>
