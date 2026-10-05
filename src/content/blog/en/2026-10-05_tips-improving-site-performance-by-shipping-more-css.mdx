@@ -1,0 +1,89 @@
+---
+title: Improving site performance by shipping more CSS
+description: Tips and discovery of the week. - Shipping more CSS for performance, think slow instead of ship fast, Cloudflare Clef, fixing PR bottlenecks, Leak fun, Pulls review, Dockset, and design picks.
+date: 2026-10-05
+tags:
+  - tips
+  - css
+  - AI
+  - agents
+  - tooling
+  - open-source
+  - design
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="⚡" text="Improving site performance by shipping more CSS" />
+  <AnchorLink emoji="🤔" text="Ship fast is dead. Think slow" />
+  <AnchorLink emoji="🗝️" text="Introducing Clef" />
+  <AnchorLink emoji="🍾" text="Fixing the PR bottlenecks" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="⚡" id="improving-site-performance-by-shipping-more-css" text="Improving site performance by shipping more CSS" url="https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/" />
+
+<p class="mt-2">
+Github moved from css-in-js to CSS modules and CSS variables with ~22% less time passed in the server-rendering. CSS-in-JS is a cool technology but with modern CSS you can do a lot nowedays. With the IA becoming more advanced and more fast, we now can develop and ship more « native » code, we don’t have to use so much layers which harm performance and is why we need a macbook pro with 16Gb of Ram to just visit a simple website in 2026.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤔" id="ship-fast-is-dead.-think-slow" text='"Ship fast" is dead. The new rule is "Think slow".' url="https://thomas-sanlis.com/p/ship-fast-is-dead-the-new-rule-is-think-slow" />
+
+<p class="mt-2">
+Very good advice from Thomas, in a sea of slop you can be the lighthouse. Don’t push 50 half finished slop project, try to solve one problem really really well and build from it.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🗝️" id="introducing-clef" text="Introducing Clef" url="https://blog.cloudflare.com/clef-decision-models/" />
+
+<p class="mt-2">
+Clef the open-source concurrent of Jev which is only two weeks old lol.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🍾" id="fixing-the-pr-bottlenecks" text="Fixing the PR bottlenecks" url="https://www.youtube.com/watch?v=LlgiOCmFG_w" />
+
+<p class="mt-2">
+Write more automated tests but good ones, use linter, type checker. Design your codebase in a way where you expose a small interface which is easily testable instead of testing every use case and line of your codebase.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🔎" url="https://leak.fun/" text="Leak fun" templateClass="mt-4">
+Also <BaseLink text="BrixHub" url="https://brixhub.to/" />. I discovered these OSINT websites, because there is kind of « drama » in tiktok about a website which show the information of everybody. These informations are only from public sources and database breach, so it’s fun to see the french love data transparency ( I am french and it’s fucking cynical ).
+</WebLinkSection>
+
+<WebLinkSection emoji="➕" url="https://pulls.review/" text="Pulls review" templateClass="mt-4">
+Groups changed files, summarizes what matters, review them one scope at a time. Everything works locally in your browser.
+</WebLinkSection>
+
+<WebLinkSection emoji="🚢" url="https://dockset.app/" text="Dockset" templateClass="mt-4">
+Custom docks, widgets, and your everyday apps. Save and switch your macOS Dock layouts, or add a separate Dock with widgets.
+</WebLinkSection>
+
+<WebLinkSection emoji="👀" url="https://github.com/emilkowalski/skills" text="Skills for Designers and Engineers." templateClass="mt-4">
+For designers and engineers to help them build better user interfaces.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<WebLinkSection emoji="📞" url="https://x.com/armand_dpl/status/2106513235541377525" text="Telephone to your agent and tell him what you want to do" templateClass="mt-4">
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="🧑‍🎨" url="https://www.yanniceberthault.com/" text="Digital Art & Creative Direction" templateClass="mt-4">
+I worked with yannice in 2016 ( time flies LOL ), my first developer internship I worked on <BaseLink text="Be the drop website" url="https://vimeo.com/195883883" /> with him. Anyway, really nice folio.
+</WebLinkSection>
