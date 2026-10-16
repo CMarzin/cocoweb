@@ -1,0 +1,89 @@
+---
+title: "How to be more ambitious: A tutorial for humans with models"
+description: Tips and discovery of the week. - AI ambition, Anthropic's Scion source control, agent skills, Rust-powered previews, local tools, and design picks.
+date: 2026-10-12
+tags:
+  - tips
+  - AI
+  - agents
+  - tooling
+  - open-source
+  - rust
+  - design
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="🌍" text="How to be more ambitious: A tutorial for humans with models" />
+  <AnchorLink emoji="📚" text="Redesigning source control at Anthropic" />
+  <AnchorLink emoji="🤖" text="Matt Pocock skills v1.3 is out" />
+  <AnchorLink emoji="⚡️" text="Faster previews, soon powered by OJ" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="🌍" id="how-to-be-more-ambitious:-a-tutorial-for-humans-with-models" text="How to be more ambitious: A tutorial for humans with models" url="https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/" />
+
+<p class="mt-2">
+The lead programmer of Claude at Anthropic gives some tips to be more ambitious, if you give something impossible to a human there is a high chance it will be possible. You can hack your brain into trying big things. Check this <BaseLink text="list of ambitious things people" url="https://patrickcollison.com/fast" /> did really quickly.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="📚" id="redesigning-source-control-at-anthropic" text="Redesigning source control at Anthropic" url="https://www.anthropic.com/engineering/redesigning-source-control" />
+
+<p class="mt-2">
+Replacing Git by Scion to handle their enormous monorepo. Really cool software but only for big company and their take is the source control always has internet access the contrary of Git which is fundamentaly offline by default.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="matt-pocock-skills-v1.3-is-out" text="Matt Pocock skills v1.3 is out" url="https://x.com/mattpocockuk/status/2107062474914550098" />
+
+<p class="mt-2">
+Three news skills, /pr to write easy and human readable body PR. I love the new retro skills which analyse your previous session and tell you what you can do better next time.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="⚡️" id="faster-previews,-soon-powered-by-oj" text="Faster previews, soon powered by OJ" url="https://lovable.dev/blog/faster-previews-oj" />
+
+<p class="mt-2">
+A reimplementation of vite by the lovable, they got rid of the node js runtime of vite and have the entire stack built in rust to have better performance across the board.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="🩺" url="https://pulse.egoist.dev/" text="Pulse" templateClass="mt-4">
+Everything your computer is doing, in one calm window.
+</WebLinkSection>
+
+<WebLinkSection emoji="🗣️" url="https://cactuscompute.com/blog/whistle" text="Whistle: Speech to Text in 16.9 MB" templateClass="mt-4">
+An open speech recognition model that runs on the same CPU engine as Needle. It transcribes seven languages, reaches the first token in 11 ms, and loads beside Needle so one binary turns a clip straight into tool calls.
+</WebLinkSection>
+
+<WebLinkSection emoji="🔍" url="https://github.com/context-dot-dev/sgrep" text="sgrep" templateClass="mt-4">
+Search code and documents in plain English. Runs locally.
+</WebLinkSection>
+
+<WebLinkSection emoji="🪦" url="https://massgrave.dev/" text="Microsoft Activation Scripts | MAS" templateClass="mt-4">
+An open-source Windows and Office activator featuring HWID, Ohook, TSforge, and Online KMS activation methods, along with advanced troubleshooting.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<WebLinkSection emoji="❤️" url="https://x.com/ZoeCatherineF/status/2108666858148700360" text="True love" templateClass="mt-4">
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="🌌" url="https://mkdir.directory/" text="mkdir.directory" templateClass="mt-4">
+Galleries, award sites, landing page collections and section libraries, picked by hand by <del><BaseLink text="EdoardoLunardi.dev" url="https://www.edoardolunardi.dev/" /></del> and kept short on purpose. Every one is free to explore, with no paywall and no account.
+</WebLinkSection>
