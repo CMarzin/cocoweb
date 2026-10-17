@@ -44,6 +44,11 @@ export const ui = {
     // Footer
     'footer.copyright': 'cocoweb.fr',
     'footer.webring': 'An IndieWeb Webring 🕸💍',
+
+    // Newsletter
+    'newsletter.title': 'Newsletter',
+    'newsletter.placeholder': 'votre@email.fr',
+    'newsletter.button': "S'abonner",
   },
   en: {
     // Navigation
@@ -81,6 +86,11 @@ export const ui = {
     // Footer
     'footer.copyright': 'cocoweb.fr',
     'footer.webring': 'An IndieWeb Webring 🕸💍',
+
+    // Newsletter
+    'newsletter.title': 'Newsletter',
+    'newsletter.placeholder': 'you@email.com',
+    'newsletter.button': 'Subscribe',
   },
 } as const;
 

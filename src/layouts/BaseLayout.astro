@@ -1,6 +1,7 @@
 ---
 import { Font } from "astro:assets";
 
+import NewsletterForm from "@/components/NewsletterForm.astro";
 import {
   getLangFromUrl,
   useTranslations,
@@ -255,6 +256,7 @@ const jsonLd = generateJsonLd();
       <div>
         &copy; {t("footer.copyright")} - {new Date().getFullYear()}
       </div>
+      <NewsletterForm lang={lang} />
       <div class="flex items-center justify-center gap-2">
         <a href="https://xn--sr8hvo.ws/previous" class="text-glow">←</a>
         <a

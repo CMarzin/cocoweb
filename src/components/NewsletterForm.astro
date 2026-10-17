@@ -1,0 +1,50 @@
+---
+import { useTranslations, type Lang } from "@/i18n/utils";
+
+interface Props {
+  lang: Lang;
+  endpoint?: string;
+  listId?: string;
+}
+
+const { lang, endpoint, listId } = Astro.props;
+const t = useTranslations(lang);
+
+// Falls back to PUBLIC_LISTMONK_URL and PUBLIC_LISTMONK_LIST_ID env vars.
+// Renders nothing until both are set, so the build never breaks on a
+// machine without the secrets.
+const url = (endpoint ?? import.meta.env.PUBLIC_LISTMONK_URL)?.replace(/\/+$/, "");
+const list = listId ?? import.meta.env.PUBLIC_LISTMONK_LIST_ID;
+---
+
+{
+  url && list && (
+    <form
+      method="POST"
+      action={`${url}/subscription/form`}
+      class="flex flex-col items-center gap-2 w-full"
+    >
+      <label for="newsletter-email" class="uppercase tracking-[0.2em]">
+        {t("newsletter.title")}
+      </label>
+      <div class="flex flex-wrap justify-center gap-2">
+        <input
+          id="newsletter-email"
+          type="email"
+          name="email"
+          required
+          autocomplete="email"
+          placeholder={t("newsletter.placeholder")}
+          class="border border-input bg-transparent rounded px-2 py-1 text-xs text-muted-foreground transition-colors duration-200 focus:border-primary focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="border border-input rounded px-2 py-1 text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors duration-200 hover:text-primary hover:border-primary active:scale-[0.97] cursor-pointer"
+        >
+          {t("newsletter.button")}
+        </button>
+      </div>
+      <input type="hidden" name="l" value={list} />
+    </form>
+  )
+}
