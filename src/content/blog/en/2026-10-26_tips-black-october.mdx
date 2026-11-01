@@ -1,0 +1,89 @@
+---
+title: Black October
+description: Tips and discovery of the week. - Cybersecurity incidents, thoughtful software, self-improving AI, Cloudflare Void, agentic tooling, and design inspiration.
+date: 2026-10-26
+tags:
+  - tips
+  - AI
+  - agents
+  - tooling
+  - hacking
+  - cloudflare
+  - design
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorSection from "@/components/AnchorSection.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import TextSeparator from "@/components/TextSeparator.astro";
+import StarterText from "@/components/StarterText.astro";
+import WebLinkSection from "@/components/WebLinkSection.astro";
+import BaseLink from "@/components/BaseLink.astro";
+
+<StarterText>
+I have selected some news  from the web dev world to share.
+</StarterText>
+
+<AnchorWrapper>
+  <AnchorLink emoji="💣" text="Black October" />
+  <AnchorLink emoji="🫡" text="Someone behind the software" />
+  <AnchorLink emoji="🤖" text="Self-improving software is inevitable" />
+  <AnchorLink emoji="☁️" text="Deploy with Void" />
+</AnchorWrapper>
+
+<TextSeparator />
+
+<AnchorSection emoji="💣" id="black-october" text="Black October" url="https://en.wikipedia.org/wiki/Black_October_%28information_security%29" />
+
+<p class="mt-2">
+Welcome to the new worl where every day there is a several major security incidents and <BaseLink text="vulnerability disclosures" url="https://en.wikipedia.org/wiki/Vulnerability_%28computer_security%29#Disclosure" />. I updated everythings, I am wondering if maybe I will try to get an Yubikey to better secured my accounts.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🫡" id="someone-behind-the-software" text="Someone behind the software" url="https://karrisaarinen.com/posts/someone-behind-the-software/" />
+
+<p class="mt-2">
+I agree, I think improving what is already existing over adding and adding stuff is very hard. Adding stuff is easier than step back, reflect what is already working and what is not. With AI, it’s more easier than ever to add a TON of useless feature very fast. We will see in the future if a product with few but carefully crafted feature versus a product with ALL features will be better.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="🤖" id="self-improving-software-is-inevitable" text="Self-improving software is inevitable" url="https://boristane.com/blog/self-improving-software-is-inevitable/" />
+
+<p class="mt-2">
+At the end we will just end up has people defining what «better » means to an AI. We will be left with the hard part, choosing what to build, where your company want’s to go. This futur can already work for the company with the right mindset and right tools but I think the more we automate the more we can be free of grunt work. We will see.
+</p>
+
+<AnchorSection componentClass="mt-2" emoji="☁️" id="deploy-with-void" text="Deploy with Void" url="https://blog.cloudflare.com/deploy-with-void/" />
+
+<p class="mt-2">
+With this cloudflare tool, you can now host your vibe coded project securely, in the same way as professionnal project. The team behind Vite + strikes again, I will love to check it out for my company.
+</p>
+
+<hr class="my-8 border-t border-border/60 animate-fade-up"  style="animation-delay: 500ms;"/>
+
+<h2 class="font-display text-2xl text-foreground">Web tools and Library</h2>
+
+<WebLinkSection emoji="📘" url="https://github.com/colinhacks/reylo" text="colinhacks/reylo" templateClass="mt-4">
+Import .sql files into TypeScript with full type inference and zero codegen.
+</WebLinkSection>
+
+<WebLinkSection emoji="🤔" url="https://polylane.com/" text="Polylane" templateClass="mt-4">
+Polylane finds issues in your app and fixes them for you before they become incidents.
+Connect this tool with all your repo and observability and let agent to the work for you.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Cool Websites</h2>
+
+<WebLinkSection emoji="💣" url="https://pwn.watch/" text="pwn.watch" templateClass="mt-4">
+See live security incidents from tech all around the world.
+</WebLinkSection>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Joke of the week</h2>
+
+<h2 class="font-display text-2xl text-foreground mt-8">Design inspirations</h2>
+
+<WebLinkSection emoji="🐟" url="https://www.daoho.dev/" text="Dao Ho" templateClass="mt-4">
+Dao portfolio, beautiful koy carp in ascii in the background.
+</WebLinkSection>
+
+<WebLinkSection emoji="🗾" url="https://tsubi.club/" text="tsubi.club" templateClass="mt-4">
+A shopify with a very nice graphical style. it’s like a dragonball Z UI of a Playstation 2 game.
+</WebLinkSection>
