@@ -2,15 +2,19 @@
 /**
  * LanguageSwitcher component
  * Allows users to switch between available languages (FR/EN).
+ *
+ * mode="site": links to the same page in the other site language.
+ * mode="content": swaps the [data-article-lang] blocks on the page, the site language stays the same.
  */
-import { languages, defaultLang, type Lang } from '../i18n/ui';
-import { getLocalizedUrl } from '../i18n/utils';
+import { defaultLang, type Lang } from "../i18n/ui";
+import { getLocalizedUrl } from "../i18n/utils";
 
 interface Props {
   currentLang?: Lang;
+  mode?: "site" | "content";
 }
 
-const { currentLang = defaultLang } = Astro.props;
+const { currentLang = defaultLang, mode = "site" } = Astro.props;
 
 // Get current path without language prefix
 const currentPath = Astro.url.pathname;
@@ -18,7 +22,7 @@ const currentPath = Astro.url.pathname;
 // Get path without any language prefix
 function getPathWithoutLang(path: string): string {
   // Remove language prefix if present
-  const cleanPath = path.replace(/^\/(en|fr)\//, '/');
+  const cleanPath = path.replace(/^\/(en|fr)\//, "/");
   return cleanPath;
 }
 
@@ -29,53 +33,61 @@ function getAlternatePath(targetLang: Lang): string {
 }
 
 const languagesList = [
-  { code: 'fr' as Lang, label: 'FR', name: 'Français' },
-  { code: 'en' as Lang, label: 'EN', name: 'English' },
+  { code: "en" as Lang, label: "en 🇬🇧", name: "English" },
+  { code: "fr" as Lang, label: "fr 🇫🇷", name: "Français" },
 ];
+
+const baseClass =
+  "px-2 py-0.5 border border-border text-muted-foreground transition-colors duration-200 hover:border-primary/40 hover:text-primary cursor-pointer active:scale-[0.96]";
+
+function ariaLabel(name: string): string {
+  return currentLang === "fr"
+    ? `Changer la langue vers ${name}`
+    : `Switch language to ${name}`;
+}
 ---
 
-<div class="language-switcher">
-  {languagesList.map((lang) => (
-    <a
-      href={getAlternatePath(lang.code)}
-      class:list={['lang-link', { 'lang-active': currentLang === lang.code }]}
-      aria-label={currentLang === 'fr' ? `Changer la langue vers ${lang.name}` : `Switch language to ${lang.name}`}
-      aria-current={currentLang === lang.code ? 'true' : undefined}
-      hreflang={lang.code}
-    >
-      {lang.label}
-    </a>
-  ))}
+<div class="flex gap-2 items-center text-xs">
+  {
+    languagesList.map((lang) =>
+      mode === "content" ? (
+        <button
+          type="button"
+          data-article-switch={lang.code}
+          class={`${baseClass} aria-pressed:border-primary aria-pressed:text-primary`}
+          aria-label={ariaLabel(lang.name)}
+          aria-pressed={currentLang === lang.code ? "true" : "false"}
+        >
+          {lang.label}
+        </button>
+      ) : (
+        <a
+          href={getAlternatePath(lang.code)}
+          class:list={[
+            baseClass,
+            { "border-primary text-primary": currentLang === lang.code },
+          ]}
+          aria-label={ariaLabel(lang.name)}
+          aria-current={currentLang === lang.code ? "true" : undefined}
+          hreflang={lang.code}
+        >
+          {lang.label}
+        </a>
+      ),
+    )
+  }
 </div>
 
-<style>
-  .language-switcher {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.875rem;
-  }
-
-  .lang-link {
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
-    opacity: 0.7;
-  }
-
-  .lang-link:hover {
-    opacity: 1;
-    background-color: rgba(128, 128, 128, 0.2);
-  }
-
-  .lang-active {
-    opacity: 1;
-    font-weight: 600;
-    background-color: rgba(128, 128, 128, 0.15);
-  }
-
-  .lang-active:hover {
-    background-color: rgba(128, 128, 128, 0.25);
-  }
-</style>
+<script>
+  document.querySelectorAll<HTMLButtonElement>("[data-article-switch]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = button.dataset.articleSwitch;
+      document.querySelectorAll<HTMLElement>("[data-article-lang]").forEach((article) => {
+        article.hidden = article.dataset.articleLang !== target;
+      });
+      document.querySelectorAll("[data-article-switch]").forEach((b) => {
+        b.setAttribute("aria-pressed", String(b === button));
+      });
+    });
+  });
+</script>

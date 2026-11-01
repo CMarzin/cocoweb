@@ -1,14 +1,16 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import {
   getLangFromUrl,
   useTranslations,
   getLocalizedUrl,
+  getAlternateLang,
   type Lang,
 } from "../i18n/utils";
 
 import TagsWrapper from "@/components/TagsWrapper.astro";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 
 interface Props {
   frontmatter: CollectionEntry<"articles">["data"];
@@ -59,8 +61,8 @@ const nextArticle =
     : null;
 
 // Format date for display
-function formatDate(date: Date): string {
-  return date.toLocaleDateString(lang === "fr" ? "fr-FR" : "en-GB", {
+function formatDate(date: Date, dateLang: Lang = lang): string {
+  return date.toLocaleDateString(dateLang === "fr" ? "fr-FR" : "en-GB", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -74,6 +76,16 @@ function formatDateISO(date: Date): string {
 
 // Get localized paths
 const articlesBasePath = getLocalizedUrl("/articles/", lang);
+
+// Both versions are rendered on the page and toggled client-side, so the site language never changes
+const contentLang = slug.slice(0, 2) as Lang;
+const otherLang = getAlternateLang(contentLang);
+const translated = frontmatter.translation
+  ? (await getCollection("articles")).find(
+      (article) => article.id === `${otherLang}/${frontmatter.translation}`,
+    )
+  : undefined;
+const TranslatedContent = translated && (await render(translated)).Content;
 ---
 
 <BaseLayout
@@ -94,38 +106,74 @@ const articlesBasePath = getLocalizedUrl("/articles/", lang);
     )
   }
 
-  <h1
-    class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
-  >
-    {title}
-  </h1>
+  {
+    TranslatedContent && (
+      <div class="mb-2">
+        <LanguageSwitcher currentLang={contentLang} mode="content" />
+      </div>
+    )
+  }
 
-  <time
-    class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
-    datetime={formatDateISO(date)}
-  >
-    {formatDate(date)}
-  </time>
+  <article data-article-lang={contentLang} lang={contentLang}>
+    <h1
+      class="font-display text-3xl sm:text-4xl text-foreground animate-fade-up mt-1"
+    >
+      {title}
+    </h1>
 
-  <div class="flex gap-2 flex-wrap tablet:w-full mt-2">
-    <TagsWrapper tags={tags} lang="en" />
-  </div>
+    <time
+      class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
+      datetime={formatDateISO(date)}
+    >
+      {formatDate(date, contentLang)}
+    </time>
 
-  <section class="content-section mt-8">
-    <slot />
-  </section>
+    <div class="flex gap-2 flex-wrap tablet:w-full mt-2">
+      <TagsWrapper tags={tags} lang="en" />
+    </div>
+
+    <section class="content-section mt-8 text-sm leading-relaxed">
+      <slot />
+    </section>
+  </article>
+
+  {
+    translated && TranslatedContent && (
+      <article data-article-lang={otherLang} lang={otherLang} hidden>
+        <h1 class="font-display text-3xl sm:text-4xl text-foreground mt-1">
+          {translated.data.title}
+        </h1>
+
+        <time
+          class="mt-5 block text-xs text-muted-foreground italic tabular-nums"
+          datetime={formatDateISO(translated.data.date)}
+        >
+          {formatDate(translated.data.date, otherLang)}
+        </time>
+
+        <div class="flex gap-2 flex-wrap tablet:w-full mt-2">
+          <TagsWrapper tags={translated.data.tags} lang="en" />
+        </div>
+
+        <section class="content-section mt-8 text-sm leading-relaxed">
+          <TranslatedContent />
+        </section>
+      </article>
+    )
+  }
 
   {
     (nextArticle || previousArticle) && (
       <>
-        <hr class="my-6 border-t border-dashed border-accent" />
+        <hr class="my-8" />
 
-        <ul class="list-none p-0">
+        <ul class="mt-8 text-sm text-foreground animate-fade-up list-disc list-inside">
           {nextArticle && (
             <li class="previous-next-page-link">
-              {t("post.next")}:{" "}
+              <span class="text-muted-foreground">{t("post.next")}:</span>
               <a
                 href={`${articlesBasePath}${nextArticle.id.replace(/^(en|fr)\//, "")}/`}
+                class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
               >
                 {nextArticle.data.title}
               </a>
@@ -133,9 +181,10 @@ const articlesBasePath = getLocalizedUrl("/articles/", lang);
           )}
           {previousArticle && (
             <li class="previous-next-page-link">
-              {t("post.previous")}:{" "}
+              <span class="text-muted-foreground">{t("post.previous")}:</span>
               <a
                 href={`${articlesBasePath}${previousArticle.id.replace(/^(en|fr)\//, "")}/`}
+                class="text-accent underline underline-offset-4 decoration-accent/30 hover:decoration-accent transition-colors duration-200 active:scale-[0.97]"
               >
                 {previousArticle.data.title}
               </a>
@@ -147,7 +196,7 @@ const articlesBasePath = getLocalizedUrl("/articles/", lang);
   }
   <style>
     .content-section :global(p) {
-      margin-top: calc(var(--spacing) * 2);
+      margin-top: calc(var(--spacing) * 6);
     }
   </style>
 </BaseLayout>

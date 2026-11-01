@@ -21,6 +21,8 @@ const articlesCollection = defineCollection({
     date: z.coerce.date(),
     tags: z.array(z.string()),
     ogImage: z.string().optional(),
+    // Slug (filename without extension) of the same article in the other language
+    translation: z.string().optional(),
   }),
 });
 

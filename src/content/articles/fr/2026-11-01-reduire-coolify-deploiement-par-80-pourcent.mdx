@@ -1,0 +1,64 @@
+---
+title: Réduire le temps de déploiement de Coolify par 80%
+description: Comment le changement de Nixpacks et Railpack vers un Dockerfile personnalisé à permis de passer le déploiement de mon blog Astro de ~3minutes à ~30secondes.
+date: 2026-11-01
+translation: 2026-11-01-reducing-coolify-deploy-time-by-80-percent
+tags:
+  - articles
+  - docker
+  - coolify
+  - astro
+  - web performance
+  - tooling
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import BaseLink from "@/components/BaseLink.astro";
+import StarterText from "@/components/StarterText.astro";
+
+<StarterText>
+**TL;PL :** En passant par un Docker personnalisé au lieu de <BaseLink text="Nixpacks" url="https://nixpacks.com/docs/getting-started" /> ou <BaseLink text="Railpack" url="https://github.com/railwayapp/railpack" />, j’ai pu réduire le temps de déploiement de mon blog d’environ 80%.
+</StarterText>
+
+<table class="w-full mt-6 text-sm border-collapse animate-fade-up" style="animation-delay: 250ms;">
+  <thead class="bg-card">
+    <tr>
+      <th class="border border-border px-3 py-2 text-left">Builder</th>
+      <th class="border border-border px-3 py-2 text-right">Temps de déploiement (secondes)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-border px-3 py-2">Nixpacks</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~180</td>
+    </tr>
+    <tr>
+      <td class="border border-border px-3 py-2">Railpack</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~120</td>
+    </tr>
+    <tr class="text-primary font-semibold">
+      <td class="border border-border px-3 py-2">Dockerfile personnalisé</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~35</td>
+    </tr>
+  </tbody>
+</table>
+
+J’utilise un VPS avec Coolify pour héberger mon blog.
+
+J’utilise Astro avec une génération statique, après chaque push sur Github un Webhook se déclenche et déploie la dernière version de mon site.
+
+Au début, j’utilisais la configuration par défaut de Nixpacks avec simplement un build statique. Cette configuration construisait et déployait mon blog de 280 articles en ~2min40s de~ 3min15s… 3 min. Une **ÉTERNITÉ** !!!
+
+Après une mise à jour de Coolify, j’ai pu tester une nouvelle option Railpack. Le sucesseur de Nixpacks, plus moderne et plus rapide. Je n’avais qu’à le sélectionner dans un sélecteur dans la page admin de Coolify. Le temps du déploiement chuta d’environ 1 minute, ~2min mais c’étais toujours un peu lent à mon goût.
+
+La raison principale de la lenteur des déploiements était la configuration par défaut. Àchaque build, ils devaient check mon code, deviner ma stack technique, build et déployer. Je contrôle ma stack de bout en bout.
+Ma stack est assez simple, pas besoin d’avoir un setup ultra lourd, très simple d’utilisation certes mais lent et lourd.
+
+J’ai décidé d’utiliser un DockerFile personnalisé, qui répond exactement à mes besoins sans avoir besoin de deviner quoi faire avant de build. J’ai testé deux versions.
+Avec la <BaseLink text="version 1" url="https://github.com/CMarzin/cocoweb/commit/3fda0df43709deadd2cc8e49468cb672bc1b0b8f" />, j’ai poussé un DockerFile très simple avec Node 24 Alpine et un serveur nginx pour servir le site en statique. Résultat : ~50 secondes.
+Avec la <BaseLink text="version 2" url="https://github.com/CMarzin/cocoweb/commit/18a8ea4071d961eeaa4ed2a5453bcd93f65ed489" />, j’ai utilisé la version d’alpine slim pour tomber aux environs de ~30s.
+
+J’aime beaucoup tout ce qui touche à l’optimisation ( j’en ai même fait un mémoire d’étude ), j’ai laissé traîner cette petite optimisation pendant un bon moment. Cependant, maintenant avec l’IA, j’ai pu me dégager du temps plus facilement pour le faire. 10 minutes de demandes avec une IA plus deux-trois tests et hop petite opti tranquille.
+
+Maintenant, dès que j’écris un article sur mon ordinateur, <span class="text-primary text-bold">environ 30 secondes</span> après avoir poussé mon code, il est live !

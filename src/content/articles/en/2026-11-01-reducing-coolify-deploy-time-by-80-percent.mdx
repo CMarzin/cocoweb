@@ -1,0 +1,63 @@
+---
+title: Reducing Coolify deployment time by ~80%
+description: How switching from Nixpacks and Railpack to a custom Dockerfile cut my Astro blog deploys on Coolify from ~3 minutes to ~30 seconds.
+date: 2026-11-01
+translation: 2026-11-01-reduire-coolify-deploiement-par-80-pourcent
+tags:
+  - articles
+  - docker
+  - coolify
+  - astro
+  - web performance
+  - tooling
+---
+
+import AnchorLink from "@/components/AnchorLink.astro";
+import AnchorWrapper from "@/components/AnchorWrapper.astro";
+import BaseLink from "@/components/BaseLink.astro";
+import StarterText from "@/components/StarterText.astro";
+
+<StarterText>
+**TL;DR :** Switching from <BaseLink text="Nixpacks" url="https://nixpacks.com/docs/getting-started" /> or <BaseLink text="Railpack" url="https://github.com/railwayapp/railpack" /> to a custom Dockerfile for my stack reduced by more than 80% the build and deploy of my blog.
+</StarterText>
+
+<table class="w-full mt-6 text-sm border-collapse animate-fade-up" style="animation-delay: 250ms;">
+  <thead class="bg-card">
+    <tr>
+      <th class="border border-border px-3 py-2 text-left">Builder</th>
+      <th class="border border-border px-3 py-2 text-right">Deploy time (seconds)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border border-border px-3 py-2">Nixpacks</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~180</td>
+    </tr>
+    <tr>
+      <td class="border border-border px-3 py-2">Railpack</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~120</td>
+    </tr>
+    <tr class="text-primary font-semibold">
+      <td class="border border-border px-3 py-2">Custom Dockerfile</td>
+      <td class="border border-border px-3 py-2 text-right tabular-nums">~35</td>
+    </tr>
+  </tbody>
+</table>
+
+I use a VPS and Coolify in order to host this very blog.
+It’s a static Astro blog, which is deployed by a webhook when I push on my github.
+
+For the deployment I used at  first the default Nixpacks setup with type of site static.
+This default setup build and deploy 280 article from my blog in ~2min40s to ~3min15s… 3 min. It’s **AN ETERNITY** !!!
+
+After an update from Coolify, I had another options to choose from, Railpack, the successor to Nixpacks, a more modern and faster alternative. The switch was easy I just selected it inside the Coolify panel. The deploy still took ~2min, 1 minute down but still slow for me.
+
+The main issue for the slowness was the default configuration. For each build, they had to check my code in order to guess my stack and choose the right build and deploy correctly.
+
+I am a developer and I am in control of the entire stack, so I decided to use a custom DockerFile which will respond only to my needs.
+
+So I decided to use a custom DockerFile to respond only to my need and not guessing each time. Here is the <BaseLink text="commit 1" url="https://github.com/CMarzin/cocoweb/commit/3fda0df43709deadd2cc8e49468cb672bc1b0b8f" /> and <BaseLink text="commit 2" url="https://github.com/CMarzin/cocoweb/commit/18a8ea4071d961eeaa4ed2a5453bcd93f65ed489" />. With the first version I got to ~2minutes to ~50s, when I used alpine slim because I don’t need all the alpine stuff I got down to nearly ~30s.
+
+I really love optimizing stuff ( I wrote a thesis about web performance ), I put this optimization behind me for a long time. But with AI, I finally took the time to do it properly.
+
+Now, every time I write an article from my computer, it’s live <span class="text-primary text-bold">nearly 30 seconds</span> after my push ! Usable finally.
