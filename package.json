@@ -1,6 +1,6 @@
 {
   "name": "cocoweb",
-  "version": "6.0.0",
+  "version": "1.0.0",
   "description": "Cocoweb personal blog",
   "type": "module",
   "scripts": {
@@ -26,17 +26,17 @@
   "homepage": "https://cocoweb.fr",
   "dependencies": {
     "@astrojs/rss": "^4.0.19",
-    "astro": "^7.3.5"
+    "astro": "^7.4.12"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^8.0.2",
+    "@astrojs/mdx": "^8.1.6",
     "@tailwindcss/vite": "^4.3.3",
     "tailwindcss": "^4.3.3",
     "tailwindcss-animate": "^1.0.7"
   },
-  "packageManager": "pnpm@11.22.0",
+  "packageManager": "pnpm@12.21.0",
   "engines": {
-    "node": ">=22.12.0",
-    "pnpm": ">=11.0.0"
+    "node": ">=24.22.0",
+    "pnpm": ">=12.21.0"
   }
 }
