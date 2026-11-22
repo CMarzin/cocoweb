@@ -10,9 +10,11 @@ COPY . .
 RUN pnpm build
 
 FROM nginx:1.30.5-alpine3.24-slim
+RUN apk add --no-cache curl
 COPY <<EOF /etc/nginx/conf.d/default.conf
 server {
   listen 80;
+  listen [::]:80;
   root /usr/share/nginx/html;
   absolute_redirect off;
   location / { try_files \$uri \$uri.html \$uri/index.html \$uri/ =404; }
@@ -23,3 +25,4 @@ server {
 }
 EOF
 COPY --from=build /app/dist /usr/share/nginx/html
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 CMD curl -fsS http://localhost:80/health || exit 1
